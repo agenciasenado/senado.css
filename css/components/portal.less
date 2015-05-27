@@ -1,0 +1,177 @@
+
+.PortalTopo {
+    .make-row();
+    @media (min-width: @screen-sm-min) {
+        margin-left: -30px;
+        margin-right: -30px;
+    }
+    @media (max-width: @screen-xs-max) {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-bottom: solid 5px #3E6892;
+    }
+}
+
+// region doc
+/**
+ * Barra de ações do PortalTopo:
+ * `PortalTopo-togglers`: Container dos controles `PortalTop-toggler` que exibem o formulário de
+ * busca e o menu principal do `PortalTopo` qdo o viewport estiver em `xs`. São alinhados à direita por padrão.
+ *
+ *     @example
+ *     .PortalTopo-togglers
+ *         .PortalTopo-toggler--menu(data-toggle='collapse', data-target='.principal')
+ *         .PortalTopo-toggler--search(data-toggle='collapse', data-target='.PortalTopo-busca')
+ */
+// endregion doc
+.PortalTopo-togglers {
+    .make-xs-column(5);
+}
+
+.PortalTopo-toggler, [class^="PortalTopo-toggler--"] {
+    @size: 34px;
+    @border-size: 1px;
+
+    &:extend(.glyphicon);
+
+    height: @size;
+    width: @size;
+    margin-left: 10px;
+    padding: 0;
+
+    border: @border-size solid @azul-padrao;
+    border-radius: 0;
+
+    text-align: center;
+    line-height: @size - 2 * @border-size;
+    float: right;
+}
+
+    .PortalTopo-toggler--menu {
+        .glyphicon-menu-hamburger;
+        background: @azul-padrao;
+        border-color: @azul-padrao;
+        color: #fff;
+    }
+
+    .PortalTopo-toggler--search {
+        .glyphicon-search;
+        background: #f5f5f5;
+        border-color: #ccc;
+        color: @azul-padrao;
+    }
+
+
+.PortalTopo-id {
+    .make-xs-column(7);
+    .make-sm-column(4);
+    color: #3E6892;
+    font-size: 18px;
+    display: table;
+}
+
+.PortalTopo-title {
+    display: table-cell;
+    vertical-align: middle;
+    line-height: 35px;
+    margin: 0;
+    font-size: 40px;
+    @media (max-width: @screen-sm-max) {
+        font-size: 34px;
+    }
+    @media (max-width: @screen-xs-max) {
+        font-size: 24px;
+    }
+    @media (max-width: @screen-xs-min) {
+        font-size: 18px;
+    }
+}
+
+.PortalTopo-intro {
+    font-size: 18px;
+    line-height: 26px;
+}
+
+// region doc
+/**
+ * Busca principal:
+ * `.PortalTopo-busca`: Formulário fixo de busca global. Faz parte do componente `PortalTopo` e, por isso,
+ * tem as dimensçoes presas via CSS (xs-4, sm-4, sm-offset-4). Expande-se automaticamente no viewport `xs`
+ *
+ *     @example
+ *     .PortalTopo-busca
+ *         .hidden-xs: a(href='#') Busca avançada ›
+ *         form(action='search', role='search')
+ *             .input-group
+ *                 input.form-control(type='text')
+ *                 .input-group-btn
+ *                     button.btn.btn-default(type='submit') Buscar
+ */
+// endregion
+.PortalTopo-busca {
+    .make-xs-column(12);
+    .make-sm-column(4);
+
+    > form {
+        margin: 10px 0 0 0;
+    }
+
+    input, button {
+        border-radius: 0;
+        height: 38px;
+    }
+
+    button {
+        color: @azul-padrao;
+        background: #f5f5f5;
+    }
+
+    @media (min-width: @screen-sm-min) {
+        display: block !important;
+        visibility: visible !important;
+    }
+
+}
+
+.PortalTopo-tools {
+    .make-xs-column(12);
+    .make-sm-column(4);
+
+    @media (min-width: @screen-sm-min) {
+        display: block !important;
+        visibility: visible !important;
+    }
+
+}
+
+.PortalTopo-id, .PortalTopo-busca, .PortalTopo-tools {
+    height: 90px;
+    @media (max-width: @screen-xs-max) {
+        height: auto;
+    }
+}
+
+// region doc
+/**
+ * PortalTopo completo:
+ * `PortalTopo`: Container de elementos que formam o topo do site. Formado pelo título (`PortalTopo-id`), formulário
+ * de busca (`PortalTopo-busca`) e o toggler-collapse do viewport `xs` (`PortalTopo-togglers`). O layout é preso
+ * via css (largura/offset das colunas), portanto foi projetado para ser _utilizado como está_.
+ *
+ *     @example
+ *     .PortalTopo
+ *         .PortalTopo-id
+ *             .hidden-xs Notícias
+ *             .PortalTopo-title Rádio Senado
+ *         .PortalTopo-togglers.visible-xs
+ *             .PortalTopo-toggler--menu
+ *             .PortalTopo-toggler--search
+ *         .PortalTopo-busca
+ *             a.hidden-xs(href='#') Busca avançada ›
+ *             form(action='search', role='search')
+ *                 .input-group
+ *                     input.form-control(type='text')
+ *                     .input-group-btn
+ *                         button.btn.btn-default Buscar
+ */
+// endregion

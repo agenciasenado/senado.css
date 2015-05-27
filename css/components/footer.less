@@ -1,0 +1,100 @@
+
+.FooterMain {
+    .clearfix();
+    background-color: #eee;
+    margin-top: 15px;
+    @media (min-width: @screen-sm-min) {
+        padding-top: 20px;
+    }
+}
+
+    .FooterMain-container {
+        .container();
+    }
+
+    .FooterMain-links {
+        .make-row();
+        .clearfix();
+    }
+
+        .FooterMain-section {
+            .make-sm-column(3)
+        }
+
+            .FooterMain-title {
+                font-size: 13px;
+                font-weight: bold;
+                line-height: 1.1;
+                color: #666;
+                margin: 0;
+                padding: 15px 0 13px;
+            }
+
+            .FooterMain-list {
+                &:extend(.list-unstyled);
+                line-height: 20px;
+                font-size: 12px;
+                color: #666;
+                @media (max-width: @screen-xs-max) {
+                    border-bottom: 1px solid #fff;
+                    margin: 0 10px;
+                    &:last-child {
+                        border: none;
+                    }
+                }
+                & > li > a {
+                    &, &:visited, &:focus, &:hover {
+                        color: #333;
+                        font-style: normal;
+                        font-weight: normal;
+                        text-decoration: none;
+                    }
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+
+.FooterMain-end {
+    margin-top: 5px;
+    border-top: 1px solid #fff;
+    line-height: 40px;
+}
+
+.FooterMain-endereco {
+    background-color: #002e56;
+    color: #FFF;
+    width: 100%;
+    text-align: center;
+    font-size: 11px;
+    line-height: 40px;
+}
+
+.FooterMain-icon, [class^="FooterMain-icon--"] {
+    font-size: 12px;
+    a {
+        color: #333;
+    }
+    &:before {
+        .glyphicon();
+        font-size: 12px;
+    }
+}
+    .FooterMain-icon--earphone {
+        .glyphicon-earphone();
+    }
+
+    .FooterMain-icon--lock {
+        .glyphicon-lock();
+    }
+
+    .FooterMain-icon--intranet {
+        .glyphicon-lock();
+    }
+
+    .FooterMain-icon--aotopo {
+        float: right;
+        .glyphicon-chevron-up();
+    }
+
+

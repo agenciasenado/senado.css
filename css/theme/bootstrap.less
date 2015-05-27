@@ -1,0 +1,35 @@
+
+.spaced-tabs {
+  li a {
+    padding: 5px 10px;
+  }
+  > li:first-child {
+    margin-left: 10px;
+  }
+}
+
+.dropdown-menu {
+    border-radius: 0;
+    background-color: @smoke;
+    border: none;
+    border-bottom: 5px solid @azul-padrao;
+    border-top: 1px solid @cinza-medio;
+    min-width: 140px;
+    font-size: 13px;
+    > li.dropdown-header {
+        padding: 4px 15px;
+    }
+    > li > a {
+        padding: 4px 20px;
+        &:hover {
+            background: @cinza-claro;
+        }
+        > img {
+            margin-right: 5px;
+            vertical-align: text-top;
+        }
+    }
+    .divider {
+        margin: 4px 0;
+    }
+}
