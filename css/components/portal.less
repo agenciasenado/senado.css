@@ -168,14 +168,15 @@
  *     @example
  *     .PortalTopo
  *         .PortalTopo-id
- *             .hidden-xs Notícias
- *             .PortalTopo-title Rádio Senado
+ *             .PortalTopo-title
+ *                 .PortalTopo-intro.hidden-xs Notícias
+ *                 | Senado
  *         .PortalTopo-togglers.visible-xs
  *             .PortalTopo-toggler--menu
  *             .PortalTopo-toggler--search
  *         .PortalTopo-busca
- *             a.hidden-xs(href='#') Busca avançada ›
  *             form(action='search', role='search')
+ *                 a.hidden-xs(href='#') Busca avançada ›
  *                 .input-group
  *                     input.form-control(type='text')
  *                     .input-group-btn
