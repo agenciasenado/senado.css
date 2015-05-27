@@ -66,13 +66,27 @@ module.exports = function(grunt) {
                     'css/dist.css': ['css/dist.css']
                 }
             }
+        },
+        jade: {
+            compile: {
+                options: {
+                    data: {
+                        debug: false
+                    }
+                },
+                files: {
+                    "index.html": ["index.jade"],
+                    "dist.html": ["dist.jade"]
+                }
+            }
         }
     })
 
     grunt.loadNpmTasks('grunt-uncss')
     grunt.loadNpmTasks('grunt-styledown')
-    grunt.loadNpmTasks('grunt-contrib-less')
     grunt.loadNpmTasks('grunt-autoprefixer')
+    grunt.loadNpmTasks('grunt-contrib-jade')
+    grunt.loadNpmTasks('grunt-contrib-less')
     grunt.loadNpmTasks('grunt-contrib-watch')
     grunt.loadNpmTasks('grunt-contrib-cssmin')
 
