@@ -88,6 +88,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch')
     grunt.loadNpmTasks('grunt-contrib-cssmin')
 
-    grunt.registerTask('default', ['less', 'autoprefixer', 'uncss:essencial', 'cssmin:essencial'])
+    grunt.registerTask('default', ['jade', 'less', 'autoprefixer', 'uncss:essencial', 'cssmin:essencial'])
 
 }
