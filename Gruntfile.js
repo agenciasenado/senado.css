@@ -48,12 +48,12 @@ module.exports = function(grunt) {
                     ignore: ['.collapse.in', '.collapsing', '.open']
                 },
                 files: {
-                    'css/dist.css': ['index.html']
+                    'css/essencial.css': ['index.html']
                 }
             }
         },
         autoprefixer: {
-            dist: {
+            essencial: {
                 options: {
                     browsers: ['last 2 versions', 'ie 9']
                 },
@@ -63,7 +63,7 @@ module.exports = function(grunt) {
         cssmin: {
             essencial: {
                 files: {
-                    'css/dist.css': ['css/dist.css']
+                    'css/essencial.css': ['css/essencial.css']
                 }
             }
         },
@@ -74,7 +74,7 @@ module.exports = function(grunt) {
                 },
                 files: {
                     "index.html": ["index.jade"],
-                    "dist.html": ["dist.jade"]
+                    "essencial.html": ["essencial.jade"]
                 }
             }
         }
