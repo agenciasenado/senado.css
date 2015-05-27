@@ -1,4 +1,6 @@
 
+@portal-topo-height: 90px;
+
 .PortalTopo {
     .make-row();
     @media (min-width: @screen-sm-min) {
@@ -100,8 +102,8 @@
  *
  *     @example
  *     .PortalTopo-busca
- *         .hidden-xs: a(href='#') Busca avançada ›
  *         form(action='search', role='search')
+ *             .hidden-xs: a(href='#') Busca avançada ›
  *             .input-group
  *                 input.form-control(type='text')
  *                 .input-group-btn
@@ -113,7 +115,11 @@
     .make-sm-column(4);
 
     > form {
-        margin: 10px 0 0 0;
+        margin: 10px 0;
+        @media (min-width: @screen-sm-min) {
+            display: table-cell;
+            vertical-align: middle;
+        }
     }
 
     input, button {
@@ -127,8 +133,9 @@
     }
 
     @media (min-width: @screen-sm-min) {
-        display: block !important;
+        display: table!important;
         visibility: visible !important;
+        height: @portal-topo-height!important;
     }
 
 }
@@ -145,7 +152,7 @@
 }
 
 .PortalTopo-id, .PortalTopo-busca, .PortalTopo-tools {
-    height: 90px;
+    height: @portal-topo-height;
     @media (max-width: @screen-xs-max) {
         height: auto;
     }
