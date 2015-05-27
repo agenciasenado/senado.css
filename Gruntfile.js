@@ -70,9 +70,7 @@ module.exports = function(grunt) {
         jade: {
             compile: {
                 options: {
-                    data: {
-                        debug: false
-                    }
+                    pretty: true
                 },
                 files: {
                     "index.html": ["index.jade"],
