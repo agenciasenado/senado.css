@@ -43,12 +43,12 @@ module.exports = function(grunt) {
             }
         },
         uncss: {
-            dist: {
+            essencial: {
                 options : {
                     ignore: ['.collapse.in', '.collapsing', '.open']
                 },
                 files: {
-                    'css/tidy.css': ['index.html']
+                    'css/dist.css': ['index.html']
                 }
             }
         },
@@ -61,10 +61,9 @@ module.exports = function(grunt) {
             }
         },
         cssmin: {
-            target: {
+            essencial: {
                 files: {
-                    'css/styles-min.css': ['css/styles.css'],
-                    'css/tidy-min.css': ['css/tidy.css']
+                    'css/dist.css': ['css/dist.css']
                 }
             }
         }
@@ -77,6 +76,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch')
     grunt.loadNpmTasks('grunt-contrib-cssmin')
 
-    grunt.registerTask('default', ['less', 'autoprefixer', 'uncss', 'cssmin'])
+    grunt.registerTask('default', ['less', 'autoprefixer', 'uncss:essencial', 'cssmin:essencial'])
 
 }
