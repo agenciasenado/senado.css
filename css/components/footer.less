@@ -1,6 +1,5 @@
 
 .FooterMain {
-    .clearfix();
     background-color: #eee;
     margin-top: 15px;
     @media (min-width: @screen-sm-min) {
@@ -8,14 +7,11 @@
     }
 }
 
-    .FooterMain-container {
-        .container();
-    }
-
-    .FooterMain-links {
+    .FooterMain-row {
         .make-row();
         .clearfix();
     }
+
 
         .FooterMain-section {
             .make-sm-column(3)
@@ -26,8 +22,8 @@
                 font-weight: bold;
                 line-height: 1.1;
                 color: #666;
-                margin: 0;
-                padding: 15px 0 13px;
+                margin: 13px 0;
+                //padding: 15px 0 13px;
             }
 
             .FooterMain-list {
