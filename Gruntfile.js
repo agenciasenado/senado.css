@@ -7,9 +7,6 @@ module.exports = function(grunt) {
         less: {
             development: {
                 options: {
-                    compress: true,
-                    cleancss: true,
-                    optimization: 2,
                     sourceMap: true,
                     sourceMapFilename: 'css/styles.css.map',
                     sourceMapURL: 'styles.css.map'
@@ -24,15 +21,21 @@ module.exports = function(grunt) {
                 files: ['**/*.less'],
                 tasks: ['less'],
                 options: {
-                    spawn: false,
-                    livereload: true
+                    //spawn: false
                 }
+            },
+            livereload: {
+                options: {
+                    livereload: true,
+                    spawn: false
+                },
+                files: ['**/*.css']
             },
             jade: {
                 files: ['**/*.jade'],
                 tasks: ['jade'],
                 options: {
-                    spawn: false
+                    //spawn: false
                 }
             }
         },
