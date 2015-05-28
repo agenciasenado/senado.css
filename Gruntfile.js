@@ -36,7 +36,7 @@ module.exports = function(grunt) {
                     livereload: true,
                     spawn: false
                 },
-                files: ['**/*.css']
+                files: ['**/*.css', '**/*.html']
             }
         },
         styledown: {
@@ -119,9 +119,11 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-cssmin')
     grunt.loadNpmTasks('grunt-contrib-connect')
 
-    grunt.registerTask('dev', ['connect', 'concurrent'])
     grunt.registerTask('default', [
         'jade', 'less', 'autoprefixer', 'uncss:essencial', 'cssmin:essencial', 'styledown'
+    ])
+    grunt.registerTask('dev', [
+        'jade', 'less', 'connect', 'concurrent'
     ])
 
 }
