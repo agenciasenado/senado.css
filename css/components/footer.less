@@ -17,40 +17,40 @@
             .make-sm-column(3)
         }
 
-            .FooterMain-title {
-                font-size: 13px;
-                font-weight: bold;
-                line-height: 1.1;
-                color: #666;
-                margin: 13px 0;
-                //padding: 15px 0 13px;
+    .FooterMain-list {
+        &:extend(.list-unstyled);
+        line-height: 20px;
+        font-size: 12px;
+        color: #666;
+        @media (max-width: @screen-xs-max) {
+            border-bottom: 1px solid #fff;
+            margin: 0 10px;
+            &:last-child {
+                border: none;
             }
-
-            .FooterMain-list {
-                &:extend(.list-unstyled);
-                line-height: 20px;
-                font-size: 12px;
-                color: #666;
-                @media (max-width: @screen-xs-max) {
-                    border-bottom: 1px solid #fff;
-                    margin: 0 10px;
-                    &:last-child {
-                        border: none;
-                    }
+        }
+        & > dd {
+            line-height: inherit;
+            & > a {
+                &, &:visited, &:focus, &:hover {
+                    color: #333;
+                    font-style: normal;
+                    font-weight: normal;
+                    text-decoration: none;
                 }
-                & > li > a {
-                    &, &:visited, &:focus, &:hover {
-                        color: #333;
-                        font-style: normal;
-                        font-weight: normal;
-                        text-decoration: none;
-                    }
-                    &:hover {
-                        text-decoration: underline;
-                    }
+                &:hover {
+                    text-decoration: underline;
                 }
             }
-
+        }
+        & > dt {
+            font-size: 13px;
+            font-weight: bold;
+            line-height: inherit;
+            color: #666;
+            margin: 10px 0;
+        }
+    }
 .FooterMain-end {
     margin-top: 5px;
     border-top: 1px solid #fff;
