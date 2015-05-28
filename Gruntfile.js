@@ -105,7 +105,7 @@ module.exports = function(grunt) {
             options: {
                 logConcurrentOutput: true,
             },
-            styles: ['watch:styles', 'watch:livereload']
+            styles: ['watch:styles', 'watch:livereload', 'watch:jade']
         }
     })
 
