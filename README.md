@@ -2,11 +2,9 @@
 
 > conjunto de componentes `less` e guia de estilo do portal senado.noticias
 
-----
 ## pré-requisitos
 * [node](https://iojs.org)
 * grunt (`npm -g install grunt-cli`)
-
 
 ## instalação
 
@@ -22,6 +20,20 @@ Para gerar os arquivos de distribuição, é necessário a instalação do grunt
 
 Os seguintes arquivos serão gerados:
 
-* styles.css: combinado do bootstrap + todos os componentes
-* essencial.css: combinado das classes necessárias para utilização do topo, navegação e rodapé
-* index.html: markup dos componentes essenciais.
+* _styles.css_: combinado do bootstrap + todos os componentes
+* _essencial.css_: combinado das classes necessárias para utilização do topo, navegação e rodapé
+* _index.html_: markup dos componentes essenciais.
+
+## desenvolvimento
+Para compilar os arquivos .less automaticamente ao editá-los execute:
+
+    grunt watch
+
+
+## problemas comuns
+### Configurações de proxy
+O `npm` no Windows não enxerga as configurações de proxy automaticamente. Para configurar utilize:
+
+    npm config set proxy http://user:password@host:port
+    npm config set https.proxy http://user:password@host:port
+    
