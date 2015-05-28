@@ -31,14 +31,14 @@ module.exports = function(grunt) {
         styledown: {
             build: {
                 files: {
-                    'docs/styleguide/index.html': ['**/css/**/*.less']
+                    'styleguide/index.html': ['**/css/**/*.less']
                 },
                 options: {
-                    css: '../senado/radio/static/css/styles.css',
-                    config: 'docs/styleguide/config.md',
-                    sg_css: 'docs/styleguide/styledown.css',
-                    sg_js: 'docs/styleguide/styledown.js',
-                    title: 'Rádio Senado'
+                    css: 'css/styles.css',
+                    config: 'styleguide/config.md',
+                    sg_css: 'styleguide/styledown.css',
+                    sg_js: 'styleguide/styledown.js',
+                    title: 'Senado.CSS'
                 }
             }
         },
