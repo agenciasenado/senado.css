@@ -22,8 +22,8 @@
     @media (max-width: @screen-xs-max) {
         margin-bottom: 0;
     }
-
 }
+
 
 .NavGlobal-container {
     .container();
@@ -33,9 +33,18 @@
     }
 }
 
+    .NavGlobal-logo {
+        border: 1px solid transparent; // forçar centralização
+        > img {
+            vertical-align: middle;
+        }
+    }
+
 .NavGlobal-toggle {
     color: #B2C0CE;
-    &:hover, &:active, &:focus {
+    cursor: pointer;
+    font-size: 14px;
+    &:hover, &:active, &:focus, &:visited {
         color: #fff;
         text-decoration: none;
     }
@@ -53,8 +62,10 @@
     border-bottom: none;
     box-shadow: none;
     top: 42px;
-    margin-top: 0;
-    padding: 5px 15px;
+    margin-top: 9px;
+    padding: 5px 20px;
+    line-height: 16px;
+    border-top: none;
     > li > a {
         padding: 6px 0;
         font-size: 12px;
