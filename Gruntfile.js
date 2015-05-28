@@ -77,7 +77,8 @@ module.exports = function(grunt) {
                     keepSpecialComments: 0
                 },
                 files: {
-                    'css/essencial.css': ['css/essencial.css']
+                    'css/essencial.css': ['css/essencial.css'],
+                    'css/dist.css': ['css/styles.css']
                 }
             }
         },
