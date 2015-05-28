@@ -72,7 +72,7 @@ module.exports = function(grunt) {
             }
         },
         cssmin: {
-            essencial: {
+            dist: {
                 options : {
                     keepSpecialComments: 0
                 },
@@ -120,7 +120,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-connect')
 
     grunt.registerTask('default', [
-        'jade', 'less', 'autoprefixer', 'uncss:essencial', 'cssmin:essencial', 'styledown'
+        'jade', 'less', 'autoprefixer', 'uncss:essencial', 'cssmin', 'styledown'
     ])
     grunt.registerTask('dev', [
         'jade', 'less', 'connect', 'concurrent'
