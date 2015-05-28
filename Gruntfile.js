@@ -62,6 +62,9 @@ module.exports = function(grunt) {
         },
         cssmin: {
             essencial: {
+                options : {
+                    keepSpecialComments: 0
+                },
                 files: {
                     'css/essencial.css': ['css/essencial.css']
                 }
