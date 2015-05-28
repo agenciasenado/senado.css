@@ -24,7 +24,15 @@ module.exports = function(grunt) {
                 files: ['**/*.less'],
                 tasks: ['less'],
                 options: {
-                    nospawn: true
+                    spawn: false,
+                    livereload: true
+                }
+            },
+            jade: {
+                files: ['**/*.jade'],
+                tasks: ['jade'],
+                options: {
+                    spawn: false
                 }
             }
         },
