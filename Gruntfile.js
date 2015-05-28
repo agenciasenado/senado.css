@@ -21,7 +21,14 @@ module.exports = function(grunt) {
                 files: ['**/*.less'],
                 tasks: ['less'],
                 options: {
-                    //spawn: false
+                    spawn: false
+                }
+            },
+            jade: {
+                files: ['**/*.jade'],
+                tasks: ['jade'],
+                options: {
+                    spawn: false
                 }
             },
             livereload: {
@@ -30,13 +37,6 @@ module.exports = function(grunt) {
                     spawn: false
                 },
                 files: ['**/*.css']
-            },
-            jade: {
-                files: ['**/*.jade'],
-                tasks: ['jade'],
-                options: {
-                    //spawn: false
-                }
             }
         },
         styledown: {
@@ -91,17 +91,36 @@ module.exports = function(grunt) {
                     "essencial.html": ["essencial.jade"]
                 }
             }
+        },
+        connect: {
+            server: {
+                options: {
+                    port: 8000,
+                    hostname: '*'
+                }
+            }
+        },
+        concurrent: {
+            options: {
+                logConcurrentOutput: true,
+            },
+            styles: ['watch:styles', 'watch:livereload']
         }
     })
 
     grunt.loadNpmTasks('grunt-uncss')
     grunt.loadNpmTasks('grunt-styledown')
+    grunt.loadNpmTasks('grunt-concurrent')
     grunt.loadNpmTasks('grunt-autoprefixer')
     grunt.loadNpmTasks('grunt-contrib-jade')
     grunt.loadNpmTasks('grunt-contrib-less')
     grunt.loadNpmTasks('grunt-contrib-watch')
     grunt.loadNpmTasks('grunt-contrib-cssmin')
+    grunt.loadNpmTasks('grunt-contrib-connect')
 
-    grunt.registerTask('default', ['jade', 'less', 'autoprefixer', 'uncss:essencial', 'cssmin:essencial'])
+    grunt.registerTask('dev', ['connect', 'concurrent'])
+    grunt.registerTask('default', [
+        'jade', 'less', 'autoprefixer', 'uncss:essencial', 'cssmin:essencial', 'styledown'
+    ])
 
 }
