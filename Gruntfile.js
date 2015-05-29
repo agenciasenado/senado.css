@@ -152,8 +152,11 @@ module.exports = function(grunt) {
     grunt.registerTask('default', [
         'build', 'styledown'
     ])
+    grunt.registerTask('server', [
+        'connect', 'concurrent'
+    ])
     grunt.registerTask('dev', [
-        'build', 'connect', 'concurrent'
+        'build', 'server'
     ])
 
 }
