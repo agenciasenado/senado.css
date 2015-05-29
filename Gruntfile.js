@@ -78,13 +78,16 @@ module.exports = function(grunt) {
             }
         },
         cssmin: {
+            options : {
+                keepSpecialComments: 0,
+                rebase: false
+            },
             dist: {
                 options : {
-                    keepSpecialComments: 0
+                    rebase: true
                 },
                 files: {
-                    'dist/essencial.css': ['dist/essencial.css'],
-                    'dist/styles.css': ['dist/styles.css']
+                    'dist/fab.css' : 'dist/essencial.css'
                 }
             }
         },
@@ -94,11 +97,10 @@ module.exports = function(grunt) {
                     pretty: true
                 },
                 files: {
-                    "index.html": ["index.jade"],
-                    "essencial.html": ["essencial.jade"],
+                    "index.html": ["index.jade"]
                 }
             },
-            dist: {
+            essencial: {
                 options: {
                     pretty: true,
                     data : {
@@ -106,9 +108,9 @@ module.exports = function(grunt) {
                     }
                 },
                 files: {
-                    "dist/navglobal.html": ["jade/navglobal.jade"],
-                    "dist/portaltopo.html": ["jade/portaltopo.jade"],
-                    "dist/footer.html": ["jade/footer.jade"]
+                    "dist/navglobal.utf8.html": ["jade/navglobal.jade"],
+                    "dist/footer.utf8.html": ["jade/footer.jade"],
+                    "dist/portaltopo.html": ["jade/portaltopo.essencial.jade"]
                 }
             }
         },
@@ -133,10 +135,34 @@ module.exports = function(grunt) {
                 logConcurrentOutput: true,
             },
             styles: ['watch:styles', 'watch:livereload', 'watch:jade']
+        },
+        charset: {
+            dist : {
+                options: {
+                    from: 'utf8',
+                    to: 'iso-8859-1',
+                },
+                files: [{
+                    dest: 'dist/footer.iso88591.html',
+                    src: 'dist/footer.utf8.html'
+                }, {
+                    dest: 'dist/navglobal.iso88591.html',
+                    src: 'dist/footer.utf8.html'
+                }]
+            }
+        },
+        css_url_replace: {
+            options: {
+                staticRoot: './'
+            },
+            files: {
+                'a.css': ['dist/essencial.css']
+            }
         }
     })
 
     grunt.loadNpmTasks('grunt-uncss')
+    grunt.loadNpmTasks('grunt-charset')
     grunt.loadNpmTasks('grunt-styledown')
     grunt.loadNpmTasks('grunt-concurrent')
     grunt.loadNpmTasks('grunt-autoprefixer')
@@ -145,9 +171,11 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch')
     grunt.loadNpmTasks('grunt-contrib-cssmin')
     grunt.loadNpmTasks('grunt-contrib-connect')
+    grunt.loadNpmTasks('grunt-css-url-replace')
 
     grunt.registerTask('build', [
         'jade'
+        ,'charset'
         ,'less:styles'
         ,'autoprefixer'
         ,'uncss:essencial'
