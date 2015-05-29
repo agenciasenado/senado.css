@@ -51,7 +51,7 @@
 *           li: a TV Senado
 */
 // endregion
-@secundaria-height: 34px;
+@secundaria-height: 30px;
 .Nav--secundaria {
     border-top: 1px solid #CCC;
     background-color: #f7f7f7;
@@ -60,12 +60,13 @@
     > ul > li {
         line-height: @secundaria-height;
         &:not(:last-child):after {
+            font-size: 14px;
             content: ' ';
-            height: 14px;
             border-left: 1px solid #ccc;
             vertical-align: middle;
         }
         > a {
+            font-size: 13px;
             float:left;
             color: #3E6892;
             padding: 0 15px;
