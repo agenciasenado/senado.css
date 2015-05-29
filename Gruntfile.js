@@ -8,16 +8,16 @@ module.exports = function(grunt) {
             styles: {
                 options: {
                     sourceMap: true,
-                    sourceMapFilename: 'css/styles.css.map',
+                    sourceMapFilename: 'dist/styles.css.map',
                     sourceMapURL: 'styles.css.map'
                 },
                 files: {
-                    "css/styles.css": "css/styles.less"
+                    "dist/styles.css": "css/styles.less"
                 }
             },
             dist: {
                 files: {
-                    "css/essencial.css": "css/dist.less"
+                    "dist/essencial.css": "css/dist.less"
                 }
             }
         },
@@ -50,7 +50,7 @@ module.exports = function(grunt) {
                     'styleguide/index.html': ['**/css/**/*.less']
                 },
                 options: {
-                    css: 'css/styles.css',
+                    css: 'dist/styles.css',
                     config: 'styleguide/config.md',
                     sg_css: 'styleguide/styledown.css',
                     sg_js: 'styleguide/styledown.js',
@@ -64,7 +64,15 @@ module.exports = function(grunt) {
                     ignore: ['.collapse.in', '.collapsing', '.open']
                 },
                 files: {
-                    'css/essencial.css': ['index.html']
+                    'dist/essencial.css': ['index.html']
+                }
+            },
+            dist: {
+                options : {
+                    ignore: ['.collapse.in', '.collapsing', '.open']
+                },
+                files: {
+                    'dist/essencial.css': ['essencial.html']
                 }
             }
         },
@@ -73,7 +81,7 @@ module.exports = function(grunt) {
                 options: {
                     browsers: ['last 2 versions', 'ie 9']
                 },
-                src: 'css/styles.css'
+                src: 'dist/styles.css'
             }
         },
         cssmin: {
@@ -82,8 +90,8 @@ module.exports = function(grunt) {
                     keepSpecialComments: 0
                 },
                 files: {
-                    'css/essencial.css': ['css/essencial.css'],
-                    'css/styles.css': ['css/styles.css']
+                    'dist/essencial.css': ['dist/essencial.css'],
+                    'dist/styles.css': ['dist/styles.css']
                 }
             }
         },
@@ -133,7 +141,13 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-connect')
 
     grunt.registerTask('build', [
-        'jade', 'less:styles', 'autoprefixer', 'uncss', 'less:dist', 'cssmin'
+        'jade'
+        ,'less:styles'
+        ,'autoprefixer'
+        ,'uncss:essencial'
+        ,'less:dist'
+        ,'uncss:dist'
+        ,'cssmin'
     ])
     grunt.registerTask('default', [
         'build', 'styledown'
