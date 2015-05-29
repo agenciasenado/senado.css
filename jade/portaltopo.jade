@@ -1,46 +1,50 @@
 
-.sf-container
+.sf-component
 
-    .PortalTopo
+    .sf-container
 
-        .PortalTopo-id
-            .PortalTopo-title
-                .PortalTopo-intro.hidden-xs Notícias
-                | Senado Federal
+        .PortalTopo
 
-        .PortalTopo-togglers.visible-xs
-            .PortalTopo-toggler--menu(data-toggle='collapse', data-target='.Nav--principal')
-            .PortalTopo-toggler--search(data-toggle='collapse', data-target='.PortalTopo-busca')
+            .PortalTopo-id
+                .PortalTopo-title
+                    .PortalTopo-intro.hidden-xs Notícias
+                    | Senado Federal
 
-        .PortalTopo-tools
+            .PortalTopo-togglers.visible-xs
+                .PortalTopo-toggler--menu(data-toggle='collapse', data-target='.Nav--principal')
+                .PortalTopo-toggler--search(data-toggle='collapse', data-target='.PortalTopo-busca')
 
-        .PortalTopo-busca.collapse
-            form(action='search', role='search')
-                p.hidden-xs: a(href='#') Busca avançada ›
-                .input-group
-                    input.form-control(type='text', name='SearchableText', autocomplete='off')
-                    .input-group-btn
-                        button.btn.btn-default(type='submit') Buscar
+            .PortalTopo-tools
 
-    .sf-row
+            .PortalTopo-busca.collapse
+                form(action='search', role='search')
+                    p.hidden-xs: a(href='#') Busca avançada ›
+                    .input-group
+                        input.form-control(type='text', name='SearchableText', autocomplete='off')
+                        .input-group-btn
+                            button.btn.btn-default(type='submit') Buscar
 
-        nav.Nav--principal.collapse(role="navigation")
-            ul.nav.navbar-nav
-                li: a(href='#') Início
-                li: a(href='#') Notícias
-                li: a(href='#') Plenário
-                li: a(href='#') Conveniadas
-                li: a(href='#') Central de Áudio
-                li.dropdown.open
-                    a.dropdown-toggle(href='#', data-toggle='dropdown')
-                        = 'Serviços '
-                        span.caret
-                    ul.dropdown-menu
-                        li: a(href='#') Lorem Ipsum
-                        li: a(href='#') Lorem Ipsum
+        .sf-row
 
-        nav.Nav--secundaria.hidden-xs
-            ul.nav.navbar-nav.pull-right
-                li: a(href='http://www12.senado.leg.br/jornal') Jornal do Senado
-                li: a(href='http://www12.senado.gov.br/noticias') Senado Notícias
-                li: a(href='http://www.senado.leg.br/noticias/tv') TV Senado
+            nav.Nav--principal.collapse(role="navigation")
+                ul.nav.navbar-nav
+                    li: a(href='#') Início
+                    li: a(href='#') Notícias
+                    li: a(href='#') Plenário
+                    li: a(href='#') Conveniadas
+                    li: a(href='#') Central de Áudio
+                    //- os dropdowns precisam ficar aberto no momento de gerar o uncss e
+                    //- fechado na hora do build
+                    li.dropdown(class=(dist ? '' : 'open'))
+                        a.dropdown-toggle(href='#', data-toggle='dropdown')
+                            = 'Serviços '
+                            span.caret
+                        ul.dropdown-menu
+                            li: a(href='#') Lorem Ipsum
+                            li: a(href='#') Lorem Ipsum
+
+            nav.Nav--secundaria.hidden-xs
+                ul.nav.navbar-nav.pull-right
+                    li: a(href='http://www12.senado.leg.br/jornal') Jornal do Senado
+                    li: a(href='http://www12.senado.gov.br/noticias') Senado Notícias
+                    li: a(href='http://www.senado.leg.br/noticias/tv') TV Senado
