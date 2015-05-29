@@ -152,10 +152,9 @@ module.exports = function(grunt) {
         ,'autoprefixer'
         ,'uncss:essencial'
         ,'less:dist'
-        ,'cssmin'
     ])
     grunt.registerTask('default', [
-        'build', 'styledown'
+        'build' ,'cssmin', 'styledown'
     ])
     grunt.registerTask('server', [
         'connect', 'concurrent'
