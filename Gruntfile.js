@@ -24,14 +24,14 @@ module.exports = function(grunt) {
         watch: {
             styles: {
                 files: ['**/*.less'],
-                tasks: ['less:styles', 'autoprefixer', 'uncss', 'less:dist'],
+                tasks: ['less:styles', 'autoprefixer', 'uncss:essencial', 'less:dist'],
                 options: {
                     spawn: false
                 }
             },
             jade: {
                 files: ['**/*.jade'],
-                tasks: ['jade'],
+                tasks: ['jade:dev'],
                 options: {
                     spawn: false
                 }
@@ -66,14 +66,6 @@ module.exports = function(grunt) {
                 files: {
                     'dist/essencial.css': ['index.html']
                 }
-            },
-            dist: {
-                options : {
-                    ignore: ['.collapse.in', '.collapsing', '.open']
-                },
-                files: {
-                    'dist/essencial.css': ['essencial.html']
-                }
             }
         },
         autoprefixer: {
@@ -96,13 +88,26 @@ module.exports = function(grunt) {
             }
         },
         jade: {
-            compile: {
+            dev: {
                 options: {
                     pretty: true
                 },
                 files: {
                     "index.html": ["index.jade"],
-                    "essencial.html": ["essencial.jade"]
+                    "essencial.html": ["essencial.jade"],
+                }
+            },
+            dist: {
+                options: {
+                    pretty: true,
+                    data : {
+                        dist: true
+                    }
+                },
+                files: {
+                    "dist/navglobal.html": ["jade/navglobal.jade"],
+                    "dist/portaltopo.html": ["jade/portaltopo.jade"],
+                    "dist/footer.html": ["jade/footer.jade"]
                 }
             }
         },
@@ -146,7 +151,6 @@ module.exports = function(grunt) {
         ,'autoprefixer'
         ,'uncss:essencial'
         ,'less:dist'
-        ,'uncss:dist'
         ,'cssmin'
     ])
     grunt.registerTask('default', [
