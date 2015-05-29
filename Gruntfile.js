@@ -21,6 +21,30 @@ module.exports = function(grunt) {
                 }
             }
         },
+        jade: {
+            dev: {
+                options: {
+                    pretty: true
+                },
+                files: {
+                    "index.html": ["index.jade"],
+                    "essencial.html": ["essencial.jade"]
+                }
+            },
+            essencial: {
+                options: {
+                    pretty: true,
+                    data : {
+                        dist: true
+                    }
+                },
+                files: {
+                    "dist/essencial/utf8/navglobal.html": ["jade/navglobal.jade"],
+                    "dist/essencial/utf8/footer.html": ["jade/footer.jade"],
+                    "dist/essencial/utf8/portaltopo.html": ["jade/portaltopo.essencial.jade"]
+                }
+            }
+        },
         watch: {
             styles: {
                 files: ['**/*.less'],
@@ -91,30 +115,6 @@ module.exports = function(grunt) {
                 }
             }
         },
-        jade: {
-            dev: {
-                options: {
-                    pretty: true
-                },
-                files: {
-                    "index.html": ["index.jade"],
-                    "essencial.html": ["essencial.jade"]
-                }
-            },
-            essencial: {
-                options: {
-                    pretty: true,
-                    data : {
-                        dist: true
-                    }
-                },
-                files: {
-                    "dist/essencial/utf8/navglobal.html": ["jade/navglobal.jade"],
-                    "dist/essencial/utf8/footer.html": ["jade/footer.jade"],
-                    "dist/essencial/utf8/portaltopo.html": ["jade/portaltopo.essencial.jade"]
-                }
-            }
-        },
         connect: {
             server: {
                 options: {
@@ -138,7 +138,7 @@ module.exports = function(grunt) {
             styles: ['watch:styles', 'watch:livereload', 'watch:jade']
         },
         charset: {
-            dist : {
+            essencial : {
                 options: {
                     from: 'utf8',
                     to: 'iso-8859-1',
