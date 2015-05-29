@@ -15,7 +15,7 @@ module.exports = function(grunt) {
                     "dist/styles.css": "css/styles.less"
                 }
             },
-            dist: {
+            essencial: {
                 files: {
                     "dist/essencial.css": "css/essencial.less"
                 }
@@ -24,7 +24,7 @@ module.exports = function(grunt) {
         watch: {
             styles: {
                 files: ['**/*.less'],
-                tasks: ['less:styles', 'autoprefixer', 'uncss:essencial', 'less:dist'],
+                tasks: ['less:styles', 'autoprefixer', 'uncss:essencial', 'less:essencial'],
                 options: {
                     spawn: false
                 }
@@ -180,10 +180,14 @@ module.exports = function(grunt) {
         ,'less:styles'
         ,'autoprefixer'
         ,'uncss:essencial'
-        ,'less:dist'
+        ,'less:essencial'
+    ])
+
+    grunt.registerTask('essencial', [
+        'build' ,'cssmin'
     ])
     grunt.registerTask('default', [
-        'build' ,'cssmin', 'styledown'
+        'essencial', 'styledown'
     ])
     grunt.registerTask('server', [
         'connect', 'concurrent'
