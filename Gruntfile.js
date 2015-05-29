@@ -87,7 +87,7 @@ module.exports = function(grunt) {
                     rebase: true
                 },
                 files: {
-                    'dist/fab.css' : 'dist/essencial.css'
+                    'dist/essencial.css' : 'dist/essencial.css'
                 }
             }
         },
