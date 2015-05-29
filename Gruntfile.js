@@ -17,7 +17,7 @@ module.exports = function(grunt) {
             },
             dist: {
                 files: {
-                    "dist/essencial.css": "css/dist.less"
+                    "dist/essencial.css": "css/essencial.less"
                 }
             }
         },
@@ -79,7 +79,7 @@ module.exports = function(grunt) {
         },
         cssmin: {
             options : {
-                keepSpecialComments: 0,
+                keepSpecialComments: 1,
                 rebase: false
             },
             dist: {
@@ -87,7 +87,7 @@ module.exports = function(grunt) {
                     rebase: true
                 },
                 files: {
-                    'dist/essencial.css' : 'dist/essencial.css'
+                    'dist/dist.css' : 'dist/essencial.css'
                 }
             }
         },
@@ -97,7 +97,8 @@ module.exports = function(grunt) {
                     pretty: true
                 },
                 files: {
-                    "index.html": ["index.jade"]
+                    "index.html": ["index.jade"],
+                    "essencial.html": ["essencial.jade"]
                 }
             },
             essencial: {
