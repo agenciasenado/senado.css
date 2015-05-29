@@ -87,7 +87,7 @@ module.exports = function(grunt) {
                     rebase: true
                 },
                 files: {
-                    'dist/dist.css' : 'dist/essencial.css'
+                    'dist/essencial/dist.css' : 'dist/essencial.css'
                 }
             }
         },
@@ -109,9 +109,9 @@ module.exports = function(grunt) {
                     }
                 },
                 files: {
-                    "dist/navglobal.utf8.html": ["jade/navglobal.jade"],
-                    "dist/footer.utf8.html": ["jade/footer.jade"],
-                    "dist/portaltopo.html": ["jade/portaltopo.essencial.jade"]
+                    "dist/essencial/navglobal.utf8.html": ["jade/navglobal.jade"],
+                    "dist/essencial/footer.utf8.html": ["jade/footer.jade"],
+                    "dist/essencial/portaltopo.html": ["jade/portaltopo.essencial.jade"]
                 }
             }
         },
