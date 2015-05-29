@@ -9,7 +9,8 @@ module.exports = function(grunt) {
                 options: {
                     sourceMap: true,
                     sourceMapFilename: 'dist/styles.css.map',
-                    sourceMapURL: 'styles.css.map'
+                    sourceMapURL: 'styles.css.map',
+                    sourceMapRootpath: '../'
                 },
                 files: {
                     "dist/styles.css": "css/styles.less"
@@ -39,9 +40,9 @@ module.exports = function(grunt) {
                     }
                 },
                 files: {
-                    "dist/essencial/utf8/navglobal.html": ["jade/navglobal.jade"],
-                    "dist/essencial/utf8/footer.html": ["jade/footer.jade"],
-                    "dist/essencial/utf8/portaltopo.html": ["jade/portaltopo.essencial.jade"]
+                    "dist/essencial/utf-8/navglobal.html": ["jade/navglobal.jade"],
+                    "dist/essencial/utf-8/footer.html": ["jade/footer.jade"],
+                    "dist/essencial/utf-8/portaltopo.html": ["jade/portaltopo.essencial.jade"]
                 }
             }
         },
@@ -144,14 +145,14 @@ module.exports = function(grunt) {
                     to: 'iso-8859-1',
                 },
                 files: [{
-                    dest: 'dist/essencial/iso88591/footer.html',
-                    src: 'dist/essencial/utf8/footer.html'
+                    dest: 'dist/essencial/iso-8859-1/footer.html',
+                    src: 'dist/essencial/utf-8/footer.html'
                 }, {
-                    dest: 'dist/essencial/iso88591/navglobal.html',
-                    src: 'dist/essencial/utf8/navglobal.html'
+                    dest: 'dist/essencial/iso-8859-1/navglobal.html',
+                    src: 'dist/essencial/utf-8/navglobal.html'
                 }, {
-                    dest: 'dist/essencial/iso88591/portaltopo.html',
-                    src: 'dist/essencial/utf8/portaltopo.html'
+                    dest: 'dist/essencial/iso-8859-1/portaltopo.html',
+                    src: 'dist/essencial/utf-8/portaltopo.html'
                 }]
             }
         }
