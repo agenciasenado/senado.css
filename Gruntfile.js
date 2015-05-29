@@ -19,7 +19,7 @@ module.exports = function(grunt) {
         watch: {
             styles: {
                 files: ['**/*.less'],
-                tasks: ['less'],
+                tasks: ['less', 'uncss'],
                 options: {
                     spawn: false
                 }
@@ -78,7 +78,7 @@ module.exports = function(grunt) {
                 },
                 files: {
                     'css/essencial.css': ['css/essencial.css'],
-                    'css/dist.css': ['css/styles.css']
+                    'css/styles.css': ['css/styles.css']
                 }
             }
         },
@@ -97,7 +97,15 @@ module.exports = function(grunt) {
             server: {
                 options: {
                     port: 8000,
-                    hostname: '*'
+                    hostname: '*',
+                    middleware: function(connect, options, middlewares) {
+                        middlewares.unshift(function(req, res, next) {
+                            res.setHeader('Access-Control-Allow-Origin', '*')
+                            res.setHeader('Access-Control-Allow-Methods', '*')
+                            next()
+                        })
+                        return middlewares
+                    }
                 }
             }
         },
