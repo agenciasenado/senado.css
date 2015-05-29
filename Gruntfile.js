@@ -5,7 +5,7 @@ module.exports = function(grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         less: {
-            development: {
+            styles: {
                 options: {
                     sourceMap: true,
                     sourceMapFilename: 'css/styles.css.map',
@@ -14,12 +14,17 @@ module.exports = function(grunt) {
                 files: {
                     "css/styles.css": "css/styles.less"
                 }
+            },
+            dist: {
+                files: {
+                    "css/essencial.css": "css/dist.less"
+                }
             }
         },
         watch: {
             styles: {
                 files: ['**/*.less'],
-                tasks: ['less', 'uncss'],
+                tasks: ['less:styles', 'autoprefixer', 'uncss', 'less:dist'],
                 options: {
                     spawn: false
                 }
@@ -127,11 +132,14 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-cssmin')
     grunt.loadNpmTasks('grunt-contrib-connect')
 
+    grunt.registerTask('build', [
+        'jade', 'less:styles', 'autoprefixer', 'uncss', 'less:dist', 'cssmin'
+    ])
     grunt.registerTask('default', [
-        'jade', 'less', 'autoprefixer', 'uncss:essencial', 'cssmin', 'styledown'
+        'build', 'styledown'
     ])
     grunt.registerTask('dev', [
-        'jade', 'less', 'connect', 'concurrent'
+        'build', 'connect', 'concurrent'
     ])
 
 }
