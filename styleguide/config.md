@@ -5,7 +5,7 @@
     <meta name='viewport' content='width=device-width, initial-scale=1' />
     <script src='styledown.js'></script>
     <link rel='stylesheet' href='styledown.css' />
-    <link rel='stylesheet' href='../css/styles.css' />
+    <link rel='stylesheet' href='../dist/styles.css' />
     <style>
     .sg-canvas { position: relative; }
     .sg-canvas::after {
@@ -18,3 +18,4 @@
 ### Body
 
     <div class='sg-container container' sg-content></div>
+    <script src="//localhost:35729/livereload.js"></script>
