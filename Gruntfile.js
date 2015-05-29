@@ -151,14 +151,6 @@ module.exports = function(grunt) {
                     src: 'dist/footer.utf8.html'
                 }]
             }
-        },
-        css_url_replace: {
-            options: {
-                staticRoot: './'
-            },
-            files: {
-                'a.css': ['dist/essencial.css']
-            }
         }
     })
 
@@ -172,7 +164,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch')
     grunt.loadNpmTasks('grunt-contrib-cssmin')
     grunt.loadNpmTasks('grunt-contrib-connect')
-    grunt.loadNpmTasks('grunt-css-url-replace')
 
     grunt.registerTask('build', [
         'jade'
