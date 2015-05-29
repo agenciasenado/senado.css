@@ -109,9 +109,9 @@ module.exports = function(grunt) {
                     }
                 },
                 files: {
-                    "dist/essencial/navglobal.utf8.html": ["jade/navglobal.jade"],
-                    "dist/essencial/footer.utf8.html": ["jade/footer.jade"],
-                    "dist/essencial/portaltopo.html": ["jade/portaltopo.essencial.jade"]
+                    "dist/essencial/utf8/navglobal.html": ["jade/navglobal.jade"],
+                    "dist/essencial/utf8/footer.html": ["jade/footer.jade"],
+                    "dist/essencial/utf8/portaltopo.html": ["jade/portaltopo.essencial.jade"]
                 }
             }
         },
@@ -144,11 +144,14 @@ module.exports = function(grunt) {
                     to: 'iso-8859-1',
                 },
                 files: [{
-                    dest: 'dist/footer.iso88591.html',
-                    src: 'dist/footer.utf8.html'
+                    dest: 'dist/essencial/iso88591/footer.html',
+                    src: 'dist/essencial/utf8/footer.html'
                 }, {
-                    dest: 'dist/navglobal.iso88591.html',
-                    src: 'dist/footer.utf8.html'
+                    dest: 'dist/essencial/iso88591/navglobal.html',
+                    src: 'dist/essencial/utf8/navglobal.html'
+                }, {
+                    dest: 'dist/essencial/iso88591/portaltopo.html',
+                    src: 'dist/essencial/utf8/portaltopo.html'
                 }]
             }
         }
