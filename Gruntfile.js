@@ -28,8 +28,7 @@ module.exports = function(grunt) {
                     pretty: true
                 },
                 files: {
-                    "index.html": ["index.jade"],
-                    "essencial.html": ["essencial.jade"]
+                    "index.html": ["index.jade"]
                 }
             },
             essencial: {
@@ -105,7 +104,6 @@ module.exports = function(grunt) {
         cssmin: {
             options : {
                 keepSpecialComments: 1,
-                rebase: false
             },
             dist: {
                 options : {
