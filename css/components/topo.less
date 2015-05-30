@@ -27,15 +27,24 @@
 
 .NavGlobal-container {
     .container();
-    font-size: 14px;
     @media (min-width: @screen-sm-min) {
         padding-left: 0;
         padding-right: 0;
     }
+    text-align: center;
+    font-size: 12px;
 }
 
+    .NavGlobal-middle {
+        > a {
+            color: #fff;
+        }
+        @media (max-width: @screen-xs-min) {
+            display: none;
+        }
+    }
+
     .NavGlobal-logo {
-        border: 1px solid transparent; // forçar centralização
         > img {
             vertical-align: middle;
         }
@@ -44,6 +53,7 @@
     .NavGlobal-toggle {
         color: #B2C0CE;
         cursor: pointer;
+        font-size: 14px;
         &:hover, &:active, &:focus, &:visited {
             color: #fff;
             text-decoration: none;
