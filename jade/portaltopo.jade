@@ -7,7 +7,7 @@
 
             .PortalTopo-id
                 .PortalTopo-title
-                    .PortalTopo-intro.hidden-xs Notícias
+                    .PortalTopo-intro.sf-hidden-xs Notícias
                     | Senado Federal
 
             .PortalTopo-togglers.visible-xs
@@ -18,7 +18,7 @@
 
             .PortalTopo-busca.collapse
                 form(action='search', role='search')
-                    p.hidden-xs: a(href='#') Busca avançada ›
+                    p.sf-hidden-xs: a(href='#') Busca avançada ›
                     .input-group
                         input.form-control(type='text', name='SearchableText', autocomplete='off')
                         .input-group-btn
@@ -26,7 +26,7 @@
 
         .sf-row
 
-            nav.Nav--principal.collapse(role="navigation")
+            nav.Nav--principal.navbar-collapse.collapse(role="navigation")
                 ul.nav.navbar-nav
                     li: a(href='#') Início
                     li: a(href='#') Notícias
@@ -43,7 +43,7 @@
                             li: a(href='#') Lorem Ipsum
                             li: a(href='#') Lorem Ipsum
 
-            nav.Nav--secundaria.hidden-xs
+            nav.Nav--secundaria.sf-hidden-xs
                 ul.nav.navbar-nav.pull-right
                     li: a(href='http://www12.senado.leg.br/jornal') Jornal do Senado
                     li: a(href='http://www12.senado.gov.br/noticias') Senado Notícias
