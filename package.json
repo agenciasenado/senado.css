@@ -43,5 +43,8 @@
     "predef": [
       "define"
     ]
+  },
+  "dependencies": {
+    "bootstrap": "^3.3.4"
   }
 }
