@@ -13,7 +13,7 @@ html(lang='pt')
           <script src='https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js'></script>
           <script src='https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js'></script>
 
-    body
+    body.sf-component
 
         include jade/navglobal
         include jade/portaltopo.essencial.jade
@@ -21,7 +21,8 @@ html(lang='pt')
         .sf-container
             .sf-row
                 include jade/breadcrumbs
-                div.sf-H1 Guia de estilos do Senado Federal
+                .sf-container
+                    div.sf-H1 Guia de estilos do Senado Federal
 
         include jade/footer
 
