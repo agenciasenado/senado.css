@@ -14,12 +14,15 @@
 // endregion
 .Breadcrumbs {
     &:extend(.breadcrumb all);
-    margin: 15px 0 0;
-    //padding-left: 0;
+    margin-top:10px;
+    margin-bottom: 0;
     background: none;
     font-size: 13px;
     > li > a {
         font-size: inherit;
         cursor: pointer;
+    }
+    @media (max-width: @screen-xs-max) {
+        display: none;
     }
 }
