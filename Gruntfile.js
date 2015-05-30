@@ -13,12 +13,12 @@ module.exports = function(grunt) {
                     sourceMapRootpath: '../'
                 },
                 files: {
-                    "dist/styles.css": "css/styles.less"
+                    "dist/styles.css": "less/styles.less"
                 }
             },
             essencial: {
                 files: {
-                    "dist/essencial.css": "css/essencial.less"
+                    "dist/essencial.css": "less/essencial.less"
                 }
             }
         },
@@ -71,7 +71,7 @@ module.exports = function(grunt) {
         styledown: {
             build: {
                 files: {
-                    'styleguide/index.html': ['**/css/**/*.less']
+                    'styleguide/index.html': ['**/less/**/*.less']
                 },
                 options: {
                     css: 'dist/styles.css',
