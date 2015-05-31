@@ -48,7 +48,7 @@ module.exports = function(grunt) {
         watch: {
             styles: {
                 files: ['**/*.less'],
-                tasks: ['less:essencial', 'autoprefixer', 'uncss:essencial', 'less:componentize'],
+                tasks: ['less:essencial', 'uncss:essencial'],
                 options: {
                     spawn: false
                 }
@@ -62,8 +62,7 @@ module.exports = function(grunt) {
             },
             livereload: {
                 options: {
-                    livereload: true,
-                    spawn: false
+                    livereload: true
                 },
                 files: ['**/*.css', '**/*.html']
             }
@@ -85,7 +84,8 @@ module.exports = function(grunt) {
         uncss: {
             essencial: {
                 options : {
-                    ignore: ['.collapse.in', '.collapsing', '.open']
+                    ignore: ['.collapse.in', '.collapsing', '.open'],
+                    stylesheets: ['styles.css']
                 },
                 files: {
                     'essencial/essencial.css': ['essencial/index.html']
@@ -117,6 +117,9 @@ module.exports = function(grunt) {
         },
         clean: {
             build: {
+                src: ["dist"]
+            },
+            essencial: {
                 src: ["essencial/*.html", "essencial/*.css"]
             }
         },
@@ -178,13 +181,13 @@ module.exports = function(grunt) {
         'jade'
         ,'charset'
         ,'less:essencial'
-        //,'autoprefixer'
+        ,'autoprefixer'
         ,'uncss:essencial'
         ,'less:componentize'
     ])
 
     grunt.registerTask('essencial', [
-        'build' ,'cssmin'
+        'clean:build', 'build' ,'cssmin', 'clean:essencial'
     ])
     grunt.registerTask('default', [
         'essencial', 'styledown'
