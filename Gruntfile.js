@@ -5,22 +5,11 @@ module.exports = function(grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         less: {
-            senado: {
-                options: {
-                    sourceMap: true,
-                    sourceMapFilename: 'less/styles.css.map',
-                    sourceMapURL: 'styles.css.map',
-                    sourceMapRootpath: '../'
-                },
-                files: {
-                    'less/styles.css': 'less/styles.less'
-                }
-            },
             essencial: {
                 options: {
                     sourceMap: true,
-                    sourceMapFilename: 'essencial/styles.css.map',
-                    sourceMapURL: 'styles.css.map',
+                    sourceMapFilename: 'essencial/full.css.map',
+                    sourceMapURL: 'full.css.map',
                     sourceMapRootpath: '../'
                 },
                 files: {
@@ -29,12 +18,31 @@ module.exports = function(grunt) {
             },
             componentize: {
                 files: {
-                    'essencial/essencial.css': 'essencial/essencial.less'
+                    'essencial/essencial.full.css': 'essencial/essencial.full.less'
+                }
+            },
+            senado: {
+                options: {
+                    sourceMap: true,
+                    sourceMapFilename: 'less/full.css.map',
+                    sourceMapURL: 'styles.css.map',
+                    sourceMapRootpath: '../'
+                },
+                files: {
+                    'less/styles.css': 'less/styles.less'
                 }
             }
         },
         jade: {
             dev: {
+                options: {
+                    pretty: true
+                },
+                files: {
+                    'index.html': ['index.jade']
+                }
+            },
+            essencial: {
                 options: {
                     pretty: true
                 },
@@ -59,14 +67,14 @@ module.exports = function(grunt) {
         watch: {
             styles: {
                 files: ['**/*.less'],
-                tasks: ['less:essencial', 'uncss:essencial'],
+                tasks: ['less:senado', 'less:essencial', 'uncss:essencial'],
                 options: {
                     spawn: false
                 }
             },
             jade: {
                 files: ['**/*.jade'],
-                tasks: ['jade:dev'],
+                tasks: ['jade:essencial', 'jade:dev'],
                 options: {
                     spawn: false
                 }
@@ -84,7 +92,7 @@ module.exports = function(grunt) {
                     'styleguide/index.html': ['**/less/**/*.less']
                 },
                 options: {
-                    css: 'dist/styles.css',
+                    css: 'dist/full.css',
                     config: 'styleguide/config.md',
                     sg_css: 'styleguide/styledown.css',
                     sg_js: 'styleguide/styledown.js',
@@ -99,7 +107,7 @@ module.exports = function(grunt) {
                     stylesheets: ['styles.css']
                 },
                 files: {
-                    'essencial/essencial.css': ['essencial/index.html']
+                    'essencial/uncss.css': ['essencial/index.html']
                 }
             }
         },
@@ -110,10 +118,10 @@ module.exports = function(grunt) {
                 map: true
             },
             essencial: {
-                src: 'essencial/essencial.css'
+                src: 'essencial/essencial.full.css'
             },
             senado: {
-                src: 'less/styles.css'
+                src: 'less/full.css'
             }
         },
         cssmin: {
@@ -123,12 +131,12 @@ module.exports = function(grunt) {
             },
             essencial: {
                 files: {
-                    'dist/essencial/dist.css' : 'essencial/essencial.css'
+                    'dist/essencial/dist.css' : 'essencial/essencial.full.css'
                 }
             },
             senado: {
                 files: {
-                    'dist/dist.css' : 'less/styles.css'
+                    'dist/dist.css' : 'less/full.css'
                 }
             }
         },
@@ -185,6 +193,7 @@ module.exports = function(grunt) {
         }
     })
 
+    // region loadNpmTasks
     grunt.loadNpmTasks('grunt-uncss')
     grunt.loadNpmTasks('grunt-charset')
     grunt.loadNpmTasks('grunt-styledown')
@@ -196,11 +205,12 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-clean')
     grunt.loadNpmTasks('grunt-contrib-cssmin')
     grunt.loadNpmTasks('grunt-contrib-connect')
+    // endregion
 
     grunt.registerTask('build.essencial', [
-        'jade:dev',                 // gera html
+        'jade:essencial',           // gera html
         'less:essencial',           // gera styles dos módulos essenciais
-        'uncss:essencial'           // faz o uncss do essencial/styles.css
+        'uncss:essencial'           // faz o uncss do essencial/full.css
     ])
     grunt.registerTask('essencial', [
         'clean:build',              // limpar arquivos antigos

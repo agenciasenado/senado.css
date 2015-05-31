@@ -4,4 +4,4 @@ dist/*
 *.css.map
 *.idea
 *.html
-
+**/output
