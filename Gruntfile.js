@@ -13,12 +13,12 @@ module.exports = function(grunt) {
                     sourceMapRootpath: '../'
                 },
                 files: {
-                    "essencial/styles.css": "essencial/styles.less"
+                    'essencial/styles.css': 'essencial/styles.less'
                 }
             },
             componentize: {
                 files: {
-                    "essencial/essencial.css": "essencial/essencial.less"
+                    'essencial/essencial.css': 'essencial/essencial.less'
                 }
             }
         },
@@ -28,7 +28,7 @@ module.exports = function(grunt) {
                     pretty: true
                 },
                 files: {
-                    "essencial/index.html": ["essencial/index.jade"]
+                    'essencial/index.html': ['essencial/index.jade']
                 }
             },
             essencial: {
@@ -39,9 +39,9 @@ module.exports = function(grunt) {
                     }
                 },
                 files: {
-                    "dist/essencial/utf-8/navglobal.html": ["essencial/jade/navglobal.jade"],
-                    "dist/essencial/utf-8/footer.html": ["essencial/jade/footer.jade"],
-                    "dist/essencial/utf-8/portaltopo.html": ["essencial/jade/portaltopo.jade"]
+                    'dist/essencial/utf-8/navglobal.html': ['essencial/jade/navglobal.jade'],
+                    'dist/essencial/utf-8/footer.html': ['essencial/jade/footer.jade'],
+                    'dist/essencial/utf-8/portaltopo.html': ['essencial/jade/portaltopo.jade']
                 }
             }
         },
@@ -117,10 +117,10 @@ module.exports = function(grunt) {
         },
         clean: {
             build: {
-                src: ["dist"]
+                src: ['dist']
             },
             essencial: {
-                src: ["essencial/*.html", "essencial/*.css"]
+                src: ['essencial/*.html', 'essencial/*.css', 'essencial/*.map']
             }
         },
         connect: {
