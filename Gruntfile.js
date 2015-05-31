@@ -105,12 +105,15 @@ module.exports = function(grunt) {
         },
         autoprefixer: {
             // TODO: verficar se o prefixer está funcionando
+            options: {
+                browsers: ['last 2 versions', 'ie 9'],
+                map: true
+            },
             essencial: {
-                options: {
-                    browsers: ['last 2 versions', 'ie 9'],
-                    map: true
-                },
-                src: 'essencial/styles.css'
+                src: 'essencial/essencial.css'
+            },
+            senado: {
+                src: 'less/styles.css'
             }
         },
         cssmin: {
@@ -122,6 +125,11 @@ module.exports = function(grunt) {
                 files: {
                     'dist/essencial/dist.css' : 'essencial/essencial.css'
                 }
+            },
+            senado: {
+                files: {
+                    'dist/dist.css' : 'less/styles.css'
+                }
             }
         },
         clean: {
@@ -130,6 +138,9 @@ module.exports = function(grunt) {
             },
             essencial: {
                 src: ['essencial/*.html', 'essencial/*.css', 'essencial/*.map']
+            },
+            senado: {
+                src: ['less/*.css', 'less/*.map']
             }
         },
         connect: {
@@ -186,21 +197,32 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-cssmin')
     grunt.loadNpmTasks('grunt-contrib-connect')
 
-    grunt.registerTask('build', [
-        'jade:dev',            // gera html
-        'less:essencial',      // gera styles dos módulos essenciais
-        'autoprefixer',        // autoprefixa
-        'uncss:essencial'      // faz o uncss do essencial/styles.css
+    grunt.registerTask('build.essencial', [
+        'jade:dev',                 // gera html
+        'less:essencial',           // gera styles dos módulos essenciais
+        'uncss:essencial'           // faz o uncss do essencial/styles.css
     ])
 
     grunt.registerTask('essencial', [
-        'clean:build',         // limpar arquivos antigos
-        'build',               // gera html, styles, autoprefixa e faz o uncss
-        'less:componentize',   // gera o arquivo no escopo sf-component
-        'jade:includes',       // gera os html para include
-        'charset',             // gera cópia do include em iso-88959-1
-        'cssmin:essencial',    // minifica o css gerado
-        'clean:essencial'      // limpar arquivos que não seja de distribuição
+        'clean:build',              // limpar arquivos antigos
+        'build',                    // gera html, styles, autoprefixa e faz o uncss
+        'less:componentize',        // gera o arquivo no escopo sf-component
+        'jade:includes',            // gera os html para include
+        'charset',                  // gera cópia do include em iso-88959-1
+        'autoprefixer:essencial',   // autoprefixa
+        'cssmin:essencial',         // minifica o css gerado
+        'clean:essencial'           // limpar arquivos que não seja de distribuição
+    ])
+
+    grunt.registerTask('build.geral', [
+        'less:senado',
+        'autoprefixer:senado'
+    ])
+
+    grunt.registerTask('geral', [
+        'build.geral',
+        'cssmin:senado',
+        'clean:senado'
     ])
 
     grunt.registerTask('default', [
@@ -212,7 +234,7 @@ module.exports = function(grunt) {
     ])
 
     grunt.registerTask('dev', [
-        'build', 'server'
+        'build.essencial', 'server'
     ])
 
 }
