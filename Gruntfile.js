@@ -202,10 +202,9 @@ module.exports = function(grunt) {
         'less:essencial',           // gera styles dos módulos essenciais
         'uncss:essencial'           // faz o uncss do essencial/styles.css
     ])
-
     grunt.registerTask('essencial', [
         'clean:build',              // limpar arquivos antigos
-        'build',                    // gera html, styles, autoprefixa e faz o uncss
+        'build.essencial',          // gera html, styles, autoprefixa e faz o uncss
         'less:componentize',        // gera o arquivo no escopo sf-component
         'jade:includes',            // gera os html para include
         'charset',                  // gera cópia do include em iso-88959-1
@@ -218,8 +217,8 @@ module.exports = function(grunt) {
         'less:senado',
         'autoprefixer:senado'
     ])
-
     grunt.registerTask('geral', [
+        'clean:build',
         'build.geral',
         'cssmin:senado',
         'clean:senado'
@@ -234,7 +233,7 @@ module.exports = function(grunt) {
     ])
 
     grunt.registerTask('dev', [
-        'build.essencial', 'server'
+        'build.geral', 'build.essencial', 'server'
     ])
 
 }
