@@ -2,8 +2,10 @@
 
 @import (reference) "../node_modules/bootstrap/less/variables";
 @import (reference) "../node_modules/bootstrap/less/mixins";
+@import (reference) "../node_modules/bootstrap/less/type";
 
-@import "layout/namespace";
+@import "less/namespace";
+@import "less/typo.essencial.less";
 
 .sf-component {
 
@@ -21,9 +23,9 @@
         color: inherit;
     }
 
-    @import (less) "../dist/essencial.css";
+    @import "../less/vendors/bootstrap";
+    @import "../less/senado";
 
 }
 
-@import (reference) "../node_modules/bootstrap/less/type";
-@import "base/typo.essencial.less";
+
