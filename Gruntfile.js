@@ -42,7 +42,7 @@ module.exports = function(grunt) {
                     'essencial/index.html': ['essencial/index.jade']
                 }
             },
-            essencial: {
+            includes: {
                 options: {
                     pretty: true,
                     data : {
@@ -187,23 +187,30 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-connect')
 
     grunt.registerTask('build', [
-        'jade'
-        ,'charset'
-        ,'less:essencial'
-        ,'autoprefixer'
-        ,'uncss:essencial'
-        ,'less:componentize'
+        'jade:dev',            // gera html
+        'less:essencial',      // gera styles dos módulos essenciais
+        'autoprefixer',        // autoprefixa
+        'uncss:essencial'      // faz o uncss do essencial/styles.css
     ])
 
     grunt.registerTask('essencial', [
-        'clean:build', 'build' ,'cssmin', 'clean:essencial'
+        'clean:build',         // limpar arquivos antigos
+        'build',               // gera html, styles, autoprefixa e faz o uncss
+        'less:componentize',   // gera o arquivo no escopo sf-component
+        'jade:includes',       // gera os html para include
+        'charset',             // gera cópia do include em iso-88959-1
+        'cssmin:essencial',    // minifica o css gerado
+        'clean:essencial'      // limpar arquivos que não seja de distribuição
     ])
+
     grunt.registerTask('default', [
         'essencial', 'styledown'
     ])
+
     grunt.registerTask('server', [
         'connect', 'concurrent'
     ])
+
     grunt.registerTask('dev', [
         'build', 'server'
     ])
