@@ -178,22 +178,22 @@ module.exports = function(grunt) {
     // endregion
 
     grunt.registerTask('build.essencial', [
-        'jade:essencial',           // gera html
-        'less:essencial',           // gera styles dos módulos essenciais
-        'uncss:essencial',          // faz o uncss do essencial/fat.css
-        'less:essencial.componentize'        // gera o arquivo no escopo sf-component
+        'jade:essencial',             // gera html
+        'less:essencial',             // gera styles dos módulos essenciais
+        'uncss:essencial',            // faz o uncss do essencial/fat.css
+        'less:essencial.componentize' // gera o arquivo no escopo sf-component
     ])
     grunt.registerTask('essencial', [
-        'clean:build',              // limpar arquivos antigos
+        'clean:build',                // limpar arquivos antigos
 
-        'build.essencial',          // gera html, styles, autoprefixa e faz o uncss
-        'autoprefixer:essencial',   // autoprefixa
-        'cssmin:essencial',         // minifica o css gerado
+        'build.essencial',            // gera html, styles, autoprefixa e faz o uncss
+        'autoprefixer:essencial',     // autoprefixa
+        'cssmin:essencial',           // minifica o css gerado
 
-        'jade:essencial.includes',            // gera os html para include
-        'charset',                  // gera cópia do include em iso-88959-1
+        'jade:essencial.includes',    // gera os html para include
+        'charset',                    // gera cópia do include em iso-88959-1
 
-        //'clean:essencial'           // limpar arquivos que não seja de distribuição
+        'clean:essencial'             // limpar arquivos que não seja de distribuição
     ])
 
     grunt.registerTask('default', [
