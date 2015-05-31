@@ -1,11 +1,11 @@
 /*! Senado.CSS v0.0.2 | github.com/fabianonunes/senado.css */
 
-@import (reference) "../node_modules/bootstrap/less/variables";
-@import (reference) "../node_modules/bootstrap/less/mixins";
-@import (reference) "../node_modules/bootstrap/less/type";
+@bootstrap-path: "../node_modules/bootstrap/less";
 
-@import "less/namespace";
-@import "less/typo.essencial.less";
+@import (reference) "@{bootstrap-path}/variables";
+@import (reference) "@{bootstrap-path}/mixins";
+@import (reference) "@{bootstrap-path}/type";
+
 
 .sf-component {
 
@@ -23,9 +23,9 @@
         color: inherit;
     }
 
-    @import "../less/vendors/bootstrap";
-    @import "../less/senado";
+    @import (less) "essencial.css";
 
 }
 
-
+@import "less/namespace";
+@import "less/typo";

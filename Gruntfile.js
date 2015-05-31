@@ -5,20 +5,20 @@ module.exports = function(grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         less: {
-            styles: {
+            essencial: {
                 options: {
                     sourceMap: true,
-                    sourceMapFilename: 'dist/styles.css.map',
+                    sourceMapFilename: 'essencial/styles.css.map',
                     sourceMapURL: 'styles.css.map',
                     sourceMapRootpath: '../'
                 },
                 files: {
-                    "dist/styles.css": "less/styles.less"
+                    "essencial/styles.css": "essencial/styles.less"
                 }
             },
-            essencial: {
+            componentize: {
                 files: {
-                    "dist/essencial.css": "less/essencial.less"
+                    "essencial/essencial.css": "essencial/essencial.less"
                 }
             }
         },
@@ -28,7 +28,7 @@ module.exports = function(grunt) {
                     pretty: true
                 },
                 files: {
-                    "index.html": ["index.jade"]
+                    "essencial/index.html": ["essencial/index.jade"]
                 }
             },
             essencial: {
@@ -39,16 +39,16 @@ module.exports = function(grunt) {
                     }
                 },
                 files: {
-                    "dist/essencial/utf-8/navglobal.html": ["jade/navglobal.jade"],
-                    "dist/essencial/utf-8/footer.html": ["jade/footer.jade"],
-                    "dist/essencial/utf-8/portaltopo.html": ["jade/portaltopo.essencial.jade"]
+                    "dist/essencial/utf-8/navglobal.html": ["essencial/jade/navglobal.jade"],
+                    "dist/essencial/utf-8/footer.html": ["essencial/jade/footer.jade"],
+                    "dist/essencial/utf-8/portaltopo.html": ["essencial/jade/portaltopo.jade"]
                 }
             }
         },
         watch: {
             styles: {
                 files: ['**/*.less'],
-                tasks: ['less:styles', 'autoprefixer', 'uncss:essencial', 'less:essencial'],
+                tasks: ['less:essencial', 'autoprefixer', 'uncss:essencial', 'less:componentize'],
                 options: {
                     spawn: false
                 }
@@ -88,30 +88,36 @@ module.exports = function(grunt) {
                     ignore: ['.collapse.in', '.collapsing', '.open']
                 },
                 files: {
-                    'dist/essencial.css': ['index.html']
+                    'essencial/essencial.css': ['essencial/index.html']
                 }
             }
         },
         autoprefixer: {
+            // TODO: verficar se o prefixer está funcionando
             essencial: {
                 options: {
                     browsers: ['last 2 versions', 'ie 9'],
                     map: true
                 },
-                src: 'dist/styles.css'
+                src: 'essencial/styles.css'
             }
         },
         cssmin: {
             options : {
                 keepSpecialComments: 1,
             },
-            dist: {
+            essencial: {
                 options : {
                     rebase: true
                 },
                 files: {
-                    'dist/essencial/dist.css' : 'dist/essencial.css'
+                    'dist/essencial/dist.css' : 'essencial/essencial.css'
                 }
+            }
+        },
+        clean: {
+            build: {
+                src: ["essencial/*.html", "essencial/*.css"]
             }
         },
         connect: {
@@ -164,16 +170,17 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-jade')
     grunt.loadNpmTasks('grunt-contrib-less')
     grunt.loadNpmTasks('grunt-contrib-watch')
+    grunt.loadNpmTasks('grunt-contrib-clean')
     grunt.loadNpmTasks('grunt-contrib-cssmin')
     grunt.loadNpmTasks('grunt-contrib-connect')
 
     grunt.registerTask('build', [
         'jade'
         ,'charset'
-        ,'less:styles'
-        ,'autoprefixer'
-        ,'uncss:essencial'
         ,'less:essencial'
+        //,'autoprefixer'
+        ,'uncss:essencial'
+        ,'less:componentize'
     ])
 
     grunt.registerTask('essencial', [
