@@ -5,6 +5,17 @@ module.exports = function(grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         less: {
+            senado: {
+                options: {
+                    sourceMap: true,
+                    sourceMapFilename: 'less/styles.css.map',
+                    sourceMapURL: 'styles.css.map',
+                    sourceMapRootpath: '../'
+                },
+                files: {
+                    'less/styles.css': 'less/styles.less'
+                }
+            },
             essencial: {
                 options: {
                     sourceMap: true,
@@ -105,11 +116,9 @@ module.exports = function(grunt) {
         cssmin: {
             options : {
                 keepSpecialComments: 1,
+                rebase: true
             },
             essencial: {
-                options : {
-                    rebase: true
-                },
                 files: {
                     'dist/essencial/dist.css' : 'essencial/essencial.css'
                 }
