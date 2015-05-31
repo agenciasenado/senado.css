@@ -8,46 +8,28 @@ module.exports = function(grunt) {
             essencial: {
                 options: {
                     sourceMap: true,
-                    sourceMapFilename: 'essencial/full.css.map',
-                    sourceMapURL: 'full.css.map',
-                    sourceMapRootpath: '../'
-                },
-                files: {
-                    'essencial/styles.css': 'essencial/styles.less'
-                }
-            },
-            componentize: {
-                files: {
-                    'essencial/essencial.full.css': 'essencial/essencial.full.less'
-                }
-            },
-            senado: {
-                options: {
-                    sourceMap: true,
-                    sourceMapFilename: 'less/full.css.map',
+                    sourceMapFilename: 'essencial/output/styles.css.map',
                     sourceMapURL: 'styles.css.map',
                     sourceMapRootpath: '../'
                 },
                 files: {
-                    'less/styles.css': 'less/styles.less'
+                    'essencial/output/styles.css': 'essencial/styles.less',
+                    'essencial/output/essencial.thin.css': 'essencial/essencial.thin.less'
+                }
+            },
+            componentize: {
+                files: {
+                    'essencial/output/essencial.fat.css': 'essencial/essencial.fat.less'
                 }
             }
         },
         jade: {
-            dev: {
-                options: {
-                    pretty: true
-                },
-                files: {
-                    'index.html': ['index.jade']
-                }
-            },
             essencial: {
                 options: {
                     pretty: true
                 },
                 files: {
-                    'essencial/index.html': ['essencial/index.jade']
+                    'essencial/output/index.html': ['essencial/index.jade']
                 }
             },
             includes: {
@@ -67,14 +49,14 @@ module.exports = function(grunt) {
         watch: {
             styles: {
                 files: ['**/*.less'],
-                tasks: ['less:senado', 'less:essencial', 'uncss:essencial'],
+                tasks: ['less:essencial'],
                 options: {
                     spawn: false
                 }
             },
             jade: {
                 files: ['**/*.jade'],
-                tasks: ['jade:essencial', 'jade:dev'],
+                tasks: ['jade:essencial'],
                 options: {
                     spawn: false
                 }
@@ -92,7 +74,7 @@ module.exports = function(grunt) {
                     'styleguide/index.html': ['**/less/**/*.less']
                 },
                 options: {
-                    css: 'dist/full.css',
+                    css: 'dist/fat.css',
                     config: 'styleguide/config.md',
                     sg_css: 'styleguide/styledown.css',
                     sg_js: 'styleguide/styledown.js',
@@ -103,52 +85,40 @@ module.exports = function(grunt) {
         uncss: {
             essencial: {
                 options : {
-                    ignore: ['.collapse.in', '.collapsing', '.open'],
-                    stylesheets: ['styles.css']
+                    ignore: ['.collapse.in', '.collapsing', '.open']
                 },
                 files: {
-                    'essencial/uncss.css': ['essencial/index.html']
+                    'essencial/output/uncss.css': ['essencial/output/index.html']
                 }
             }
         },
         autoprefixer: {
             // TODO: verficar se o prefixer está funcionando
             options: {
-                browsers: ['last 2 versions', 'ie 9'],
+                browsers: ['> 1%', 'last 2 versions', 'ie 9'],
                 map: true
             },
             essencial: {
-                src: 'essencial/essencial.full.css'
-            },
-            senado: {
-                src: 'less/full.css'
+                src: 'essencial/output/essencial.fat.css'
             }
         },
         cssmin: {
             options : {
                 keepSpecialComments: 1,
-                rebase: true
             },
             essencial: {
                 files: {
-                    'dist/essencial/dist.css' : 'essencial/essencial.full.css'
-                }
-            },
-            senado: {
-                files: {
-                    'dist/dist.css' : 'less/full.css'
+                    'dist/essencial/fat.css' : 'essencial/output/essencial.fat.css',
+                    'dist/essencial/thin.css' : 'essencial/output/essencial.thin.css'
                 }
             }
         },
         clean: {
             build: {
-                src: ['dist']
+                src: ['dist', 'essencial/output']
             },
             essencial: {
-                src: ['essencial/*.html', 'essencial/*.css', 'essencial/*.map']
-            },
-            senado: {
-                src: ['less/*.css', 'less/*.map']
+                src: ['essencial/output']
             }
         },
         connect: {
@@ -210,17 +180,20 @@ module.exports = function(grunt) {
     grunt.registerTask('build.essencial', [
         'jade:essencial',           // gera html
         'less:essencial',           // gera styles dos módulos essenciais
-        'uncss:essencial'           // faz o uncss do essencial/full.css
+        'uncss:essencial',          // faz o uncss do essencial/fat.css
+        'less:componentize'        // gera o arquivo no escopo sf-component
     ])
     grunt.registerTask('essencial', [
         'clean:build',              // limpar arquivos antigos
+
         'build.essencial',          // gera html, styles, autoprefixa e faz o uncss
-        'less:componentize',        // gera o arquivo no escopo sf-component
-        'jade:includes',            // gera os html para include
-        'charset',                  // gera cópia do include em iso-88959-1
         'autoprefixer:essencial',   // autoprefixa
         'cssmin:essencial',         // minifica o css gerado
-        'clean:essencial'           // limpar arquivos que não seja de distribuição
+
+        'jade:includes',            // gera os html para include
+        'charset',                  // gera cópia do include em iso-88959-1
+
+        //'clean:essencial'           // limpar arquivos que não seja de distribuição
     ])
 
     grunt.registerTask('build.geral', [
