@@ -17,7 +17,7 @@ module.exports = function(grunt) {
                     'essencial/output/essencial.thin.css': 'essencial/essencial.thin.less'
                 }
             },
-            componentize: {
+            'essencial.componentize': {
                 files: {
                     'essencial/output/essencial.fat.css': 'essencial/essencial.fat.less'
                 }
@@ -32,7 +32,7 @@ module.exports = function(grunt) {
                     'essencial/output/index.html': ['essencial/index.jade']
                 }
             },
-            includes: {
+            'essencial.includes': {
                 options: {
                     pretty: true,
                     data : {
@@ -181,7 +181,7 @@ module.exports = function(grunt) {
         'jade:essencial',           // gera html
         'less:essencial',           // gera styles dos módulos essenciais
         'uncss:essencial',          // faz o uncss do essencial/fat.css
-        'less:componentize'        // gera o arquivo no escopo sf-component
+        'less:essencial.componentize'        // gera o arquivo no escopo sf-component
     ])
     grunt.registerTask('essencial', [
         'clean:build',              // limpar arquivos antigos
@@ -190,21 +190,10 @@ module.exports = function(grunt) {
         'autoprefixer:essencial',   // autoprefixa
         'cssmin:essencial',         // minifica o css gerado
 
-        'jade:includes',            // gera os html para include
+        'jade:essencial.includes',            // gera os html para include
         'charset',                  // gera cópia do include em iso-88959-1
 
         //'clean:essencial'           // limpar arquivos que não seja de distribuição
-    ])
-
-    grunt.registerTask('build.geral', [
-        'less:senado',
-        'autoprefixer:senado'
-    ])
-    grunt.registerTask('geral', [
-        'clean:build',
-        'build.geral',
-        'cssmin:senado',
-        'clean:senado'
     ])
 
     grunt.registerTask('default', [
@@ -216,7 +205,7 @@ module.exports = function(grunt) {
     ])
 
     grunt.registerTask('dev', [
-        'build.geral', 'build.essencial', 'server'
+        'build.essencial', 'server'
     ])
 
 }
