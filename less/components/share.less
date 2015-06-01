@@ -1,4 +1,32 @@
 
+// region doc
+/**
+* Menus de navegação:
+* `.Nav--principal`: Menu principal do portal. É colidível no viewport `xs`.
+*
+*     @example
+*     div.Share
+*       a.btn Facebook
+*       a.btn Facebook
+*       a.btn Facebook
+*       a.btn Facebook
+*       a.btn Facebook
+*/
+// endregion
 .Share {
-
+    float: right;
 }
+
+    .Share-btn {
+        &:extend(.btn);
+        .button-variant(#fff, #000, #000);
+        border: none;
+        border-radius: 0;
+        margin-left: 5px;
+        color: #fff;
+    }
+
+        .Share-btn--facebook {
+            //background-color: lighten(#3b5998, 10%);
+            border-bottom: 4px solid #3b5998;
+        }
