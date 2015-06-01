@@ -42,7 +42,8 @@ module.exports = function(grunt) {
                 files: {
                     'dist/essencial/utf-8/navglobal.html': ['essencial/jade/navglobal.jade'],
                     'dist/essencial/utf-8/footer.html': ['essencial/jade/footer.jade'],
-                    'dist/essencial/utf-8/portaltopo.html': ['essencial/jade/portaltopo.jade']
+                    'dist/essencial/utf-8/portaltopo.html': ['essencial/jade/portaltopo.jade'],
+                    'dist/essencial/utf-8/scripts.html': ['essencial/jade/scripts.jade']
                 }
             }
         },
@@ -104,7 +105,7 @@ module.exports = function(grunt) {
         },
         cssmin: {
             options : {
-                keepSpecialComments: 1,
+                keepSpecialComments: 0
             },
             essencial: {
                 files: {
@@ -170,6 +171,9 @@ module.exports = function(grunt) {
                 }, {
                     dest: 'dist/essencial/iso-8859-1/portaltopo.html',
                     src: 'dist/essencial/utf-8/portaltopo.html'
+                }, {
+                    dest: 'dist/essencial/iso-8859-1/scripts.html',
+                    src: 'dist/essencial/utf-8/scripts.html'
                 }]
             }
         }
