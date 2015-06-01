@@ -21,6 +21,17 @@ module.exports = function(grunt) {
                 files: {
                     'essencial/output/essencial.fat.css': 'essencial/essencial.fat.less'
                 }
+            },
+            main: {
+                options: {
+                    sourceMap: true,
+                    sourceMapFilename: 'dist/main.css.map',
+                    sourceMapURL: 'main.css.map',
+                    sourceMapRootpath: '../'
+                },
+                files: {
+                    'dist/main.css': 'less/styles.less'
+                }
             }
         },
         jade: {
@@ -45,23 +56,48 @@ module.exports = function(grunt) {
                     'dist/essencial/utf-8/portaltopo.html': ['essencial/jade/portaltopo.jade'],
                     'dist/essencial/utf-8/scripts.html': ['essencial/jade/scripts.jade']
                 }
+            },
+            main: {
+                options: {
+                    pretty: true
+                },
+                files: {
+                    'index.html': ['index.jade']
+                }
+
             }
         },
         watch: {
-            styles: {
+            'styles.essencial': {
                 files: ['**/*.less'],
                 tasks: ['less:essencial'],
                 options: {
                     spawn: false
                 }
             },
-            jade: {
+            'jade.essencial': {
                 files: ['**/*.jade'],
                 tasks: ['jade:essencial'],
                 options: {
                     spawn: false
                 }
             },
+
+            styles: {
+                files: ['**/*.less'],
+                tasks: ['less:main'],
+                options: {
+                    spawn: false
+                }
+            },
+            jade: {
+                files: ['**/*.jade'],
+                tasks: ['jade:main'],
+                options: {
+                    spawn: false
+                }
+            },
+
             livereload: {
                 options: {
                     livereload: true
@@ -100,6 +136,9 @@ module.exports = function(grunt) {
             },
             essencial: {
                 src: 'essencial/output/essencial.fat.css'
+            },
+            main: {
+                src: 'dist/main.css'
             }
         },
         cssmin: {
@@ -125,11 +164,10 @@ module.exports = function(grunt) {
             essencial: {
                 options: {
                     position: 'top',
-                    banner: '/*! <%= pkg.name %> v<%= pkg.version %>  | <%= pkg.repository %> */\n',
-                    linebreak: false
+                    banner: '/*! <%= pkg.name %> v<%= pkg.version %>  | <%= pkg.repository %> */',
                 },
                 files: {
-                    src: [ 'dist/essencial/fat.css', 'dist/essencial/thin.css' ]
+                    src: ['dist/essencial/fat.css', 'dist/essencial/thin.css', 'dist/main.css']
                 }
             }
         },
@@ -153,7 +191,8 @@ module.exports = function(grunt) {
             options: {
                 logConcurrentOutput: true,
             },
-            styles: ['watch:styles', 'watch:livereload', 'watch:jade']
+            essencial: ['watch:styles.essencial', 'watch:livereload', 'watch:jade.essencial'],
+            main: ['watch:styles', 'watch:livereload', 'watch:jade']
         },
         charset: {
             essencial : {
@@ -199,6 +238,12 @@ module.exports = function(grunt) {
         'uncss:essencial',            // faz o uncss do essencial/fat.css
         'less:essencial.componentize' // gera o arquivo no escopo sf-component
     ])
+    grunt.registerTask('server.essencial', [
+        'connect', 'concurrent:essencial'
+    ])
+    grunt.registerTask('dev.essencial', [
+        'build.essencial', 'server.essencial'
+    ])
     grunt.registerTask('essencial', [
         'clean:build',                // limpar arquivos antigos
 
@@ -213,16 +258,19 @@ module.exports = function(grunt) {
         'clean:essencial'             // limpar arquivos que não seja de distribuição
     ])
 
+    grunt.registerTask('build', [
+        'jade:main',
+        'less:main'
+    ])
+    grunt.registerTask('server', [
+        'connect', 'concurrent:main'
+    ])
+    grunt.registerTask('dev', [
+        'build', 'server'
+    ])
+
     grunt.registerTask('default', [
         'essencial', 'styledown'
-    ])
-
-    grunt.registerTask('server', [
-        'connect', 'concurrent'
-    ])
-
-    grunt.registerTask('dev', [
-        'build.essencial', 'server'
     ])
 
 }
