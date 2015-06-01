@@ -1,0 +1,87 @@
+
+.FooterMain {
+    background-color: #eee;
+    margin-top: 10px;
+    padding-top: 10px;
+    @media (min-width: @screen-sm-min) {
+        padding-top: 20px;
+    }
+}
+
+    .FooterMain-row {
+        .make-row();
+    }
+
+    .FooterMain-section {
+        .make-sm-column(3)
+    }
+
+    .FooterMain-list {
+        &:extend(.list-unstyled);
+        line-height: 20px;
+        font-size: 12px;
+        color: #666;
+        @media (max-width: @screen-xs-max) {
+            margin: 0 10px;
+        }
+        & > dd {
+            & > a {
+                &, &:visited, &:focus, &:hover {
+                    color: #333;
+                    text-decoration: none;
+                }
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+        & > dt {
+            font-size: 13px;
+            font-weight: bold;
+            color: #666;
+            margin: 10px 0;
+        }
+    }
+
+.FooterMain-end {
+    margin-top: 5px;
+    border-top: 1px solid #fff;
+    line-height: 40px;
+}
+
+.FooterMain-endereco {
+    background-color: #002e56;
+    color: #FFF;
+    width: 100%;
+    text-align: center;
+    font-size: 11px;
+    line-height: 40px;
+}
+
+.FooterMain-icon, [class^="FooterMain-icon--"] {
+    font-size: 12px;
+    a {
+        color: #333;
+    }
+    &:before {
+        .glyphicon();
+        font-size: 12px;
+    }
+}
+
+    .FooterMain-icon--earphone {
+        .glyphicon-earphone();
+    }
+
+    .FooterMain-icon--lock {
+        .glyphicon-lock();
+    }
+
+    .FooterMain-icon--intranet {
+        .glyphicon-lock();
+    }
+
+    .FooterMain-icon--aotopo {
+        float: right;
+        .glyphicon-chevron-up();
+    }

@@ -1,0 +1,39 @@
+
+.sf-component
+
+    .sf-container
+
+        .PortalTopo
+
+            .PortalTopo-id
+                .PortalTopo-title
+                    | Senado Federal
+
+            .PortalTopo-togglers.visible-xs
+                .PortalTopo-toggler--menu(data-toggle='collapse', data-target='.Nav--principal')
+
+            .PortalTopo-tools
+            .PortalTopo-busca
+
+        .sf-row
+
+            nav.Nav--principal.navbar.navbar-default.navbar-collapse.collapse(role="navigation")
+                ul.nav.navbar-nav
+                    li: a(href='#') Início
+                    li: a(href='#') Conveniadas
+                    li: a(href='#') Central de Áudio
+                    //- os dropdowns precisam ficar aberto no momento de gerar o uncss e
+                    //- fechado na hora do build
+                    li.dropdown(class=(dist ? '' : 'open'))
+                        a.dropdown-toggle(href='#', data-toggle='dropdown')
+                            = 'Serviços '
+                            span.caret
+                        ul.dropdown-menu
+                            li: a(href='#') Lorem Ipsum
+                            li: a(href='#') Lorem Ipsum
+
+            nav.Nav--secundaria.sf-hidden-xs
+                ul.nav.navbar-nav.pull-right
+                    li: a(href='http://www12.senado.leg.br/jornal') Jornal do Senado
+                    li: a(href='http://www12.senado.gov.br/noticias') Senado Notícias
+                    li: a(href='http://www.senado.leg.br/noticias/tv') TV Senado

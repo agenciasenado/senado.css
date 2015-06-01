@@ -1,0 +1,27 @@
+// region doc
+/**
+* Breadcrumbs:
+* `.Breadcrumbs`: Caminho de navegação do portal
+* deve ser exibido em `xs`. Utilizado
+*
+*     @example
+*     ol.Breadcrumbs
+*       li: a Home
+*       li: a Senado Notícias
+*       li.active: a TV Senado
+*/
+// endregion
+.Breadcrumbs {
+    &:extend(.breadcrumb all);
+    margin-top:5px;
+/*     margin-bottom: 10px; */
+    background: none;
+    font-size: 12px;
+    > li > a {
+        font-size: inherit;
+        cursor: pointer;
+    }
+    @media (max-width: @screen-xs-max) {
+        display: none;
+    }
+}

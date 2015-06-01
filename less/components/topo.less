@@ -1,0 +1,94 @@
+@import (reference) "@{bootstrap-path}/grid";
+
+// region doc
+/**
+ * Navegação Global:
+ * `.NavGlobal` - documentation on what your
+ * component is goes here. Markdown is encouraged.
+ *
+ *     @example
+ *     .NavGlobal.navbar.navbar-static-top
+ *        a.NavGlobal-logo(href='http://www.senado.gov.br/')
+ *          img(src='../img/senado.svg', alt='Senado Federal')
+ *
+ */
+// endregion
+.NavGlobal {
+    margin-bottom: 0;
+    min-height: 47px;
+    line-height: 43px;
+    background-color: #00305C;
+    border-bottom: 4px solid #00824A;
+    box-shadow: 0 4px 0 #FAE042;
+
+    @media (max-width: @screen-xs-max) {
+        margin-bottom: 4px;
+    }
+}
+
+
+.NavGlobal-container {
+    .container();
+    @media (min-width: @screen-sm-min) {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    text-align: center;
+    font-size: 12px;
+}
+
+    .NavGlobal-middle {
+        > a {
+            color: #fff;
+        }
+        @media (max-width: @screen-xs-min) {
+            display: none;
+        }
+    }
+
+    .NavGlobal-logo {
+        > img {
+            vertical-align: middle;
+        }
+    }
+
+    .NavGlobal-toggle {
+        color: #B2C0CE;
+        cursor: pointer;
+        font-size: 14px;
+        &:hover, &:active, &:focus, &:visited {
+            color: #fff;
+            text-decoration: none;
+        }
+    }
+
+.NavGlobal-menu {
+    vertical-align: middle;
+    background: transparent;
+    font-size: 18px;
+}
+
+.NavGlobal-dropdownMenu.dropdown-menu {
+    background-color: #1A456C;
+    border-radius: 0;
+    border-bottom: none;
+    box-shadow: none;
+    top: 42px;
+    margin-top: 9px;
+    padding: 5px 20px;
+    border-top: none;
+    font-size: 12px;
+    line-height: @line-height-base;
+    > li > a {
+        padding: 6px 0;
+        color: #fff;
+        border-bottom: 1px solid #1A9FDD;
+        &:hover, &:focus {
+            background-color: inherit;
+            color: #fff;
+        }
+    }
+    > li:last-child > a {
+        border: none;
+    }
+}
