@@ -105,7 +105,7 @@ module.exports = function(grunt) {
         },
         cssmin: {
             options : {
-                keepSpecialComments: 1,
+                keepSpecialComments: 0
             },
             essencial: {
                 files: {
