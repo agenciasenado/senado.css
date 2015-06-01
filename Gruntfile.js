@@ -121,6 +121,18 @@ module.exports = function(grunt) {
                 src: ['essencial/output']
             }
         },
+        usebanner: {
+            essencial: {
+                options: {
+                    position: 'top',
+                    banner: '/*! <%= pkg.name %> v<%= pkg.version %>  | <%= pkg.repository %> */\n',
+                    linebreak: false
+                },
+                files: {
+                    src: [ 'dist/essencial/fat.css', 'dist/essencial/thin.css' ]
+                }
+            }
+        },
         connect: {
             server: {
                 options: {
@@ -165,6 +177,7 @@ module.exports = function(grunt) {
 
     // region loadNpmTasks
     grunt.loadNpmTasks('grunt-uncss')
+    grunt.loadNpmTasks('grunt-banner')
     grunt.loadNpmTasks('grunt-charset')
     grunt.loadNpmTasks('grunt-styledown')
     grunt.loadNpmTasks('grunt-concurrent')
@@ -189,6 +202,7 @@ module.exports = function(grunt) {
         'build.essencial',            // gera html, styles, autoprefixa e faz o uncss
         'autoprefixer:essencial',     // autoprefixa
         'cssmin:essencial',           // minifica o css gerado
+        'usebanner:essencial',        // insere o banner nos arquivos css
 
         'jade:essencial.includes',    // gera os html para include
         'charset',                    // gera cópia do include em iso-88959-1
