@@ -7,7 +7,7 @@
 
             .PortalTopo-id
                 .PortalTopo-title
-                    | Senado Federal
+                    | Portal Legislação
 
             .PortalTopo-togglers.visible-xs
                 .PortalTopo-toggler--menu(data-toggle='collapse', data-target='.Nav--principal')
@@ -20,17 +20,18 @@
             nav.Nav--principal.navbar.navbar-default.navbar-collapse.collapse(role="navigation")
                 ul.nav.navbar-nav
                     li: a(href='#') Início
-                    li: a(href='#') Conveniadas
-                    li: a(href='#') Central de Áudio
+                    li: a(href='#') Constituição Federal
+                    li: a(href='#') Legislação Federal
+                    li: a(href='#') Regimento Interno
                     //- os dropdowns precisam ficar aberto no momento de gerar o uncss e
                     //- fechado na hora do build
                     li.dropdown(class=(dist ? '' : 'open'))
                         a.dropdown-toggle(href='#', data-toggle='dropdown')
-                            = 'Serviços '
+                            = 'Consulte '
                             span.caret
                         ul.dropdown-menu
-                            li: a(href='#') Lorem Ipsum
-                            li: a(href='#') Lorem Ipsum
+                            li: a(href='#') Bases Históricas
+                            li: a(href='#') SICON
 
             nav.Nav--secundaria.sf-hidden-xs
                 ul.nav.navbar-nav.pull-right
@@ -39,11 +40,10 @@
                     li: a(href='http://www.senado.leg.br/noticias/tv') TV Senado
 
 .sf-component
-    .sf-container
+    .container-miolo
         ol.Breadcrumbs
             li: a Home
-            li: a Senado Notícias
-            li.active TV Senado
-        .sf-row
-            .sf-container
-                div.sf-H1 Guia de estilos do Senado Federal
+            li: a Constituição Federal
+            li: a Emendas Constituicionais
+            li.active EC nº 35
+        div.sf-H1.titulo-principal Ementa Constitucional nº 35

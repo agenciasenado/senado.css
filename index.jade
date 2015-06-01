@@ -7,7 +7,7 @@ html(lang='pt')
         meta(charset='utf-8')
         meta(http-equiv='X-UA-Compatible', content='IE=edge')
         title Senado Federal
-        link(href='styles.css', rel='stylesheet')
+        link(href='dist/main.css', rel='stylesheet')
 
     //if lt IE 9
           <script src='https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js'></script>
@@ -17,12 +17,13 @@ html(lang='pt')
 
         include jade/navglobal
         include jade/portaltopo
-        include jade/breadcrumbs
 
-        .container
+        .container-miolo
+            include jade/breadcrumbs
             .row
-                .container
-                    h1 Guia de estilos do Senado Federal
+                .col-xs-12
+                    h1.titulo-principal Guia de estilos do Senado Federal
+                    include jade/share
 
         include jade/footer
 

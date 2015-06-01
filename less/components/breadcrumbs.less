@@ -15,12 +15,17 @@
     &:extend(.breadcrumb all);
     margin-top: 5px;
     padding-left: 0;
+    margin-left: 0;
     margin-bottom: 10px;
     background: none;
     font-size: 12px;
     > li > a {
         font-size: inherit;
         cursor: pointer;
+    }
+    > li + li:before {
+        content: '\203A\00a0';
+        color: #666;
     }
     @media (max-width: @screen-xs-max) {
         display: none;
