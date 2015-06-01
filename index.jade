@@ -17,12 +17,13 @@ html(lang='pt')
 
         include jade/navglobal
         include jade/portaltopo
-        include jade/breadcrumbs
 
-        .container
+        .container-miolo
+            include jade/breadcrumbs
             .row
-                .container
-                    h1 Guia de estilos do Senado Federal
+                .col-xs-12
+                    h1.titulo-principal Guia de estilos do Senado Federal
+                    include jade/share
 
         include jade/footer
 
