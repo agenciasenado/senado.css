@@ -94,7 +94,6 @@ module.exports = function(grunt) {
             }
         },
         autoprefixer: {
-            // TODO: verficar se o prefixer está funcionando
             options: {
                 browsers: ['> 1%', 'last 2 versions', 'ie 9'],
                 map: true
