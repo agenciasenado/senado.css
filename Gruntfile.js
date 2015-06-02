@@ -122,7 +122,8 @@ module.exports = function(grunt) {
         uncss: {
             essencial: {
                 options : {
-                    ignore: ['.collapse.in', '.collapsing', '.open']
+                    ignore: ['.collapse.in', '.collapsing', '.open'],
+                    stylesheets: ['styles.css']
                 },
                 files: {
                     'essencial/output/uncss.css': ['essencial/output/index.html']
