@@ -6,4 +6,4 @@ dist/*
 *.html
 **/output
 
-essencial/tests/results
+essencial/tests/**/results
