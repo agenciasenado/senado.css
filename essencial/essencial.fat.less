@@ -18,6 +18,7 @@
     font-size: @font-size-base;
     line-height: @line-height-base;
     color: @text-color;
+
     background-color: @body-bg;
     margin: 0;
 
@@ -30,6 +31,14 @@
 
     @import (less) "output/uncss.css";
 
+}
+
+// Fixes
+.aui .sf-component {
+    li {
+        // corrigir line-heigth do bs2.
+        line-height: @line-height-base;
+    }
 }
 
 @import "less/namespace";
