@@ -224,8 +224,7 @@ module.exports = function(grunt) {
                 options: {
                     screenshots: 'essencial/tests/desktop/screenshots/',
                     results: 'essencial/tests/desktop/results/',
-                    viewportSize: [800, 800],
-                    mismatchTolerance: 0.1
+                    viewportSize: [800, 800]
                 },
                 src: [ 'essencial/tests/**/*desktop.js' ]
             },
@@ -233,8 +232,7 @@ module.exports = function(grunt) {
                 options: {
                     screenshots: 'essencial/tests/mobile/screenshots/',
                     results: 'essencial/tests/mobile/results/',
-                    viewportSize: [320, 480],
-                    mismatchTolerance: 0.1
+                    viewportSize: [320, 480]
                 },
                 src: [ 'essencial/tests/**/*mobile.js' ]
             }
@@ -275,9 +273,9 @@ module.exports = function(grunt) {
         'build.essencial',                // gera html, styles, faz o uncss e componentiza
         'autoprefixer:essencial',         // autoprefixa
 
-        'connect',                        // comparação de screenshots
-        'phantomcss:essencial.mobile',
-        'phantomcss:essencial.desktop',
+        //'connect',                        // comparação de screenshots
+        //'phantomcss:essencial.mobile',
+        //'phantomcss:essencial.desktop',
 
         'cssmin:essencial',               // comprime o css gerado
         'usebanner:essencial',            // insere o banner nos arquivos css
