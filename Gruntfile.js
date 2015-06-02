@@ -273,9 +273,9 @@ module.exports = function(grunt) {
         'build.essencial',                // gera html, styles, faz o uncss e componentiza
         'autoprefixer:essencial',         // autoprefixa
 
-        'connect',                        // comparação de screenshots
-        'phantomcss:essencial.mobile',
-        'phantomcss:essencial.desktop',
+        //'connect',                        // comparação de screenshots
+        //'phantomcss:essencial.mobile',
+        //'phantomcss:essencial.desktop',
 
         'cssmin:essencial',               // comprime o css gerado
         'usebanner:essencial',            // insere o banner nos arquivos css
