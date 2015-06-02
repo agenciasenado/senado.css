@@ -224,7 +224,8 @@ module.exports = function(grunt) {
                 options: {
                     screenshots: 'essencial/tests/desktop/screenshots/',
                     results: 'essencial/tests/desktop/results/',
-                    viewportSize: [800, 800]
+                    viewportSize: [800, 800],
+                    mismatchTolerance: 0.05
                 },
                 src: [ 'essencial/tests/**/*desktop.js' ]
             },
@@ -232,7 +233,8 @@ module.exports = function(grunt) {
                 options: {
                     screenshots: 'essencial/tests/mobile/screenshots/',
                     results: 'essencial/tests/mobile/results/',
-                    viewportSize: [320, 480]
+                    viewportSize: [320, 480],
+                    mismatchTolerance: 0.05
                 },
                 src: [ 'essencial/tests/**/*mobile.js' ]
             }
