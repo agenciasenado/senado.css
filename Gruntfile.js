@@ -222,7 +222,7 @@ module.exports = function(grunt) {
                     screenshots: 'essencial/tests/desktop/screenshots/',
                     results: 'essencial/tests/desktop/results/'
                 },
-                src: [ 'essencial/tests/**/*.js' ]
+                src: [ 'essencial/tests/**/*desktop.js' ]
             },
             'essencial.mobile': {
                 options: {
@@ -230,7 +230,7 @@ module.exports = function(grunt) {
                     results: 'essencial/tests/mobile/results/',
                     viewportSize: [320, 480]
                 },
-                src: [ 'essencial/tests/**/*.js' ]
+                src: [ 'essencial/tests/**/*mobile.js' ]
             }
         }
     })
