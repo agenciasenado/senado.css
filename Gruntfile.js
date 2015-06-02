@@ -144,7 +144,10 @@ module.exports = function(grunt) {
         },
         cssmin: {
             options : {
-                keepSpecialComments: 0
+                keepSpecialComments: 0,
+                rebase: true,
+                target: './',
+                relativeTo: '../../'
             },
             essencial: {
                 files: {
@@ -158,7 +161,7 @@ module.exports = function(grunt) {
                 src: ['dist', 'essencial/output']
             },
             essencial: {
-                src: ['essencial/output']
+                src: ['essencial/output', 'essencial/tests/**/results']
             }
         },
         usebanner: {
@@ -264,17 +267,21 @@ module.exports = function(grunt) {
         'build.essencial', 'server.essencial'
     ])
     grunt.registerTask('essencial', [
-        'clean:build',                // limpar arquivos antigos
+        'clean:build',                    // limpar arquivos antigos
 
-        'build.essencial',            // gera html, styles, autoprefixa e faz o uncss
-        'autoprefixer:essencial',     // autoprefixa
-        'cssmin:essencial',           // minifica o css gerado
-        'usebanner:essencial',        // insere o banner nos arquivos css
+        'build.essencial',                // gera html, styles, faz o uncss e componentiza
+        'autoprefixer:essencial',         // autoprefixa
 
-        'jade:essencial.includes',    // gera os html para include
-        'charset',                    // gera cópia do include em iso-88959-1
+        'phantomcss:essencial.mobile',    // comparação de screenshots
+        'phantomcss:essencial.desktop',
 
-        'clean:essencial'             // limpar arquivos que não seja de distribuição
+        'cssmin:essencial',               // comprime o css gerado
+        'usebanner:essencial',            // insere o banner nos arquivos css
+
+        'jade:essencial.includes',        // gera os html para inserção
+        'charset',                        // gera cópia do include em iso-88959-1
+
+        'clean:essencial'                 // limpar arquivos que não seja de distribuição
     ])
 
     grunt.registerTask('build', [
