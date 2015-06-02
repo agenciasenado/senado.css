@@ -217,14 +217,20 @@ module.exports = function(grunt) {
             }
         },
         phantomcss: {
-            options: {
-                screenshots: 'essencial/tests/screenshots/',
-                results: 'essencial/tests/results/'
+            'essencial.desktop': {
+                options: {
+                    screenshots: 'essencial/tests/desktop/screenshots/',
+                    results: 'essencial/tests/desktop/results/'
+                },
+                src: [ 'essencial/tests/**/*.js' ]
             },
-            essencial:{
-                src: [
-                    'essencial/tests/**/*.js'
-                ]
+            'essencial.mobile': {
+                options: {
+                    screenshots: 'essencial/tests/mobile/screenshots/',
+                    results: 'essencial/tests/mobile/results/',
+                    viewportSize: [320, 480]
+                },
+                src: [ 'essencial/tests/**/*.js' ]
             }
         }
     })
