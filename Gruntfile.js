@@ -215,6 +215,17 @@ module.exports = function(grunt) {
                     src: 'dist/essencial/utf-8/scripts.html'
                 }]
             }
+        },
+        phantomcss: {
+            options: {
+                screenshots: 'essencial/tests/screenshots/',
+                results: 'essencial/tests/results/'
+            },
+            essencial:{
+                src: [
+                    'essencial/tests/**/*.js'
+                ]
+            }
         }
     })
 
@@ -224,6 +235,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-charset')
     grunt.loadNpmTasks('grunt-styledown')
     grunt.loadNpmTasks('grunt-concurrent')
+    grunt.loadNpmTasks('grunt-phantomcss')
     grunt.loadNpmTasks('grunt-autoprefixer')
     grunt.loadNpmTasks('grunt-contrib-jade')
     grunt.loadNpmTasks('grunt-contrib-less')
