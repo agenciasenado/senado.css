@@ -70,7 +70,7 @@ module.exports = function(grunt) {
         watch: {
             'styles.essencial': {
                 files: ['**/*.less'],
-                tasks: ['less:essencial'],
+                tasks: ['less:essencial', 'uncss:essencial', 'less:essencial.componentize'],
                 options: {
                     spawn: false
                 }
