@@ -5,3 +5,5 @@ dist/*
 *.idea
 *.html
 **/output
+
+essencial/tests/results
