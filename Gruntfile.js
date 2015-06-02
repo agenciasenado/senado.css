@@ -223,7 +223,8 @@ module.exports = function(grunt) {
             'essencial.desktop': {
                 options: {
                     screenshots: 'essencial/tests/desktop/screenshots/',
-                    results: 'essencial/tests/desktop/results/'
+                    results: 'essencial/tests/desktop/results/',
+                    viewportSize: [800, 800]
                 },
                 src: [ 'essencial/tests/**/*desktop.js' ]
             },
