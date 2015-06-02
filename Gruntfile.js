@@ -70,7 +70,7 @@ module.exports = function(grunt) {
         watch: {
             'styles.essencial': {
                 files: ['**/*.less'],
-                tasks: ['less:essencial'],
+                tasks: ['less:essencial', 'uncss:essencial', 'less:essencial.componentize'],
                 options: {
                     spawn: false
                 }
@@ -122,7 +122,8 @@ module.exports = function(grunt) {
         uncss: {
             essencial: {
                 options : {
-                    ignore: ['.collapse.in', '.collapsing', '.open']
+                    ignore: ['.collapse.in', '.collapsing', '.open'],
+                    stylesheets: ['styles.css']
                 },
                 files: {
                     'essencial/output/uncss.css': ['essencial/output/index.html']
@@ -143,7 +144,10 @@ module.exports = function(grunt) {
         },
         cssmin: {
             options : {
-                keepSpecialComments: 0
+                keepSpecialComments: 0,
+                rebase: true,
+                target: './',
+                relativeTo: '../../'
             },
             essencial: {
                 files: {
@@ -157,7 +161,7 @@ module.exports = function(grunt) {
                 src: ['dist', 'essencial/output']
             },
             essencial: {
-                src: ['essencial/output']
+                src: ['essencial/output', 'essencial/tests/**/results']
             }
         },
         usebanner: {
@@ -214,6 +218,24 @@ module.exports = function(grunt) {
                     src: 'dist/essencial/utf-8/scripts.html'
                 }]
             }
+        },
+        phantomcss: {
+            'essencial.desktop': {
+                options: {
+                    screenshots: 'essencial/tests/desktop/screenshots/',
+                    results: 'essencial/tests/desktop/results/',
+                    viewportSize: [800, 800]
+                },
+                src: [ 'essencial/tests/**/*desktop.js' ]
+            },
+            'essencial.mobile': {
+                options: {
+                    screenshots: 'essencial/tests/mobile/screenshots/',
+                    results: 'essencial/tests/mobile/results/',
+                    viewportSize: [320, 480]
+                },
+                src: [ 'essencial/tests/**/*mobile.js' ]
+            }
         }
     })
 
@@ -223,6 +245,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-charset')
     grunt.loadNpmTasks('grunt-styledown')
     grunt.loadNpmTasks('grunt-concurrent')
+    grunt.loadNpmTasks('grunt-phantomcss')
     grunt.loadNpmTasks('grunt-autoprefixer')
     grunt.loadNpmTasks('grunt-contrib-jade')
     grunt.loadNpmTasks('grunt-contrib-less')
@@ -245,17 +268,22 @@ module.exports = function(grunt) {
         'build.essencial', 'server.essencial'
     ])
     grunt.registerTask('essencial', [
-        'clean:build',                // limpar arquivos antigos
+        'clean:build',                    // limpar arquivos antigos
 
-        'build.essencial',            // gera html, styles, autoprefixa e faz o uncss
-        'autoprefixer:essencial',     // autoprefixa
-        'cssmin:essencial',           // minifica o css gerado
-        'usebanner:essencial',        // insere o banner nos arquivos css
+        'build.essencial',                // gera html, styles, faz o uncss e componentiza
+        'autoprefixer:essencial',         // autoprefixa
 
-        'jade:essencial.includes',    // gera os html para include
-        'charset',                    // gera cópia do include em iso-88959-1
+        'connect',                        // comparação de screenshots
+        'phantomcss:essencial.mobile',
+        'phantomcss:essencial.desktop',
 
-        'clean:essencial'             // limpar arquivos que não seja de distribuição
+        'cssmin:essencial',               // comprime o css gerado
+        'usebanner:essencial',            // insere o banner nos arquivos css
+
+        'jade:essencial.includes',        // gera os html para inserção
+        'charset',                        // gera cópia do include em iso-88959-1
+
+        'clean:essencial'                 // limpar arquivos que não seja de distribuição
     ])
 
     grunt.registerTask('build', [
