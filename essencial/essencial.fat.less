@@ -64,6 +64,12 @@
         line-height: @line-height-base;
     }
 
+    // a barra de administração do Liferay tem z-index de apenas 325.
+    // mandar para trás alguns componentes do topo
+    .navbar-static-top, .dropdown-menu {
+        z-index: 300;
+    }
+
 }
 
 .twbs2 .sf-component {
