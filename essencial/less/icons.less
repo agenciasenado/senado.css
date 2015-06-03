@@ -1,46 +1,57 @@
 @font-face {
-	font-family: 'sf-icon';
-	src:url('@{icon-font-path}sf-icon.woff?ddaykc') format('woff');
+	font-family: 'mini-glyphicon';
+	src: url('@{icon-font-path}mini-glyphicon.woff?aaasas') format('woff');
 	font-weight: normal;
 	font-style: normal;
 }
 
-.glyphicon {
-	font-family: 'sf-icon';
+.glyphicon, [class^="glyphicon-"], [class*=" glyphicon-"] {
+	font-family: 'mini-glyphicon';
 	font-style: normal;
 	font-weight: normal;
 	font-variant: normal;
 	text-transform: none;
 	line-height: 1;
 
+    position: relative;
+    display: inline-block;
+    top: 1px;
+
+    font-size: 12px;
+
 	/* Better Font Rendering =========== */
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
 
+.glyphicon-search {
+	&::before {
+        content: "\e003";
+    }
+}
 .glyphicon-lock {
-	&:before {
-		content: "\f023";
-	}
+	&::before {
+        content: "\e033";
+    }
 }
 .glyphicon-chevron-up {
-	&:before {
-		content: "\f077";
-	}
+	&::before {
+        content: "\e113";
+    }
 }
-.glyphicon-menu-hamburger {
-	&:before {
-		content: "\f0c9";
-	}
-}
-.glyphicon-search {
-	&:before {
-		content: "\f0c9";
-	}
+.glyphicon-earphone {
+	&::before {
+        content: "\e182";
+    }
 }
 
-.glyphicon-earphone {
-	&:before {
-		content: "\f0c9";
-	}
+.glyphicon-menu-hamburger {
+    &:before {
+        content: "\e236";
+    }
+}
+
+.Icon--hamburger {
+    &:extend(.glyphicon);
+    .glyphicon-menu-hamburger;
 }
