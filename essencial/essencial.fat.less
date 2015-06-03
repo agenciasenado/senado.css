@@ -59,10 +59,17 @@
 
 // Fixes
 .aui .sf-component {
-
     // corrige line-heigth do bs2.
     li {
         line-height: @line-height-base;
+    }
+
+}
+
+.twbs2 .sf-component {
+    // forçar cimpatibilidade do collapse do twbs2 com o twbs3
+    .collapse {
+        display: block;
     }
 
 }
