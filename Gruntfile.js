@@ -156,6 +156,13 @@ module.exports = function(grunt) {
                 }
             }
         },
+        cssUrlEmbed: {
+            essencial: {
+                files: {
+                    'essencial/output/essencial.fat.css': ['essencial/output/essencial.fat.css']
+                }
+            }
+        },
         clean: {
             build: {
                 src: ['dist', 'essencial/output']
@@ -251,6 +258,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-less')
     grunt.loadNpmTasks('grunt-contrib-watch')
     grunt.loadNpmTasks('grunt-contrib-clean')
+    grunt.loadNpmTasks('grunt-css-url-embed')
     grunt.loadNpmTasks('grunt-contrib-cssmin')
     grunt.loadNpmTasks('grunt-contrib-connect')
     // endregion
@@ -272,8 +280,9 @@ module.exports = function(grunt) {
 
         'build.essencial',                // gera html, styles, faz o uncss e componentiza
         'autoprefixer:essencial',         // autoprefixa
+        'cssUrlEmbed:essencial',          // embute a fonte
 
-        //'connect',                        // comparação de screenshots
+        //'connect',                      // comparação de screenshots
         //'phantomcss:essencial.mobile',
         //'phantomcss:essencial.desktop',
 
