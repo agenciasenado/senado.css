@@ -2,7 +2,7 @@
 
     .PortalTopo
 
-        .PortalTopo-id
+        .PortalTopo-id.PortalTopo-id--narrow
             .PortalTopo-title
                 .PortalTopo-intro.hidden-xs Notícias
                 | Senado Federal
@@ -32,7 +32,7 @@
                 li: a(href='#') Central de Áudio
                 //- os dropdowns precisam ficar aberto no momento de gerar o uncss e
                 //- fechado na hora do build
-                li.dropdown(class=(dist ? '' : 'open'))
+                li.dropdown
                     a.dropdown-toggle(href='#', data-toggle='dropdown')
                         = 'Serviços '
                         span.caret

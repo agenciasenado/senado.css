@@ -1,0 +1,57 @@
+@font-face {
+	font-family: 'mini-glyphicon';
+	src: url('@{icon-font-path}mini-glyphicon.woff?aaasas') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+.glyphicon, [class^="glyphicon-"], [class*=" glyphicon-"] {
+	font-family: 'mini-glyphicon';
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+    position: relative;
+    display: inline-block;
+    top: 1px;
+
+    font-size: 12px;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.glyphicon-search {
+	&::before {
+        content: "\e003";
+    }
+}
+.glyphicon-lock {
+	&::before {
+        content: "\e033";
+    }
+}
+.glyphicon-chevron-up {
+	&::before {
+        content: "\e113";
+    }
+}
+.glyphicon-earphone {
+	&::before {
+        content: "\e182";
+    }
+}
+
+.glyphicon-menu-hamburger {
+    &:before {
+        content: "\e236";
+    }
+}
+
+.Icon--hamburger {
+    &:extend(.glyphicon);
+    .glyphicon-menu-hamburger;
+}

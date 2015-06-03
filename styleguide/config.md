@@ -5,7 +5,7 @@
     <meta name='viewport' content='width=device-width, initial-scale=1' />
     <script src='styledown.js'></script>
     <link rel='stylesheet' href='styledown.css' />
-    <link rel='stylesheet' href='../essencial/styles.css' />
+    <link rel='stylesheet' href='../dist/main.css' />
     <style>
     .sg-canvas { position: relative; }
     .sg-canvas::after {

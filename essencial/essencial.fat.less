@@ -10,13 +10,15 @@
 @import (reference) "@{bootstrap-path}/mixins";
 @import (reference) "@{bootstrap-path}/type";
 
+@import (reference) "../less/utils/variables";
 
-.sf-component {
+.aui .sf-component, .sf-component {
 
     font-family: @font-family-base;
     font-size: @font-size-base;
     line-height: @line-height-base;
     color: @text-color;
+
     background-color: @body-bg;
     margin: 0;
 
@@ -28,6 +30,16 @@
     }
 
     @import (less) "output/uncss.css";
+
+}
+
+// Fixes
+.aui .sf-component {
+
+    // corrige line-heigth do bs2.
+    li {
+        line-height: @line-height-base;
+    }
 
 }
 

@@ -1,6 +1,3 @@
-@import (reference) "@{bootstrap-path}/glyphicons";
-@import (reference) "@{bootstrap-path}/grid";
-
 @portal-topo-height: 90px;
 
 .PortalTopo {
@@ -29,7 +26,7 @@
  */
 // endregion doc
 .PortalTopo-togglers {
-    .make-xs-column(5);
+    .make-xs-column(4);
 }
 
 .PortalTopo-toggler, [class^="PortalTopo-toggler--"] {
@@ -67,11 +64,14 @@
 
 
 .PortalTopo-id {
-    .make-xs-column(7);
-    .make-sm-column(5);
+    .make-xs-column(8);
     color: #3E6892;
     display: table;
 }
+
+    .PortalTopo-id--narrow {
+        .make-sm-column(5);
+    }
 
 .PortalTopo-title {
     display: table-cell;
