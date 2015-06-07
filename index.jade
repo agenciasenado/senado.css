@@ -21,9 +21,17 @@ html(lang='pt')
         .container
             include jade/breadcrumbs
             .row
-                .col-xs-12
+                .col-sm-8.col-xs-12
                     h1.titulo-principal Guia de estilos do Senado Federal
+                    p.ByLine.pull-left
+                        span.ByLine-autor Da Redação
+                        span.ByLine-data
+                            |  05/06/2015, 17h17 - ATUALIZADO EM 05/06/2015, 18h25
                     include jade/share
+
+                    .row
+                        .col-xs-11
+                            include jade/bacon
 
         include jade/footer
 
