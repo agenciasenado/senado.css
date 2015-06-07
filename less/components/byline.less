@@ -17,11 +17,16 @@
 }
 
     .ByLine-autor {
-        &:after {
-            content: ' | ';
+        @media (min-width: @screen-sm-min) {
+            &:after {
+                content: ' | ';
+            }
         }
     }
 
     .ByLine-data {
         color: #999;
+        @media (max-width: @screen-xs-max) {
+            display: block;
+        }
     }
