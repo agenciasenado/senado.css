@@ -23,6 +23,8 @@
 // endregion doc
 .PortalTopo-togglers {
     .make-xs-column(4);
+    text-align: right;
+    font-size: 0;
 }
 
 .PortalTopo-toggler, [class^="PortalTopo-toggler--"] {
@@ -31,9 +33,10 @@
 
     &:extend(.glyphicon);
 
+    font-size: 14px;
     height: @size;
     width: @size;
-    margin-left: 10px;
+    margin-left: 5px;
     padding: 0;
 
     border: @border-size solid @azul-padrao;
@@ -41,7 +44,11 @@
 
     text-align: center;
     line-height: @size - 2 * @border-size;
-    float: right;
+
+    &:first-child {
+        margin-left: 0;
+    }
+
 }
 
     .PortalTopo-toggler--menu {
