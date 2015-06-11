@@ -43,6 +43,13 @@ module.exports = function(grunt) {
                     spawn: false
                 }
             },
+            styledown: {
+                files: ['**/*.less'],
+                tasks: ['styledown'],
+                options: {
+                    spawn: false
+                }
+            },
 
             livereload: {
                 options: {
@@ -109,7 +116,7 @@ module.exports = function(grunt) {
             options: {
                 logConcurrentOutput: true,
             },
-            main: ['watch:styles', 'watch:livereload', 'watch:jade']
+            main: ['watch:styles', 'watch:styledown', 'watch:livereload', 'watch:jade']
         },
         phantomcss: {
         }
