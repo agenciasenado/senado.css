@@ -1,15 +1,36 @@
+// region doc
+/**
+* Bloco:
+* `.Bloco`: Estrutura de conteúdo com um cabeçalho, uma mídia e um texto, todos opcionais. Ocupa toda a largura do
+* elemento parent. Embora o `.Bloco-top` seja o primeiro elemento visível, é o elemento `.Bloco-bd`
+* que deve ser sempre o primeiro child para permitir adaptação ao objeto `.Media`
+*
+*     @example
+*     .row
+*       .col-xs-3
+*         .Bloco
+*           .Bloco-bd
+*             div(style='width: 100%; height:100px; background-color:#eee')
+*           .Bloco-top
+*             .Etiqueta.Etiqueta--list Topo
+*           .Bloco-detail
+*             p: a(href='#'): small Detalhe
+*/
+// endregion
 .Bloco {
     width: 100%;
     margin-bottom: @line-height-computed;
     display: table;
+    position: relative;
 }
 
     .Bloco-top {
         display: table-header-group;
     }
 
-    .Bloco-img {
+    .Bloco-bd {
         overflow: hidden;
+        padding: 0;
     }
 
     .Bloco-detail {}
@@ -18,15 +39,53 @@
             height: 80px;
         }
 
+/**
+* Bloco Media:
+* `.Bloco--media`: Adaptação da estrutura `Bloco` ao elemento `.Media`. Nesse elemento, o `.Bloco-bd` é deslocado
+*  para a esquerda e um novo contexto de fluxo é criado. Possui versões responsivas, na qual o elemento `.Bloco`
+*  se comporta como um elemento `.Media` apenas daquele breakpoint pra baixo.
+*
+*  Permite aninhamento de outro `.Media` ou `.Bloco--media`
+*
+*     @example
+*     .Bloco.Bloco--media
+*       .Bloco-bd
+*         div(style='width: 50px; height:50px; background-color:#eee')
+*       .Bloco-top
+*         .Etiqueta.Etiqueta--list Topo
+*       .Bloco-detail
+*         p: a(href='#'): small Detalhes
+*         .Bloco.Bloco--media
+*           .Bloco-bd
+*             div(style='width: 50px; height:50px; background-color:#eee')
+*           .Bloco-top
+*             .Etiqueta.Etiqueta--list Topo
+*           .Bloco-detail
+*             p: a(href='#'): small Detalhe
+*         .Bloco.Bloco--media
+*           .Bloco-bd
+*             div(style='width: 50px; height:50px; background-color:#eee')
+*           .Bloco-top
+*             .Etiqueta.Etiqueta--list Topo
+*           .Bloco-detail
+*             p: a(href='#'): small Detalhe
+*         .Bloco.Bloco--media
+*           .Bloco-bd
+*             div(style='width: 50px; height:50px; background-color:#eee')
+*           .Bloco-top
+*             .Etiqueta.Etiqueta--list Topo
+*           .Bloco-detail
+*             p: a(href='#'): small Detalhe
+*/
+// endregion
 .Bloco--media {
     display: block;
     overflow: hidden;
-    .Bloco-img {
+    > .Bloco-bd {
         float: left;
         margin-right: 10px;
-        width: 40%;
     }
-    .Bloco-detail {
+    > .Bloco-detail {
         overflow: hidden;
     }
 }
