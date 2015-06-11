@@ -39,6 +39,7 @@
             height: 80px;
         }
 
+//region doc
 /**
 * Bloco Media:
 * `.Bloco--media`: Adaptação da estrutura `Bloco` ao elemento `.Media`. Nesse elemento, o `.Bloco-bd` é deslocado
@@ -93,6 +94,9 @@
 .Bloco--media-xs {
     @media (max-width: @screen-xs-max) {
         .Bloco--media;
+        > .Bloco-bd {
+            width: 40%;
+        }
     }
 }
 
