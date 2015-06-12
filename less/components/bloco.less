@@ -1,139 +1,142 @@
 /***
- * Blocos e Media:
+ * Medias e Media:
  */
-
-// region doc
-/**
- * Bloco:
- * `.Bloco`: Estrutura de conteúdo com um cabeçalho, uma mídia e um texto, todos opcionais. Ocupa toda a largura do
- * elemento parent. Embora o `.Bloco-top` seja o primeiro elemento visível, é o elemento `.Bloco-figure`
- * que deve ser sempre o primeiro child para permitir adaptação ao objeto `.Media`
- *
- *     @example
- *     div(style='width:100px')
- *       .Bloco
- *         .Bloco-figure
- *           div(style='width: 100%; height:100px; background-color:#eee')
- *         .Bloco-top
- *           .Etiqueta.Etiqueta--left.glyphicon-list Topo
- *         .Bloco-body
- *           p: a(href='#'): small Detalhe
- */
-// endregion
-.Bloco {
-    width: 100%;
-    margin-bottom: @line-height-computed;
-    display: table;
-    position: relative;
-}
-
-    .Bloco-top {
-        display: table-header-group;
-    }
-
-    .Bloco-figure {
-        overflow: hidden;
-        padding: 0;
-    }
-
-    .Bloco-body {}
 
 //region doc
 /**
-* Bloco Media:
-* `.Bloco--media`: Adaptação da estrutura `Bloco` ao elemento `.Media`. Nesse elemento, o `.Bloco-figure` é deslocado
+* Media Media:
+* `.Media--media`: Adaptação da estrutura `Media` ao elemento `.Media`. Nesse elemento, o `.Media-figure` é deslocado
 *  para a esquerda (ou para a direita via `.pull-right`) e um novo [contexto de formatação](http://goo.gl/sIBbFp)
-*  é criado. Possui modificadores responsivos, em que o elemento `.Bloco` se comporta como um elemento `.Media`
+*  é criado. Possui modificadores responsivos, em que o elemento `.Media` se comporta como um elemento `.Media`
 *  apenas daquele breakpoint pra baixo.
 *
-*  Permite aninhamento de outro `.Media` ou `.Bloco--media`
+*  Permite aninhamento de outro `.Media` ou `.Media--media`
 *
 *     @example
-*     .Bloco.Bloco--media
-*       .Bloco-figure.col-xs-2
-*         div(style='width: 100%; height:50px; background-color:#eee')
-*       .Bloco-top
+*     .Media
+*       .Media-figure
+*         div(style='width:50px; height:50px; background-color:#eee')
+*       .Media-body
 *         .Etiqueta.glyphicon-list Topo
-*       .Bloco-body
 *         p: a(href='#'): small Detalhes
-*         .Bloco.Bloco--media
-*           .Bloco-figure
+*         .Media
+*           .Media-figure
 *             div(style='width: 50px; height:50px; background-color:#eee')
-*           .Bloco-top
+*           .Media-body
 *             .Etiqueta.glyphicon-list Topo
-*           .Bloco-body
 *             p: a(href='#'): small Detalhe
-*         .Bloco.Bloco--media
-*           .Bloco-figure
+*         .Media
+*           .Media-figure
 *             div(style='width: 50px; height:50px; background-color:#eee')
-*           .Bloco-top
+*           .Media-body
 *             .Etiqueta.glyphicon-list Topo
-*           .Bloco-body
 *             p: a(href='#'): small Detalhe
-*         .Bloco.Bloco--media
-*           .Bloco-figure
+*         .Media
+*           .Media-figure
 *             div(style='width: 50px; height:50px; background-color:#eee')
-*           .Bloco-top
+*           .Media-body
 *             .Etiqueta.glyphicon-list Topo
-*           .Bloco-body
 *             p: a(href='#'): small Detalhe
 */
 // endregion
-.Bloco--media {
-    display: block;
+.Media {
     overflow: hidden;
-    > .Bloco-figure {
+    margin-bottom: @line-height-computed;
+}
+    .Media-figure {
         float: left;
         margin-right: 10px;
+        padding: 0; // forçar o padding==0 para permitir utilização de classes col-*-*.
     }
-    > .Bloco-body {
+
+    .Media-body {
         overflow: hidden;
     }
+
+
+// region doc
+/**
+ * Media:
+ * `.Media`: Estrutura de conteúdo com um cabeçalho, uma mídia e um texto, todos opcionais. Ocupa toda a largura do
+ * elemento parent. Embora o `.Media-top` seja o primeiro elemento visível, é o elemento `.Media-figure`
+ * que deve ser sempre o primeiro child para permitir adaptação ao objeto `.Media`
+ *
+ *     @example
+ *     div
+ *       .Media.Media--bloco
+ *         .Media-figure
+ *           div(style='height:100px; background-color:#eee')
+ *         .Media-top
+ *           .Etiqueta.Etiqueta--left.glyphicon-list Topo
+ *         .Media-body
+ *           p: a(href='#'): small Detalhe
+ *     div
+ *       .Media.Media--bloco.Media--bloco--sm
+ *         .Media-figure
+ *           div(style='width: 100px; height:100px; background-color:#eee')
+ *         .Media-top
+ *           .Etiqueta.Etiqueta--left.glyphicon-list Topo
+ *         .Media-body
+ *           p: a(href='#'): small Detalhe
+ */
+// endregion
+.Media--bloco {
+    display: table;
+    width: 100%;
+
+    > .Media-top {
+        display: table-header-group;
+    }
+
+    > .Media-figure {
+        width: 100%; // forçar o width==100% para permitir utilização de classes col-*-* no modo Media.
+        margin: 0;
+    }
 }
 
-.Bloco--media-xs {
+
+.Media--bloco--sm {
     @media (max-width: @screen-xs-max) {
-        .Bloco--media;
-    }
-    @media (min-width: @screen-sm-min) {
-        > .Bloco-figure {
-            width: 100%;
+        display: block;
+        > .Media-figure {
+            width: auto;
+            margin-right: 10px;
         }
     }
 }
-
-.Bloco--media-sm {
-    @media (max-width: @screen-sm-max) {
-        .Bloco--media;
-    }
-    @media (min-width: @screen-md-min) {
-        > .Bloco-figure {
-            width: 100%;
-        }
-    }
-}
-
-.Bloco--media-md {
-    @media (max-width: @screen-md-max) {
-        .Bloco--media;
-    }
-    @media (min-width: @screen-lg-min) {
-        > .Bloco-figure {
-            width: 100%;
-        }
-    }
-}
-
-.Bloco-adminbar {
-    position: absolute;
-    right: 0;
-    left: 0;
-    z-index: 1;
-    a {
-        display: inline-block;
-        padding: 0 4px;
-        background: fadeout(@azul-padrao, 20%);
-        color: #fff;
-        margin-left: 2px;
-    }
-}
+//
+//.Media--media-sm {
+//    @media (max-width: @screen-sm-max) {
+//        .Media--media;
+//    }
+//    @media (min-width: @screen-md-min) {
+//        > .Media-figure {
+//            width: 100%;
+//        }
+//    }
+//}
+//
+//.Media--media-md {
+//    @media (max-width: @screen-md-max) {
+//        .Media--media;
+//    }
+//    @media (min-width: @screen-lg-min) {
+//        > .Media-figure {
+//            width: 100%;
+//        }
+//    }
+//}
+//
+//.Media-adminbar {
+//    position: absolute;
+//    right: 0;
+//    left: 0;
+//    z-index: 1;
+//    a {
+//        display: inline-block;
+//        padding: 0 4px;
+//        background: fadeout(@azul-padrao, 20%);
+//        color: #fff;
+//        margin-left: 2px;
+//    }
+//}
