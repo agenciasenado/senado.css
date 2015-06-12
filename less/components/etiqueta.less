@@ -1,37 +1,53 @@
 // region doc
 /**
 * Etiqueta de Retranca:
-* `.Etiqueta`: Label com ícone para uso geral. Deve ser utilizada sempre `inline`.
+* `.Etiqueta`: Label com ícone para uso geral. Deve ser utilizada sempre `inline`. Deve ser combinado com uma classe
+* `.glyphicon-*` para exibição de ícones.
 *
 *     @example
-*     div.Etiqueta.Etiqueta--list
+*     div.Etiqueta.glyphicon-list
 *         |  Etiqueta
 *     span Bloco inline
+*     br
+*     div.Etiqueta.Etiqueta--left.glyphicon-list
+*         |  Etiqueta
+*     span Bloco inline
+
 */
 // endregion
 
-@etqt-height: 22px;
+@etiqueta-height: 23px;
+@etiqueta-padding: 6px;
 
 .Etiqueta {
     display: inline-block;
-    padding-left: 6px;
+    padding: 0 @etiqueta-padding;
     background: #999;
-    line-height: @etqt-height - 2;
+    line-height: @etiqueta-height - 2;
     font-size: 11px;
     color: #fff;
     margin-bottom: 1px;
 }
-    .Etiqueta:after {
+    .Etiqueta:after, .Etiqueta:before {
         font-family: 'Glyphicons Halflings', sans-serif;
-        display: inline-block;
-        vertical-align: top;
         font-size: 12px;
-        margin-left: 6px;
-        border-left: 1px solid #fff;
+        border: solid #fff;
+        border-width: 0 1px;
+
         padding: 0 5px;
         background: @azul-padrao;
+        float: right;
+
+        position: relative;
+        left: @etiqueta-padding;
     }
 
-    .Etiqueta--list:after {
-        content: "\e032";
+    .Etiqueta--left {
+        position: relative;
+        left: -1px;
+        &:after, &:before {
+            float: left;
+            left: auto;
+            right: @etiqueta-padding;
+        }
     }
