@@ -1,47 +1,43 @@
 /***
- * Medias e Media:
+ * Blocos e Media:
  */
 
 //region doc
 /**
-* Media Media:
-* `.Media--media`: Adaptação da estrutura `Media` ao elemento `.Media`. Nesse elemento, o `.Media-figure` é deslocado
-*  para a esquerda (ou para a direita via `.pull-right`) e um novo [contexto de formatação](http://goo.gl/sIBbFp)
-*  é criado. Possui modificadores responsivos, em que o elemento `.Media` se comporta como um elemento `.Media`
-*  apenas daquele breakpoint pra baixo.
-*
-*  Permite aninhamento de outro `.Media` ou `.Media--media`
-*
-*     @example
-*     .Media
-*       .Media-figure
-*         div(style='width:50px; height:50px; background-color:#eee')
-*       .Media-body
-*         .Etiqueta.glyphicon-list Topo
-*         p: a(href='#'): small Detalhes
-*         .Media
-*           .Media-figure
-*             div(style='width: 50px; height:50px; background-color:#eee')
-*           .Media-body
-*             .Etiqueta.glyphicon-list Topo
-*             p: a(href='#'): small Detalhe
-*         .Media
-*           .Media-figure
-*             div(style='width: 50px; height:50px; background-color:#eee')
-*           .Media-body
-*             .Etiqueta.glyphicon-list Topo
-*             p: a(href='#'): small Detalhe
-*         .Media
-*           .Media-figure
-*             div(style='width: 50px; height:50px; background-color:#eee')
-*           .Media-body
-*             .Etiqueta.glyphicon-list Topo
-*             p: a(href='#'): small Detalhe
-*/
+ * Media:
+ * `.Media`: Estrutura genérica de disposição de conteúdo com uma mídia lateral. Nesse elemento, o `.Media-figure` é
+ * deslocado para a esquerda (ou para a direita via `.pull-right`) e um novo
+ * [contexto de formatação](http://goo.gl/sIBbFp) é criado.
+ *
+ *  Permite aninhamento de outro `.Media`.
+ *
+ *     @example
+ *     .Media
+ *       .Media-figure
+ *         div(style='width:50px; height:50px; background-color:#eee')
+ *       .Media-body
+ *         .Etiqueta.glyphicon-list Topo
+ *         p: a(href='#'): small Detalhes
+ *         .Media
+ *           .Media-figure
+ *             div(style='width: 50px; height:50px; background-color:#eee')
+ *           .Media-body
+ *             .Etiqueta.glyphicon-list Topo
+ *             p: a(href='#'): small Detalhe
+ *         .Media
+ *           .Media-figure
+ *             div(style='width: 50px; height:50px; background-color:#eee')
+ *           .Media-body
+ *             .Etiqueta.glyphicon-list Topo
+ *             p: a(href='#'): small Detalhe
+ */
 // endregion
 .Media {
     overflow: hidden;
-    margin-bottom: @line-height-computed;
+    margin-top: 15px;
+    &:first-child {
+        margin-top: 0;
+    }
 }
     .Media-figure {
         float: left;
@@ -56,28 +52,18 @@
 
 // region doc
 /**
- * Media:
- * `.Media`: Estrutura de conteúdo com um cabeçalho, uma mídia e um texto, todos opcionais. Ocupa toda a largura do
- * elemento parent. Embora o `.Media-top` seja o primeiro elemento visível, é o elemento `.Media-figure`
- * que deve ser sempre o primeiro child para permitir adaptação ao objeto `.Media`
+ * Bloco:
+ * `.Media--bloco`: Implementa a estrutura **Bloco** a partir de um elemento `.Media`. Compõe-se de um cabeçalho,
+ * uma mídia e um texto (todos opcionais) dispostos verticalmente.
  *
  *     @example
- *     div
- *       .Media.Media--bloco
- *         .Media-figure
- *           div(style='height:100px; background-color:#eee')
- *         .Media-top
- *           .Etiqueta.Etiqueta--left.glyphicon-list Topo
- *         .Media-body
- *           p: a(href='#'): small Detalhe
- *     div
- *       .Media.Media--bloco.Media--bloco--sm
- *         .Media-figure
- *           div(style='width: 100px; height:100px; background-color:#eee')
- *         .Media-top
- *           .Etiqueta.Etiqueta--left.glyphicon-list Topo
- *         .Media-body
- *           p: a(href='#'): small Detalhe
+ *     .Media.Media--bloco
+ *       .Media-figure
+ *         div(style='background-color:#eee; height:100px')
+ *       .Media-top
+ *         .Etiqueta.Etiqueta--left.glyphicon-list Topo
+ *       .Media-body
+ *         p: a(href='#'): small Detalhes
  */
 // endregion
 .Media--bloco {
@@ -89,44 +75,60 @@
     }
 
     > .Media-figure {
-        width: 100%; // forçar o width==100% para permitir utilização de classes col-*-* no modo Media.
+        float: none;
         margin: 0;
     }
 }
 
 
-.Media--bloco--sm {
-    @media (max-width: @screen-xs-max) {
-        display: block;
-        > .Media-figure {
-            width: auto;
-            margin-right: 10px;
-        }
+// region doc
+/**
+ * Bloco e Media: É possível que um elemento **Bloco** se comporte como **Media** quando necessário.
+ * Por meio de seus modificadores responsivos, um elemento `.Media--bloco` se comportará como **Media** até
+ * o breakpoint especificado.
+ *
+ * Embora o `.Media-top` seja o primeiro elemento visível no modo **Bloco**, é o elemento `.Media-figure` que deve vir
+ * primeiro na markup.
+ *
+ *     @example
+ *     .Media.Media--bloco.Media--bloco--sm
+ *       .Media-figure.col-xs-3.col-sm-6.col-md-12
+ *         div(style='height:100px; background-color:#eee')
+ *       .Media-top
+ *         .Etiqueta.Etiqueta--left.glyphicon-list Topo
+ *       .Media-body
+ *         p: a(href='#'): small Detalhe
+ */
+// endregion
+
+._is-media() {
+    display: block;
+    > .Media-figure {
+        float: left;
+        margin-right: 10px;
     }
 }
-//
-//.Media--media-sm {
-//    @media (max-width: @screen-sm-max) {
-//        .Media--media;
-//    }
-//    @media (min-width: @screen-md-min) {
-//        > .Media-figure {
-//            width: 100%;
-//        }
-//    }
-//}
-//
-//.Media--media-md {
-//    @media (max-width: @screen-md-max) {
-//        .Media--media;
-//    }
-//    @media (min-width: @screen-lg-min) {
-//        > .Media-figure {
-//            width: 100%;
-//        }
-//    }
-//}
-//
+
+    .Media--bloco--xs {
+        @media (max-width: @screen-xs-max) {
+            ._is-media;
+        }
+    }
+
+    .Media--bloco--sm {
+        @media (max-width: @screen-sm-max) {
+            ._is-media;
+        }
+    }
+
+    .Media--bloco--md {
+        @media (max-width: @screen-md-max) {
+            ._is-media;
+        }
+    }
+
+
+
 //.Media-adminbar {
 //    position: absolute;
 //    right: 0;
