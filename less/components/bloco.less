@@ -7,7 +7,8 @@
  * Media:
  * `.Media`: Estrutura genérica de disposição de conteúdo com uma mídia lateral. Nesse elemento, o `.Media-figure` é
  * deslocado para a esquerda (ou para a direita via `.pull-right`) e um novo
- * [contexto de formatação](http://goo.gl/sIBbFp) é criado.
+ * [contexto de formatação](http://goo.gl/sIBbFp)
+ * é criado.
  *
  *  Permite aninhamento de outro `.Media`.
  *
@@ -85,11 +86,10 @@
 
 // region doc
 /**
- * Bloco e Media: É possível que um elemento **Bloco**
+ * Bloco e Media: Para que um elemento **Bloco**
  * se comporte como **Media**
- * quando necessário. Por meio dos
- * estados `is-xs`, `is-sm`, `is-md` e `is-lg`,  um elemento `.Media--bloco` se comportará como **Media**
- * só no breakpoint especificado.
+ * apenas em determinados breakpoints, utilize os estados `is-xs`, `is-sm`,
+ `is-md` ou `is-lg`, combinados ou não.
  *
  * Embora o `.Media-top` seja o primeiro elemento visível no modo **Bloco**, é o elemento `.Media-figure` que deve vir
  * primeiro na markup.
