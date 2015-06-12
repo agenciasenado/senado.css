@@ -38,6 +38,7 @@
     &:first-child {
         margin-top: 0;
     }
+    margin-bottom: 15px;
 }
     .Media-figure {
         float: left;
@@ -53,7 +54,8 @@
 // region doc
 /**
  * Bloco:
- * `.Media--bloco`: Implementa a estrutura **Bloco** a partir de um elemento `.Media`. Compõe-se de um cabeçalho,
+ * `.Media--bloco`: Implementa a estrutura **Bloco**
+ * a partir de um elemento `.Media`. Compõe-se de um cabeçalho,
  * uma mídia e um texto (todos opcionais) dispostos verticalmente.
  *
  *     @example
@@ -83,15 +85,17 @@
 
 // region doc
 /**
- * Bloco e Media: É possível que um elemento **Bloco** se comporte como **Media** quando necessário.
- * Por meio de seus modificadores responsivos, um elemento `.Media--bloco` se comportará como **Media** até
- * o breakpoint especificado.
+ * Bloco e Media: É possível que um elemento **Bloco**
+ * se comporte como **Media**
+ * quando necessário. Por meio dos
+ * estados `is-xs`, `is-sm`, `is-md` e `is-lg`,  um elemento `.Media--bloco` se comportará como **Media**
+ * só no breakpoint especificado.
  *
  * Embora o `.Media-top` seja o primeiro elemento visível no modo **Bloco**, é o elemento `.Media-figure` que deve vir
  * primeiro na markup.
  *
  *     @example
- *     .Media.Media--bloco.Media--bloco--sm
+ *     .Media.Media--bloco.is-xs.is-sm
  *       .Media-figure.col-xs-3.col-sm-6.col-md-12
  *         div(style='height:100px; background-color:#eee')
  *       .Media-top
@@ -109,36 +113,30 @@
     }
 }
 
-    .Media--bloco--xs {
+.Media--bloco {
+
+    &.is-xs {
         @media (max-width: @screen-xs-max) {
             ._is-media;
         }
     }
 
-    .Media--bloco--sm {
-        @media (max-width: @screen-sm-max) {
+    &.is-sm {
+        @media(min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
             ._is-media;
         }
     }
 
-    .Media--bloco--md {
-        @media (max-width: @screen-md-max) {
+    &.is-md {
+        @media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
             ._is-media;
         }
     }
 
+    &.is-lg {
+        @media (min-width: @screen-lg-min) {
+            ._is-media;
+        }
+    }
 
-
-//.Media-adminbar {
-//    position: absolute;
-//    right: 0;
-//    left: 0;
-//    z-index: 1;
-//    a {
-//        display: inline-block;
-//        padding: 0 4px;
-//        background: fadeout(@azul-padrao, 20%);
-//        color: #fff;
-//        margin-left: 2px;
-//    }
-//}
+}
