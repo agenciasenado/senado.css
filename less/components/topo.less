@@ -8,8 +8,9 @@
  *
  *     @example
  *     .NavGlobal.navbar.navbar-static-top
- *        a.NavGlobal-logo(href='http://www.senado.gov.br/')
- *          img(src='../img/senado.svg', alt='Senado Federal')
+ *       .container-fluid
+ *          a.NavGlobal-logo(href='http://www.senado.gov.br/')
+ *            img(src='../img/senado.svg', alt='Senado Federal')
  *
  */
 // endregion
@@ -21,6 +22,9 @@
     border-bottom: 4px solid #00824A;
     box-shadow: 0 4px 0 #FAE042;
 
+    text-align: center;
+    font-size: 12px;
+
     @media (max-width: @screen-xs-max) {
         margin-bottom: 4px;
     }
@@ -29,8 +33,6 @@
 
 .NavGlobal-container {
     .container();
-    text-align: center;
-    font-size: 12px;
 }
 
     .NavGlobal-middle {
@@ -60,33 +62,33 @@
         }
     }
 
-.NavGlobal-menu {
-    vertical-align: middle;
-    background: transparent;
-    font-size: 18px;
-}
+    .NavGlobal-menu {
+        vertical-align: middle;
+        background: transparent;
+        font-size: 18px;
+    }
 
-.NavGlobal-dropdownMenu.dropdown-menu {
-    background-color: #1A456C;
-    border-radius: 0;
-    border-bottom: none;
-    box-shadow: none;
-    top: 42px;
-    margin-top: 9px;
-    padding: 5px 20px;
-    border-top: none;
-    font-size: 12px;
-    line-height: @line-height-base;
-    > li > a {
-        padding: 6px 0;
-        color: #fff;
-        border-bottom: 1px solid #1A9FDD;
-        &:hover, &:focus {
-            background: inherit;
+    .NavGlobal-dropdownMenu.dropdown-menu {
+        background-color: #1A456C;
+        border-radius: 0;
+        border-bottom: none;
+        box-shadow: none;
+        top: 42px;
+        margin-top: 9px;
+        padding: 5px 20px;
+        border-top: none;
+        font-size: 12px;
+        line-height: @line-height-base;
+        > li > a {
+            padding: 6px 0;
             color: #fff;
+            border-bottom: 1px solid #1A9FDD;
+            &:hover, &:focus {
+                background: inherit;
+                color: #fff;
+            }
+        }
+        > li:last-child > a {
+            border: none;
         }
     }
-    > li:last-child > a {
-        border: none;
-    }
-}

@@ -6,7 +6,7 @@
 /**
  * Media:
  * `.Media`: Estrutura genérica de disposição de conteúdo com uma mídia lateral. Nesse elemento, o `.Media-figure` é
- * deslocado para a esquerda (ou para a direita via `.pull-right`) e um novo
+ * deslocado para a esquerda (ou para a direita via `.Media--flip`) e um novo
  * [contexto de formatação](http://goo.gl/sIBbFp)
  * é criado.
  *
@@ -16,126 +16,158 @@
  *     .Media
  *       .Media-figure
  *         div(style='width:50px; height:50px; background-color:#eee')
+ *       .Media-top
+ *         .Etiqueta.glyphicon-list Hyperspace II
  *       .Media-body
- *         .Etiqueta.glyphicon-list Topo
- *         p: a(href='#'): small Detalhes
+ *         p
+ *           small
+ *             | The alien is more pathway now than cosmonaut. greatly exaggerated and virtually futile.
+ *             | The transporter is more crewmate now than collective. harmless and wildly proud.
+ *             | The space suit is more mermaid now than lieutenant commander. Fantastic and virtually senior.
  *         .Media
  *           .Media-figure
  *             div(style='width: 50px; height:50px; background-color:#eee')
  *           .Media-body
- *             .Etiqueta.glyphicon-list Topo
- *             p: a(href='#'): small Detalhe
+ *             .Etiqueta.glyphicon-list Pathway
+ *             p
+ *               small
+ *                 | The sonic shower is more transporter now than particle. real and technically chemical.
+ *                 | Understanding at the universe was the devastation of mystery, arrested to a modern green people.
+ *                 | All the alignments will be lost in advices like galaxies in deaths.
  *         .Media
  *           .Media-figure
  *             div(style='width: 50px; height:50px; background-color:#eee')
  *           .Media-body
- *             .Etiqueta.glyphicon-list Topo
- *             p: a(href='#'): small Detalhe
+ *             p: a(href='#'): small Cauliflower combines greatly with salted noodles.
  */
 // endregion
+@media-spacing: 10px;
+
 .Media {
     overflow: hidden;
-    margin-top: 15px;
+    margin-top: @media-spacing;
     &:first-child {
         margin-top: 0;
     }
-    margin-bottom: 15px;
+    margin-bottom: @media-spacing;
 }
+
     .Media-figure {
         float: left;
         margin-right: 10px;
         padding: 0; // forçar o padding==0 para permitir utilização de classes col-*-*.
     }
 
+        .Media-figure--right {
+            float: right;
+            margin-right: 0;
+            margin-left: @media-spacing;
+        }
+
     .Media-body {
         overflow: hidden;
     }
 
-
-// region doc
-/**
- * Bloco:
- * `.Media--bloco`: Implementa a estrutura **Bloco**
- * a partir de um elemento `.Media`. Compõe-se de um cabeçalho,
- * uma mídia e um texto (todos opcionais) dispostos verticalmente.
- *
- *     @example
- *     .Media.Media--bloco
- *       .Media-figure
- *         div(style='background-color:#eee; height:100px')
- *       .Media-top
- *         .Etiqueta.Etiqueta--left.glyphicon-list Topo
- *       .Media-body
- *         p: a(href='#'): small Detalhes
- */
-// endregion
-.Media--bloco {
-    display: table;
-    width: 100%;
-
-    > .Media-top {
+    .Media-top {
         display: table-header-group;
     }
 
+// region doc
+/**
+ * Mídia à direita:
+ * `.Media--flip`: Alinha a mídia à direita.
+ *
+ *     @example
+ *     .row
+ *       .col-sm-6
+ *         .Media
+ *           .Media-figure.Media-figure--right
+ *             div(style='width: 60px; height:60px; background-color:#eee')
+ *           .Media-body
+ *             .Etiqueta.glyphicon-list Flip
+ *             p: small
+ *               | Cauliflower can be marinateed with packaged chili, also try flavoring the smoothie with peppermint tea.
+ *               | Ramen can be garnished with canned rhubarb, also try blending the pudding with oyster sauce.
+ */
+// endregion
+
+
+// region doc
+/**
+ * Stack:
+ * `.Media--stack`: Empilha os subelementos do **Media**. O subelemento `.Media-top` sempre será o primeiro elemento
+ * da pilha, independente da sua ordem na markup.
+ *
+ *     @example
+ *     .Media.Media--stack
+ *       .Media-top
+ *         .Etiqueta.Etiqueta--left.glyphicon-list Topo
+ *       .Media-figure
+ *         div(style='background-color:#eee; height:100px')
+ *       .Media-body
+ *         p: small The planet is more emitter now than cosmonaut. final and pedantically neutral.
+ */
+// endregion
+
+
+// region doc
+/**
+ * Stack responsivo: Para que um elemento **Bloco**
+ * se comporte como **Media**
+ * apenas em determinados breakpoints, utilize os estados `is-media-xs`, `is-media-sm`,
+ * `is-media-md` ou `is-media-lg`, combinados ou não.
+ *
+ * Embora o `.Media-top` seja o primeiro elemento visível no modo **Bloco**, é o elemento `.Media-figure` que deve vir
+ * primeiro na markup.
+ *
+ *     @example
+ *     .Media.Media--stack
+ *       .Media-figure.col-xs-6
+ *         div(style='height:100px; background-color:#eee')
+ *       .Media-top
+ *         .Etiqueta.Etiqueta--left.glyphicon-list Topo
+ *       .Media-body
+ *         p: small The disconnection is a terrifying species.
+ *           | Whine quirky like a rainy wind. This honor has only been opened by a fantastic particle.
+ *           | Assimilation at the homeworld was the future of nuclear flux, attacked to a gravimetric planet.
+ *           | Moon at the cabin was the stigma of understanding, gathered to a real klingon.
+ */
+// endregion
+.Media--stack {
+    display: table;
+    width: 100%;
     > .Media-figure {
         float: none;
         margin: 0;
     }
 }
 
-
-// region doc
-/**
- * Bloco e Media: Para que um elemento **Bloco**
- * se comporte como **Media**
- * apenas em determinados breakpoints, utilize os estados `is-xs`, `is-sm`,
- `is-md` ou `is-lg`, combinados ou não.
- *
- * Embora o `.Media-top` seja o primeiro elemento visível no modo **Bloco**, é o elemento `.Media-figure` que deve vir
- * primeiro na markup.
- *
- *     @example
- *     .Media.Media--bloco.is-xs.is-sm
- *       .Media-figure.col-xs-3.col-sm-6.col-md-12
- *         div(style='height:100px; background-color:#eee')
- *       .Media-top
- *         .Etiqueta.Etiqueta--left.glyphicon-list Topo
- *       .Media-body
- *         p: a(href='#'): small Detalhe
- */
-// endregion
-
-._is-media() {
-    display: block;
-    > .Media-figure {
-        float: left;
-        margin-right: 10px;
-    }
+._is-stack() {
 }
 
-.Media--bloco {
+.Media--stack {
 
-    &.is-xs {
+    &.is-media-xs {
         @media (max-width: @screen-xs-max) {
-            ._is-media;
+            ._is-stack;
         }
     }
 
-    &.is-sm {
+    &.is-stack-sm {
         @media(min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
-            ._is-media;
+            ._is-stack;
         }
     }
 
-    &.is-md {
+    &.is-media-md {
         @media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
-            ._is-media;
+            ._is-stack;
         }
     }
 
-    &.is-lg {
+    &.is-media-lg {
         @media (min-width: @screen-lg-min) {
-            ._is-media;
+            ._is-stack;
         }
     }
 

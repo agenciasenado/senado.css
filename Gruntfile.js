@@ -144,7 +144,7 @@ module.exports = function(grunt) {
         'connect', 'concurrent:main'
     ])
     grunt.registerTask('dev', [
-        'build', 'server'
+        'build', 'styledown', 'server'
     ])
 
     grunt.registerTask('default', [
