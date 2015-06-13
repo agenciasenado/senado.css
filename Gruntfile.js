@@ -61,7 +61,7 @@ module.exports = function(grunt) {
         styledown: {
             build: {
                 files: {
-                    'styleguide/index.html': ['less/**/*.less']
+                    'styleguide/index.html': ['less/**/bloco.less']
                 },
                 options: {
                     css: 'dist/fat.css',

@@ -1,5 +1,5 @@
 /***
- * Blocos e Media:
+ * Media:
  */
 
 //region doc
@@ -15,7 +15,7 @@
  *     @example
  *     .Media
  *       .Media-figure
- *         div(style='width:50px; height:50px; background-color:#eee')
+ *         div(style='width:50px; height:50px; background-color:#eee; display: table-cell; vertical-align: middle')
  *       .Media-top
  *         .Etiqueta.glyphicon-list Hyperspace II
  *       .Media-body
@@ -45,7 +45,6 @@
 
 .Media {
     overflow: hidden;
-    margin-top: @media-spacing;
     &:first-child {
         margin-top: 0;
     }
@@ -54,15 +53,9 @@
 
     .Media-figure {
         float: left;
-        margin-right: 10px;
         padding: 0; // forçar o padding==0 para permitir utilização de classes col-*-*.
+        margin-right: @media-spacing;
     }
-
-        .Media-figure--right {
-            float: right;
-            margin-right: 0;
-            margin-left: @media-spacing;
-        }
 
     .Media-body {
         overflow: hidden;
@@ -72,24 +65,14 @@
         display: table-header-group;
     }
 
-// region doc
-/**
- * Mídia à direita:
- * `.Media--flip`: Alinha a mídia à direita.
- *
- *     @example
- *     .row
- *       .col-sm-6
- *         .Media
- *           .Media-figure.Media-figure--right
- *             div(style='width: 60px; height:60px; background-color:#eee')
- *           .Media-body
- *             .Etiqueta.glyphicon-list Flip
- *             p: small
- *               | Cauliflower can be marinateed with packaged chili, also try flavoring the smoothie with peppermint tea.
- *               | Ramen can be garnished with canned rhubarb, also try blending the pudding with oyster sauce.
- */
-// endregion
+.Media--flip {
+    > .Media-figure {
+        float: right;
+        margin-right: 0;
+        margin-left: @media-spacing;
+    }
+}
+
 
 
 // region doc
@@ -108,6 +91,15 @@
  *         p: small The planet is more emitter now than cosmonaut. final and pedantically neutral.
  */
 // endregion
+.Media--stack {
+    display: table;
+    width: 100%;
+    > .Media-figure {
+        width: 100%;
+        float: none;
+        margin: 0;
+    }
+}
 
 
 // region doc
@@ -117,57 +109,47 @@
  * apenas em determinados breakpoints, utilize os estados `is-media-xs`, `is-media-sm`,
  * `is-media-md` ou `is-media-lg`, combinados ou não.
  *
- * Embora o `.Media-top` seja o primeiro elemento visível no modo **Bloco**, é o elemento `.Media-figure` que deve vir
- * primeiro na markup.
+ * A posição do `.Media-top` na markup influencia a disposição dos subelementos no modo **Media**. Se for o primeiro
+ * elemento filho, ficará acima do **Media**
+ * inteiro. Caso contrário ficará diretamente acima do subelemento `.Media-body`.
  *
  *     @example
- *     .Media.Media--stack
- *       .Media-figure.col-xs-6
- *         div(style='height:100px; background-color:#eee')
- *       .Media-top
- *         .Etiqueta.Etiqueta--left.glyphicon-list Topo
- *       .Media-body
- *         p: small The disconnection is a terrifying species.
- *           | Whine quirky like a rainy wind. This honor has only been opened by a fantastic particle.
- *           | Assimilation at the homeworld was the future of nuclear flux, attacked to a gravimetric planet.
- *           | Moon at the cabin was the stigma of understanding, gathered to a real klingon.
+ *     .row
+ *       .col-xs-12
+ *         .Media.Media--stack-sm
+ *           .Media-figure.col-xs-5
+ *             div(style='padding-bottom: 56.25%; height:0px; background-color:#eee')
+ *           .Media-top
+ *             .Etiqueta.Etiqueta--left.glyphicon-list Topo
+ *           .Media-body
+ *             p: small The disconnection is a terrifying species.
+ *               | Whine quirky like a rainy wind. This honor has only been opened by a fantastic particle.
  */
 // endregion
-.Media--stack {
-    display: table;
-    width: 100%;
-    > .Media-figure {
-        float: none;
-        margin: 0;
-    }
-}
-
-._is-stack() {
-}
 
 .Media--stack {
 
-    &.is-media-xs {
+    &-xs {
         @media (max-width: @screen-xs-max) {
-            ._is-stack;
+            .Media--stack;
         }
     }
 
-    &.is-stack-sm {
+    &-sm {
         @media(min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
-            ._is-stack;
+            .Media--stack;
         }
     }
 
-    &.is-media-md {
+    &-md {
         @media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
-            ._is-stack;
+            .Media--stack;
         }
     }
 
-    &.is-media-lg {
+    &-lg {
         @media (min-width: @screen-lg-min) {
-            ._is-stack;
+            .Media--stack;
         }
     }
 
