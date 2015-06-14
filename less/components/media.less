@@ -45,6 +45,7 @@
 @media-spacing: 10px;
 
 .Media {
+    overflow: hidden; // necessário para evitar problemas de clearfix
     width: 100%;
     &:first-child {
         margin-top: 0;
@@ -71,6 +72,7 @@
     .Media-top {
         display: table-header-group;
     }
+
 
 // region doc
 /**
@@ -118,9 +120,7 @@
  *               | Whine quirky like a rainy wind. This honor has only been opened by a fantastic particle.
  */
 // endregion
-
 .Media {
-
     &.is-stack-xs {
         @media (max-width: @screen-xs-max) {
             .Media--stack;
@@ -128,7 +128,7 @@
     }
 
     &.is-stack-sm {
-        @media(min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+        @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
             .Media--stack;
         }
     }
@@ -144,5 +144,4 @@
             .Media--stack;
         }
     }
-
 }
