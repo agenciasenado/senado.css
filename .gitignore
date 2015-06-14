@@ -9,4 +9,4 @@ dist/*
 *.html
 **/output
 
-essencial/tests/**/results
+tests/**/results
