@@ -35,16 +35,17 @@
  *                 | Understanding at the universe was the devastation of mystery, arrested to a modern green people.
  *                 | All the alignments will be lost in advices like galaxies in deaths.
  *         .Media
- *           .Media-figure
+ *           .Media-figure.Media-figure--right
  *             div(style='width: 50px; height:50px; background-color:#eee')
  *           .Media-body
+ *             .Etiqueta.glyphicon-list Pathway
  *             p: a(href='#'): small Cauliflower combines greatly with salted noodles.
  */
 // endregion
 @media-spacing: 10px;
 
 .Media {
-    overflow: hidden;
+    width: 100%;
     &:first-child {
         margin-top: 0;
     }
@@ -57,6 +58,12 @@
         margin-right: @media-spacing;
     }
 
+    .Media-figure--right {
+        float: right;
+        margin-right: 0;
+        margin-left: @media-spacing;
+    }
+
     .Media-body {
         overflow: hidden;
     }
@@ -64,16 +71,6 @@
     .Media-top {
         display: table-header-group;
     }
-
-.Media--flip {
-    > .Media-figure {
-        float: right;
-        margin-right: 0;
-        margin-left: @media-spacing;
-    }
-}
-
-
 
 // region doc
 /**
@@ -83,31 +80,26 @@
  *
  *     @example
  *     .Media.Media--stack
+ *       .Media-figure
+ *         div(style='background-color:#eee; width: 100px; height:100px')
  *       .Media-top
  *         .Etiqueta.Etiqueta--left.glyphicon-list Topo
- *       .Media-figure
- *         div(style='background-color:#eee; height:100px')
  *       .Media-body
- *         p: small The planet is more emitter now than cosmonaut. final and pedantically neutral.
+ *         p: small The planet is more emitter now than cosmonaut.
  */
 // endregion
 .Media--stack {
-    display: table;
-    width: 100%;
+    display: table; // necessário para o que o Media-top suba
     > .Media-figure {
-        width: 100%;
-        float: none;
-        margin: 0;
+        width: 100%; // se é para empilhar, forçar que o -figure ocupe a largura inteira
     }
 }
 
-
 // region doc
 /**
- * Stack responsivo: Para que um elemento **Bloco**
- * se comporte como **Media**
- * apenas em determinados breakpoints, utilize os estados `is-media-xs`, `is-media-sm`,
- * `is-media-md` ou `is-media-lg`, combinados ou não.
+ * Stack responsivo: Para que um elemento **Media**
+ * seja empilhado apenas em determinados breakpoints, utilize os estados `is-stack-xs`, `is-stack-sm`,
+ * `is-stack-md` ou `is-stack-lg`, combinados ou não.
  *
  * A posição do `.Media-top` na markup influencia a disposição dos subelementos no modo **Media**. Se for o primeiro
  * elemento filho, ficará acima do **Media**
@@ -116,7 +108,7 @@
  *     @example
  *     .row
  *       .col-xs-12
- *         .Media.Media--stack-sm
+ *         .Media.is-stack-xs
  *           .Media-figure.col-xs-5
  *             div(style='padding-bottom: 56.25%; height:0px; background-color:#eee')
  *           .Media-top
@@ -127,27 +119,27 @@
  */
 // endregion
 
-.Media--stack {
+.Media {
 
-    &-xs {
+    &.is-stack-xs {
         @media (max-width: @screen-xs-max) {
             .Media--stack;
         }
     }
 
-    &-sm {
+    &.is-stack-sm {
         @media(min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
             .Media--stack;
         }
     }
 
-    &-md {
+    &.is-stack-md {
         @media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
             .Media--stack;
         }
     }
 
-    &-lg {
+    &.is-stack-lg {
         @media (min-width: @screen-lg-min) {
             .Media--stack;
         }
