@@ -164,7 +164,7 @@ module.exports = function(grunt) {
     ])
 
     grunt.registerTask('default', [
-        'essencial', 'styledown'
+        'build', 'styledown'
     ])
 
 }
