@@ -90,6 +90,7 @@
 .Media--stack {
     display: table; // necessário para o que o Media-top suba
     > .Media-figure {
+        float: none; // caso não haja o Media-top, é preciso remover o float do Figure para o Body descer.
         width: 100%; // se é para empilhar, forçar que o Media-figure ocupe a largura inteira
     }
 }
