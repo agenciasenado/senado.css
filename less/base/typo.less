@@ -3,6 +3,10 @@ h1 {
     font-size: 28px;
 }
 
+h5 {
+    line-height: @line-height-base;
+}
+
  // region doc
 /**
 * Título principal:
@@ -33,8 +37,18 @@ a.flat {
     }
 }
 
-.cut-here {
+.cut-here, .cut-here-lg {
     border-bottom: 1px dotted #ccc;
+}
+
+.cut-here {
+    margin-top: 5px!important;
     margin-bottom: 5px!important;
     padding-bottom: 5px;
+}
+
+.cut-here-lg {
+    margin-top: 10px!important;
+    margin-bottom: 10px!important;
+    padding-bottom: 10px;
 }
