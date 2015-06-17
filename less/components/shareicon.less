@@ -14,15 +14,14 @@
 .ShareIcon {
     &:extend(.btn);
 
+
     border: none;
     border-radius: 0;
     border-bottom-style: solid;
     border-bottom-width: 2px;
-    //margin-bottom: @line-height-computed;
 
     color: #666;
     line-height: 32px;
-    width: 34px;
     font-weight: bold;
 
     margin-left: 3px;
@@ -39,7 +38,6 @@
     }
     &:before {
         &:extend(.MoonIcon);
-        display: inline-block;
         font-size: 18px;
     }
 }
@@ -51,6 +49,10 @@
             background-color: @color;
             border-bottom-color: darken(@color, 16%);
         }
+    }
+
+    .ShareIcon--default {
+        .share-icon-variant(@azul-padrao);
     }
 
     .ShareIcon--facebook {
@@ -72,3 +74,9 @@
         .MoonIcon--pinterest;
         .share-icon-variant(#cb2027);
     }
+
+.ShareIcon-text {
+    font-size: 13px;
+    margin-left: 8px;
+    margin-right: 8px;
+}
