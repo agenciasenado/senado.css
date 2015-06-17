@@ -1,0 +1,64 @@
+// region doc
+/**
+* Etiqueta de Retranca:
+* `.Etiqueta`: Label com ícone para uso geral. Deve ser utilizada sempre `inline`. Pode ser combinado com uma classe
+* `.glyphicon-*` para exibição de ícones.
+*
+*     @example
+*     div.Etiqueta.Etiqueta--default.glyphicon-list
+*         |  Gemna
+*     small Secundus adelphis semper amors nuclear vexatum iacere est.
+*     p
+*     div.Etiqueta.Etiqueta--default.Etiqueta--left.glyphicon-list
+*         |  Lura
+*     small Cum adiurator assimilant, omnes dominaes reperire neuter, peritus rationees.
+
+*/
+// endregion
+
+ // altura da etiqueta em que o espaçamento vertical coincide com o horizontal considerando font-size: 12px
+@etiqueta-height: 21px;
+@etiqueta-padding: 5px;
+
+.Etiqueta {
+    display: inline-block;
+    padding: 0 @etiqueta-padding;
+    margin-bottom: 1px;
+
+    font-size: 11px;
+    line-height: @etiqueta-height;
+    vertical-align: middle;
+}
+
+    .Etiqueta:before {
+        position: relative;
+        left: @etiqueta-padding;
+        padding: 0 @etiqueta-padding;
+        float: right;
+
+        font-family: 'Glyphicons Halflings', sans-serif;
+        font-size: 12px; // 12px é o breakpoint em que a fonte fica bitmap
+
+        // utilizar a borda como separador
+        border: solid #fff;
+        border-width: 0 0 0 1px;
+
+    }
+
+    .Etiqueta--left {
+        position: relative;
+        &:before {
+            float: left;
+            left: auto;
+            right: @etiqueta-padding;
+            border-width: 0 1px 0 0;
+        }
+    }
+
+    .Etiqueta--default {
+        color: #fff;
+        background: #999;
+        &:before {
+            background: @azul-padrao;
+        }
+    }

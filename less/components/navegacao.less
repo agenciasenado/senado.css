@@ -5,7 +5,7 @@
 * `.Nav--principal`: Menu principal do portal. É colidível no viewport `xs`.
 *
 *     @example
-*     ul.Nav--principal.navbar-collapse
+*     ul.Nav--principal.navbar.navbar-collapse.navbar-default
 *       ul.nav.navbar-nav
 *         li: a Início
 *         li: a Notícias
@@ -34,7 +34,6 @@
     li > a.dropdown-toggle > .caret {
         margin-top: 0;
     }
-
 }
 
 
@@ -45,32 +44,44 @@
 * deve ser exibido em `xs`. Utilizado
 *
 *     @example
-*     div.Nav--secundaria
+*     div.Nav--secundaria.navbar
 *       ul.nav.navbar-nav.pull-right
-*           li: a Jornal do Senado
-*           li: a Senado Notícias
-*           li: a TV Senado
+*           li: a(href='#') Jornal do Senado
+*           li: a(href='#') Senado Notícias
+*           li: a(href='#') TV Senado
 */
 // endregion
 @secundaria-height: 30px;
 .Nav--secundaria {
+    border: none;
+    border-radius: 0;
     border-top: 1px solid #CCC;
     background-color: #f7f7f7;
-    height: @secundaria-height;
+    min-height: 30px;
+    margin-bottom: 0;
 
     > ul > li {
         line-height: @secundaria-height;
-        &:not(:last-child):after {
-            font-size: 14px;
-            content: ' ';
-            border-left: 1px solid #ccc;
-        }
         > a {
             font-size: 13px;
             float:left;
-            color: #3E6892;
             padding: 0 15px;
             line-height: @secundaria-height;
         }
+
+        @media (min-width: @screen-xs-max) {
+            &:not(:last-child):after {
+                font-size: 14px;
+                content: ' ';
+                border-left: 1px solid #ccc;
+            }
+        }
     }
+
+    @media (max-width: @screen-xs-max) {
+        > ul {
+            float: left!important;
+        }
+    }
+
 }

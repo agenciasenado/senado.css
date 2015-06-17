@@ -3,7 +3,56 @@ h1 {
     font-size: 28px;
 }
 
+h5 {
+    line-height: @line-height-base;
+}
+
+ // region doc
+/**
+* Título principal:
+* `h1.titulo-principal`: Deve ser utilizado sempre como o primeiro título de um conteúdo. Apenas um subelemento é
+* permitido (`small`) e deve ser utilizado para descrição ou lead do título.
+*
+*     @example
+*     h1.titulo-principal senado.css
+*         small http://git.io/senado.css
+*/
+// endregion
+
     h1.titulo-principal {
         border-bottom: 1px solid #eee;
         padding-bottom: 15px;
     }
+        h1.titulo-principal small {
+            display: block;
+            font-size: 14px;
+            line-height: @line-height-small;
+            margin-top: 10px;
+        }
+
+.flat {
+    &, &:focus, &:visited, &:hover, &:active {
+        color: inherit;
+        text-decoration: none;
+    }
+}
+
+.cut-here, .cut-here-lg {
+    border-bottom: 1px dotted #ccc;
+}
+
+.cut-here {
+    margin-top: 5px!important;
+    margin-bottom: 5px!important;
+    padding-bottom: 5px;
+}
+
+.cut-here-lg {
+    margin-top: 10px!important;
+    margin-bottom: 10px!important;
+    padding-bottom: 10px;
+}
+
+.island {
+    margin: 15px;
+}

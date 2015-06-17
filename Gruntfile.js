@@ -43,6 +43,13 @@ module.exports = function(grunt) {
                     spawn: false
                 }
             },
+            styledown: {
+                files: ['**/*.less'],
+                tasks: ['styledown'],
+                options: {
+                    spawn: false
+                }
+            },
 
             livereload: {
                 options: {
@@ -109,9 +116,25 @@ module.exports = function(grunt) {
             options: {
                 logConcurrentOutput: true,
             },
-            main: ['watch:styles', 'watch:livereload', 'watch:jade']
+            main: ['watch:styles', 'watch:styledown', 'watch:livereload', 'watch:jade']
         },
         phantomcss: {
+            'desktop': {
+                options: {
+                    screenshots: 'tests/desktop/screenshots/',
+                    results: 'tests/desktop/results/',
+                    viewportSize: [1200, 1200]
+                },
+                src: [ 'tests/**/*desktop.js' ]
+            },
+            'mobile': {
+                options: {
+                    screenshots: 'tests/mobile/screenshots/',
+                    results: 'tests/mobile/results/',
+                    viewportSize: [480, 480]
+                },
+                src: [ 'tests/**/*desktop.js' ]
+            }
         }
     })
 
@@ -137,11 +160,11 @@ module.exports = function(grunt) {
         'connect', 'concurrent:main'
     ])
     grunt.registerTask('dev', [
-        'build', 'server'
+        'build', 'styledown', 'server'
     ])
 
     grunt.registerTask('default', [
-        'essencial', 'styledown'
+        'build', 'styledown'
     ])
 
 }

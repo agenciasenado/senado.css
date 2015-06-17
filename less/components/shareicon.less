@@ -2,16 +2,11 @@
 // region doc
 /**
 * Botões de compartilhamento:
-* `.ShareIcon`: Botão de compartilhamento em redes sociais. O ícone já é embutido no componente. Caso haja texto
-* no botão, um sub-elemento `ShareIcon-text` deve ser inserido no markup.
+* `.ShareIcon`: Botão de compartilhamento em redes sociais. O ícone já é embutido no componente.
 *
 *     @example
 *     a.ShareIcon.ShareIcon--facebook
-*         span.ShareIcon-text.hidden-xs
-*             | Facebook
 *     a.ShareIcon.ShareIcon--twitter
-*         span.ShareIcon-text.hidden-xs
-*             | Twitter
 *     a.ShareIcon.ShareIcon--googleplus
 *     a.ShareIcon.ShareIcon--pinterest
 */
@@ -19,20 +14,20 @@
 .ShareIcon {
     &:extend(.btn);
 
+
     border: none;
     border-radius: 0;
     border-bottom-style: solid;
     border-bottom-width: 2px;
 
-    color: #fff;
-    font-size: 12px;
-    line-height: 30px;
+    color: #666;
+    line-height: 32px;
     font-weight: bold;
 
-    margin-left: 6px;
+    margin-left: 3px;
     padding: 0 8px;
 
-    transition: background-color 300ms linear;
+    transition: background-color 300ms linear, border-bottom-color 300ms linear;
 
     &:hover {
         color: #fff;
@@ -43,21 +38,21 @@
     }
     &:before {
         &:extend(.MoonIcon);
-        display: inline-block;
-    }
-    @media (max-width: @screen-xs-max) {
-        display: inline-block;
-        width: 36px;
-        line-height: 36px;
+        font-size: 18px;
     }
 }
 
     .share-icon-variant(@color) {
-        background-color: lighten(@color, 12%);
-        border-bottom-color: darken(@color, 8%);
+        background-color: #eee;
+        border-bottom-color: lighten(@color, 25%);
         &:hover {
             background-color: @color;
+            border-bottom-color: darken(@color, 16%);
         }
+    }
+
+    .ShareIcon--default {
+        .share-icon-variant(@azul-padrao);
     }
 
     .ShareIcon--facebook {
@@ -81,5 +76,7 @@
     }
 
 .ShareIcon-text {
+    font-size: 13px;
     margin-left: 8px;
+    margin-right: 8px;
 }

@@ -20,9 +20,9 @@ Para gerar os arquivos de distribuição, é necessário a instalação do grunt
 
 Os seguintes arquivos serão gerados:
 
-* _dist/styles.css_: combinado do bootstrap + todos os componentes
-* _dist/essencial.css_: combinado das classes necessárias para utilização do topo, navegação e rodapé
-* _dist/*.html_: markup dos componentes essenciais.
+* **dist/styles.css**: combinado do bootstrap + todos os componentes
+* **dist/essencial.css**: combinado das classes necessárias para utilização do topo, navegação e rodapé
+* **dist/*.html**: markup dos componentes essenciais.
 
 ## desenvolvimento
 Para compilar os arquivos .less e .jade automaticamente ao editá-los execute:
