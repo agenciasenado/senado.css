@@ -24,7 +24,6 @@
     box-shadow: 0 4px 0 #FAE042;
     margin-bottom:4px; // compensar box-shadow
 
-    text-align: center;
     font-size: 12px;
 
     @media (max-width: @screen-xs-max) {
@@ -40,9 +39,12 @@
 
     .NavGlobal-middle {
         color: #fff;
+        text-align: center;
+
         @media (max-width: @screen-xs-min) {
             display: none;
         }
+
         > a {
             .flat();
         }
