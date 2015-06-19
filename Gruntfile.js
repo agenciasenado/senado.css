@@ -167,4 +167,12 @@ module.exports = function(grunt) {
         'build', 'styledown'
     ])
 
+    grunt.registerTask('test', [
+        'build',
+        'connect',
+        'phantomcss',
+        'clean'
+    ])
+
+
 }
