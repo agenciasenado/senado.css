@@ -61,7 +61,7 @@ module.exports = function(grunt) {
         styledown: {
             build: {
                 files: {
-                    'styleguide/index.html': ['less/**/*.less']
+                    'index.html': ['less/**/*.less']
                 },
                 options: {
                     css: 'dist/fat.css',
@@ -166,5 +166,13 @@ module.exports = function(grunt) {
     grunt.registerTask('default', [
         'build', 'styledown'
     ])
+
+    grunt.registerTask('test', [
+        'build',
+        'connect',
+        'phantomcss',
+        'clean'
+    ])
+
 
 }
