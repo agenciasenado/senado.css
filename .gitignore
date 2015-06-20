@@ -7,6 +7,7 @@ node_modules
 *.css.map
 *.html
 !index.html
+!dist
 **/output
 
 tests/**/results
