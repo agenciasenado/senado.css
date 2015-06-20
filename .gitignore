@@ -7,7 +7,6 @@ dist/*
 *.css
 *.css.map
 *.html
-!index.html
 **/output
 
 tests/**/results
