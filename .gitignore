@@ -3,7 +3,6 @@
 .lock-wscript
 
 node_modules
-dist/*
 *.css
 *.css.map
 *.html
