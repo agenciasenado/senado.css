@@ -4940,7 +4940,7 @@ h1.titulo-principal small {
  *     .NavGlobal.navbar.navbar-static-top
  *       .container-fluid
  *          a.NavGlobal-logo.pull-left(href='http://www.senado.gov.br/')
- *            img(src='../img/senado.svg', alt='Senado Federal')
+ *            img(src='img/senado.svg', alt='Senado Federal')
  *          .NavGlobal-middle
  *            a.flat(href='#') Toolkit
  */
