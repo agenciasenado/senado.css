@@ -4,10 +4,10 @@
 
 node_modules
 *.css
+!dist/*
 *.css.map
 *.html
 !index.html
-!dist
 **/output
 
 tests/**/results
