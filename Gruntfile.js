@@ -94,8 +94,6 @@ module.exports = function(grunt) {
                 src: ['dist', 'tests/desktop/results', 'tests/mobile/results']
             }
         },
-        usebanner: {
-        },
         connect: {
             server: {
                 options: {
