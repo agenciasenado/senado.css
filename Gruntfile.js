@@ -91,7 +91,7 @@ module.exports = function(grunt) {
         },
         clean: {
             build: {
-                src: ['dist', 'essencial/output']
+                src: ['dist', 'tests/desktop/results', 'tests/mobile/results']
             }
         },
         usebanner: {
