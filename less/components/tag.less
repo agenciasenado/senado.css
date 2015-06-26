@@ -1,0 +1,42 @@
+// region doc
+/**
+* Tags:
+* `.Tag`: Label com ícone para uso geral.
+*
+*     @example
+*     div.Etiqueta.Etiqueta--default.Icon--display
+*         |  Rádio
+
+*/
+// endregion
+
+ // altura da tag em que o espaçamento vertical coincide com o horizontal considerando font-size: 12px
+@tag-height: 60px;
+@tag-padding: 10px;
+
+.Tag {
+    display: inline-block;
+    padding: 0 @tag-padding;
+    margin-bottom: 1px;
+
+    line-height: @tag-height;
+    vertical-align: middle;
+}
+
+    .Tag:before {
+        padding-right: @tag-padding;
+        padding-left: 0;
+        font-family: 'agenciaweb', sans-serif;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .Tag--default {
+        border: 1px solid #e3e3e3;
+        &:before {
+            color: @azul-padrao;
+            font-size: 32px;
+        }
+        color: #999;
+        font-size: 18px;
+    }
