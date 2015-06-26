@@ -1,4 +1,3 @@
-@import (reference) "icons";
 // region doc
 /**
 * Botões de compartilhamento:
@@ -7,13 +6,12 @@
 *     @example
 *     a.ShareIcon.ShareIcon--facebook
 *     a.ShareIcon.ShareIcon--twitter
-*     a.ShareIcon.ShareIcon--googleplus
+*     a.ShareIcon.ShareIcon--google-plus
 *     a.ShareIcon.ShareIcon--pinterest
 */
 // endregion
 .ShareIcon {
     &:extend(.btn);
-
 
     border: none;
     border-radius: 0;
@@ -37,7 +35,7 @@
         margin-left: 0;
     }
     &:before {
-        &:extend(.MoonIcon);
+        &:extend(.Icon);
         font-size: 18px;
     }
 }
@@ -56,22 +54,22 @@
     }
 
     .ShareIcon--facebook {
-        .MoonIcon--facebook;
+        .Icon--facebook;
         .share-icon-variant(#3b5998);
     }
 
     .ShareIcon--twitter {
-        .MoonIcon--twitter;
+        .Icon--twitter;
         .share-icon-variant(#00aced);
     }
 
-    .ShareIcon--googleplus {
-        .MoonIcon--googleplus;
+    .ShareIcon--google-plus {
+        .Icon--google-plus;
         .share-icon-variant(#dd4b39);
     }
 
     .ShareIcon--pinterest {
-        .MoonIcon--pinterest;
+        .Icon--pinterest;
         .share-icon-variant(#cb2027);
     }
 
