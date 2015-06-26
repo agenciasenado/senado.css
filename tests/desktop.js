@@ -2,7 +2,7 @@
 
 var classNames = []
 
-casper.start('http://localhost:8000/styleguide/')
+casper.start('http://localhost:8000/')
 .then(function () {
     classNames = this.evaluate(function () {
         var blocks = __utils__.findAll('.sg-block')
