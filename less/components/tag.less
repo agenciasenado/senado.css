@@ -4,39 +4,75 @@
 * `.Tag`: Label com ícone para uso geral.
 *
 *     @example
-*     div.Etiqueta.Etiqueta--default.Icon--display
-*         |  Rádio
-
+*     .Tag.Tag--default
+*       .Tag-icon.Tag-icon--default.Icon--newspaper
+*       a.flat(href='#')
+*         span.Tag-caption Jornal
+*     .Tag
+*       .Tag-icon.Tag-icon--circle.Icon--display
+*       a(href='#')
+*         .Tag-caption.Tag-caption--label Em Discussão
 */
 // endregion
 
  // altura da tag em que o espaçamento vertical coincide com o horizontal considerando font-size: 12px
-@tag-height: 60px;
-@tag-padding: 10px;
+@tag-height: 100px;
+@tag-padding: 20px;
 
 .Tag {
-    display: inline-block;
+    display: block;
     padding: 0 @tag-padding;
-    margin-bottom: 1px;
-
-    line-height: @tag-height;
+    margin-bottom: 10px;
+    margin-top: 10px;
     vertical-align: middle;
+    text-align: center;
 }
 
-    .Tag:before {
+    .Tag-icon {
         padding-right: @tag-padding;
         padding-left: 0;
         font-family: 'agenciaweb', sans-serif;
         display: inline-block;
+        line-height: @tag-height;
         vertical-align: middle;
     }
 
+    .Tag-icon--default {
+        color: #0095DA;
+        font-size: 64px;
+    }
+
     .Tag--default {
-        border: 1px solid #e3e3e3;
-        &:before {
-            color: @azul-padrao;
-            font-size: 32px;
+        border: 1px solid #ccc;
+        font-size: 24px;
+        > a {
+            color: #999;
         }
-        color: #999;
-        font-size: 18px;
+    }
+
+    .Tag-icon--circle {
+        display: block;
+        border: 1px solid #ccc;
+        width: @tag-height;
+        border-radius: 50%;
+        font-size: 48px;
+        color: #333;
+        margin-left: auto;
+        margin-right: auto;
+
+        padding: 0;
+    }
+
+    .Tag--circle {
+        line-height: 24px;
+        display: inline-block;
+        text-align: center;
+    }
+    .Tag-caption--label {
+        display: block;
+        color: @azul-padrao;
+        margin-top: -15px;
+        padding-top: 5px;
+        background: #fff;
+        font-size: 24px;
     }
