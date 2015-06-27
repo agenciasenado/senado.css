@@ -5,11 +5,11 @@
 * `.glyphicon-*` para exibição de ícones.
 *
 *     @example
-*     div.Etiqueta.Etiqueta--default.glyphicon-list
+*     div.Etiqueta.Etiqueta--rev.Etiqueta--default.glyphicon-list
 *         |  Gemna
 *     small Secundus adelphis semper amors nuclear vexatum iacere est.
 *     p
-*     div.Etiqueta.Etiqueta--default.Etiqueta--left.glyphicon-list
+*     div.Etiqueta.Etiqueta--default.glyphicon-list
 *         |  Lura
 *     small Cum adiurator assimilant, omnes dominaes reperire neuter, peritus rationees.
 
@@ -32,26 +32,27 @@
 
     .Etiqueta:before {
         position: relative;
-        left: @etiqueta-padding;
+        right: @etiqueta-padding;
         padding: 0 @etiqueta-padding;
-        float: right;
+        display: inline-block;
+        vertical-align: top;
 
         font-family: 'Glyphicons Halflings', sans-serif;
         font-size: 12px; // 12px é o breakpoint em que a fonte fica bitmap
 
         // utilizar a borda como separador
         border: solid #fff;
-        border-width: 0 0 0 1px;
+        border-width: 0 1px 0 0;
 
     }
 
-    .Etiqueta--left {
+    .Etiqueta--rev {
         position: relative;
         &:before {
-            float: left;
-            left: auto;
-            right: @etiqueta-padding;
-            border-width: 0 1px 0 0;
+            float: right;
+            right: auto;
+            left: @etiqueta-padding;
+            border-width: 0 0 0 1px;
         }
     }
 

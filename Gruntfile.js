@@ -152,7 +152,8 @@ module.exports = function(grunt) {
 
     grunt.registerTask('build', [
         'jade:main',
-        'less:main'
+        'less:main',
+        'styledown'
     ])
     grunt.registerTask('server', [
         'connect', 'concurrent:main'
