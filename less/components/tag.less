@@ -1,78 +1,83 @@
 // region doc
 /**
-* Tags:
-* `.Tag`: Label com ícone para uso geral.
+* Stamps:
+* `.Stamp`: Label com ícone para uso geral.
 *
 *     @example
-*     .Tag.Tag--default
-*       .Tag-icon.Tag-icon--default.Icon--newspaper
-*       a.flat(href='#')
-*         span.Tag-caption Jornal
-*     .Tag
-*       .Tag-icon.Tag-icon--circle.Icon--display
-*       a(href='#')
-*         .Tag-caption.Tag-caption--label Em Discussão
+*     .Stamp.Stamp--tag
+*       .Stamp-icon.Stamp-icon--default
+*         .Icon--newspaper
+*       a.Stamp-caption Jornal
+*
+*     .Stamp.Stamp--stack
+*       .Stamp-icon.Stamp-icon--circle
+*         .Icon--display
+*       a.Stamp-caption.Stamp-caption--label TV SENADO
 */
 // endregion
 
  // altura da tag em que o espaçamento vertical coincide com o horizontal considerando font-size: 12px
-@tag-height: 100px;
+@tag-height: 110px;
 @tag-padding: 20px;
 
-.Tag {
-    display: block;
+.Stamp {
     padding: 0 @tag-padding;
     margin-bottom: 10px;
     margin-top: 10px;
-    vertical-align: middle;
     text-align: center;
 }
 
-    .Tag-icon {
+.Stamp--tag {
+    border: 1px solid #ccc;
+    font-size: 24px;
+    > a {
+        color: #999;
+    }
+}
+
+.Stamp--tag {
+    .Stamp-icon {
         padding-right: @tag-padding;
-        padding-left: 0;
+    }
+}
+
+
+    .Stamp-icon {
         font-family: 'agenciaweb', sans-serif;
-        display: inline-block;
         line-height: @tag-height;
         vertical-align: middle;
+        display: inline-block;
     }
 
-    .Tag-icon--default {
+    .Stamp-icon--default {
+        display: inline-block;
         color: #0095DA;
         font-size: 64px;
     }
+    
 
-    .Tag--default {
-        border: 1px solid #ccc;
-        font-size: 24px;
-        > a {
-            color: #999;
-        }
-    }
-
-    .Tag-icon--circle {
+.Stamp--stack {
+    .Stamp-icon {
         display: block;
-        border: 1px solid #ccc;
+    }
+}
+
+    .Stamp-icon--circle {
         width: @tag-height;
-        border-radius: 50%;
-        font-size: 48px;
-        color: #333;
         margin-left: auto;
         margin-right: auto;
-
-        padding: 0;
+        
+        font-size: 48px;
+        color: #333;
+        
+        border: 1px solid #ccc;
+        border-radius: 50%;
     }
 
-    .Tag--circle {
-        line-height: 24px;
-        display: inline-block;
-        text-align: center;
-    }
-    .Tag-caption--label {
+    .Stamp-caption--label {
         display: block;
         color: @azul-padrao;
         margin-top: -15px;
-        padding-top: 5px;
         background: #fff;
         font-size: 24px;
     }
