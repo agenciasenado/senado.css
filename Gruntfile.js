@@ -22,10 +22,13 @@ module.exports = function(grunt) {
                 options: {
                     pretty: true
                 },
-                files: {
-                    'index.html': ['index.jade']
-                }
-
+                files: [{
+                    expand: true,
+                    src: 'jade/*.jade',
+                    rename : function (dest, src) {
+                        return src.replace(/\.jade$/, '.html')
+                    }
+                }]
             }
         },
         watch: {
@@ -83,10 +86,12 @@ module.exports = function(grunt) {
         },
         cssmin: {
             options : {
-                keepSpecialComments: 0,
-                rebase: true,
-                target: './',
-                relativeTo: '../../'
+                keepSpecialComments: 0
+            },
+            dist: {
+                files: {
+                    'dist/main.css' : 'dist/main.css'
+                }
             }
         },
         clean: {
@@ -153,6 +158,8 @@ module.exports = function(grunt) {
     grunt.registerTask('build', [
         'jade:main',
         'less:main',
+        'autoprefixer',
+        'cssmin',
         'styledown'
     ])
     grunt.registerTask('server', [
