@@ -1,0 +1,45 @@
+@flag-spacing: 10px;
+.Flag {
+    display: table;
+    width: 100%;
+
+    &:first-child {
+        margin-top: 0;
+    }
+    margin-bottom: @flag-spacing;
+    margin-top: @flag-spacing;
+}
+
+    .Flag-image,
+    .Flag-body {
+        display: table-cell;
+        vertical-align: middle;
+
+        .Flag--top & {
+            vertical-align: top;
+        }
+
+        .Flag--bottom & {
+            vertical-align: bottom;
+        }
+
+    }
+
+    .Flag-image {
+        padding-right: 10px;
+
+        > img {
+            display: block;
+            max-width: none;
+        }
+
+        .Flag--rev & {
+            padding-right: 0;
+            padding-left: 10px;
+        }
+
+    }
+
+    .Flag-body {
+        width: 100%;
+    }
