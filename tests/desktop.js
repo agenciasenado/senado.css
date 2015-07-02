@@ -4,6 +4,7 @@ var classNames = []
 
 casper.start('http://localhost:8000/')
 .then(function () {
+    phantomcss.pathToTest = './';
     classNames = this.evaluate(function () {
         var blocks = __utils__.findAll('.sg-block')
         return Array.prototype.map.call(blocks, function (el) {
