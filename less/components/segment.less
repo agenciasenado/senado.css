@@ -12,12 +12,8 @@
 *       .Segment
 *         | Segment
 *       .Segment
-*         .Segment.Segment--full
-*           | Segment--full
 *         .Segment
 *           | Segment
-*         .Segment.Segment--full
-*           | Segment--full
 *       .Segment
 *         | Segment
 *       .Segment.Segment--full
@@ -68,27 +64,31 @@
     margin-bottom: @painel-spacing;
     padding: @painel-spacing 0; // se o padding for retirado, tem que habilitar o overflow: hidden
 
-    // força a remoção da primeira e da última margem via collapse (até 15px)
+    // força o collapse da primeira e da última margem (até 15px)
     &:after, &:before {
         content: '';
         height: 0;
         display: block;
-        margin: -15px 0 15px; // retira toda margem vertical de até 1em;
+        margin: -15px 0 15px;
     }
 
     > .Segment {
-        overflow: hidden; // garantir espaçamento ainda que não haja padding ou border // testado
+        overflow: hidden; // garantir collapse ainda que não haja padding
         padding: 0;
         margin-left: @painel-spacing;
         margin-right: @painel-spacing;
     }
-
-
 }
 
     .Segment--full {
         margin-left: 0!important;
         margin-right: 0!important;
+        &:first-child {
+            &:before {
+                display: none;
+            }
+        }
+
     }
 
         .Segment--light {
