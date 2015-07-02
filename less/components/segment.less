@@ -1,49 +1,57 @@
+/***
+ * Segment:
+ */
+
 // region doc
 /**
 * Segment:
 * `.Segment`: Estrutura que colide as margens verticais do `first-child` e `last-child` e
 * uniformiza os espaços entre os elementos de uma sequência vertical.
 *
-* Deve ser aninhado com outros elementos `.Segment`
+*     @example
+*     .Segment.Segment--cut
+*       p Segment
+*     .Segment.Segment--cut
+*       ul
+*         li Segment
+*     .Segment.Segment--cut
+*       h4 Segment
+*     .Segment.Segment--cut
+*       small Segment
+
+/**
+* Aninhamento:
+* `.Segments`: Ajusta o espaçamento externo e permite o aninhamento segmentos.
 *
 *     @example
-*     .Segments
-*       .Segment.Segment--full
-*         | Segment--full
-*       .Segment
-*         | Segment
-*       .Segments.Segment--light
-*         .Segment
-*           .Apex.Apex--light
-*             span.u-divisorVertical Segment
-*         .Segment
-*           | Segment
-*       .Segments.Segment--cut
-*         .Segment
-*           .Apex.Apex--cut
-*             span.u-divisorVertical Segment
-*         .Segment
-*           | Segment
-*       .Segment
-*         | Segment
-*       .Segment.Segment--full
-*         | Segment--full
-*
 *     .Segments.Segment--cut
-*         .Segment
-*           .Apex.Apex--cut
-*             span.u-divisorVertical Agenda
-*             p.Apex-detail: a  Qua | 01/07
-*         .Segment
-*           ul.list-unstyled
-*             li: a Mori diligenter ducunt ad flavum calceus.
-*             li: a Nix de emeritis tabes, perdere luna.
-*               ul.list-unstyled
-*                 li: a Mori diligenter ducunt ad flavum calceus.
-*                 li: a Nix de emeritis tabes, perdere luna.
-*         .Segment
-*           .Bed.Bed--cut: a Agenda semanal
+*       .Segment
+*         p Segment
+*       .Segments.Segment--light
+*         .Segment.Segment--cut
+*           ul
+*             li Segment
+*         .Segment.Segment--cut
+*           small Segment
+
+/**
+* Full:
+* `.Segment--full`: Anula o espaçamento horizontal
 *
+*     @example
+*     .Segments.Segment--light
+*       .Segment.Segment--cut.Segment--full
+*         p Segment--full
+*       .Segment.Segment--cut
+*         small Segment
+*       .Segment.Segment--cut.Segment--full
+*         p Segment--full
+
+/**
+* Cut here:
+* `.Segment--cutHere`: Divide cada segmento com uma borda tracejada.
+*
+*     @example
 *     .Segments.Segment--cut
 *         .Segment.Segment--cutHere
 *           p Apolloniates de festus gabalium, amor frondator!
@@ -51,7 +59,20 @@
 *           p Potus hic ducunt ad noster demissio.
 *         .Segment.Segment--cutHere
 *           p Caculas sunt paluss de altus species.
+
+/**
+* Exemplos:
 *
+*     @example
+*     .Segments.Segment--cut
+*         .Segment.Apex.Apex--cut
+*           span.u-divisorVertical Agenda
+*           p.Apex-detail: a  Qua | 01/07
+*         .Segment
+*           ul.list-unstyled
+*             li: a Mori diligenter ducunt ad flavum calceus
+*             li: a Sunt axonaes amor clemens, neuter triticumes
+*         .Segment.Bed.Bed--cut: a Agenda semanal
 *     .Segments.Segment--links
 *         .Segment.Segment--full.Apex.Apex--default
 *             | Expediente
@@ -62,13 +83,12 @@
 *             .Flag-body
 *               a Cur vita tolerare?
 *               p: small Nunquam gratia guttus
-*         .Segment
 *           .Flag
 *             .Flag-image
 *               .Icon.Icon--bubble.Icon--lg
 *             .Flag-body
 *               a Nunquam contactus pulchritudine
-*               div: small Nunquam consumere tumultumque
+*               div: small Fuga de ferox buxum, manifestum advena
 */
 // endregion
 
@@ -79,41 +99,28 @@
 
 .Segments {
     // se o padding for retirado, tem que habilitar o overflow: hidden
-    padding-top: @painel-spacing;
-    padding-bottom: @painel-spacing;
-
-    > .Segments {
-        margin-left: @painel-spacing;
-        margin-right: @painel-spacing;
-    }
+    padding: @painel-spacing;
 }
 
 .Segments, .Segment {
     margin-bottom: @painel-spacing;
 
-    // força o collapse da primeira e da última margem (até 15px)
-    &:after, &:before {
-        content: '';
-        height: 0;
-        display: block;
-        margin: -15px 0 15px;
+    &:last-child {
+        margin-bottom: 0;
     }
+
+    .collapse-margins();
 }
 
 .Segment {
-    padding-top: 0;
-    padding-bottom: 0;
-    overflow: hidden; // garantir collapse ainda que não haja padding
-
-    margin-left: @painel-spacing;
-    margin-right: @painel-spacing;
+    overflow: hidden; // garantir espaçamento ainda que não haja padding
 }
 
     .Segment--full {
         position: relative;
 
-        margin-left: 0!important;
-        margin-right: 0!important;
+        margin-left: -@painel-spacing;
+        margin-right: -@painel-spacing;
 
         &:first-child {
             margin-bottom: 0;
