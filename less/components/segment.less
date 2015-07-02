@@ -7,12 +7,21 @@
 * Deve ser aninhado com outros elementos `.Segment`
 *
 *     @example
-*     .Segment
+*     .Segments
 *       .Segment.Segment--full
 *         | Segment--full
-*       .Segment.Segment--cutHere
-*         | Segment
 *       .Segment
+*         | Segment
+*       .Segments.Segment--light
+*         .Segment
+*           .Apex.Apex--light
+*             span.u-divisorVertical Segment
+*         .Segment
+*           | Segment
+*       .Segments.Segment--cut
+*         .Segment
+*           .Apex.Apex--cut
+*             span.u-divisorVertical Segment
 *         .Segment
 *           | Segment
 *       .Segment
@@ -20,7 +29,7 @@
 *       .Segment.Segment--full
 *         | Segment--full
 *
-*     .Segment.Segment--cut
+*     .Segments.Segment--cut
 *         .Segment
 *           .Apex.Apex--cut
 *             span.u-divisorVertical Agenda
@@ -34,10 +43,17 @@
 *                 li: a Nix de emeritis tabes, perdere luna.
 *         .Segment
 *           .Bed.Bed--cut: a Agenda semanal
-*     p -----
-*     .Segment.Segment--links
-*         .Segment.Segment--full
-*           .Apex.Apex--lg.Apex--default
+*
+*     .Segments.Segment--cut
+*         .Segment.Segment--cutHere
+*           p Apolloniates de festus gabalium, amor frondator!
+*         .Segment.Segment--cutHere
+*           p Potus hic ducunt ad noster demissio.
+*         .Segment.Segment--cutHere
+*           p Caculas sunt paluss de altus species.
+*
+*     .Segments.Segment--links
+*         .Segment.Segment--full.Apex.Apex--default
 *             | Expediente
 *         .Segment
 *           .Flag
@@ -45,7 +61,8 @@
 *               .Icon.Icon--newspaper.Icon--lg
 *             .Flag-body
 *               a Cur vita tolerare?
-*               div: small Nunquam gratia guttus
+*               p: small Nunquam gratia guttus
+*         .Segment
 *           .Flag
 *             .Flag-image
 *               .Icon.Icon--bubble.Icon--lg
@@ -57,12 +74,22 @@
 
 @painel-spacing: 10px;
 
-.Segment {
-    // SPEC:
-    // - não deve possuir margens lateriais
+// SPEC:
+// - não deve possuir margens lateriais
 
+.Segments {
+    // se o padding for retirado, tem que habilitar o overflow: hidden
+    padding-top: @painel-spacing;
+    padding-bottom: @painel-spacing;
+
+    > .Segments {
+        margin-left: @painel-spacing;
+        margin-right: @painel-spacing;
+    }
+}
+
+.Segments, .Segment {
     margin-bottom: @painel-spacing;
-    padding: @painel-spacing 0; // se o padding for retirado, tem que habilitar o overflow: hidden
 
     // força o collapse da primeira e da última margem (até 15px)
     &:after, &:before {
@@ -71,22 +98,31 @@
         display: block;
         margin: -15px 0 15px;
     }
+}
 
-    > .Segment {
-        overflow: hidden; // garantir collapse ainda que não haja padding
-        padding: 0;
-        margin-left: @painel-spacing;
-        margin-right: @painel-spacing;
-    }
+.Segment {
+    padding-top: 0;
+    padding-bottom: 0;
+    overflow: hidden; // garantir collapse ainda que não haja padding
+
+    margin-left: @painel-spacing;
+    margin-right: @painel-spacing;
 }
 
     .Segment--full {
+        position: relative;
+
         margin-left: 0!important;
         margin-right: 0!important;
+
         &:first-child {
-            &:before {
-                display: none;
-            }
+            margin-bottom: 0;
+            top: -@painel-spacing;
+        }
+
+        &:last-child {
+            top: @painel-spacing;
+            margin-top: -10px;
         }
     }
 
@@ -102,9 +138,9 @@
         border-bottom: 5px solid #ccc;
     }
 
-    .Segment--cutHere {
+    .Segment--cutHere:not(:last-child) {
         border-bottom: 1px dotted #ccc;
-        padding-bottom: @painel-spacing/2!important;
+        padding-bottom: @painel-spacing/2;
         margin-bottom: @painel-spacing/2;
     }
 
