@@ -1,0 +1,120 @@
+// region doc
+/**
+* Segment:
+* `.Segment`: Segmento
+*
+*     @example
+*     .Segment.Segment--light
+*       p Ola
+*         .Segment
+*           .Apex.Apex--light Ao vivo
+*         .Segment
+*           p Mori diligenter ducunt ad flavum calceus.
+*           p Nix de emeritis tabes, perdere luna.
+*           .Segment
+*             .Apex.Apex--light Ao vivo
+*           .Segment
+*             p Mori diligenter ducunt ad flavum calceus.
+*             p Nix de emeritis tabes, perdere luna.
+*         .Segment
+*           ul.list-unstyled
+*             li Sunt apolloniateses imperium audax, germanus mensaes.
+*             li Castus virtualiter promissio de fatalis, noster pars.
+*
+*     .Segment.Segment--cut
+*         .Segment
+*           .Apex.Apex--cut
+*             span.u-divisorVertical Agenda
+*             p.Apex-detail: a  Qua | 01/07
+*         .Segment
+*           ul.list-unstyled
+*             li: a Mori diligenter ducunt ad flavum calceus.
+*             li: a Nix de emeritis tabes, perdere luna.
+*               ul.list-unstyled
+*                 li: a Mori diligenter ducunt ad flavum calceus.
+*                 li: a Nix de emeritis tabes, perdere luna.
+*         .Segment
+*           .Bed.Bed--cut: a Agenda semanal
+*     p Oi
+*     .Segment.Segment--links
+*         .Segment.Segment--full
+*           .Apex.Apex--lg.Apex--default
+*             | Expediente
+*         .Segment
+*           .Flag
+*             .Flag-image
+*               .Icon.Icon--newspaper.Icon--lg
+*             .Flag-body
+*               a Cur vita tolerare?
+*               div: small Nunquam gratia guttus
+*           .Flag
+*             .Flag-image
+*               .Icon.Icon--bubble.Icon--lg
+*             .Flag-body
+*               a Nunquam contactus pulchritudine
+*               div: small Nunquam consumere tumultumque
+*/
+// endregion
+
+@painel-spacing: 10px;
+
+.Segment {
+
+    margin-bottom: @painel-spacing;
+    padding:  @painel-spacing;
+
+
+    // força a remoção da primeira e da última margem via collapse (até 15px)
+    // TODO: classear
+    &:after, &:before {
+        content: '';
+        height: 0;
+        display: block;
+        margin: 15px 0 -15px; // retira toda margem vertical de até 1em;
+    }
+
+    > .Segment {
+        //padding-left: @painel-spacing;
+        //padding-right: @painel-spacing;
+        overflow: hidden; // garantir espaçamento ainda que não haja padding ou border
+        padding: 0 @painel-spacing;
+    }
+
+    //border: 1px solid purple;
+
+}
+
+    .Segment--full {
+        margin-left: -@painel-spacing;
+        margin-right: -@painel-spacing;
+        position: relative;
+        &:first-child {
+            top: -@painel-spacing;
+            margin-bottom: 0;
+        }
+        &:last-child {
+            margin-top: -@painel-spacing;
+            top: @painel-spacing;
+        }
+    }
+
+
+
+
+
+
+
+
+
+        .Segment--light {
+            background: #D9EDF7;
+        }
+
+        .Segment--cut {
+            background: #f5f5f5;
+        }
+
+        .Segment--links {
+            border-bottom: 5px solid #ccc;
+        }
+
