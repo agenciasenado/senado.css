@@ -37,23 +37,10 @@ h5 {
     }
 }
 
-.cut-here, .cut-here-lg {
+.cutHere:not(:last-child) {
     border-bottom: 1px dotted #ccc;
-    &:last-child {
-        border-bottom: none;
-    }
-}
-
-.cut-here {
-    margin-top: 5px!important;
-    margin-bottom: 5px!important;
-    padding-bottom: 5px;
-}
-
-.cut-here-lg {
-    margin-top: 10px!important;
-    margin-bottom: 10px!important;
-    padding-bottom: 10px;
+    padding-bottom: @painel-spacing/2;
+    margin-bottom: @painel-spacing/2;
 }
 
 .island {
