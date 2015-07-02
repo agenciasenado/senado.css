@@ -5,21 +5,23 @@
 *
 *     @example
 *     .Segment.Segment--light
-*       p Ola
+*       .Segment
+*         .Apex.Apex--cut
+*           span.u-divisorVertical Agenda
+*           p.Apex-detail: a  Qua | 01/07
+*       .Segment
+*         | Segment
+*       .Segment
+*         .Segment.Segment--full
+*           | Segment--full
 *         .Segment
-*           .Apex.Apex--light Ao vivo
-*         .Segment
-*           p Mori diligenter ducunt ad flavum calceus.
-*           p Nix de emeritis tabes, perdere luna.
-*           .Segment
-*             .Apex.Apex--light Ao vivo
-*           .Segment
-*             p Mori diligenter ducunt ad flavum calceus.
-*             p Nix de emeritis tabes, perdere luna.
-*         .Segment
-*           ul.list-unstyled
-*             li Sunt apolloniateses imperium audax, germanus mensaes.
-*             li Castus virtualiter promissio de fatalis, noster pars.
+*           | Segment
+*         .Segment.Segment--full
+*           | Segment--full
+*       .Segment
+*         | Segment
+*       .Segment.Segment--full
+*         | Segment--full
 *
 *     .Segment.Segment--cut
 *         .Segment
@@ -35,7 +37,7 @@
 *                 li: a Nix de emeritis tabes, perdere luna.
 *         .Segment
 *           .Bed.Bed--cut: a Agenda semanal
-*     p Oi
+*     p -----
 *     .Segment.Segment--links
 *         .Segment.Segment--full
 *           .Apex.Apex--lg.Apex--default
@@ -60,51 +62,34 @@
 
 .Segment {
 
-    margin-bottom: @painel-spacing;
-    padding:  @painel-spacing;
+    // SPEC:
+    // - não deve possuir margens lateriais
 
+    margin-bottom: @painel-spacing;
+    padding: @painel-spacing 0; // se o padding for retirado, tem que habilitar o overflow: hidden
 
     // força a remoção da primeira e da última margem via collapse (até 15px)
-    // TODO: classear
     &:after, &:before {
         content: '';
         height: 0;
         display: block;
-        margin: 15px 0 -15px; // retira toda margem vertical de até 1em;
+        margin: -15px 0 15px; // retira toda margem vertical de até 1em;
     }
 
     > .Segment {
-        //padding-left: @painel-spacing;
-        //padding-right: @painel-spacing;
-        overflow: hidden; // garantir espaçamento ainda que não haja padding ou border
-        padding: 0 @painel-spacing;
+        overflow: hidden; // garantir espaçamento ainda que não haja padding ou border // testado
+        padding: 0;
+        margin-left: @painel-spacing;
+        margin-right: @painel-spacing;
     }
 
-    //border: 1px solid purple;
 
 }
 
     .Segment--full {
-        margin-left: -@painel-spacing;
-        margin-right: -@painel-spacing;
-        position: relative;
-        &:first-child {
-            top: -@painel-spacing;
-            margin-bottom: 0;
-        }
-        &:last-child {
-            margin-top: -@painel-spacing;
-            top: @painel-spacing;
-        }
+        margin-left: 0!important;
+        margin-right: 0!important;
     }
-
-
-
-
-
-
-
-
 
         .Segment--light {
             background: #D9EDF7;
