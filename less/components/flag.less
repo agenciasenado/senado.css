@@ -1,4 +1,39 @@
+// region doc
+/**
+* Flag:
+* `.Flag`: Estrutura genérica de disposição de conteúdo com uma mídia lateral e um conteúdo
+* adjacente. É centralizado verticalmente por padrão, mas pode ser alinhhado ao topo
+* ou ao rodapé por meio dos modificadores `--top` e `--bottom`.
+*
+*     @example
+*     h4 Centralizado
+*     .Flag
+*       .Flag-image
+*         .Icon.Icon--newspaper.Icon--lg
+*       .Flag-body
+*         a Cur vita tolerare?
+*         div: small Nunquam gratia guttus
+*         div: small Cur impositio resistere?
+*     h4 Topo
+*     .Flag.Flag--top
+*       .Flag-image
+*         .Icon.Icon--bubble.Icon--lg
+*       .Flag-body
+*         a Nunquam contactus pulchritudine
+*         div: small Nunquam consumere tumultumque
+*         div: small Cur adgium persuadere
+*     h4 Rodapé
+*     .Flag.Flag--bottom
+*       .Flag-image
+*         .Icon.Icon--twitter.Icon--lg
+*       .Flag-body
+*         a Cur nix velum
+*         div: small Dexter verpas ducunt ad devatio.
+*         div: small A falsis, verpa peritus burgus.
+*/
+// endregion
 @flag-spacing: 10px;
+
 .Flag {
     display: table;
     width: 100%;
@@ -7,7 +42,6 @@
         margin-top: 0;
     }
     margin-bottom: @flag-spacing;
-    margin-top: @flag-spacing;
 }
 
     .Flag-image,
