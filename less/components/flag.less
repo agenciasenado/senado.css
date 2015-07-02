@@ -6,28 +6,25 @@
 * ou ao rodapé por meio dos modificadores `--top` e `--bottom`.
 *
 *     @example
-*     h4 Centralizado
 *     .Flag
 *       .Flag-image
 *         .Icon.Icon--newspaper.Icon--lg
 *       .Flag-body
-*         a Cur vita tolerare?
+*         a Middle
 *         div: small Nunquam gratia guttus
 *         div: small Cur impositio resistere?
-*     h4 Topo
 *     .Flag.Flag--top
 *       .Flag-image
 *         .Icon.Icon--bubble.Icon--lg
 *       .Flag-body
-*         a Nunquam contactus pulchritudine
+*         a Top
 *         div: small Nunquam consumere tumultumque
 *         div: small Cur adgium persuadere
-*     h4 Rodapé
 *     .Flag.Flag--bottom
 *       .Flag-image
 *         .Icon.Icon--twitter.Icon--lg
 *       .Flag-body
-*         a Cur nix velum
+*         a Bottom
 *         div: small Dexter verpas ducunt ad devatio.
 *         div: small A falsis, verpa peritus burgus.
 */
@@ -37,11 +34,10 @@
 .Flag {
     display: table;
     width: 100%;
-
-    &:first-child {
-        margin-top: 0;
-    }
     margin-bottom: @flag-spacing;
+    &:last-child {
+        margin-bottom: 0;
+    }
 }
 
     .Flag-image,
@@ -57,6 +53,7 @@
             vertical-align: bottom;
         }
 
+        .collapse-margins();
     }
 
     .Flag-image {
