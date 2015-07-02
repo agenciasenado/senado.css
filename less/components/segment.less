@@ -1,15 +1,16 @@
 // region doc
 /**
 * Segment:
-* `.Segment`: Segmento
+* `.Segment`: Estrutura que colide as margens verticais do `first-child` e `last-child` e
+* uniformiza os espaços entre os elementos de uma sequência vertical.
+*
+* Deve ser aninhado com outros elementos `.Segment`
 *
 *     @example
-*     .Segment.Segment--light
-*       .Segment
-*         .Apex.Apex--cut
-*           span.u-divisorVertical Agenda
-*           p.Apex-detail: a  Qua | 01/07
-*       .Segment
+*     .Segment
+*       .Segment.Segment--full
+*         | Segment--full
+*       .Segment.Segment--cutHere
 *         | Segment
 *       .Segment
 *         .Segment
@@ -57,7 +58,6 @@
 @painel-spacing: 10px;
 
 .Segment {
-
     // SPEC:
     // - não deve possuir margens lateriais
 
@@ -88,18 +88,23 @@
                 display: none;
             }
         }
-
     }
 
-        .Segment--light {
-            background: #D9EDF7;
-        }
+    .Segment--light {
+        background: #D9EDF7;
+    }
 
-        .Segment--cut {
-            background: #f5f5f5;
-        }
+    .Segment--cut {
+        background: #f5f5f5;
+    }
 
-        .Segment--links {
-            border-bottom: 5px solid #ccc;
-        }
+    .Segment--links {
+        border-bottom: 5px solid #ccc;
+    }
+
+    .Segment--cutHere {
+        border-bottom: 1px dotted #ccc;
+        padding-bottom: @painel-spacing/2!important;
+        margin-bottom: @painel-spacing/2;
+    }
 
