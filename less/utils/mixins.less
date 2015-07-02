@@ -21,3 +21,12 @@
 .rect(@top, @left, @bottom, @right) {
     top:@top; left:@left; right:@right; bottom:@bottom;
 }
+
+.collapse-margins() {
+    &:after, &:before {
+        content: '';
+        height: 0;
+        display: block;
+        margin: -15px 0 15px;
+    }
+}
