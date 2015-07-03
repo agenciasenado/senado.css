@@ -1,12 +1,10 @@
-@painel-spacing: 10px;
-
 // SPEC:
 // - não deve possuir margens lateriais
 
 .Painel {
     // se o padding for retirado, tem que habilitar o overflow: hidden
-    padding: @painel-spacing;
-    margin-bottom: @painel-spacing;
+    padding: @padding-small-horizontal;;
+    margin-bottom: @padding-small-horizontal;;
 }
 
     .Painel--light {
@@ -16,3 +14,8 @@
     .Painel--cut {
         background: #f5f5f5;
     }
+
+.Painel-body {
+    padding-top: @padding-small-horizontal;;
+    padding-bottom: @padding-small-horizontal;;
+}

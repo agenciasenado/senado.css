@@ -1,68 +1,62 @@
 /***
- * Segment:
+ * Segmento:
  */
 
 // region doc
 /**
 * Segment:
 * `.Segment`: Estrutura que colide as margens verticais do `first-child` e `last-child` e
-* uniformiza os espaços entre os elementos de uma sequência vertical.
+* uniformiza os espaços entre os elementos de uma sequência vertical. Quando dentro de um `.Segments`, é
+* separado verticalmente do próximo elemento.
 *
 *     @example
-*     .Segment.Painel--cut
-*       div: p div > p
-*     .Segment.Painel--cut
-*       ul
-*         li ul > li
-*           ul
-*             li ul > li > ul > li
-*     .Segment.Painel--cut
-*        div: div: div: h3 div > div > div > h3
-*     .Segment.Painel--cut
-*       span span
-
-/**
-* Full:
-* `.Segment--full`: Anula o espaçamento horizontal
-*
-*     @example
-*     .Painel.Painel--light
-*       .Segment.Painel--cut.Segment--full
-*         p Segment--full
+*     .Segments
 *       .Segment.Painel--cut
-*         small Segment
-*       .Segment.Painel--cut.Segment--full
-*         p Segment--full
+*         div: p div > p
+*       .Segment.Painel--cut
+*         ul
+*           li ul > li
+*             ul
+*               li ul > li > ul > li
+*       .Segment.Painel--cut
+*          div: div: div: h3 div > div > div > h3
+*       .Segment.Painel--cut
+*         span span
+*/
 
 /**
 * Cut here:
 * `.Segment--cutHere`: Divide cada segmento com uma borda tracejada.
 *
 *     @example
-*     .Painel.Painel--cut
+*     .Segments.Painel.Painel--cut
 *         .Segment.cutHere
 *           p Apolloniates de festus gabalium, amor frondator!
 *         .Segment.cutHere
 *           p Potus hic ducunt ad noster demissio.
 *         .Segment.cutHere
 *           p Caculas sunt paluss de altus species.
+*/
 
 /**
 * Exemplos:
 *
 *     @example
-*     .Painel.Segment.Painel--cut
-*         .Segment.Apex.Apex--cut
-*           span.u-divisorVertical Agenda
-*           p.Apex-detail: a  Qua | 01/07
+*     .Segments.Painel.Painel--cut
+*         .Segment
+*           .Apex.Apex--cut
+*             span.u-divisorVertical Agenda
+*             p.Apex-detail: a  Qua | 01/07
 *         .Segment
 *           ul.list-unstyled
 *             li: a Mori diligenter ducunt ad flavum calceus
 *             li: a Sunt axonaes amor clemens, neuter triticumes
-*         .Segment.Bed.Bed--cut: a Agenda semanal
+*         .Segment
+*           .Bed.Bed--cut: a Agenda semanal
 *     .Card.Card--links
-*         .Apex.Apex--default
-*             | Expediente
+*         .Segment.Apex.Apex--default
+*             h4 Expediente
+*               small= '<h4>'
 *         .Segment.Painel
 *           .Flag
 *             .Flag-image
@@ -84,9 +78,12 @@
 
 .Segment {
     overflow: hidden; // garantir espaçamento ainda que não haja padding
-    margin-bottom: @padding-small-horizontal;
     &:last-child {
         margin-bottom: 0;
     }
     .collapse-margins();
+}
+
+.Segments > .Segment:not(:last-child) {
+    margin-bottom: @padding-small-horizontal;
 }
