@@ -10,30 +10,16 @@
 *
 *     @example
 *     .Segment.Painel--cut
-*       p Segment
+*       div: p div > p
 *     .Segment.Painel--cut
 *       ul
-*         li Segment
-*     .Segment.Painel--cut
-*       h3 Segment
-*     .Segment.Painel--cut
-*       small Segment
-
-/**
-* Aninhamento:
-* `.Painel`: Ajusta o espaçamento externo e permite o aninhamento segmentos.
-*
-*     @example
-*     .Painel.Painel--cut
-*       .Segment
-*         p para
-*       .Painel.Painel--light
-*         .Segment.Painel--cut
-*           p para
+*         li ul > li
 *           ul
-*             li list
-*         .Segment.Painel--cut
-*           p para
+*             li ul > li > ul > li
+*     .Segment.Painel--cut
+*        div: div: div: h3 div > div > div > h3
+*     .Segment.Painel--cut
+*       span span
 
 /**
 * Full:
@@ -93,14 +79,12 @@
 */
 // endregion
 
-@painel-spacing: 10px;
-
 // SPEC:
 // - não deve possuir margens lateriais
 
 .Segment {
     overflow: hidden; // garantir espaçamento ainda que não haja padding
-    margin-bottom: @painel-spacing;
+    margin-bottom: @padding-small-horizontal;
     &:last-child {
         margin-bottom: 0;
     }
@@ -108,18 +92,6 @@
 }
 
     .Segment--full {
-        position: relative;
-
-        margin-left: -@painel-spacing;
-        margin-right: -@painel-spacing;
-
-        &:first-child {
-            margin-bottom: 0;
-            top: -@painel-spacing;
-        }
-
-        &:last-child {
-            top: @painel-spacing;
-            margin-top: -10px;
-        }
+        margin-left: -@padding-small-horizontal;
+        margin-right: -@padding-small-horizontal;
     }
