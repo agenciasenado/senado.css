@@ -96,7 +96,13 @@ module.exports = function(grunt) {
         },
         clean: {
             build: {
-                src: ['dist', 'tests/desktop/results', 'tests/mobile/results']
+                src: [
+                    'dist',
+                    'tests/desktop/screenshots/*.diff.png',
+                    'tests/mobile/screenshots/*.diff.png',
+                    'tests/desktop/screenshots/*.fail.png',
+                    'tests/mobile/screenshots/*.fail.png'
+                ]
             }
         },
         connect: {

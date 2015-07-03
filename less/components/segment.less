@@ -26,12 +26,12 @@
 * `.Segment--full`: Anula o espaçamento horizontal
 *
 *     @example
-*     .Painel.Segment--light
-*       .Segment.Segment--cut.Segment--full
+*     .Painel.Painel--light
+*       .Segment.Painel--cut.Segment--full
 *         p Segment--full
-*       .Segment.Segment--cut
+*       .Segment.Painel--cut
 *         small Segment
-*       .Segment.Segment--cut.Segment--full
+*       .Segment.Painel--cut.Segment--full
 *         p Segment--full
 
 /**
@@ -60,10 +60,10 @@
 *             li: a Mori diligenter ducunt ad flavum calceus
 *             li: a Sunt axonaes amor clemens, neuter triticumes
 *         .Segment.Bed.Bed--cut: a Agenda semanal
-*     .Painel.Painel--links.Segment
-*         .Segment.Segment--full.Apex.Apex--default
+*     .Card.Card--links
+*         .Apex.Apex--default
 *             | Expediente
-*         .Segment
+*         .Segment.Painel
 *           .Flag
 *             .Flag-image
 *               .Icon.Icon--newspaper.Icon--lg
@@ -90,8 +90,3 @@
     }
     .collapse-margins();
 }
-
-    .Segment--full {
-        margin-left: -@padding-small-horizontal;
-        margin-right: -@padding-small-horizontal;
-    }
