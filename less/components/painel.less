@@ -3,8 +3,10 @@
 
 .Painel {
     // se o padding for retirado, tem que habilitar o overflow: hidden
-    padding: @padding-small-horizontal;;
-    margin-bottom: @padding-small-horizontal;;
+    padding: @padding-small-horizontal;
+    &:not(:last-child) {
+        margin-bottom: @padding-small-horizontal;
+    }
 }
 
     .Painel--light {
@@ -15,7 +17,3 @@
         background: #f5f5f5;
     }
 
-.Painel-body {
-    padding-top: @padding-small-horizontal;;
-    padding-bottom: @padding-small-horizontal;;
-}
