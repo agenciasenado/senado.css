@@ -29,13 +29,17 @@
 * `.Segment--cutHere`: Divide cada segmento com uma borda tracejada.
 *
 *     @example
-*     .Segments.Painel.Painel--cut
-*         .Segment.cutHere
-*           p Apolloniates de festus gabalium, amor frondator!
-*         .Segment.cutHere
-*           p Potus hic ducunt ad noster demissio.
-*         .Segment.cutHere
-*           p Caculas sunt paluss de altus species.
+*     .Segments.Segments.Painel.Painel--cut
+*         .Segment.Apex.Apex--cut: small ÚLTIMAS NOTÍCIAS
+*         .Segment
+*           .Segment.cutHere--lg
+*             p Apolloniates de festus gabalium, amor frondator!
+*           .Segment.cutHere--lg
+*             p Potus hic ducunt ad noster demissio.
+*           .Segment.cutHere--lg
+*             p Caculas sunt paluss de altus species.
+*         .Segment
+*           .Bed.Bed--cut: a: strong VER TODAS
 */
 
 /**
@@ -45,12 +49,13 @@
 *     .Segments.Painel.Painel--cut
 *         .Segment
 *           .Apex.Apex--cut
-*             span.u-divisorVertical Agenda
-*             p.Apex-detail: a  Qua | 01/07
+*             span.h4
+*               span.u-divisorVertical Agenda
+*               span.h6: a Qua | 01/07
 *         .Segment
-*           ul.list-unstyled
-*             li: a Mori diligenter ducunt ad flavum calceus
-*             li: a Sunt axonaes amor clemens, neuter triticumes
+*             p: a Mori diligenter ducunt ad flavum calceus
+*         .Segment
+*             p: a Sunt axonaes amor clemens, neuter triticumes
 *         .Segment
 *           .Bed.Bed--cut: a Agenda semanal
 *     .Card.Card--links
@@ -85,6 +90,6 @@
     margin-bottom: @padding-small-horizontal;
 }
 
-.Segments > .Segment--lg:not(:last-child) {
+.Segments--lg > .Segment:not(:last-child) {
     margin-bottom: @padding-large-horizontal;
 }
