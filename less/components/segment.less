@@ -51,15 +51,13 @@
 * Exemplos:
 *
 *     @example
-*     .Segments.Painel.Painel--cut
-*         h4.Segment.Apex.Apex--cut
+*     ul.Segments.Painel.Painel--cut
+*         li.h4.Apex.Apex--cut
 *           span.u-divisorVertical Agenda
 *           span.h6: a Qua | 01/07
-*         .Segment
-*           p: a Mori diligenter ducunt ad flavum calceus
-*         .Segment
-*           p: a Sunt axonaes amor clemens, neuter triticumes
-*         .Segment.Stand.Stand--cut.small
+*         li: a Mori diligenter ducunt ad flavum calceus
+*         li: a Sunt axonaes amor clemens, neuter triticumes
+*         li.Stand.Stand--cut.small
 *           a(href='#') Agenda semanal
 *     .Card.Card--links
 *         .Segment
@@ -84,7 +82,7 @@
 // SPEC:
 // - não deve possuir margens lateriais
 
-.Segment {
+.Segment, ul.Segments > li {
     overflow: hidden; // garantir espaçamento ainda que não haja padding
     .collapse-margins();
     display: block;
@@ -93,13 +91,13 @@
 
 .Segments {
     > :not(:last-child) {
-        margin-bottom: @padding-small-horizontal;
+        margin-bottom: @padding-base-vertical;
     }
 }
 
     .Segments--lg {
         > :not(:last-child) {
-            margin-bottom: @padding-large-horizontal;
+            margin-bottom: @padding-large-vertical;
         }
     }
 
