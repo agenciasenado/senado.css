@@ -2,7 +2,7 @@
  * Segmento:
  */
 
-// region doc
+// region segment
 /**
 * Segment:
 * `.Segment`: Estrutura que colide as margens verticais do `first-child` e `last-child` e
@@ -23,45 +23,48 @@
 *       .Segment.Painel--cut
 *         span span
 */
+// endregion
 
+// region cut-here
 /**
 * Cut here:
 * `.Segment--cutHere`: Divide cada segmento com uma borda tracejada.
 *
 *     @example
-*     .Segments.Segments.Painel.Painel--cut
-*         .Segment.Apex.Apex--cut: small ÚLTIMAS NOTÍCIAS
-*         .Segment
-*           .Segment.cutHere--lg
-*             p Apolloniates de festus gabalium, amor frondator!
-*           .Segment.cutHere--lg
-*             p Potus hic ducunt ad noster demissio.
-*           .Segment.cutHere--lg
-*             p Caculas sunt paluss de altus species.
-*         .Segment
-*           .Bed.Bed--cut: a: strong VER TODAS
+*     .Segments.Painel.Painel--cut
+*
+*       div(class='Segment [ Apex Apex--cut ] small')
+*         ÚLTIMAS NOTÍCIAS
+*
+*       .CutHere.CutHere--dotted
+*         .Segment: p Apolloniates de festus gabalium, amor frondator!
+*         .Segment: h4 Potus hic ducunt ad noster demissio.
+*         .Segment: small Caculas sunt paluss de altus species.
+*
+*       div(class='Segment [ Stand Stand--cut ] small')
+*         a: b VER TODAS
 */
+// endregion
 
+// region exemplos
 /**
 * Exemplos:
 *
 *     @example
 *     .Segments.Painel.Painel--cut
+*         h4.Segment.Apex.Apex--cut
+*           span.u-divisorVertical Agenda
+*           span.h6: a Qua | 01/07
 *         .Segment
-*           .Apex.Apex--cut
-*             span.h4
-*               span.u-divisorVertical Agenda
-*               span.h6: a Qua | 01/07
+*           p: a Mori diligenter ducunt ad flavum calceus
 *         .Segment
-*             p: a Mori diligenter ducunt ad flavum calceus
-*         .Segment
-*             p: a Sunt axonaes amor clemens, neuter triticumes
-*         .Segment
-*           .Bed.Bed--cut: a Agenda semanal
+*           p: a Sunt axonaes amor clemens, neuter triticumes
+*         .Segment.Stand.Stand--cut.small
+*           a(href='#') Agenda semanal
 *     .Card.Card--links
-*         .Segment.Apex.Apex--default
-*             h4 Expediente
-*               small= '<h4>'
+*         .Segment
+*           h4.Apex.Apex--default Expediente
+*             small= '<h4>'
 *         .Painel
 *           .Flag
 *             .Flag-image
@@ -84,12 +87,19 @@
 .Segment {
     overflow: hidden; // garantir espaçamento ainda que não haja padding
     .collapse-margins();
+    display: block;
+    margin: 0;
 }
 
-.Segments > .Segment:not(:last-child) {
-    margin-bottom: @padding-small-horizontal;
+.Segments {
+    > :not(:last-child) {
+        margin-bottom: @padding-small-horizontal;
+    }
 }
 
-.Segments--lg > .Segment:not(:last-child) {
-    margin-bottom: @padding-large-horizontal;
-}
+    .Segments--lg {
+        > :not(:last-child) {
+            margin-bottom: @padding-large-horizontal;
+        }
+    }
+
