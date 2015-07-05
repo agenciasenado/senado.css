@@ -1,0 +1,19 @@
+.CutHere {
+    > :not(:last-child) {
+        border-bottom: 1px dotted #ccc;
+        padding-bottom: @padding-small-horizontal/2;
+        margin-bottom: @padding-small-horizontal/2;
+    }
+}
+.CutHere--lg {
+     > :not(:last-child) {
+         padding-bottom: @padding-large-horizontal/2;
+         margin-bottom: @padding-large-horizontal/2;
+     }
+}
+
+.CutHere--dashed {
+    > :not(:last-child) {
+        border-bottom-style: dashed;
+    }
+}
