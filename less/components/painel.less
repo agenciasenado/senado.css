@@ -1,5 +1,65 @@
-// SPEC:
-// - não deve possuir margens lateriais
+/***
+ * Painel:
+ */
+
+// region exemplos
+/**
+* Painel:
+* `.Painel`: Elemento com padding interno e margem abaixo. Seu espaçamento pode ser configurado por meio
+* dos modificadores `--fullvert`, que não possui padding vertical; `--fullhorz`, que não possui padding
+* horizontal; e `--full`, que não possui paddings.
+*
+*     @example
+*     .Painel.Painel--cut.Painel--full
+*       | f
+*     .Painel.Painel--cut.Painel--fullvert
+*       | f
+*     .Painel.Painel--cut.Painel--fullhorz
+*       | f
+*     ul.Segments.Segments--lg.Painel.Painel--cut
+*         li.h4.Apex.Apex--cut
+*           span.u-divisorVertical Agenda
+*           span.h6: a Qua | 01/07
+*         li: a Mori diligenter ducunt ad flavum calceus
+*         li: a Sunt axonaes amor clemens, neuter triticumes
+*         li.Stand.Stand--cut.small
+*           a(href='#') Agenda semanal
+*/
+
+/**
+* Tamanho do espaçamento interno:
+* Os elementos `.Painel` podem o tamanho do espaçamento interno alterado por meio dos modificadores `--sm`
+* ou `--lg`.
+*
+*     @example
+*     .Painel.Painel--cut.Painel--lg
+*       | lg
+*     .Painel.Painel--cut
+*       | normal
+*     .Painel.Painel--cut.Painel--sm
+*       | sm
+*/
+
+/**
+*     @example
+*     .Painel.Painel--full.Painel--links
+*         h4(class='[ Segment ][ Apex.Apex--default]') Expediente
+*             small= '<h4>'
+*         .Painel
+*           .Flag
+*             .Flag-image
+*               .Icon.Icon--newspaper.Icon--lg
+*             .Flag-body
+*               a Cur vita tolerare?
+*               p: small Nunquam gratia guttus
+*           .Flag
+*             .Flag-image
+*               .Icon.Icon--bubble.Icon--lg
+*             .Flag-body
+*               a Nunquam contactus pulchritudine
+*               div: small Fuga de ferox buxum, manifestum advena
+*/
+// endregion
 
 .Painel {
     padding: 10px;
