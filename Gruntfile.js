@@ -165,14 +165,13 @@ module.exports = function(grunt) {
         'jade:main',
         'less:main',
         'autoprefixer',
-        'cssmin',
-        'styledown'
+        'cssmin'
     ])
     grunt.registerTask('server', [
         'connect', 'concurrent:main'
     ])
     grunt.registerTask('dev', [
-        'build', 'styledown', 'server'
+        'build', 'server'
     ])
 
     grunt.registerTask('default', [
