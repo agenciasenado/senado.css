@@ -2,16 +2,36 @@
 // - não deve possuir margens lateriais
 
 .Painel {
-    // se o padding for retirado, tem que habilitar o overflow: hidden
-    padding: @padding-large-vertical;
+    padding: 10px;
     &:not(:last-child) {
-        margin-bottom: 2*@padding-large-vertical;
+        margin-bottom: 2 * @padding-large-vertical;
     }
 }
 
-    .Painel--full {
+    .Painel--lg {
+        padding: 15px;
+    }
+
+    .Painel--sm {
+        padding: 6px;
+    }
+
+    .Painel--fullhorz {
         padding-left: 0;
         padding-right: 0;
+    }
+
+    .Painel--fullvert {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .Painel--full {
+        padding: 0;
+    }
+
+    .Painel--links {
+        border-bottom: 5px solid #ccc;
     }
 
     .Painel--light {
@@ -21,4 +41,3 @@
     .Painel--cut {
         background: #f5f5f5;
     }
-
