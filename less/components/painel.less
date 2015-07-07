@@ -11,19 +11,11 @@
 *
 *     @example
 *     .Painel.Painel--cut.Painel--full
-*       | f
-*     .Painel.Painel--cut.Painel--fullvert
-*       | f
-*     .Painel.Painel--cut.Painel--fullhorz
-*       | f
-*     ul.Segments.Segments--lg.Painel.Painel--cut
-*         li.h4.Apex.Apex--cut
-*           span.u-divisorVertical Agenda
-*           span.h6: a Qua | 01/07
-*         li: a Mori diligenter ducunt ad flavum calceus
-*         li: a Sunt axonaes amor clemens, neuter triticumes
-*         li.Stand.Stand--cut.small
-*           a(href='#') Agenda semanal
+*       | --full
+*     .Painel.Painel--cut.Painel--notb
+*       | --notb
+*     .Painel.Painel--cut.Painel--norl
+*       | --norl
 */
 
 /**
@@ -32,32 +24,42 @@
 * ou `--lg`.
 *
 *     @example
-*     .Painel.Painel--cut.Painel--lg
-*       | lg
-*     .Painel.Painel--cut
-*       | normal
 *     .Painel.Painel--cut.Painel--sm
 *       | sm
+*     .Painel.Painel--cut
+*       | normal
+*     .Painel.Painel--cut.Painel--lg
+*       | lg
 */
 
 /**
+* Exemplos:
+*
 *     @example
-*     .Painel.Painel--full.Painel--links
-*         h4(class='[ Segment ][ Apex.Apex--default]') Expediente
-*             small= '<h4>'
-*         .Painel
-*           .Flag
-*             .Flag-image
-*               .Icon.Icon--newspaper.Icon--lg
-*             .Flag-body
-*               a Cur vita tolerare?
-*               p: small Nunquam gratia guttus
-*           .Flag
-*             .Flag-image
-*               .Icon.Icon--bubble.Icon--lg
-*             .Flag-body
-*               a Nunquam contactus pulchritudine
-*               div: small Fuga de ferox buxum, manifestum advena
+*     ul(class='[ Segments Segments--lg] [ Painel Painel--lg Painel--cut ]')
+*         li(class='[ Apex Apex--cut ] h4')
+*           span.u-divisorVertical Agenda
+*           span.h6: a Qua | 01/07
+*         li: a Mori diligenter ducunt ad flavum calceus
+*         li: a Sunt axonaes amor clemens, neuter triticumes
+*         li.Stand.Stand--cut.small
+*           a(href='#') Agenda semanal
+*     .Painel--full.Painel--links
+*       h4(class='[ Segment ][ Apex Apex--default ]') Expediente
+*         small= '<h4>'
+*       .Painel
+*         .Flag
+*           .Flag-image
+*             .Icon.Icon--newspaper.Icon--lg
+*           .Flag-body
+*             a Cur vita tolerare?
+*             p: small Nunquam gratia guttus
+*         .Flag
+*           .Flag-image
+*             .Icon.Icon--bubble.Icon--lg
+*           .Flag-body
+*             a Nunquam contactus pulchritudine
+*             div: small Fuga de ferox buxum, manifestum advena
 */
 // endregion
 
@@ -76,12 +78,12 @@
         padding: 6px;
     }
 
-    .Painel--fullhorz {
+    .Painel--norl {
         padding-left: 0;
         padding-right: 0;
     }
 
-    .Painel--fullvert {
+    .Painel--notb {
         padding-top: 0;
         padding-bottom: 0;
     }
