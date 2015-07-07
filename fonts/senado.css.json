@@ -1418,7 +1418,7 @@
 				"licenseURL": "http://brankic1979.com/icons/"
 			},
 			"height": 1024,
-			"prevSize": 32,
+			"prevSize": 16,
 			"icons": [
 				{
 					"id": 0,
@@ -6238,7 +6238,7 @@
 					"grid": 32
 				}
 			],
-			"invisible": false
+			"invisible": true
 		},
 		{
 			"selection": [
@@ -10977,7 +10977,7 @@
 					"ligatures": "fullscreen_exit"
 				},
 				{
-					"order": 32,
+					"order": 0,
 					"id": 526,
 					"prevSize": 24,
 					"code": 57870,
@@ -10991,7 +10991,7 @@
 					"prevSize": 24,
 					"code": 57871,
 					"name": "more-horizontal",
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "keyboard_control"
 				},
 				{
@@ -11000,7 +11000,7 @@
 					"prevSize": 24,
 					"code": 57872,
 					"name": "more-vertical",
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "more_vert"
 				},
 				{
@@ -12111,7 +12111,7 @@
 					"ligatures": "done_all"
 				},
 				{
-					"order": 37,
+					"order": 0,
 					"id": 652,
 					"prevSize": 24,
 					"code": 57996,
@@ -25911,7 +25911,7 @@
 				"licenseURL": "http://dribbble.com/shots/929153-Steady-set-of-icons"
 			},
 			"height": 1024,
-			"prevSize": 24,
+			"prevSize": 12,
 			"icons": [
 				{
 					"id": 0,
@@ -27879,7 +27879,7 @@
 					"grid": 24
 				}
 			],
-			"invisible": false
+			"invisible": true
 		},
 		{
 			"selection": [
@@ -29148,7 +29148,11 @@
 				},
 				{
 					"id": 19,
-					"order": 0
+					"order": 43,
+					"prevSize": 16,
+					"code": 61544,
+					"name": "calendar",
+					"tempChar": ""
 				},
 				{
 					"id": 20,
@@ -29732,7 +29736,11 @@
 				},
 				{
 					"id": 165,
-					"order": 0
+					"order": 42,
+					"prevSize": 16,
+					"code": 61534,
+					"name": "menu",
+					"tempChar": ""
 				},
 				{
 					"id": 166,
@@ -29789,7 +29797,7 @@
 				"licenseURL": "https://github.com/github/octicons/blob/master/LICENSE.txt"
 			},
 			"height": 1024,
-			"prevSize": 32,
+			"prevSize": 16,
 			"icons": [
 				{
 					"id": 0,
@@ -32927,7 +32935,7 @@
 				"licenseURL": "http://creativecommons.org/licenses/by-sa/3.0/us/"
 			},
 			"height": 1024,
-			"prevSize": 32,
+			"prevSize": 16,
 			"icons": [
 				{
 					"id": 0,
@@ -37739,7 +37747,7 @@
 				},
 				{
 					"id": 59,
-					"order": 36,
+					"order": 0,
 					"prevSize": 32,
 					"code": 58880,
 					"name": "dots-horizontal",
@@ -37747,7 +37755,7 @@
 				},
 				{
 					"id": 60,
-					"order": 35,
+					"order": 0,
 					"prevSize": 32,
 					"code": 58881,
 					"name": "dots-vertical",
@@ -39065,7 +39073,7 @@
 				"licenseURL": "https://creativecommons.org/licenses/by-sa/4.0/"
 			},
 			"height": 1024,
-			"prevSize": 32,
+			"prevSize": 20,
 			"icons": [
 				{
 					"id": 0,
@@ -44664,9 +44672,9 @@
 				{
 					"order": 9,
 					"id": 1624,
-					"prevSize": 32,
+					"prevSize": 16,
 					"code": 59652,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "newspaper, news",
 					"name": "newspaper"
 				},
@@ -44880,9 +44888,9 @@
 				{
 					"id": 154,
 					"order": 4,
-					"prevSize": 32,
+					"prevSize": 16,
 					"code": 59676,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "podcast, broadcast",
 					"name": "podcast"
 				},
@@ -44952,9 +44960,9 @@
 				{
 					"order": 2,
 					"id": 1598,
-					"prevSize": 32,
+					"prevSize": 16,
 					"code": 59684,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "file-empty, file3",
 					"name": "page"
 				},
@@ -45375,11 +45383,11 @@
 				{
 					"id": 340,
 					"order": 0,
-					"prevSize": 32,
+					"prevSize": 16,
 					"code": 59731,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "calendar, date",
-					"name": ""
+					"name": "calendar2"
 				},
 				{
 					"id": 345,
@@ -45402,9 +45410,9 @@
 				{
 					"id": 353,
 					"order": 7,
-					"prevSize": 32,
+					"prevSize": 16,
 					"code": 59734,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "display, screen",
 					"name": "display"
 				},
@@ -45618,9 +45626,9 @@
 				{
 					"id": 425,
 					"order": 8,
-					"prevSize": 32,
+					"prevSize": 16,
 					"code": 59758,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "bubble2, comment2",
 					"name": "bubble"
 				},
@@ -46374,9 +46382,9 @@
 				{
 					"id": 788,
 					"order": 28,
-					"prevSize": 32,
+					"prevSize": 16,
 					"code": 59842,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "cloud-download, cloud2",
 					"name": "download"
 				},
@@ -46563,27 +46571,27 @@
 				{
 					"id": 863,
 					"order": 31,
-					"prevSize": 32,
+					"prevSize": 16,
 					"code": 59863,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "star-empty, rate",
 					"name": "star-empty"
 				},
 				{
 					"id": 864,
 					"order": 29,
-					"prevSize": 32,
+					"prevSize": 16,
 					"code": 59864,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "star-half, rate2",
 					"name": "star-half"
 				},
 				{
 					"id": 865,
 					"order": 30,
-					"prevSize": 32,
+					"prevSize": 16,
 					"code": 59865,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "star-full, rate3",
 					"name": "star-full"
 				},
@@ -47121,18 +47129,18 @@
 				{
 					"id": 996,
 					"order": 26,
-					"prevSize": 32,
+					"prevSize": 16,
 					"code": 59925,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "play2, player",
 					"name": "play"
 				},
 				{
 					"id": 997,
 					"order": 27,
-					"prevSize": 32,
+					"prevSize": 16,
 					"code": 59926,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "pause, player2",
 					"name": "pause"
 				},
@@ -48156,9 +48164,9 @@
 				{
 					"id": 1292,
 					"order": 24,
-					"prevSize": 32,
+					"prevSize": 16,
 					"code": 60040,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "google-plus, brand2",
 					"name": "google-plus"
 				},
@@ -48192,9 +48200,9 @@
 				{
 					"id": 1297,
 					"order": 18,
-					"prevSize": 32,
+					"prevSize": 16,
 					"code": 60044,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "facebook, brand6",
 					"name": "facebook"
 				},
@@ -48228,18 +48236,18 @@
 				{
 					"id": 1301,
 					"order": 25,
-					"prevSize": 32,
+					"prevSize": 16,
 					"code": 60048,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "instagram, brand10",
 					"name": "instagram"
 				},
 				{
 					"id": 1302,
 					"order": 19,
-					"prevSize": 32,
+					"prevSize": 16,
 					"code": 60049,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "twitter, brand11",
 					"name": "twitter"
 				},
@@ -48291,27 +48299,27 @@
 				{
 					"id": 1308,
 					"order": 21,
-					"prevSize": 32,
+					"prevSize": 16,
 					"code": 60055,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "youtube, brand14",
 					"name": "youtube-dark"
 				},
 				{
 					"id": 1309,
 					"order": 20,
-					"prevSize": 32,
+					"prevSize": 16,
 					"code": 60056,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "youtube2, brand15",
 					"name": "youtube-light"
 				},
 				{
 					"order": 22,
 					"id": 1541,
-					"prevSize": 32,
+					"prevSize": 16,
 					"code": 60057,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "youtube3, brand16",
 					"name": "youtube-logo"
 				},
@@ -48381,9 +48389,9 @@
 				{
 					"id": 1317,
 					"order": 23,
-					"prevSize": 32,
+					"prevSize": 16,
 					"code": 60065,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "flickr2, brand24",
 					"name": "flickr"
 				},
@@ -48804,9 +48812,9 @@
 				{
 					"id": 1364,
 					"order": 38,
-					"prevSize": 32,
+					"prevSize": 16,
 					"code": 60112,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "pinterest, brand71",
 					"name": "pinterest"
 				},
@@ -49055,7 +49063,7 @@
 				"licenseURL": "https://icomoon.io/#icons-icomoon"
 			},
 			"height": 1024,
-			"prevSize": 32,
+			"prevSize": 16,
 			"icons": [
 				{
 					"id": 0,
@@ -56997,8 +57005,8 @@
 			"prefix": "Icon--",
 			"metadata": {
 				"fontFamily": "agenciaweb",
-				"majorVersion": 1,
-				"minorVersion": 2
+				"majorVersion": 2,
+				"minorVersion": 0
 			},
 			"metrics": {
 				"emSize": 1024,
