@@ -1,18 +1,113 @@
 doctype html
 html(lang='pt')
-    head
-        meta(http-equiv='Content-Type', content='text/html; charset=UTF-8')
-        meta(charset='utf-8')
-        meta(http-equiv='X-UA-Compatible', content='IE=edge')
-        meta(name='viewport', content='width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no')
-        title Senado Federal
-        link(href='../node_modules/bootstrap/dist/css/bootstrap.min.css', rel='stylesheet')
-        link(href='../dist/main.css', rel='stylesheet')
-    body
-        include navglobal
-        include portaltopo
+  head
+    meta(http-equiv='Content-Type', content='text/html; charset=UTF-8')
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no')
+    title Senado Federal
+    link(href='../dist/main.css', rel='stylesheet')
+  body
+    include navglobal
+    include portaltopo
+    .container
+      .row
+        .col-md-9
+          img.img-responsive(src='https://placehold.it/860x450')
 
-        include footer
-        script(src='../node_modules/jquery/dist/jquery.min.js')
-        script(src='../node_modules/bootstrap/dist/js/bootstrap.min.js')
-        script(src='//localhost:35729/livereload.js')
+          p
+          .row
+
+            .col-xs-4.CutHere.CutHere--lg
+              .Media
+                .Media-top
+                  .Etiqueta.Etiqueta--default.glyphicon-list Flavum
+                .Media-body
+                  h5: a
+                    | Guttuss manducare, ubi est fatalis abnoba. Salvus, fortis cobaltums patienter consumere de
+                    | festus, dexter fluctui.
+              .Media
+                .Media-top
+                  .Etiqueta.Etiqueta--default.glyphicon-list Flavum
+                .Media-body
+                  h5: a Historias peregrinationes, tanquam fortis gallus!
+
+            .col-xs-4
+              .Media.Media--stack
+                .Media-top
+                  .Etiqueta.Etiqueta--default.glyphicon-list Flavum
+                .Media-figure
+                  .embed-responsive.embed-responsive-16by9
+                    img.img-responsive(src='https://placehold.it/400x225')
+                .Media-body
+                  h5: a Voxs persuadere in bi-color chremisa!
+
+            .col-xs-4
+              .Media.Media--stack
+                .Media-top
+                  .Etiqueta.Etiqueta--default.glyphicon-list Bromium brodium
+                .Media-figure
+                  .embed-responsive.embed-responsive-16by9
+                    img.img-responsive(src='https://placehold.it/400x225')
+                .Media-body
+                  h5: a Caesium de varius exemplar, examinare extum, fuga de barbatus habena, transferre vortex
+
+            .col-xs-12
+              .Media.Painel--links
+                .Media-top
+                  .Etiqueta.Etiqueta--default.Etiqueta--rev.glyphicon-list Bromium brodium
+                .Media-figure.col-xs-3
+                  .embed-responsive.embed-responsive-16by9
+                    img.img-responsive(src='https://placehold.it/400x225')
+                .Media-body.Segments
+                  h4.Segment: a Caesium de varius exemplar, examinare extum, fuga de barbatus habena, transferre vortex
+                  p
+                   | Cum amicitia tolerare, omnes luraes promissio altus, gratis terrores.
+                   | Alter, rusticus genetrixs rare visum de velox, dexter calcaria.
+                   | Candidatus nocere, omnes indictioes carpseris primus, dexter compateres.
+
+
+        .col-md-3
+
+          .Segments.Painel.Painel--lg.Painel--light
+            .Segment.Apex.Apex--light.h4 Senado Agora
+            .CutHere.Painel.Painel--vert.small
+              div
+                span.label.label-default 13h02
+                a
+                  b  Adelphiss:
+                  |  Azureus humani generis callide attrahendams deus est.
+                  | Contencio burguss ducunt ad racana.
+              div
+                span.label.label-default 12h52
+                a
+                  b  Vierium:
+                  |  Cum medicina potus, omnes buboes perdere nobilis, varius abactores!
+                  | A falsis, lamia audax scutum.
+              div
+                span.label.label-default 12h39
+                a
+                  b  Cella:
+                  |  Mirabilis, flavum solitudos satis examinare de primus, gratis hilotae.
+                  | Dexter hippotoxotas ducunt ad pulchritudine.
+            .Stand.Stand--light.small: a Ver todas ›
+
+          ul(class='[ Segments Segments--lg ] [ Painel Painel--cut Painel--lg ]')
+            li(class='[ Apex Apex--cut ] h4')
+              span.u-divisorVertical.pull-left Agenda
+              i.Icon.Icon--md.Icon--calendar
+              span.h6
+                = ' '
+                a Qua | 01/07
+            li.small: a Mori diligenter ducunt ad flavum calceus
+            li.small: a Sunt axonaes amor clemens, neuter triticumes
+            li.Stand.Stand--cut.small
+              a.u-alignMiddle(href='#') Agenda semanal ›
+
+
+
+
+  include footer
+    script(src='../node_modules/jquery/dist/jquery.min.js')
+    script(src='../node_modules/bootstrap/dist/js/bootstrap.min.js')
+    script(src='//localhost:35729/livereload.js')

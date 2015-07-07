@@ -6,16 +6,16 @@
 /**
 * Painel:
 * `.Painel`: Elemento com padding interno e margem abaixo. Seu espaçamento pode ser configurado por meio
-* dos modificadores `--fullvert`, que não possui padding vertical; `--fullhorz`, que não possui padding
+* dos modificadores `--notb`, que não possui padding vertical; `--norl`, que não possui padding
 * horizontal; e `--full`, que não possui paddings.
 *
 *     @example
 *     .Painel.Painel--cut.Painel--full
 *       | --full
-*     .Painel.Painel--cut.Painel--notb
-*       | --notb
-*     .Painel.Painel--cut.Painel--norl
-*       | --norl
+*     .Painel.Painel--cut.Painel--horz
+*       | --horz
+*     .Painel.Painel--cut.Painel--vert
+*       | --vert
 */
 
 /**
@@ -36,14 +36,6 @@
 * Exemplos:
 *
 *     @example
-*     ul(class='[ Segments Segments--lg] [ Painel Painel--lg Painel--cut ]')
-*         li(class='[ Apex Apex--cut ] h4')
-*           span.u-divisorVertical Agenda
-*           span.h6: a Qua | 01/07
-*         li: a Mori diligenter ducunt ad flavum calceus
-*         li: a Sunt axonaes amor clemens, neuter triticumes
-*         li.Stand.Stand--cut.small
-*           a(href='#') Agenda semanal
 *     .Painel--full.Painel--links
 *       h4(class='[ Segment ][ Apex Apex--default ]') Expediente
 *         small= '<h4>'
@@ -64,26 +56,26 @@
 // endregion
 
 .Painel {
-    padding: 10px;
+    padding: @padding-base-vertical @padding-base-horizontal;
     &:not(:last-child) {
         margin-bottom: 2 * @padding-large-vertical;
     }
 }
 
     .Painel--lg {
-        padding: 15px;
+        padding: @padding-large-vertical @padding-large-horizontal;
     }
 
     .Painel--sm {
-        padding: 6px;
+        padding: @padding-small-vertical @padding-small-horizontal;
     }
 
-    .Painel--norl {
+    .Painel--vert {
         padding-left: 0;
         padding-right: 0;
     }
 
-    .Painel--notb {
+    .Painel--horz {
         padding-top: 0;
         padding-bottom: 0;
     }
@@ -93,7 +85,13 @@
     }
 
     .Painel--links {
-        border-bottom: 5px solid #ccc;
+        border-bottom: 5px solid #ddd;
+    }
+
+    .Painel--news {
+        border-style: solid;
+        border-color: #ccc;
+        border-width: 1px 0 5px;
     }
 
     .Painel--light {

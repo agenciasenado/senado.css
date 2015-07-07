@@ -5,9 +5,7 @@
 // region segment
 /**
 * Segment:
-* `.Segment`: Estrutura que colide as margens verticais do `first-child` e `last-child` e
-* uniformiza os espaços entre os elementos de uma sequência vertical. Quando dentro de um `.Segments`, é
-* separado verticalmente do próximo elemento.
+* `.Segment`: Estrutura que colide as margens verticais do `first-child` e `last-child`.
 *
 *     @example
 *     .Segments
@@ -28,7 +26,7 @@
 // region cut-here
 /**
 * Cut here:
-* `.Segment--cutHere`: Divide cada segmento com uma borda tracejada.
+* `.CutHere`: Divide cada segmento com uma borda tracejada.
 *
 *     @example
 *     .Segments.Painel.Painel--cut
@@ -36,7 +34,7 @@
 *       div(class='Segment [ Apex Apex--cut ] small')
 *         ÚLTIMAS NOTÍCIAS
 *
-*       .CutHere.CutHere--dotted
+*       .CutHere
 *         .Segment: p Apolloniates de festus gabalium, amor frondator!
 *         .Segment: h4 Potus hic ducunt ad noster demissio.
 *         .Segment: small Caculas sunt paluss de altus species.
@@ -48,17 +46,40 @@
 
 // region exemplos
 /**
-* Exemplos:
+* Uniformização dos espaçamentos verticais:
+* `.Segments`: uniformiza os espaços entre os elementos de uma sequência vertical. Quando dentro de um `.Segments`,
+* um elemento qualquer será separado verticalmente do próximo sibling.
+*
+* Pode ser utilizado na forma `ul.Segment > li` ou `Segments > *.Segment`
 *
 *     @example
-*     ul.Segments.Segments--lg.Painel.Painel--cut
-*         li.h4.Apex.Apex--cut
-*           span.u-divisorVertical Agenda
-*           span.h6: a Qua | 01/07
-*         li: a Mori diligenter ducunt ad flavum calceus
-*         li: a Sunt axonaes amor clemens, neuter triticumes
-*         li.Stand.Stand--cut.small
-*           a(href='#') Agenda semanal
+*     .row
+*       .col-xs-6
+*         div(class='[ Segments ] [ Painel Painel--vert Painel--news ]')
+*           div(class='[ Segment ][ Apex Apex--lg Apex--default ] h4')
+*             | Saiba Mais
+*           .CutHere
+*             .Segments
+*               div
+*                 i.Icon.Icon--md.Icon--display
+*                 a Vídeo
+*               div(class='[ embed-responsive embed-responsive-16by9 ] Painel--light')
+*             div
+*               i.Icon.Icon--md.Icon--play
+*               a Áudio
+*             div
+*               i.Icon.Icon--md.Icon--newspaper
+*               a Taquigrafia
+*       .col-xs-6
+*         ul(class='[ Segments Segments--lg ] [ Painel Painel--cut Painel--lg ]')
+*           li(class='[ Apex Apex--cut ] h4')
+*             span.u-divisorVertical.pull-left Agenda
+*             i.Icon.Icon--md.Icon--calendar
+*             span.h6: a Qua | 01/07
+*           li: a Mori diligenter ducunt ad flavum calceus
+*           li: a Sunt axonaes amor clemens, neuter triticumes
+*           li.Stand.Stand--cut.small
+*             a.u-alignMiddle(href='#') Agenda semanal
 */
 // endregion
 
@@ -74,12 +95,18 @@
 
 .Segments {
     > :not(:last-child) {
-        margin-bottom: @padding-base-vertical;
+        margin-bottom: @padding-base-vertical!important;
     }
 }
 
     .Segments--lg {
         > :not(:last-child) {
-            margin-bottom: @padding-large-vertical;
+            margin-bottom: @padding-large-vertical!important;
+        }
+    }
+
+    .Segments--sm {
+        > :not(:last-child) {
+            margin-bottom: @padding-small-vertical!important;
         }
     }
