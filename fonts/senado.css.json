@@ -8,6 +8,52 @@
 		{
 			"selection": [
 				{
+					"order": 44,
+					"id": 0,
+					"prevSize": 16,
+					"code": 58880,
+					"name": "whatsapp",
+					"tempChar": ""
+				}
+			],
+			"id": 11,
+			"metadata": {
+				"name": "Font Awesome (subset)",
+				"url": "http://fortawesome.github.com/Font-Awesome/",
+				"designer": "Dave Gandy",
+				"designerURL": "https://github.com/davegandy",
+				"license": "Custom",
+				"licenseURL": "http://fortawesome.github.io/Font-Awesome/license/",
+				"importSize": {
+					"width": 14,
+					"height": 14
+				}
+			},
+			"height": 1024,
+			"prevSize": 16,
+			"icons": [
+				{
+					"id": 0,
+					"paths": [
+						"M642.682 558.303q8.452 0 63.39 28.607t58.19 34.459q1.3 3.25 1.3 9.751 0 21.455-11.053 49.412-10.403 25.357-46.161 42.586t-66.317 17.23q-37.058 0-123.53-40.31-63.715-29.257-110.527-76.719t-96.223-120.279q-46.812-69.567-46.161-126.13v-5.201q1.95-59.165 48.112-102.725 15.603-14.303 33.808-14.303 3.902 0 11.703 0.975t12.353 0.975q12.353 0 17.23 4.226t10.077 17.879q5.201 13.004 21.455 57.214t16.254 48.762q0 13.653-22.43 37.383t-22.43 30.231q0 4.551 3.25 9.751 22.106 47.461 66.317 89.072 36.409 34.459 98.174 65.666 7.802 4.551 14.303 4.551 9.751 0 35.108-31.533t33.808-31.533zM510.7 902.889q82.57 0 158.314-32.508t130.356-87.121 87.121-130.356 32.508-158.314-32.508-158.314-87.121-130.356-130.356-87.121-158.314-32.508-158.314 32.508-130.356 87.121-87.121 130.356-32.508 158.314q0 131.982 78.018 239.259l-51.363 151.487 157.339-50.062q102.725 67.617 224.305 67.617zM510.7 4.368q99.475 0 190.172 39.010t156.364 104.675 104.675 156.364 39.010 190.172-39.010 190.172-104.675 156.364-156.364 104.675-190.172 39.010q-126.782 0-237.308-61.115l-271.117 87.121 88.421-263.315q-70.217-115.728-70.217-252.912 0-99.475 39.010-190.172t104.675-156.364 156.364-104.675 190.172-39.010z"
+					],
+					"attrs": [
+						{}
+					],
+					"isMulticolor": false,
+					"tags": [
+						"whatsapp"
+					],
+					"grid": 16,
+					"width": 1024
+				}
+			],
+			"invisible": false,
+			"colorThemes": []
+		},
+		{
+			"selection": [
+				{
 					"id": 0,
 					"order": 0
 				},
@@ -10991,7 +11037,7 @@
 					"prevSize": 24,
 					"code": 57871,
 					"name": "more-horizontal",
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "keyboard_control"
 				},
 				{
@@ -11000,7 +11046,7 @@
 					"prevSize": 24,
 					"code": 57872,
 					"name": "more-vertical",
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "more_vert"
 				},
 				{
@@ -25336,7 +25382,7 @@
 					"grid": 24
 				}
 			],
-			"invisible": false
+			"invisible": true
 		},
 		{
 			"selection": [
@@ -29066,7 +29112,7 @@
 					"grid": 18
 				}
 			],
-			"invisible": false
+			"invisible": true
 		},
 		{
 			"selection": [
@@ -29152,7 +29198,7 @@
 					"prevSize": 16,
 					"code": 61544,
 					"name": "calendar",
-					"tempChar": ""
+					"tempChar": ""
 				},
 				{
 					"id": 20,
@@ -29740,7 +29786,7 @@
 					"prevSize": 16,
 					"code": 61534,
 					"name": "menu",
-					"tempChar": ""
+					"tempChar": ""
 				},
 				{
 					"id": 166,
@@ -32232,7 +32278,7 @@
 					"grid": 16
 				}
 			],
-			"invisible": false
+			"invisible": true
 		},
 		{
 			"selection": [
@@ -35276,7 +35322,7 @@
 					"grid": 16
 				}
 			],
-			"invisible": false
+			"invisible": true
 		},
 		{
 			"selection": [
@@ -35811,7 +35857,7 @@
 				"designer": "Cole Bemis"
 			},
 			"height": 1024,
-			"prevSize": 24,
+			"prevSize": 12,
 			"icons": [
 				{
 					"id": 0,
@@ -43943,7 +43989,7 @@
 				"designerURL": "http://shmidt.in/"
 			},
 			"height": 1024,
-			"prevSize": 32,
+			"prevSize": 16,
 			"icons": [
 				{
 					"id": 0,
@@ -44674,7 +44720,7 @@
 					"id": 1624,
 					"prevSize": 16,
 					"code": 59652,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "newspaper, news",
 					"name": "newspaper"
 				},
@@ -44890,7 +44936,7 @@
 					"order": 4,
 					"prevSize": 16,
 					"code": 59676,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "podcast, broadcast",
 					"name": "podcast"
 				},
@@ -44962,7 +45008,7 @@
 					"id": 1598,
 					"prevSize": 16,
 					"code": 59684,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "file-empty, file3",
 					"name": "page"
 				},
@@ -45412,7 +45458,7 @@
 					"order": 7,
 					"prevSize": 16,
 					"code": 59734,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "display, screen",
 					"name": "display"
 				},
@@ -45628,7 +45674,7 @@
 					"order": 8,
 					"prevSize": 16,
 					"code": 59758,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "bubble2, comment2",
 					"name": "bubble"
 				},
@@ -46384,7 +46430,7 @@
 					"order": 28,
 					"prevSize": 16,
 					"code": 59842,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "cloud-download, cloud2",
 					"name": "download"
 				},
@@ -46573,7 +46619,7 @@
 					"order": 31,
 					"prevSize": 16,
 					"code": 59863,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "star-empty, rate",
 					"name": "star-empty"
 				},
@@ -46582,7 +46628,7 @@
 					"order": 29,
 					"prevSize": 16,
 					"code": 59864,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "star-half, rate2",
 					"name": "star-half"
 				},
@@ -46591,7 +46637,7 @@
 					"order": 30,
 					"prevSize": 16,
 					"code": 59865,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "star-full, rate3",
 					"name": "star-full"
 				},
@@ -47131,7 +47177,7 @@
 					"order": 26,
 					"prevSize": 16,
 					"code": 59925,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "play2, player",
 					"name": "play"
 				},
@@ -47140,7 +47186,7 @@
 					"order": 27,
 					"prevSize": 16,
 					"code": 59926,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "pause, player2",
 					"name": "pause"
 				},
@@ -48166,7 +48212,7 @@
 					"order": 24,
 					"prevSize": 16,
 					"code": 60040,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "google-plus, brand2",
 					"name": "google-plus"
 				},
@@ -48202,7 +48248,7 @@
 					"order": 18,
 					"prevSize": 16,
 					"code": 60044,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "facebook, brand6",
 					"name": "facebook"
 				},
@@ -48238,7 +48284,7 @@
 					"order": 25,
 					"prevSize": 16,
 					"code": 60048,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "instagram, brand10",
 					"name": "instagram"
 				},
@@ -48247,7 +48293,7 @@
 					"order": 19,
 					"prevSize": 16,
 					"code": 60049,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "twitter, brand11",
 					"name": "twitter"
 				},
@@ -48301,7 +48347,7 @@
 					"order": 21,
 					"prevSize": 16,
 					"code": 60055,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "youtube, brand14",
 					"name": "youtube-dark"
 				},
@@ -48310,7 +48356,7 @@
 					"order": 20,
 					"prevSize": 16,
 					"code": 60056,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "youtube2, brand15",
 					"name": "youtube-light"
 				},
@@ -48319,7 +48365,7 @@
 					"id": 1541,
 					"prevSize": 16,
 					"code": 60057,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "youtube3, brand16",
 					"name": "youtube-logo"
 				},
@@ -48391,7 +48437,7 @@
 					"order": 23,
 					"prevSize": 16,
 					"code": 60065,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "flickr2, brand24",
 					"name": "flickr"
 				},
@@ -48814,7 +48860,7 @@
 					"order": 38,
 					"prevSize": 16,
 					"code": 60112,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "pinterest, brand71",
 					"name": "pinterest"
 				},
@@ -57006,7 +57052,7 @@
 			"metadata": {
 				"fontFamily": "agenciaweb",
 				"majorVersion": 2,
-				"minorVersion": 0
+				"minorVersion": 4
 			},
 			"metrics": {
 				"emSize": 1024,
