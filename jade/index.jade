@@ -10,17 +10,21 @@ html(lang='pt')
     body
         include navglobal
         include portaltopo
+
         .u-spacer--lg
+
         .container
-            .row.u-spacer
+
+            .row
+
                 .col-md-9
 
                     .u-spacer--lg
                         img.img-responsive(src='https://placehold.it/860x450')
 
-                    .row
+                    .row.Segments.Segments--lg
 
-                        .col-xs-4
+                        .col-sm-4
                             .Media.Media--stack
                                 .Media-top
                                     .Etiqueta.Etiqueta--default.glyphicon-list Flavum
@@ -28,9 +32,9 @@ html(lang='pt')
                                     .embed-responsive.embed-responsive-16by9
                                         img.img-responsive(src='https://placehold.it/400x225')
                                 .Media-body
-                                    h5: a Voxs persuadere in bi-color chremisa!
+                                    a Voxs persuadere in bi-color chremisa!
 
-                        .col-xs-4
+                        .col-sm-4
                             .Media.Media--stack
                                 .Media-top
                                     .Etiqueta.Etiqueta--default.glyphicon-list Bromium brodium
@@ -38,9 +42,9 @@ html(lang='pt')
                                     .embed-responsive.embed-responsive-16by9
                                         img.img-responsive(src='https://placehold.it/400x225')
                                 .Media-body
-                                    h5: a Caesium de varius exemplar, examinare extum, fuga de barbatus habena, transferre vortex
+                                    a Caesium de varius exemplar, examinare extum, fuga de barbatus habena, transferre vortex
 
-                        .col-xs-4.CutHere.CutHere--lg
+                        .col-sm-4.CutHere.CutHere--lg
                             .Media
                                 .Media-top
                                     .Etiqueta.Etiqueta--default.glyphicon-list Flavum
@@ -54,23 +58,24 @@ html(lang='pt')
                                 .Media-body
                                     h5: a Historias peregrinationes, tanquam fortis gallus!
 
-                        .clearfix.u-spacer
+                    .row.u-spacer--lg
 
                         .col-xs-12
                             .Painel.Painel--vert.Painel--huge.Painel--news
-                                .Etiqueta.Etiqueta--default.Etiqueta--rev.glyphicon-list Bromium brodium
-                                .row
-                                    .col-xs-4
+                                .Media.Media--row.is-stack-xs
+                                    .Media-top
+                                        .Etiqueta.Etiqueta--default.Etiqueta--rev.glyphicon-list Calcarias cadunt
+                                    .Media-figure.col-sm-4
                                         .embed-responsive.embed-responsive-16by9
-                                            img.img-responsive(src='https://placehold.it/400x225')
-                                    .col-xs-8
-                                        h4.Segment: a DDDD de varius exemplar, examinare extum, fuga de barbatus habena, transferre vortex
-                                        p
-                                            | Cum amicitia tolerare, omnes luraes promissio altus, gratis terrores.
-                                            | Alter, rusticus genetrixs rare visum de velox, dexter calcaria.
-                                            | Candidatus nocere, omnes indictioes carpseris primus, dexter compateres.
+                                            img.img-responsive(src='https://placehold.it/800x450')
+                                    ul.Media-body.Segments
+                                        li.h4: a Albus torquiss ducunt ad impositio. Cacula de secundus candidatus, aperto parma!
+                                        li: p
+                                            | Barbatus, azureus adgiums nunquam reperire de raptus, neuter nomen.
+                                            | Lotus, superbus speciess sed mire resuscitabo de grandis, flavum coordinatae.
+                                            | Primus, lotus nixuss foris gratia de talis, placidus verpa.
 
-                .col-md-3
+                .col-md-3.u-spacer--lg
 
                     .Segments.Painel.Painel--lg.Painel--light
                         .Segment.Apex.Apex--light.h4 Senado Agora
@@ -106,9 +111,64 @@ html(lang='pt')
                         li.small: a Sunt axonaes amor clemens, neuter triticumes
                         li.Stand.Stand--cut.small
                             a.u-alignMiddle(href='#') Agenda semanal ›
-            .row
-                .col-xs-12
-                    | a
+
+            .row.u-spacer--lg
+
+                .col-sm-6.Segments.Segments--lg
+                    - var n = 0
+                    while n < 3
+                        .Media.Media--row.is-stack-xs
+                            .Media-figure.col-sm-6
+                                .embed-responsive.embed-responsive-16by9(style='background: #c0ffee')
+                            ul.Media-body.Segments
+                                li.h4: a Ecce. Albus ollas ducunt ad capio.
+                                li: p Contencio moris, tanquam grandis era. Index de salvus lura, promissio demissio!
+                        - n++
+
+                .col-sm-6
+                    ul.Painel.Painel--light.Painel--lg.Segments.Segments--lg
+                        li.Apex.Apex--cut.h4.Apex--medium
+                            | Vídeos
+                        li.embed-responsive.embed-responsive-16by9
+                            img.img-responsive(src='https://placehold.it/800x450')
+                        li.h4 Spatii accelerares, tanquam alter rumor
+                        li: p
+                            | Cum brodium nocere, omnes habenaes convertam noster, magnum cobaltumes.
+                            | Noster, festus hilotaes solite aperto de fatalis, dexter pars.
+                            | Pius, placidus orexiss aliquando experientia de superbus, regius cobaltum.
+                            | Talis, albus lumens sapienter talem de audax, salvus historia.
+                            | Primus, teres tatas superbe locus de nobilis, lotus galatae.
+                        li.Stand.Stand--lg.Stand--light
+
+            .row.u-spacer--lg
+                - var n = 0
+                while n < 3
+                    .col-sm-3
+                        .Painel.Painel--links.Painel--flush
+                            .Segment.Apex.Apex--default.Apex--medium.h4 Sunt nixuses
+                            .Painel
+                                .Flag
+                                    .Flag-image
+                                        .Icon.Icon--newspaper.Icon--lg
+                                    .Flag-body
+                                        a Cur vita tolerare?
+                                        p: small Nunquam gratia guttus
+                                .Flag
+                                    .Flag-image
+                                        .Icon.Icon--bubble.Icon--lg
+                                    .Flag-body
+                                        a Nunquam contactus pulchritudine
+                                        div: small Fuga de ferox buxum, manifestum advena
+                                .Flag
+                                    .Flag-image
+                                        .Icon.Icon--calendar.Icon--lg
+                                    .Flag-body
+                                        a Nunquam contactus pulchritudine
+                                        div: small Fuga de ferox buxum, manifestum advena
+                    - n++
+
+
+
     include footer
         script(src='../node_modules/jquery/dist/jquery.min.js')
         script(src='../node_modules/bootstrap/dist/js/bootstrap.min.js')
