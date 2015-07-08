@@ -56,6 +56,7 @@
 // endregion
 
 .Painel {
+    display: block;
     padding: @padding-base-vertical @padding-base-horizontal;
     &:not(:last-child) {
         margin-bottom: 2 * @padding-large-vertical;
@@ -64,6 +65,10 @@
 
     .Painel--lg {
         padding: @padding-large-vertical @padding-large-horizontal;
+    }
+
+    .Painel--huge {
+        padding: @padding-large-vertical * 2 @padding-large-horizontal * 2;
     }
 
     .Painel--sm {
@@ -80,7 +85,7 @@
         padding-bottom: 0;
     }
 
-    .Painel--full {
+    .Painel--flush {
         padding: 0;
     }
 
