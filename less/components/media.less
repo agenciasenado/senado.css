@@ -50,23 +50,26 @@
     }
 }
 
+    .Media--row {
+        margin-right: -@grid-gutter-width/2;
+        margin-left: -@grid-gutter-width/2;
+        width: auto;
+        .Media-figure, .Media-body {
+            padding-left: @grid-gutter-width/2;
+            padding-right: @grid-gutter-width/2;
+            margin-right: 0;
+        }
+        .Media-top:before {
+            content: ' ';
+            margin-left: @grid-gutter-width/2;
+        }
+    }
+
     .Media-figure {
         float: left;
         padding: 0; // forçar o padding==0 para permitir utilização de classes col-*-*.
         margin-right: @media-spacing;
     }
-
-        .Media-figure--col {
-            margin-right: @grid-gutter-width/2;
-            padding-right: @grid-gutter-width/2;
-        }
-
-        .Media-figure--col.Media-figure--right {
-            margin-right: 0;
-            padding-right: 0;
-            margin-left: @grid-gutter-width/2;
-            padding-left: @grid-gutter-width/2;
-        }
 
     .Media-figure--right {
         float: right;
@@ -81,6 +84,18 @@
     .Media-top {
         display: table-header-group;
     }
+
+.Media--grid {
+    .Media-figure {
+        margin-right: @grid-gutter-width/2;
+        padding-right: @grid-gutter-width/2;
+    }
+    .Media-figure--right {
+        margin-left: @grid-gutter-width/2;
+        padding-left: @grid-gutter-width/2;
+    }
+
+}
 
 
 // region doc
@@ -103,6 +118,9 @@
     > .Media-figure {
         float: none; // caso não haja o Media-top, é preciso remover o float do Figure para o Body descer.
         width: 100%; // se é para empilhar, forçar que o Media-figure ocupe a largura inteira
+    }
+    > .Media-figure {
+        margin-bottom: @media-spacing;
     }
 }
 
