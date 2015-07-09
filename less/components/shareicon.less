@@ -1,3 +1,5 @@
+@import (reference) "icons";
+
 // region doc
 /**
 * Botões de compartilhamento:
@@ -18,7 +20,10 @@
     border-bottom-style: solid;
     border-bottom-width: 2px;
 
-    color: #666;
+    &, &:focus, &:active {
+        color: #666;
+    }
+
     line-height: 32px;
     font-weight: bold;
 
