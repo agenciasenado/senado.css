@@ -13,6 +13,11 @@
 *         .Icon--newspaper
 *       .Stamp-caption
 *         a.flat(href='#') Jornal
+*     .Stamp.Stamp--stack
+*       .Stamp-icon.Stamp-icon--circle
+*         .Icon--newspaper
+*       .Stamp-caption.Stamp-caption--label
+*         a.flat(href='#') Jornal do Senado
 *
 */
 // endregion
@@ -38,6 +43,11 @@
         }
     }
 
+    .Stamp--stack {
+        .Stamp-icon {
+            display: block;
+        }
+    }
 
     .Stamp-icon {
         font-family: 'agenciaweb', sans-serif;
@@ -51,9 +61,28 @@
             font-size: 64px;
         }
 
+        .Stamp-icon--circle {
+            width: @tag-height;
+            margin-left: auto;
+            margin-right: auto;
+
+            font-size: 32px;
+
+            border: 1px solid #bbb;
+            border-radius: 50%;
+        }
+
 
     .Stamp-caption {
         display: inline-block;
     }
+
+        .Stamp-caption--label {
+            font-size: 24px;
+            margin-top: -20px;
+            display: block;
+            color: @sf-primary;
+            background-color: #fff;
+        }
 
 
