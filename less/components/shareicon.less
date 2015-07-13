@@ -15,6 +15,8 @@
 .ShareIcon {
     &:extend(.btn);
 
+    position: relative;
+
     border: none;
     border-radius: 0;
     border-bottom-style: solid;
@@ -22,12 +24,13 @@
 
     &, &:focus, &:active {
         color: #666;
+        outline: none;
     }
 
     line-height: 32px;
     font-weight: bold;
 
-    margin-left: 3px;
+    margin-right: 3px;
     padding: 0 8px;
 
     transition: background-color 300ms linear, border-bottom-color 300ms linear;
@@ -36,8 +39,8 @@
         color: #fff;
         text-decoration: none;
     }
-    &:first-child {
-        margin-left: 0;
+    &:last-child {
+        margin-right: 0;
     }
     &:before {
         &:extend(.Icon);
@@ -48,7 +51,8 @@
     .share-icon-variant(@color) {
         background-color: #eee;
         border-bottom-color: lighten(@color, 25%);
-        &:hover {
+        &:hover, &:focus {
+            color: #fff;
             background-color: @color;
             border-bottom-color: darken(@color, 16%);
         }
@@ -91,7 +95,7 @@
     width: 35px;
     background: #ddd;
     color: #fff;
-    margin-left: 6px;
+    margin-right: 6px;
 }
 
 .ShareIcon-text {
@@ -99,3 +103,19 @@
     margin-left: 8px;
     margin-right: 8px;
 }
+
+    .ShareIcon-text--hidden {
+        vertical-align: middle;
+        overflow: hidden;
+        display: inline-block;
+        font-size: 12px;
+        font-weight: bold;
+        width: 0;
+        transition: width 0.5s ease;
+        text-align: left;
+        white-space: nowrap;
+
+        .ShareIcon:focus + & {
+            width: 90px;
+        }
+    }
