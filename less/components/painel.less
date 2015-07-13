@@ -36,24 +36,23 @@
 * Exemplos:
 *
 *     @example
-*     .Painel--full.Painel--links
+*     .Painel.Painel--flush.Painel--links
 *       h4(class='[ Segment ][ Apex Apex--default ]') Expediente
 *         small= '<h4>'
 *       .Painel
 *         .Flag
-*           .Flag-image
+*           .Flag-figure
 *             .Icon.Icon--newspaper.Icon--lg
 *           .Flag-body
 *             a Cur vita tolerare?
 *             p: small Nunquam gratia guttus
 *         .Flag
-*           .Flag-image
+*           .Flag-figure
 *             .Icon.Icon--bubble.Icon--lg
 *           .Flag-body
 *             a Nunquam contactus pulchritudine
 *             div: small Fuga de ferox buxum, manifestum advena
 */
-// endregion
 
 .Painel {
     display: block;
@@ -67,7 +66,7 @@
         padding: @padding-large-vertical @padding-large-horizontal;
     }
 
-    .Painel--huge {
+    .Painel--xl {
         padding: @padding-large-vertical * 2 @padding-large-horizontal * 2;
     }
 

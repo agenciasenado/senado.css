@@ -8,19 +8,18 @@ html(lang='pt')
         title Senado Federal
         link(href='../dist/main.css', rel='stylesheet')
     body
+
         include navglobal
-        include portaltopo
 
         .u-spacer--lg
+            include portaltopo
 
         .container
 
-            .row
-
+            .row.spacer--lg
                 .col-md-9
 
-                    .u-spacer--lg
-                        img.img-responsive(src='https://placehold.it/860x450')
+                    img.u-spacer--lg.img-responsive(src='https://placehold.it/860x450')
 
                     .row.Segments.Segments--lg
 
@@ -58,10 +57,10 @@ html(lang='pt')
                                 .Media-body
                                     h5: a Historias peregrinationes, tanquam fortis gallus!
 
-                    .row.u-spacer--lg
+                    .row
 
                         .col-xs-12
-                            .Painel.Painel--vert.Painel--huge.Painel--news
+                            .Painel.Painel--vert.Painel--xl.Painel--news
                                 .Media.Media--row.is-stack-xs
                                     .Media-top
                                         .Etiqueta.Etiqueta--default.Etiqueta--rev.glyphicon-list Calcarias cadunt
@@ -75,32 +74,29 @@ html(lang='pt')
                                             | Lotus, superbus speciess sed mire resuscitabo de grandis, flavum coordinatae.
                                             | Primus, lotus nixuss foris gratia de talis, placidus verpa.
 
-                .col-md-3.u-spacer--lg
+                .col-md-3
 
                     .Segments.Painel.Painel--lg.Painel--light
                         .Segment.Apex.Apex--light.h4 Senado Agora
                         .CutHere.Painel.Painel--vert.small
                             div
                                 span.label.label-default 13h02
-                                a
-                                    b  Adelphiss:
-                                    |  Azureus humani generis callide attrahendams deus est.
-                                    | Contencio burguss ducunt ad racana.
+                                b  Adelphiss:
+                                |  Azureus humani generis callide attrahendams deus est.
+                                | Contencio burguss ducunt ad racana.
                             div
                                 span.label.label-default 12h52
-                                a
-                                    b  Vierium:
-                                    |  Cum medicina potus, omnes buboes perdere nobilis, varius abactores!
-                                    | A falsis, lamia audax scutum.
+                                b  Vierium:
+                                |  Cum medicina potus, omnes buboes perdere nobilis, varius abactores!
+                                | A falsis, lamia audax scutum.
                             div
                                 span.label.label-default 12h39
-                                a
-                                    b  Cella:
-                                    |  Mirabilis, flavum solitudos satis examinare de primus, gratis hilotae.
-                                    | Dexter hippotoxotas ducunt ad pulchritudine.
+                                b  Cella:
+                                |  Mirabilis, flavum solitudos satis examinare de primus, gratis hilotae.
+                                | Dexter hippotoxotas ducunt ad pulchritudine.
                         .Stand.Stand--light.small: a Ver todas ›
 
-                    ul(class='[ Segments Segments--lg ] [ Painel Painel--cut Painel--lg ]')
+                    ul(class='[ Segments ] [ Painel Painel--cut Painel--lg ]')
                         li(class='[ Apex Apex--cut ] h4')
                             span.u-divisorVertical.pull-left Agenda
                             i.Icon.Icon--md.Icon--calendar
@@ -109,11 +105,10 @@ html(lang='pt')
                                 a Qua | 01/07
                         li.small: a Mori diligenter ducunt ad flavum calceus
                         li.small: a Sunt axonaes amor clemens, neuter triticumes
-                        li.Stand.Stand--cut.small
-                            a.u-alignMiddle(href='#') Agenda semanal ›
+                        li(class='[ Stand Stand--cut ] small')
+                            a(href='#') Agenda semanal ›
 
-            .row.u-spacer--lg
-
+            .row.spacer--lg
                 .col-sm-6.Segments.Segments--lg
                     - var n = 0
                     while n < 3
@@ -140,7 +135,7 @@ html(lang='pt')
                             | Primus, teres tatas superbe locus de nobilis, lotus galatae.
                         li.Stand.Stand--lg.Stand--light
 
-            .row.u-spacer--lg
+            .row.spacer--lg
                 - var n = 0
                 while n < 3
                     .col-sm-3
@@ -148,19 +143,19 @@ html(lang='pt')
                             .Segment.Apex.Apex--default.Apex--medium.h4 Sunt nixuses
                             .Painel
                                 .Flag
-                                    .Flag-image
+                                    .Flag-figure
                                         .Icon.Icon--newspaper.Icon--lg
                                     .Flag-body
                                         a Cur vita tolerare?
                                         p: small Nunquam gratia guttus
                                 .Flag
-                                    .Flag-image
+                                    .Flag-figure
                                         .Icon.Icon--bubble.Icon--lg
                                     .Flag-body
                                         a Nunquam contactus pulchritudine
                                         div: small Fuga de ferox buxum, manifestum advena
                                 .Flag
-                                    .Flag-image
+                                    .Flag-figure
                                         .Icon.Icon--calendar.Icon--lg
                                     .Flag-body
                                         a Nunquam contactus pulchritudine

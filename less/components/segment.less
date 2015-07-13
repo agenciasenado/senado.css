@@ -32,8 +32,7 @@
 *     .Segments.Painel.Painel--cut
 *
 *       div(class='Segment [ Apex Apex--cut ] small')
-*         ÚLTIMAS NOTÍCIAS
-*
+*         | ÚLTIMAS NOTÍCIAS
 *       .CutHere
 *         .Segment: p Apolloniates de festus gabalium, amor frondator!
 *         .Segment: h4 Potus hic ducunt ad noster demissio.
@@ -55,7 +54,7 @@
 *     @example
 *     .row
 *       .col-xs-6
-*         div(class='[ Segments ] [ Painel Painel--vert Painel--news ]')
+*         div(class='[ Segments ][ Painel Painel--vert Painel--news ]')
 *           div(class='[ Segment ][ Apex Apex--lg Apex--default ] h4')
 *             | Saiba Mais
 *           .CutHere
@@ -71,15 +70,15 @@
 *               i.Icon.Icon--md.Icon--newspaper
 *               a Taquigrafia
 *       .col-xs-6
-*         ul(class='[ Segments Segments--lg ] [ Painel Painel--cut Painel--lg ]')
+*         ul(class='[ Segments ][ Painel Painel--cut Painel--lg ]')
 *           li(class='[ Apex Apex--cut ] h4')
 *             span.u-divisorVertical.pull-left Agenda
 *             i.Icon.Icon--md.Icon--calendar
 *             span.h6: a Qua | 01/07
-*           li: a Mori diligenter ducunt ad flavum calceus
-*           li: a Sunt axonaes amor clemens, neuter triticumes
+*           li.small: a Mori diligenter ducunt ad flavum calceus
+*           li.small: a Sunt axonaes amor clemens, neuter triticumes
 *           li.Stand.Stand--cut.small
-*             a.u-alignMiddle(href='#') Agenda semanal
+*             a Agenda semanal
 */
 // endregion
 
@@ -96,6 +95,9 @@
 .Segments {
     > :not(:last-child) {
         margin-bottom: @padding-base-vertical!important;
+    }
+    ul& {
+        margin: 0;
     }
 }
 

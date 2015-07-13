@@ -37,7 +37,7 @@
  *             div(style='width: 50px; height:50px; background-color:#eee')
  *           .Media-body
  *             .Etiqueta.Etiqueta--default.Etiqueta--rev.glyphicon-list Decor
- *             p: small: a(href='#') Sunt habenaes contactus rusticus, nobilis humani generises.
+ *             div: small: a(href='#') Sunt habenaes contactus rusticus, nobilis humani generises.
  */
 // endregion
 @media-spacing: 10px;
@@ -45,9 +45,6 @@
 .Media {
     overflow: hidden; // necessário para evitar problemas de clearfix
     width: 100%;
-    &:not(:last-child) {
-        margin-bottom: @media-spacing;
-    }
 }
 
     .Media--row {
@@ -84,18 +81,6 @@
     .Media-top {
         display: table-header-group;
     }
-
-.Media--grid {
-    .Media-figure {
-        margin-right: @grid-gutter-width/2;
-        padding-right: @grid-gutter-width/2;
-    }
-    .Media-figure--right {
-        margin-left: @grid-gutter-width/2;
-        padding-left: @grid-gutter-width/2;
-    }
-
-}
 
 
 // region doc
