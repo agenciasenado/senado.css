@@ -13,7 +13,8 @@ module.exports = function(grunt) {
                     sourceMapRootpath: '../'
                 },
                 files: {
-                    'dist/main.css': 'less/styles.less'
+                    'dist/main.css': 'less/styles.less',
+                    'dist/noticias.css': 'less/noticias.less'
                 }
             }
         },
