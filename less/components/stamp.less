@@ -13,6 +13,11 @@
 *         .Icon--newspaper
 *       .Stamp-caption
 *         a.flat(href='#') Jornal
+*     .Stamp.Stamp--stack
+*       .Stamp-icon.Stamp-icon--circle
+*         .Icon--newspaper
+*       .Stamp-caption--label
+*         a(href='#') Jornal do Senado
 *
 */
 // endregion
@@ -39,10 +44,11 @@
     }
 
     .Stamp--stack {
-        .Stamp-icon {
-            display: block;
+        > .Stamp-icon {
+            display: block
         }
     }
+
 
     .Stamp-icon {
         font-family: 'agenciaweb', sans-serif;
@@ -58,14 +64,13 @@
 
         .Stamp-icon--circle {
             width: @tag-height;
+            border: 1px solid #ddd;
+            border-radius: 50%;
+            font-size: 32px;
             margin-left: auto;
             margin-right: auto;
-
-            font-size: 32px;
-
-            border: 1px solid #bbb;
-            border-radius: 50%;
         }
+
 
 
     .Stamp-caption {
@@ -73,11 +78,11 @@
     }
 
         .Stamp-caption--label {
+            display: block;
             font-size: 24px;
             margin-top: -20px;
-            display: block;
-            color: @sf-primary;
             background-color: #fff;
         }
+
 
 
