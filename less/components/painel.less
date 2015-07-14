@@ -72,11 +72,10 @@
 */
 
 .Painel {
-    display: block;
     padding: @padding-base-vertical @padding-base-horizontal;
-    &:not(:last-child) {
-        margin-bottom: 2 * @padding-large-vertical;
-    }
+    //&:not(:last-child) {
+    //    margin-bottom: 2 * @padding-large-vertical;
+    //}
 }
 
     .Painel--lg {
@@ -121,4 +120,8 @@
 
     .Painel--cut {
         background: #f5f5f5;
+    }
+
+    .Painel--intro {
+        border-right: 1px solid #fff;
     }
