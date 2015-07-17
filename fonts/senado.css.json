@@ -1,8 +1,8 @@
 {
 	"metadata": {
 		"name": "senado.css",
-		"lastOpened": 1436555266705,
-		"created": 1436551993509
+		"lastOpened": 1436990398578,
+		"created": 1436990396816
 	},
 	"iconSets": [
 		{
@@ -11085,7 +11085,7 @@
 					"prevSize": 24,
 					"code": 57871,
 					"name": "more-horizontal",
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "keyboard_control"
 				},
 				{
@@ -11094,7 +11094,7 @@
 					"prevSize": 24,
 					"code": 57872,
 					"name": "more-vertical",
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "more_vert"
 				},
 				{
@@ -48720,12 +48720,12 @@
 				},
 				{
 					"id": 1344,
-					"order": 0,
-					"prevSize": 32,
+					"order": 47,
+					"prevSize": 16,
 					"code": 60091,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "tumblr, brand50",
-					"name": ""
+					"name": "tumblr"
 				},
 				{
 					"id": 1345,
@@ -48912,7 +48912,7 @@
 					"order": 38,
 					"prevSize": 16,
 					"code": 60112,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "pinterest, brand71",
 					"name": "pinterest"
 				},
@@ -57103,7 +57103,7 @@
 			"metadata": {
 				"fontFamily": "agenciaweb",
 				"majorVersion": 2,
-				"minorVersion": 5
+				"minorVersion": 6
 			},
 			"metrics": {
 				"emSize": 1024,
