@@ -134,7 +134,13 @@
 // endregion
 .Media {
     &.is-stack-xs {
-        @media (max-width: @screen-xs-max) {
+        @media (max-width: @screen-xs-min) {
+            .Media--stack;
+        }
+    }
+
+    &.is-stack-sm {
+        @media (min-width: @screen-xs-min + 1) and (max-width: @screen-xs-max) {
             .Media--stack;
         }
     }
