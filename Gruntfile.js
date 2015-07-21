@@ -8,12 +8,16 @@ module.exports = function(grunt) {
             main: {
                 options: {
                     sourceMap: true,
+                    sourceMapRootpath: '../',
                     sourceMapFilename: 'dist/main.css.map',
                     sourceMapURL: 'main.css.map',
-                    sourceMapRootpath: '../'
                 },
                 files: {
-                    'dist/main.css': 'less/styles.less',
+                    'dist/main.css': 'less/styles.less'
+                }
+            },
+            noticias: {
+                files: {
                     'dist/noticias.css': 'less/noticias.less'
                 }
             }
@@ -83,7 +87,10 @@ module.exports = function(grunt) {
             },
             main: {
                 src: 'dist/main.css'
-            }
+            },
+            noticias: {
+                src: 'dist/noticias.css'
+            },
         },
         cssmin: {
             options : {
@@ -92,6 +99,11 @@ module.exports = function(grunt) {
             dist: {
                 files: {
                     'dist/main.css' : 'dist/main.css'
+                }
+            },
+            noticias: {
+                files: {
+                    'dist/noticias.css' : 'dist/noticias.css'
                 }
             }
         },
@@ -187,6 +199,13 @@ module.exports = function(grunt) {
         'phantomcss',
         'clean'
     ])
+
+    grunt.registerTask('noticias', [
+        'less:noticias',
+        'autoprefixer:noticias',
+        'cssmin:noticias'
+    ])
+
 
 
 }
