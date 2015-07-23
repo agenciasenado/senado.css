@@ -51,12 +51,12 @@
         margin-right: -@grid-gutter-width/2;
         margin-left: -@grid-gutter-width/2;
         width: auto;
-        .Media-figure, .Media-body {
+        > .Media-figure, > .Media-body {
             padding-left: @grid-gutter-width/2;
             padding-right: @grid-gutter-width/2;
             margin-right: 0;
         }
-        .Media-top:before {
+        > .Media-top:before {
             content: ' ';
             margin-left: @grid-gutter-width/2;
         }
@@ -139,8 +139,8 @@
         }
     }
 
-    &.is-stack-sm {
-        @media (min-width: @screen-xs-min + 1) and (max-width: @screen-xs-max) {
+    &.is-stack-ms {
+        @media (min-width: (@screen-xs-min+1)) and (max-width: @screen-xs-max) {
             .Media--stack;
         }
     }
