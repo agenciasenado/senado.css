@@ -1,6 +1,12 @@
 @bootstrap-path: "../node_modules/bootstrap/less";
 
-@import (reference) "vendors/bootstrap";
+//@import (reference) "vendors/bootstrap";
+
+@import (reference) "@{bootstrap-path}/variables";
+@import (reference) "@{bootstrap-path}/utilities";
+@import (reference) "@{bootstrap-path}/scaffolding";
+@import (reference) "@{bootstrap-path}/mixins";
+@import (reference) "@{bootstrap-path}/glyphicons";
 
 @import "@{bootstrap-path}/responsive-embed.less";
 
@@ -12,13 +18,11 @@
 
 @import "components/etiqueta";
 @import "components/media";
-@import "components/toolbar";
 @import "components/segment";
 @import "components/apex";
 @import "components/stand";
 @import "components/flag";
 @import "components/painel";
-@import "components/card";
 @import "components/cuthere";
 @import "components/footer";
 @import "components/navegacao";
