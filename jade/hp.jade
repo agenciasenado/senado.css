@@ -1,0 +1,90 @@
+doctype html
+
+html(lang='pt')
+
+    head
+        meta(http-equiv='Content-Type', content='text/html; charset=UTF-8')
+        meta(charset='utf-8')
+        meta(http-equiv='X-UA-Compatible', content='IE=edge')
+        meta(name='viewport', content='width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no')
+        title Senado Federal
+        link(href='../dist/main.css', rel='stylesheet')
+
+    body
+
+        include navglobal
+
+
+        .u-spacer--lg
+            include portaltopo
+
+        .container
+
+            .row.spacer--lg
+                .col-md-6
+                    .Media.Media--stack.Segment
+                        .Media-figure
+                            .embed-responsive.embed-responsive-3by2.Painel--cut
+                .col-md-6.Segments
+                    .Painel.Painel--flush.Painel--light
+                        .Painel
+                            .Segment.Apex--md.Apex--accordeon.h4(data-toggle="collapse", href=".js-senadoagora")
+                                | Senado Agora
+                                .pull-right
+                                    .Icon.Icon--md.Icon--newspaper
+                        .js-senadoagora.collapse
+                            .Segments.Painel.Painel--lg.Painel--accordeon.small
+                                .CutHere
+                                    div
+                                        span.label.label-info 13h02
+                                        b  Adelphiss:
+                                        |  Azureus humani generis callide attrahendams deus est.
+                                        | Contencio burguss ducunt ad racana.
+                                    div
+                                        span.label.label-info 12h52
+                                        b  Vierium:
+                                        |  Cum medicina potus, omnes buboes perdere nobilis, varius abactores!
+                                        | A falsis, lamia audax scutum.
+                                    div
+                                        span.label.label-info 12h39
+                                        b  Cella:
+                                        |  Mirabilis, flavum solitudos satis examinare de primus, gratis hilotae.
+                                        | Dexter hippotoxotas ducunt ad pulchritudine.
+                                .Stand.Stand--light: a Ver todas ›
+
+                    .Painel.Painel--stop.Painel--cut
+                        .Segment.Apex.Apex--md.Apex--stop.Apex--flush.h4
+                            | Últimas Notícias
+
+            .Painel.Painel--news.Painel--flush
+                .Segment.Apex--lg.h3
+                    span.u-divisorVertical Atividade Legislativa
+                    i.Icon.Icon--md.Icon--calendar.Icon--spaced
+                    span.h6.u-alignMiddle
+                        a Qua | 01/07
+                .Painel.Painel--lg.Painel--highlight
+                    .row
+                        .col-xs-7
+                            .Apex.Apex--contrast.small
+                                strong Pesquisa de matérias
+                            form.form-inline
+                                select.form-control
+                                input.form-control(type="text", size=3, placeholder="Número")
+                                input.form-control(type="text", size=2, placeholder="Ano")
+                                input.form-control(type="text", size=20, placeholder="Palavra-chave")
+                                button.btn.btn-default(type="submit") Buscar
+                        .col-xs-5
+                            .Apex.Apex--contrast.small
+                                strong Pesquisa de matérias
+                            form
+                                .input-group
+                                    input.form-control(type="text", placeholder="Número")
+                                    .input-group-btn
+                                        button.btn.btn-default(type="submit") Buscar
+
+
+    include footer
+
+        script(src='../node_modules/jquery/dist/jquery.min.js')
+        script(src='../node_modules/bootstrap/dist/js/bootstrap.min.js')
+        script(src='//localhost:35729/livereload.js')
