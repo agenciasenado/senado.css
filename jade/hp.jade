@@ -24,16 +24,16 @@ html(lang='pt')
                 .col-md-6
                     .Media.Media--stack.Segment
                         .Media-figure
-                            .embed-responsive.embed-responsive-3by2.Painel--cut
+                            .embed-responsive.embed-responsive-3by2.Box--cut
                 .col-md-6.Segments
-                    .Painel.Painel--flush.Painel--light
-                        .Painel
+                    .Box.Box--flush.Box--light
+                        .Box
                             .Segment.Apex--md.Apex--accordeon.h4(data-toggle="collapse", href=".js-senadoagora")
                                 | Senado Agora
                                 .pull-right
                                     .Icon.Icon--md.Icon--newspaper
                         .js-senadoagora.collapse
-                            .Segments.Painel.Painel--lg.Painel--accordeon.small
+                            .Segments.Box.Box--lg.Box--accordeon.small
                                 .CutHere
                                     div
                                         span.label.label-info 13h02
@@ -52,35 +52,33 @@ html(lang='pt')
                                         | Dexter hippotoxotas ducunt ad pulchritudine.
                                 .Stand.Stand--light: a Ver todas ›
 
-                    .Painel.Painel--stop.Painel--cut
-                        .Segment.Apex.Apex--md.Apex--stop.Apex--flush.h4
+                    .Box.Box--stop.Box--cut
+                        .Segment.Apex--md.Apex--stop.Apex--flush.h4
                             | Últimas Notícias
 
-            .Painel.Painel--news.Painel--flush
-                .Segment.Apex--lg.h3
-                    span.u-divisorVertical Atividade Legislativa
-                    i.Icon.Icon--md.Icon--calendar.Icon--spaced
-                    span.h6.u-alignMiddle
-                        a Qua | 01/07
-                .Painel.Painel--lg.Painel--highlight
-                    .row
-                        .col-xs-7
-                            .Apex.Apex--contrast.small
-                                strong Pesquisa de matérias
-                            form.form-inline
-                                select.form-control
-                                input.form-control(type="text", size=3, placeholder="Número")
-                                input.form-control(type="text", size=2, placeholder="Ano")
-                                input.form-control(type="text", size=20, placeholder="Palavra-chave")
-                                button.btn.btn-default(type="submit") Buscar
-                        .col-xs-5
-                            .Apex.Apex--contrast.small
-                                strong Pesquisa de matérias
-                            form
-                                .input-group
-                                    input.form-control(type="text", placeholder="Número")
-                                    .input-group-btn
-                                        button.btn.btn-default(type="submit") Buscar
+            .Box.Box--divider.Box--vert.Box--xl
+                .u-spacer
+                .row
+                    - var n = 0
+                    while n < 4
+                        .col-md-3
+                            .Media
+                                .Media-figure
+                                    .embed-responsive.embed-responsive-3by2.Box--light(style="width:90px;")
+                                .Media-top
+                                    .Etiqueta.Etiqueta--default.glyphicon-th.Etiqueta--rev Humani generis
+                                .Media-body.Segment
+                                    small
+                                        | Velox, lotus ventuss callide aperto de germanus, alter humani generis.
+                        - n++
+                .u-spacer
+
+
+            .Box.Box--insert.Box--lg.Box--vert
+                include hp/atividade
+
+            include hp/participe
+            include hp/destaques
 
 
     include footer

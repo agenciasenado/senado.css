@@ -1,0 +1,144 @@
+
+.Segment.Apex--lg.h3
+    span.u-divisorVertical Atividade Legislativa
+    i.Icon.Icon--md.Icon--calendar.Icon--spaced
+    span.h6.u-alignMiddle
+        a Qua | 01/07
+
+// - Form
+.Box.Box--lg.Box--highlight.u-spacer--lg
+    .row
+        .col-sm-7
+            .Apex.Apex--contrast.small
+                strong Pesquisa de matérias
+            form.FormFill
+                .FormFill-control.u-sizeFitAlt
+                    button.btn.btn-default(type="submit") Buscar
+                .FormFill-control.u-sizeFit
+                    select.form-control
+                        option Tipo de materia
+                .FormFill-control.u-sizeFit
+                    input.form-control(type="text", size=3, placeholder="Número")
+                .FormFill-control.u-sizeFit
+                    input.form-control(type="text", size=1, placeholder="Ano")
+                .FormFill-control.u-sizeFillAlt
+                    input.form-control(type="text", placeholder="Palavra-chave")
+
+        .clearfix.visible-xs
+
+        .col-sm-5
+            .Apex.Apex--contrast.small
+                strong Pesquisa de matérias
+            form
+                .input-group
+                    input.form-control(type="text", placeholder="Número")
+                    .input-group-btn
+                        button.btn.btn-default(type="submit") Buscar
+// -
+
+// - Plenario e Comissoes
+.Box.Box--end.Box--flush
+    .row.spacer--lg
+        .col-xs-6.col-sm-3
+            .Flag
+                .Flag-figure
+                    .Figure.Figure--highlight
+                        .Icon.Icon--lg.Icon--calendar
+                .Flag-body.small
+                    h4 Agenda do dia
+                    a Pautas
+                    = ' | '
+                    a Resultados
+        .col-xs-6.col-sm-3
+            .Flag
+                .Flag-figure
+                    .Figure.Figure--highlight
+                        .Icon.Icon--lg.Icon--display
+                .Flag-body.small
+                    h4 Ordem do dia
+                    a Diários
+                    = ' | '
+                    a Avulsos
+
+        .col-xs-6.col-sm-3
+            .Flag
+                .Flag-figure
+                    .Figure.Figure--highlight
+                        .Icon.Icon--lg.Icon--download
+                .Flag-body.small
+                    h4 Plenário
+                    a Resenhas
+                    = ' | '
+                    a Relatórios
+        .col-xs-6.col-sm-3
+            .Flag
+                .Flag-figure
+                    .Figure.Figure--highlight
+                        .Icon.Icon--lg.Icon--star-full
+                .Flag-body.small
+                    h4 Comissões
+                    a Conselhos
+                    = ' | '
+                    a Órgãos
+// -
+
+.Box.Box--vert
+    .row
+        .col-sm-6
+            .Box.Box--vert.Box--lg.Segments
+                .Segment.Apex.Apex--md.Apex--md.h4.Apex--cut
+                    | Destaques
+                ul.Segments.small
+                    li: a Emeritis tumultumques ducunt ad compater.
+                    li: a Aonides volares, tanquam mirabilis habena.
+                    li: a A falsis, urbs ferox epos.
+        .col-sm-6
+            .Box.Box--vert.Box--lg.Segments
+                .Segment.Apex.Apex--md.Apex--md.h4.Apex--cut
+                    | Atividade Legislativa em números
+                .Box
+                    p Projetos aprovados em 2015
+                    form.form-inline
+                        .form-group
+                            label Tipo
+                            select.form-control
+                                option Projeto de Decreto Legislativo
+
+    .Box.Box--flush.t-insertBottom
+        .row.spacer--lg
+            .col-sm-3
+                .Flag
+                    .Flag-figure
+                        .Figure.Figure--br
+                            .Icon.Icon--lg.Icon--headphones
+                    .Flag-body.small
+                        h4 Constituição Federal
+                        a Acesse o texto consolidado
+            .col-sm-3
+                .Flag
+                    .Flag-figure
+                        .Figure.Figure--muted
+                            .Icon.Icon--lg.Icon--display
+                    .Flag-body.small
+                        h4 Download
+                        a PDF
+                        = ' | '
+                        a e-PUB
+            .clearfix.visible-xs
+            .col-sm-3
+                .Flag
+                    .Flag-figure
+                        .Figure.Figure--muted
+                            .Icon.Icon--lg.Icon--newspaper
+                    .Flag-body.small
+                        h4 Em outros idiomas
+                        a English
+                        = ' | '
+                        a Español
+            .col-sm-3
+                .Flag
+                    .Flag-figure
+                        .Figure.Figure--temp
+                            .Icon.Icon--lg.Icon--star-full
+                    .Flag-body.small
+                        h4: a Regimento interno do Senado Federal

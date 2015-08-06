@@ -1,34 +1,34 @@
 /***
- * Painel:
+ * Box:
  */
 
 // region exemplos
 /**
-* Painel:
-* `.Painel`: Elemento com padding interno e margem abaixo. Seu espaçamento pode ser configurado por meio
+* Box:
+* `.Box`: Elemento com padding interno e margem abaixo. Seu espaçamento pode ser configurado por meio
 * dos modificadores `--notb`, que não possui padding vertical; `--norl`, que não possui padding
 * horizontal; e `--full`, que não possui paddings.
 *
 *     @example
-*     .Painel.Painel--cut.Painel--full
+*     .Box.Box--cut.Box--full
 *       | --full
-*     .Painel.Painel--cut.Painel--horz
+*     .Box.Box--cut.Box--horz
 *       | --horz
-*     .Painel.Painel--cut.Painel--vert
+*     .Box.Box--cut.Box--vert
 *       | --vert
 */
 
 /**
 * Tamanho do espaçamento interno:
-* Os elementos `.Painel` podem o tamanho do espaçamento interno alterado por meio dos modificadores `--sm`
+* Os elementos `.Box` podem o tamanho do espaçamento interno alterado por meio dos modificadores `--sm`
 * ou `--lg`.
 *
 *     @example
-*     .Painel.Painel--cut.Painel--sm
+*     .Box.Box--cut.Box--sm
 *       | sm
-*     .Painel.Painel--cut
+*     .Box.Box--cut
 *       | normal
-*     .Painel.Painel--cut.Painel--lg
+*     .Box.Box--cut.Box--lg
 *       | lg
 */
 
@@ -36,9 +36,9 @@
 * Exemplos:
 *
 *     @example
-*     .Painel.Painel--links.Painel--flush
+*     .Box.Box--links.Box--flush
 *       h4.Segment.Apex.Apex--default Expediente
-*       .Painel
+*       .Box
 *         .Flag
 *           .Flag-figure
 *             .Icon.Icon--newspaper.Icon--lg
@@ -53,10 +53,10 @@
 *             p: small Nunquam gratia guttus
 *
 
-*     .Painel.Painel--flush.Painel--links
+*     .Box.Box--flush.Box--links
 *       h4(class='[ Segment ][ Apex Apex--default ]') Expediente
 *         small= '<h4>'
-*       .Painel
+*       .Box
 *         .Flag
 *           .Flag-figure
 *             .Icon.Icon--newspaper.Icon--lg
@@ -71,88 +71,93 @@
 *             div: small Fuga de ferox buxum, manifestum advena
 */
 
-.Painel {
+.Box {
     padding: @padding-base-vertical @padding-base-horizontal;
     //&:not(:last-child) {
     //    margin-bottom: 2 * @padding-large-vertical;
     //}
 }
 
-    .Painel--lg {
+    .Box--lg {
         padding: @padding-large-vertical @padding-large-horizontal;
     }
 
-    .Painel--xl {
+    .Box--xl {
         padding: @padding-large-vertical * 2 @padding-large-horizontal * 2;
     }
 
-    .Painel--sm {
+    .Box--sm {
         padding: @padding-small-vertical @padding-small-horizontal;
     }
 
-    .Painel--vert {
+    .Box--vert {
         padding-left: 0;
         padding-right: 0;
     }
 
-    .Painel--horz {
+    .Box--horz {
         padding-top: 0;
         padding-bottom: 0;
     }
 
-    .Painel--flush {
+    .Box--flush {
         padding: 0;
     }
 
-    .Painel--links {
+    .Box--links {
         border-bottom: 5px solid #ddd;
     }
 
-    .Painel--news {
+    .Box--news {
         border-style: solid;
         border-color: #ccc;
         border-width: 1px 0 5px;
     }
 
-    .Painel--light {
+    .Box--destaque {
+        border-top: 1px dotted #ccc;
+        border-bottom: 5px solid #ccc;
+    }
+
+    .Box--light {
         background: #D9EDF7;
     }
 
-    .Painel--cut {
+    .Box--cut {
         background: #f5f5f5;
     }
 
-    .Painel--intro {
+    .Box--intro {
         border-right: 1px solid #fff;
     }
 
-    .Painel--accordeon {
+    .Box--accordeon {
         border-top: 1px dotted #ccc;
     }
 
-    .Painel--stop {
+    .Box--stop {
         border-style: solid;
         border-color: #cbcbcb;
         border-width: 1px 0;
     }
 
-    .Painel--highlight {
+    .Box--highlight {
         background: #3092D8;
     }
 
-    .Painel--divider {
+    .Box--divider {
         border-top: 1px solid #cbcbcb;
     }
 
-    .Painel--insert {
+    .Box--insert {
         border-top: 3px solid #3092D8;
     }
 
-    .Painel--end {
+    .Box--end {
         border-bottom: 1px dotted lighten(#3092D8, 30%);
     }
 
-    .Painel--border {
+    .Box--border {
         border: 1px solid #ddd;
     }
 
@@ -165,8 +170,6 @@
         border-bottom: 1px dotted #ccc;
     }
 
-    .t-low {
-        color: #666;
-        background: #f5f5f5;
+    .t-apart {
+        border-bottom: 5px solid #ccc;
     }
-
