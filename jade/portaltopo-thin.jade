@@ -1,0 +1,32 @@
+
+.container
+    .PortalTopo
+
+        .PortalTopo-id.PortalTopo-id--narrow
+            .PortalTopo-title
+                img(src="../img/logo.svg")
+
+        .PortalTopo-togglers.visible-xs
+            .PortalTopo-toggler--menu(data-toggle='collapse', data-target='.Nav--principal')
+            .PortalTopo-toggler--search(data-toggle='collapse', data-target='.PortalTopo-busca')
+
+        .PortalTopo-tools
+
+        .PortalTopo-busca
+
+    nav.Nav--principal.navbar.navbar-default.navbar-collapse.collapse(role="navigation")
+        ul.nav.navbar-nav
+            li: a(href='#') Início
+            li: a(href='#') Notícias
+            li: a(href='#') Plenário
+            li: a(href='#') Conveniadas
+            li: a(href='#') Central de Áudio
+            //- os dropdowns precisam ficar aberto no momento de gerar o uncss e
+            //- fechado na hora do build
+            li.dropdown
+                a.dropdown-toggle(href='#', data-toggle='dropdown')
+                    = 'Serviços '
+                    span.caret
+                ul.dropdown-menu
+                    li: a(href='#') Lorem Ipsum
+                    li: a(href='#') Lorem Ipsum

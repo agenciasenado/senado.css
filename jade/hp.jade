@@ -16,7 +16,7 @@ html(lang='pt')
 
 
         .u-spacer--lg
-            include portaltopo
+            include portaltopo-thin
 
         .container
 
@@ -56,6 +56,8 @@ html(lang='pt')
                         .Segment.Apex--md.Apex--stop.Apex--flush.h4
                             | Últimas Notícias
 
+            //-
+
             .Box.Box--divider.Box--vert.Box--xl
                 .u-spacer
                 .row
@@ -74,11 +76,16 @@ html(lang='pt')
                 .u-spacer
 
 
-            .Box.Box--insert.Box--lg.Box--vert
+            .Box.Box--insert.Box--flush.u-spacer--xl
                 include hp/atividade
 
-            include hp/participe
-            include hp/destaques
+            .Box.Box--flush
+                include hp/participe
+
+            .Box.Box--vert.Box--xl.t-apart
+                include hp/destaques
+
+            include hp/end
 
 
     include footer

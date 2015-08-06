@@ -76,17 +76,18 @@
     //&:not(:last-child) {
     //    margin-bottom: 2 * @padding-large-vertical;
     //}
+    //border: 1px solid red!important;
 }
-
-    .Box--lg {
-        padding: @padding-large-vertical @padding-large-horizontal;
-    }
 
     .Box--xl {
         padding: @padding-large-vertical * 2 @padding-large-horizontal * 2;
     }
 
-    .Box--sm {
+    .Box--lg {
+        padding: @padding-large-vertical @padding-large-horizontal;
+    }
+
+    .Box--md {
         padding: @padding-small-vertical @padding-small-horizontal;
     }
 
@@ -145,12 +146,19 @@
         background: #3092D8;
     }
 
+    .Box--sky {
+        background: lighten(#3092D8, 5%);
+        box-shadow: 0 2px 2px rgba(0,0,0,0.20);
+        border: 1px solid darken(#3092D8, 4%);
+    }
+
     .Box--divider {
         border-top: 1px solid #cbcbcb;
     }
 
     .Box--insert {
         border-top: 3px solid #3092D8;
+        border-bottom: 3px solid #3092D8;
     }
 
     .Box--end {
