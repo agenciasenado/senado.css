@@ -1,0 +1,23 @@
+@bootstrap-path: "../node_modules/bootstrap/less";
+
+//@import (reference) "vendors/bootstrap";
+
+@import (reference) "@{bootstrap-path}/variables";
+@import (reference) "@{bootstrap-path}/utilities";
+@import (reference) "@{bootstrap-path}/scaffolding";
+@import (reference) "@{bootstrap-path}/mixins";
+@import (reference) "@{bootstrap-path}/glyphicons";
+
+@import "@{bootstrap-path}/responsive-embed.less";
+
+@import "utils/variables";
+@import "utils/mixins";
+
+@import "components/media";
+@import "components/manchete";
+@import "components/segment";
+
+.embed-responsive-3by2 {
+  padding-bottom: 66.667%;
+}
+

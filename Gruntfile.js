@@ -20,6 +20,11 @@ module.exports = function(grunt) {
                 files: {
                     'dist/noticias.css': 'less/noticias.less'
                 }
+            },
+            hp: {
+                files: {
+                    'dist/hp.css': 'less/hp.less'
+                }
             }
         },
         jade: {
@@ -91,6 +96,9 @@ module.exports = function(grunt) {
             noticias: {
                 src: 'dist/noticias.css'
             },
+            hp: {
+                src: 'dist/hp.css'
+            },
         },
         cssmin: {
             options : {
@@ -104,6 +112,11 @@ module.exports = function(grunt) {
             noticias: {
                 files: {
                     'dist/noticias.css' : 'dist/noticias.css'
+                }
+            },
+            hp: {
+                files: {
+                    'dist/hp.css' : 'dist/hp.css'
                 }
             }
         },
@@ -204,6 +217,12 @@ module.exports = function(grunt) {
         'less:noticias',
         'autoprefixer:noticias',
         'cssmin:noticias'
+    ])
+
+    grunt.registerTask('hp', [
+        'less:hp',
+        'autoprefixer:hp',
+        'cssmin:hp'
     ])
 
 
