@@ -1,14 +1,12 @@
 .row--table {
     display: table;
     height: 1px;
-    > div[class*="col-"] {
-        height: 100%;
 
+    > div[class*="col-"] {
         > :first-child {
             display: table;
             height: 100%;
             width: 100%;
-            position: relative;
         }
     }
 }
