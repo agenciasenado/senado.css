@@ -13,12 +13,10 @@
 
 @media (min-width: @screen-sm-min) {
     .row--table\@sm {
-        &:before, &:after {
-            content: none;
-        }
         > div[class*="col-"] {
             float: none;
             .u-sizeFillAlt;
+            vertical-align: middle;
         }
     }
 }

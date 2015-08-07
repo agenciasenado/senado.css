@@ -20,42 +20,65 @@ html(lang='pt')
 
         .container
 
-            .row.spacer--lg
+            div(class="row spacer--lg")
                 .col-md-6
                     .Media.Media--stack.Segment
                         .Media-figure
                             .embed-responsive.embed-responsive-3by2.Box--cut
-                .col-md-6.Segments
-                    .Box.Box--flush.Box--light
-                        .Box
-                            .Segment.Apex--md.Apex--accordeon.h4(data-toggle="collapse", href=".js-senadoagora")
-                                | Senado Agora
-                                .pull-right
-                                    .Icon.Icon--md.Icon--newspaper
-                        .js-senadoagora.collapse
-                            .Segments.Box.Box--lg.Box--accordeon.small
-                                .CutHere
-                                    div
-                                        span.label.label-info 13h02
-                                        b  Adelphiss:
-                                        |  Azureus humani generis callide attrahendams deus est.
-                                        | Contencio burguss ducunt ad racana.
-                                    div
-                                        span.label.label-info 12h52
-                                        b  Vierium:
-                                        |  Cum medicina potus, omnes buboes perdere nobilis, varius abactores!
-                                        | A falsis, lamia audax scutum.
-                                    div
-                                        span.label.label-info 12h39
-                                        b  Cella:
-                                        |  Mirabilis, flavum solitudos satis examinare de primus, gratis hilotae.
-                                        | Dexter hippotoxotas ducunt ad pulchritudine.
-                                .Stand.Stand--light: a Ver todas ›
+                .col-md-6.Segments.panel-group
+                    //-
+                    .js-acc.Segments
 
-                    .Box.Box--stop.Box--cut
-                        .Segment.Apex--md.Apex--stop.Apex--flush.h4
-                            | Últimas Notícias
+                        .Box.Box--flush.Box--light.panel
+                            .Box
+                                .Segment.Apex--md.Apex--accordeon.h4(data-toggle="collapse", data-parent=".js-acc" href=".js-senadoagora")
+                                    | Senado Agora
+                                    .pull-right
+                                        .Icon.Icon--md.Icon--newspaper
+                            .js-senadoagora.collapse
+                                .Segments.Box.Box--lg.Box--accordeon.small
+                                    .CutHere
+                                        div
+                                            span.label.label-info 13h02
+                                            b  Adelphiss:
+                                            |  Azureus humani generis callide attrahendams deus est.
+                                            | Contencio burguss ducunt ad racana.
+                                        div
+                                            span.label.label-info 12h52
+                                            b  Vierium:
+                                            |  Cum medicina potus, omnes buboes perdere nobilis, varius abactores!
+                                            | A falsis, lamia audax scutum.
+                                        div
+                                            span.label.label-info 12h39
+                                            b  Cella:
+                                            |  Mirabilis, flavum solitudos satis examinare de primus, gratis hilotae.
+                                            | Dexter hippotoxotas ducunt ad pulchritudine.
+                                    .Stand.Stand--light: a Ver todas ›
 
+                        //-
+
+                        .Box.Box--stop.Box--cut.panel
+                            .Segment.Apex--md.Apex--stop.Apex--flush.h4(data-toggle="collapse", data-parent=".js-acc" href=".js-noticias")
+                                | Últimas Notícias
+                            .js-noticias.collapse
+                                .Segments.Box.Box--lg.Box--accordeon.small
+                                    .CutHere
+                                        div
+                                            span.label.label-info 13h02
+                                            b  Adelphiss:
+                                            |  Azureus humani generis callide attrahendams deus est.
+                                            | Contencio burguss ducunt ad racana.
+                                        div
+                                            span.label.label-info 12h52
+                                            b  Vierium:
+                                            |  Cum medicina potus, omnes buboes perdere nobilis, varius abactores!
+                                            | A falsis, lamia audax scutum.
+                                        div
+                                            span.label.label-info 12h39
+                                            b  Cella:
+                                            |  Mirabilis, flavum solitudos satis examinare de primus, gratis hilotae.
+                                            | Dexter hippotoxotas ducunt ad pulchritudine.
+                                    .Stand.Stand--light: a Ver todas ›
             //-
 
             .Box.Box--divider.Box--vert.Box--xl
