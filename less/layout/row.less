@@ -1,40 +1,24 @@
-.row--table {
-}
 
 @media (min-width: @screen-sm-min) {
-    //.row--table\@sm {
-    //    display: table;
-    //    table-layout: fixed;
-    //    &:before, &:after {
-    //        content: none;
-    //    }
-    //    > div[class*="col-"] {
-    //        background: #fafafa;
-    //        display: table-cell;
-    //        float: none;
-    //        > :first-child {
-    //            width: 100%;
-    //            height: 100%;
-    //        }
-    //        height: 100%;
-    //    }
-    //    height: 100%;
-    //}
+    .row--table\@sm {
+        display: table;
+        height: 100%;
 
-    .colllll {
-        overflow: hidden;
-                height: 100%;
-        position: relative;
+        &:before, &:after {
+            content: none;
+        }
+
         > div[class*="col-"] {
-            position: relative;
-                height: 100%;
-            border: 1px solid red;
+            float: none;
+
+            .u-sizeFillAlt;
+            height: 100%;
+
             > :first-child {
+                display: table;
                 height: 100%;
+                width: 100%;
             }
-                margin-bottom: -99999px;
-                padding-bottom: 99999px;
-            //}
         }
     }
 }
