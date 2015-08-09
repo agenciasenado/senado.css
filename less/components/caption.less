@@ -1,0 +1,19 @@
+.Caption {}
+
+    .Caption--film {
+        position: absolute;
+        bottom:0;
+        width: 100%;
+        //padding: @padding-base-vertical @padding-base-horizontal;
+
+        background: rgba(0,0,0,0.4);
+        color: #fff;
+        text-shadow: 1px 1px 1px #000;
+        line-height: 1.30;
+
+        @media (max-width: @screen-xs-max) {
+            position: static;
+            background: #333340;
+            font-size: @font-size-large;
+        }
+    }
