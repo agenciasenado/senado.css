@@ -32,7 +32,7 @@ html(lang='pt')
                 div(class=" col-md-6 / panel-group js-acc / Segments")
                     //-
 
-                    .t-light.panel
+                    div(class="--light panel")
                         .Box.Box--lg.Segment(data-toggle="collapse", data-parent=".js-acc" href=".js-senadoagora")
                             .pull-right
                                 .Icon.Icon--md.Icon--newspaper
@@ -59,7 +59,7 @@ html(lang='pt')
 
                     //-
 
-                    .t-stop.t-cut.panel
+                    div(class="panel --stop --cut")
                         .Box.Box--lg.Segment.Apex--stop.h4(data-toggle="collapse", data-parent=".js-acc" href=".js-noticias")
                             | Últimas Notícias
                         .js-noticias.collapse
@@ -97,13 +97,13 @@ html(lang='pt')
                     - n++
 
 
-            .t-insert.u-spacer--xl
+            div(class="--insert u-spacer--xl")
                 include hp/atividade
 
 
             include hp/participe
 
-            .Box.Box--vert.Box--xl.t-apart
+            div(class="Box Box--vert Box--xl / --apart")
                 include hp/destaques
 
             include hp/end
