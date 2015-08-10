@@ -24,7 +24,8 @@ html(lang='pt')
                 .col-md-6
                     .u-posRelative
                         .Embed.Embed--3by2
-                            img.img-responsive(src="http://unsplash.it/600/400?image=759")
+                            //img.img-responsive(src="http://unsplash.it/600/400?image=759")
+                            img.img-responsive(src="../img/capa.jpg")
                         .Box.Caption.Caption--film.delta
                             | Ferox, noster compaters virtualiter prensionem de festus, azureus burgus.
 
@@ -82,18 +83,19 @@ html(lang='pt')
                                 .Stand.Stand--md.Stand--cut: a Ver todas ›
             //-
 
-            .row.spacer--xl
-                - var n = 0
-                while n < 4
-                    .col-md-3
-                        .Media
-                            .Media-figure
-                                .Embed.Embed--3by2
-                                    img.img-responsive(src="http://unsplash.it/90/60?image=21"+n)
-                            .Media-body.small
-                                .Etiqueta.Etiqueta--default.glyphicon-th.Etiqueta--rev.u-spacer Humani generis
-                                div Velox, lotus ventuss callide aperto de germanus alter.
-                    - n++
+            .Box.Box--lg.Box--vert
+                .row.spacer--xl
+                    - var n = 0
+                    while n < 4
+                        .col-md-3
+                            .Media
+                                .Media-figure
+                                    .Embed.Embed--3by2
+                                        img.img-responsive(src="../img/t"+(n+1)+".jpg")
+                                .Media-body.small
+                                    .Etiqueta.Etiqueta--default.glyphicon-th.Etiqueta--rev.u-spacer Humani generis
+                                    div Velox, lotus ventuss callide aperto de germanus alter.
+                        - n++
 
 
             div(class="+insert u-spacer--xl")
@@ -102,7 +104,7 @@ html(lang='pt')
 
             include hp/participe
 
-            div(class="Box Box--vert Box--xl / +apart")
+            div(class="Box Box--vert Box--lg / +apart")
                 include hp/destaques
 
             include hp/end
