@@ -10,7 +10,7 @@ html(lang='pt')
         title Senado Federal
         link(href='../dist/main.css', rel='stylesheet')
 
-    body
+    body#sfcss
 
         include navglobal
 
@@ -23,7 +23,7 @@ html(lang='pt')
             div(class="row spacer--xl")
                 .col-md-6
                     .u-posRelative
-                        .Embed.Embed--3by2.Box--cut
+                        .Embed.Embed--3by2
                             img.img-responsive(src="http://unsplash.it/600/400?image=759")
                         .Box.Caption.Caption--film.delta
                             | Ferox, noster compaters virtualiter prensionem de festus, azureus burgus.
@@ -31,13 +31,13 @@ html(lang='pt')
                 div(class=" col-md-6 / panel-group js-acc / Segments")
                     //-
 
-                    div(class="--light panel")
+                    div(class="+light panel")
                         .Box.Segment(data-toggle="collapse", data-parent=".js-acc" href=".js-senadoagora")
                             .pull-right
                                 .Icon.Icon--md.Icon--newspaper
                             a.zeta Senado Agora
                         .js-senadoagora.collapse
-                            .Segments.Box.Box--lg.t-accordeon.small
+                            div(class="Segments / Box Box--lg / +accordeon milli")
                                 .CutHere
                                     div
                                         span.label.label-info 13h02
@@ -58,11 +58,11 @@ html(lang='pt')
 
                     //-
 
-                    div(class="panel --stop --cut")
+                    div(class="panel +stop +cut")
                         .Box.Apex--stop(data-toggle="collapse", data-parent=".js-acc" href=".js-noticias")
                             .zeta Últimas Notícias
-                        .js-noticias.collapse
-                            .Segments.Box.Box--lg.t-accordeon.small
+                        .js-noticias.collapse.in
+                            div(class="Segments / Box Box--lg / +accordeon milli")
                                 .CutHere
                                     div
                                         span.label.label-info 13h02
@@ -91,18 +91,18 @@ html(lang='pt')
                                 .Embed.Embed--3by2
                                     img.img-responsive(src="http://unsplash.it/90/60?image=21"+n)
                             .Media-body.small
-                                .Etiqueta.Etiqueta--default.glyphicon-th.Etiqueta--rev Humani generis
-                                div Velox, lotus ventuss callide aperto de germanus, alter humani generis.
+                                .Etiqueta.Etiqueta--default.glyphicon-th.Etiqueta--rev.u-spacer Humani generis
+                                div Velox, lotus ventuss callide aperto de germanus alter.
                     - n++
 
 
-            div(class="--insert u-spacer--xl")
+            div(class="+insert u-spacer--xl")
                 include hp/atividade
 
 
             include hp/participe
 
-            div(class="Box Box--vert Box--xl / --apart")
+            div(class="Box Box--vert Box--xl / +apart")
                 include hp/destaques
 
             include hp/end
