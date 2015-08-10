@@ -22,21 +22,20 @@ html(lang='pt')
 
             div(class="row spacer--xl")
                 .col-md-6
-                    .Box.Box--flush
+                    .u-posRelative
                         .embed-responsive.embed-responsive-3by2.Box--cut
-                            //img.img-responsive(src="http://unsplash.it/600/400?image=655")
                             img.img-responsive(src="http://unsplash.it/600/400?image=759")
-                        .Box.Caption.Caption--film.Segment.h3
+                        .Box.Caption.Caption--film.delta
                             | Ferox, noster compaters virtualiter prensionem de festus, azureus burgus.
 
                 div(class=" col-md-6 / panel-group js-acc / Segments")
                     //-
 
                     div(class="--light panel")
-                        .Box.Box--lg.Segment(data-toggle="collapse", data-parent=".js-acc" href=".js-senadoagora")
+                        .Box.Segment(data-toggle="collapse", data-parent=".js-acc" href=".js-senadoagora")
                             .pull-right
                                 .Icon.Icon--md.Icon--newspaper
-                            h4: a Senado Agora
+                            a.zeta Senado Agora
                         .js-senadoagora.collapse
                             .Segments.Box.Box--lg.t-accordeon.small
                                 .CutHere
@@ -60,8 +59,8 @@ html(lang='pt')
                     //-
 
                     div(class="panel --stop --cut")
-                        .Box.Box--lg.Segment.Apex--stop.h4(data-toggle="collapse", data-parent=".js-acc" href=".js-noticias")
-                            | Últimas Notícias
+                        .Box.Apex--stop(data-toggle="collapse", data-parent=".js-acc" href=".js-noticias")
+                            .zeta Últimas Notícias
                         .js-noticias.collapse
                             .Segments.Box.Box--lg.t-accordeon.small
                                 .CutHere
