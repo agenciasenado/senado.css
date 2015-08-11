@@ -58,10 +58,15 @@
         &:extend(.list-unstyled);
         line-height: 20px;
         font-size: 12px;
-        color: #666;
+
         @media (max-width: @screen-xs-max) {
             margin: 0 10px;
         }
+
+        &, & > a {
+            color: #666;
+        }
+
         & > dd {
             & > a {
                 &, &:visited, &:focus, &:hover {
@@ -74,7 +79,7 @@
             }
         }
         & > dt {
-            font-size: 13px;
+            font-size: 12px;
             font-weight: bold;
             color: #666;
             margin: 10px 0;
@@ -123,3 +128,10 @@
         float: right;
         .glyphicon-chevron-up();
     }
+
+
+.FooterMain-list--more {
+    a {
+        color: #666;
+    }
+}

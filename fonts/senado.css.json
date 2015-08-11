@@ -1,10 +1,300 @@
 {
 	"metadata": {
 		"name": "senado.css",
-		"lastOpened": 1436990398578,
-		"created": 1436990396816
+		"lastOpened": 1439301865321,
+		"created": 1439301863921
 	},
 	"iconSets": [
+		{
+			"selection": [
+				{
+					"order": 48,
+					"id": 7,
+					"prevSize": 50,
+					"code": 58881,
+					"name": "colegiados",
+					"tempChar": ""
+				},
+				{
+					"order": 49,
+					"id": 6,
+					"prevSize": 50,
+					"code": 58882,
+					"name": "estudosLegislativos",
+					"tempChar": ""
+				},
+				{
+					"order": 50,
+					"id": 5,
+					"prevSize": 50,
+					"code": 58883,
+					"name": "estudosOrcamentarios",
+					"tempChar": ""
+				},
+				{
+					"order": 56,
+					"id": 4,
+					"prevSize": 50,
+					"code": 58884,
+					"name": "ordemdoDiadoCongresso",
+					"tempChar": ""
+				},
+				{
+					"order": 52,
+					"id": 3,
+					"prevSize": 50,
+					"code": 58885,
+					"name": "ordemdoDiadoSenado",
+					"tempChar": ""
+				},
+				{
+					"order": 53,
+					"id": 2,
+					"prevSize": 50,
+					"code": 58886,
+					"name": "pesquisas",
+					"tempChar": ""
+				},
+				{
+					"order": 55,
+					"id": 1,
+					"prevSize": 50,
+					"code": 58887,
+					"name": "publicacoes",
+					"tempChar": ""
+				},
+				{
+					"order": 54,
+					"id": 0,
+					"prevSize": 50,
+					"code": 58888,
+					"name": "sessoesPlenarias",
+					"tempChar": ""
+				}
+			],
+			"id": 13,
+			"metadata": {
+				"name": "Untitled Set",
+				"importSize": {
+					"width": 50,
+					"height": 50
+				}
+			},
+			"height": 1024,
+			"prevSize": 50,
+			"icons": [
+				{
+					"id": 7,
+					"paths": [
+						"M389.119 276.481c0 39.588-32.092 71.68-71.68 71.68s-71.68-32.092-71.68-71.68c0-39.588 32.092-71.68 71.68-71.68s71.68 32.092 71.68 71.68z",
+						"M573.439 256c0 39.588-32.092 71.68-71.68 71.68s-71.68-32.092-71.68-71.68c0-39.588 32.092-71.68 71.68-71.68s71.68 32.092 71.68 71.68z",
+						"M757.759 276.481c0 39.588-32.092 71.68-71.68 71.68s-71.68-32.092-71.68-71.68c0-39.588 32.092-71.68 71.68-71.68s71.68 32.092 71.68 71.68z",
+						"M341.257 368.65h-96.473c0 0-19.505-0.963-19.505 16.649 0 30.083 0.205 204.787 0.205 204.787s2.413 24.329 21.707 24.329c19.292 0 26.163 0 26.163 0v225.266h115.765v-204.787c0 0-38.588-1.925-38.588-40.957 0-52.917 0-225.266 0-225.266v0 0 0c0-0.020 3.086-0.020-9.261-0.020z",
+						"M422.203 368.804c0 0-33.083-0.164-33.083 40.796s0 184.32 0 184.32c0 0 0 21.32 37.468 21.32v224.44h149.869v-225.28c0 0 37.466 0.963 37.466-21.34 0-29.020 0-183.46 0-183.46s7.025-40.96-32.784-40.96c-39.809 0-158.935 0.164-158.935 0.164z",
+						"M662.261 368.65h96.473c0 0 19.505-0.963 19.505 16.649 0 30.083-0.205 204.787-0.205 204.787s-2.413 24.329-21.707 24.329c-19.292 0-26.163 0-26.163 0v225.266h-115.765v-204.787c0 0 38.588-1.925 38.588-40.957 0-52.917 0-225.266 0-225.266v0 0 0c0-0.020-3.086-0.020 9.261-0.020z"
+					],
+					"attrs": [
+						{},
+						{},
+						{},
+						{},
+						{},
+						{}
+					],
+					"isMulticolor": false,
+					"grid": 50,
+					"tags": [
+						"colegiados"
+					]
+				},
+				{
+					"id": 6,
+					"paths": [
+						"M208.123 409.6c-24.476 0-44.283-22.916-44.283-51.168s19.823-51.15 44.283-51.15h17.157v102.299h-17.157z",
+						"M696.32 307.2h-450.56v102.318h450.56v-102.318z",
+						"M799.965 307.2h60.195v102.318h-143.36v-102.318z",
+						"M815.877 573.44c24.476 0 44.283-22.916 44.283-51.168s-19.823-51.15-44.283-51.15h-17.157v102.299h17.157z",
+						"M327.68 471.040h450.56v102.318h-450.56v-102.318z",
+						"M163.84 573.358h143.36v-102.318h-143.36z",
+						"M208.123 737.28c-24.476 0-44.283-22.916-44.283-51.168s19.823-51.15 44.283-51.15h17.157v102.299h-17.157z",
+						"M696.32 634.88h-450.56v102.318h450.56v-102.318z",
+						"M860.16 634.88v102.318h-143.36v-102.318h83.165z"
+					],
+					"attrs": [
+						{},
+						{},
+						{},
+						{},
+						{},
+						{},
+						{},
+						{},
+						{}
+					],
+					"isMulticolor": false,
+					"grid": 50,
+					"tags": [
+						"estudosLegislativos"
+					]
+				},
+				{
+					"id": 5,
+					"paths": [
+						"M815.877 409.6c24.476 0 44.283-22.916 44.283-51.168s-19.823-51.15-44.283-51.15h-17.157v102.299h17.157z",
+						"M327.68 307.2h450.56v102.318h-450.56v-102.318z",
+						"M163.84 307.2v102.318h143.36v-102.318h-83.165z",
+						"M208.123 573.44c-24.476 0-44.283-22.916-44.283-51.168s19.823-51.15 44.283-51.15h17.157v102.299h-17.157z",
+						"M696.32 471.040h-450.56v102.318h450.56v-102.318z",
+						"M779.485 573.358h-83.165v-102.318h143.36v102.318z",
+						"M815.877 737.28c24.476 0 44.283-22.916 44.283-51.168s-19.823-51.15-44.283-51.15h-17.157v102.299h17.157z",
+						"M327.68 634.88h450.56v102.318h-450.56v-102.318z",
+						"M163.84 737.198h143.36v-102.318h-143.36z"
+					],
+					"attrs": [
+						{},
+						{},
+						{},
+						{},
+						{},
+						{},
+						{},
+						{},
+						{}
+					],
+					"isMulticolor": false,
+					"grid": 50,
+					"tags": [
+						"estudosOrcamentarios"
+					]
+				},
+				{
+					"id": 4,
+					"paths": [
+						"M368.637 245.76h122.88v552.96h-122.88v-552.96z",
+						"M532.477 245.76h122.88v552.96h-122.88v-552.96z",
+						"M61.439 798.72c0 0 147.393-230.4 307.2 0h-307.2z",
+						"M962.559 696.32c0 0-147.393 230.4-307.2 0h307.2z",
+						"M491.517 471.040h40.96v40.96h-40.96v-40.96z"
+					],
+					"attrs": [
+						{},
+						{},
+						{},
+						{},
+						{}
+					],
+					"isMulticolor": false,
+					"grid": 50,
+					"tags": [
+						"ordemdoDiadoCongresso"
+					]
+				},
+				{
+					"id": 3,
+					"paths": [
+						"M593.92 245.76h163.84v552.96h-163.84v-552.96z",
+						"M184.319 798.72c0 0 196.545-276.48 409.601 0h-409.601z"
+					],
+					"attrs": [
+						{},
+						{}
+					],
+					"isMulticolor": false,
+					"grid": 50,
+					"tags": [
+						"ordemdoDiadoSenado"
+					]
+				},
+				{
+					"id": 2,
+					"paths": [
+						"M456.143 198.245c-0.006-0-0.013-0-0.020-0-144.688 0-261.98 117.293-261.98 261.98 0 0.007 0 0.014 0 0.021 0.011 144.678 117.3 261.959 261.98 261.959 0.007 0 0.014-0 0.021-0 144.671-0.011 261.947-117.288 261.959-261.959 0-0.007 0-0.014 0-0.021 0-144.681-117.281-261.969-261.959-261.98zM456.983 302.365c87.659 0 158.72 71.061 158.72 158.72s-71.061 158.72-158.72 158.72c-87.659 0-158.72-71.061-158.72-158.72s71.061-158.72 158.72-158.72z",
+						"M683.103 591.216l137.38 136.11c0 0 22.18 20.48-1.7 44.38s-59.74 51.2-59.74 51.2c0 0-5.12 13.64-39.26-18.78s-110.94-130.99-110.94-130.99c0 0 46.428-31.683 74.26-81.92z"
+					],
+					"attrs": [
+						{},
+						{}
+					],
+					"isMulticolor": false,
+					"grid": 50,
+					"tags": [
+						"pesquisas"
+					]
+				},
+				{
+					"id": 1,
+					"paths": [
+						"M225.279 204.8v614.4h552.96v-614.4h-552.96zM286.719 327.68h409.6v389.76h-409.6v-389.76z",
+						"M389.119 368.64h286.72v61.44h-286.72v-61.44z",
+						"M307.199 368.64h61.44v61.44h-61.44v-61.44z",
+						"M389.119 450.56h286.72v61.44h-286.72v-61.44z",
+						"M307.199 450.56h61.44v61.44h-61.44v-61.44z",
+						"M389.119 532.48h286.72v61.44h-286.72v-61.44z",
+						"M307.199 532.48h61.44v61.44h-61.44v-61.44z",
+						"M389.119 614.4h286.72v61.44h-286.72v-61.44z",
+						"M307.199 614.4h61.44v61.44h-61.44v-61.44z"
+					],
+					"attrs": [
+						{},
+						{},
+						{},
+						{},
+						{},
+						{},
+						{},
+						{},
+						{}
+					],
+					"isMulticolor": false,
+					"grid": 50,
+					"tags": [
+						"publicacoes"
+					]
+				},
+				{
+					"id": 0,
+					"paths": [
+						"M204.8 757.76c0 0 54.19-138.24 103.32 0h-103.32z",
+						"M326.76 757.76c0 0 54.19-138.24 103.32 0h-103.32z",
+						"M593.92 757.76c0 0 53.709-138.24 102.4 0h-102.4z",
+						"M716.8 757.76c0 0 53.709-138.24 102.4 0h-102.4z",
+						"M450.56 757.76c0 0 5.173-39.77 24.465-62.867 17.285-20.699 55.19-30.123 78.518 1.044 9.187 12.286 15.11 30.397 19.896 61.822h-122.88z",
+						"M757.76 266.24h40.96v368.64h-40.96v-368.64z",
+						"M675.84 286.72h40.96v348.16h-40.96v-348.16z",
+						"M614.4 307.2h40.96v327.68h-40.96v-327.68z",
+						"M552.96 327.68h40.96v307.2h-40.96v-307.2z",
+						"M491.52 327.68h40.96v307.2h-40.96v-307.2z",
+						"M430.080 327.68h40.96v307.2h-40.96v-307.2z",
+						"M368.64 307.2h40.96v327.68h-40.96v-327.68z",
+						"M307.2 286.72h40.96v348.16h-40.96v-348.16z",
+						"M225.28 266.24h40.96v368.64h-40.96v-368.64z"
+					],
+					"attrs": [
+						{},
+						{},
+						{},
+						{},
+						{},
+						{},
+						{},
+						{},
+						{},
+						{},
+						{},
+						{},
+						{},
+						{}
+					],
+					"isMulticolor": false,
+					"grid": 50,
+					"tags": [
+						"sessoesPlenarias"
+					]
+				}
+			],
+			"invisible": false,
+			"colorThemes": []
+		},
 		{
 			"selection": [
 				{
@@ -61,7 +351,7 @@
 					"prevSize": 16,
 					"code": 58880,
 					"name": "whatsapp",
-					"tempChar": ""
+					"tempChar": ""
 				}
 			],
 			"id": 11,
@@ -11085,7 +11375,7 @@
 					"prevSize": 24,
 					"code": 57871,
 					"name": "more-horizontal",
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "keyboard_control"
 				},
 				{
@@ -11094,7 +11384,7 @@
 					"prevSize": 24,
 					"code": 57872,
 					"name": "more-vertical",
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "more_vert"
 				},
 				{
@@ -29246,7 +29536,7 @@
 					"prevSize": 16,
 					"code": 61544,
 					"name": "calendar",
-					"tempChar": ""
+					"tempChar": ""
 				},
 				{
 					"id": 20,
@@ -29834,7 +30124,7 @@
 					"prevSize": 16,
 					"code": 61534,
 					"name": "menu",
-					"tempChar": ""
+					"tempChar": ""
 				},
 				{
 					"id": 166,
@@ -44772,7 +45062,7 @@
 					"id": 1624,
 					"prevSize": 16,
 					"code": 59652,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "newspaper, news",
 					"name": "newspaper"
 				},
@@ -44880,7 +45170,7 @@
 					"id": 1661,
 					"prevSize": 16,
 					"code": 59664,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "headphones, headset",
 					"name": "headphones"
 				},
@@ -44988,7 +45278,7 @@
 					"order": 4,
 					"prevSize": 16,
 					"code": 59676,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "podcast, broadcast",
 					"name": "podcast"
 				},
@@ -45060,7 +45350,7 @@
 					"id": 1598,
 					"prevSize": 16,
 					"code": 59684,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "file-empty, file3",
 					"name": "page"
 				},
@@ -45510,7 +45800,7 @@
 					"order": 7,
 					"prevSize": 16,
 					"code": 59734,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "display, screen",
 					"name": "display"
 				},
@@ -45726,7 +46016,7 @@
 					"order": 8,
 					"prevSize": 16,
 					"code": 59758,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "bubble2, comment2",
 					"name": "bubble"
 				},
@@ -46482,7 +46772,7 @@
 					"order": 28,
 					"prevSize": 16,
 					"code": 59842,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "cloud-download, cloud2",
 					"name": "download"
 				},
@@ -46671,7 +46961,7 @@
 					"order": 31,
 					"prevSize": 16,
 					"code": 59863,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "star-empty, rate",
 					"name": "star-empty"
 				},
@@ -46680,7 +46970,7 @@
 					"order": 29,
 					"prevSize": 16,
 					"code": 59864,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "star-half, rate2",
 					"name": "star-half"
 				},
@@ -46689,7 +46979,7 @@
 					"order": 30,
 					"prevSize": 16,
 					"code": 59865,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "star-full, rate3",
 					"name": "star-full"
 				},
@@ -47229,7 +47519,7 @@
 					"order": 26,
 					"prevSize": 16,
 					"code": 59925,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "play2, player",
 					"name": "play"
 				},
@@ -47238,7 +47528,7 @@
 					"order": 27,
 					"prevSize": 16,
 					"code": 59926,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "pause, player2",
 					"name": "pause"
 				},
@@ -48264,7 +48554,7 @@
 					"order": 24,
 					"prevSize": 16,
 					"code": 60040,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "google-plus, brand2",
 					"name": "google-plus"
 				},
@@ -48300,7 +48590,7 @@
 					"order": 18,
 					"prevSize": 16,
 					"code": 60044,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "facebook, brand6",
 					"name": "facebook"
 				},
@@ -48336,7 +48626,7 @@
 					"order": 25,
 					"prevSize": 16,
 					"code": 60048,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "instagram, brand10",
 					"name": "instagram"
 				},
@@ -48345,7 +48635,7 @@
 					"order": 19,
 					"prevSize": 16,
 					"code": 60049,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "twitter, brand11",
 					"name": "twitter"
 				},
@@ -48399,7 +48689,7 @@
 					"order": 21,
 					"prevSize": 16,
 					"code": 60055,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "youtube, brand14",
 					"name": "youtube-dark"
 				},
@@ -48408,7 +48698,7 @@
 					"order": 20,
 					"prevSize": 16,
 					"code": 60056,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "youtube2, brand15",
 					"name": "youtube-light"
 				},
@@ -48417,7 +48707,7 @@
 					"id": 1541,
 					"prevSize": 16,
 					"code": 60057,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "youtube3, brand16",
 					"name": "youtube-logo"
 				},
@@ -48489,7 +48779,7 @@
 					"order": 23,
 					"prevSize": 16,
 					"code": 60065,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "flickr2, brand24",
 					"name": "flickr"
 				},
@@ -48723,7 +49013,7 @@
 					"order": 47,
 					"prevSize": 16,
 					"code": 60091,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "tumblr, brand50",
 					"name": "tumblr"
 				},
@@ -48912,7 +49202,7 @@
 					"order": 38,
 					"prevSize": 16,
 					"code": 60112,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "pinterest, brand71",
 					"name": "pinterest"
 				},
@@ -57114,7 +57404,8 @@
 			"showMetrics": true,
 			"showMetadata": true,
 			"showVersion": true,
-			"resetPoint": 58880
+			"resetPoint": 58880,
+			"embed": false
 		},
 		"imagePref": {
 			"prefix": "icon-",

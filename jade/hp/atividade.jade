@@ -40,71 +40,72 @@ div(class="Box Box--lg / +pop +highlight / u-spacer--xl")
 .Box.Box--flush
     .row.spacer--xl
         .col-xs-6.col-sm-3
-            .Flag
+            .Flag.Flag--top
                 .Flag-figure
-                    div(class="Figure / +highlight +pop")
-                        .Icon.Icon--lg.Icon--calendar
+                    div(class="+highlight +pop")
+                        .Icon.Icon--50.Icon--ordemdoDiadoSenado
                 .Flag-body.small
                     div: strong Ordem do dia do Senado
-                    a Pautas
-                    = ' | '
-                    a Resultados
+                    div: a(href="http://www.senado.gov.br/atividade/plenario/ordemdodia") Ordem do dia completa
+                    div: a(href="http://www.senado.leg.br/atividade/agenda/default.asp") Agenda do mês atual
         .col-xs-6.col-sm-3
-            .Flag
+            .Flag.Flag--top
                 .Flag-figure
-                    div(class="Figure / +highlight +pop")
-                        .Icon.Icon--lg.Icon--display
+                    div(class="+highlight +pop")
+                        .Icon.Icon--50.Icon--ordemdoDiadoCongresso
                 .Flag-body.small
                     div: strong Ordem do dia do Congresso
-                    a Diários
-                    = ' | '
-                    a Avulsos
+                    a(href='http://www.senado.gov.br/atividade/plenario/ordemdodia/default.asp?casa=CN')
+                        | Ordem do dia completa
 
         .col-xs-6.col-sm-3
-            .Flag
+            .Flag.Flag--top
                 .Flag-figure
-                    div(class="Figure / +highlight +pop")
-                        .Icon.Icon--lg.Icon--download
+                    div(class="+highlight +pop")
+                        .Icon.Icon--50.Icon--sessoesPlenarias
                 .Flag-body.small
                     div: strong Plenário
-                    div: a Sessão Plenária
-                    div: a Votações nominais
+                    div: a(href='http://www25.senado.leg.br/web/atividade/sessao-plenaria') Sessão Plenária
+                    div: a(href='http://www25.senado.leg.br/web/atividade/votacoes-nominais') Votações nominais
         .col-xs-6.col-sm-3
-            .Flag
+            .Flag.Flag--top
                 .Flag-figure
-                    div(class="Figure / +highlight +pop")
-                        .Icon.Icon--lg.Icon--star-full
+                    div(class="+highlight +pop")
+                        .Icon.Icon--50.Icon--colegiados
                 .Flag-body.small
                     div: strong Colegiados
-                    div: a Comissões
-                    div: a Conselhos do SF e CN
+                    div
+                        a(href='http://legis.senado.leg.br/comissoes') Comissões
+                        = ' | '
+                        a(href='https://www25.senado.leg.br/web/atividade/conselhos-do-senado') Conselho do SF
+                    div: a(href='https://www25.senado.leg.br/web/atividade/conselhos-do-congresso-nacional') Conselho do CN
 
     .row.spacer--xl
         .col-xs-6.col-sm-3
             .Flag
                 .Flag-figure
-                    div(class="Figure / +highlight +pop")
-                        .Icon.Icon--lg.Icon--twitter
+                    div(class="+highlight +pop")
+                        .Icon.Icon--50.Icon--pesquisas
                 .Flag-body.small
                     div: strong Pesquisas
-                    div: a Questões de ordem
-                    div: a Pronunciamentos
+                    div: a(href='http://www25.senado.leg.br/web/atividade/questoes-de-ordem') Questões de ordem
+                    div: a(href='http://www25.senado.leg.br/web/atividade/pronunciamentos') Pronunciamentos
         .col-xs-6.col-sm-3
             .Flag
                 .Flag-figure
-                    div(class="Figure / +highlight +pop")
-                        .Icon.Icon--lg.Icon--page
+                    div(class="+highlight +pop")
+                        .Icon.Icon--50.Icon--publicacoes
                 .Flag-body.small
                     div: strong Publicações
-                    a Diários do SF e CN
+                    a(href='http://legis.senado.gov.br/diarios/Diario') Diários do SF e CN
                     = ' | '
                     a Avulsos
 
         .col-xs-6.col-sm-3
             .Flag
                 .Flag-figure
-                    div(class="Figure / +highlight +pop")
-                        .Icon.Icon--lg.Icon--star-empty
+                    div(class="+highlight +pop")
+                        .Icon.Icon--50.Icon--estudosLegislativos
                 .Flag-body.small
                     div: strong Estudos legislativos
                     a Textos para discussão
@@ -112,8 +113,8 @@ div(class="Box Box--lg / +pop +highlight / u-spacer--xl")
         .col-xs-6.col-sm-3
             .Flag
                 .Flag-figure
-                    div(class="Figure / +highlight +pop")
-                        .Icon.Icon--lg.Icon--bubble
+                    div(class="+highlight +pop")
+                        .Icon.Icon--50.Icon--estudosOrcamentarios
                 .Flag-body.small
                     div: strong Estudos orçamentários
                     a Orçamento em discussão

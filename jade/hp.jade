@@ -12,7 +12,7 @@ html(lang='pt')
 
     body#sfcss
 
-        include navglobal
+        include hp/navglobal
 
 
         .u-spacer--xl
@@ -37,7 +37,7 @@ html(lang='pt')
                             .pull-right
                                 .Icon.Icon--md.Icon--newspaper
                             a.zeta Senado Agora
-                        .js-senadoagora.collapse
+                        .js-senadoagora.collapse.in
                             div(class="Segments / Box Box--lg / +accordeon milli")
                                 .CutHere
                                     div
@@ -62,7 +62,7 @@ html(lang='pt')
                     div(class="panel +stop +cut")
                         .Box.Apex--stop(data-toggle="collapse", data-parent=".js-acc" href=".js-noticias")
                             .zeta Últimas Notícias
-                        .js-noticias.collapse.in
+                        .js-noticias.collapse
                             div(class="Segments / Box Box--lg / +accordeon milli")
                                 .CutHere
                                     div
