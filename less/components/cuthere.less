@@ -1,0 +1,33 @@
+.CutHere {
+    > :not(:last-child) {
+        border: 1px dotted #ccc;
+        border-width: 0;
+        border-bottom-width: 1px;
+        padding-bottom: @padding-small-horizontal/2;
+        margin-bottom: @padding-small-horizontal/2;
+    }
+}
+.CutHere--lg {
+     > :not(:last-child) {
+         padding-bottom: @padding-large-horizontal/2;
+         margin-bottom: @padding-large-horizontal/2;
+     }
+}
+.CutHere--xl {
+     > :not(:last-child) {
+         padding-bottom: @padding-large-horizontal/1.5;
+         margin-bottom: @padding-large-horizontal/1.5;
+     }
+}
+
+.CutHere--dashed {
+    > :not(:last-child) {
+        border-bottom-style: dashed;
+    }
+}
+
+.CutHere--white {
+    > :not(:last-child) {
+        border-bottom: 1px solid #fff;
+    }
+}

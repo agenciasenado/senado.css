@@ -58,23 +58,13 @@
         &:extend(.list-unstyled);
         line-height: 20px;
         font-size: 12px;
-        color: #666;
+
         @media (max-width: @screen-xs-max) {
             margin: 0 10px;
         }
-        & > dd {
-            & > a {
-                &, &:visited, &:focus, &:hover {
-                    color: #333;
-                    text-decoration: none;
-                }
-                &:hover {
-                    text-decoration: underline;
-                }
-            }
-        }
+
         & > dt {
-            font-size: 13px;
+            font-size: 12px;
             font-weight: bold;
             color: #666;
             margin: 10px 0;
@@ -96,30 +86,14 @@
     line-height: 40px;
 }
 
-.FooterMain-icon, [class^="FooterMain-icon--"] {
-    font-size: 12px;
-    a {
+.FooterMain-link {
+    &, &:hover {
         color: #333;
-    }
-    &:before {
-        .glyphicon();
-        font-size: 12px;
     }
 }
 
-    .FooterMain-icon--earphone {
-        .glyphicon-earphone();
+.FooterMain-hlink {
+    &, &:hover {
+        color: #666;
     }
-
-    .FooterMain-icon--lock {
-        .glyphicon-lock();
-    }
-
-    .FooterMain-icon--intranet {
-        .glyphicon-lock();
-    }
-
-    .FooterMain-icon--aotopo {
-        float: right;
-        .glyphicon-chevron-up();
-    }
+}

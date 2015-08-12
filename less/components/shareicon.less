@@ -1,3 +1,5 @@
+@import (reference) "icons";
+
 // region doc
 /**
 * Botões de compartilhamento:
@@ -8,6 +10,10 @@
 *     a.ShareIcon.ShareIcon--twitter
 *     a.ShareIcon.ShareIcon--google-plus
 *     a.ShareIcon.ShareIcon--pinterest
+*     a.ShareIcon.ShareIcon--youtube
+*     a.ShareIcon.ShareIcon--flickr
+*     a.ShareIcon.ShareIcon--instagram
+*     a.ShareIcon.ShareIcon--tumblr
 */
 // endregion
 .ShareIcon {
@@ -18,11 +24,15 @@
     border-bottom-style: solid;
     border-bottom-width: 2px;
 
-    color: #666;
+    &, &:focus, &:active {
+        color: #666;
+        outline: none;
+    }
+
     line-height: 32px;
     font-weight: bold;
 
-    margin-left: 3px;
+    margin-right: 3px;
     padding: 0 8px;
 
     transition: background-color 300ms linear, border-bottom-color 300ms linear;
@@ -31,8 +41,8 @@
         color: #fff;
         text-decoration: none;
     }
-    &:first-child {
-        margin-left: 0;
+    &:last-child {
+        margin-right: 0;
     }
     &:before {
         &:extend(.Icon);
@@ -43,7 +53,8 @@
     .share-icon-variant(@color) {
         background-color: #eee;
         border-bottom-color: lighten(@color, 25%);
-        &:hover {
+        &:hover, &:focus, &.ShareIcon--active {
+            color: #fff;
             background-color: @color;
             border-bottom-color: darken(@color, 16%);
         }
@@ -56,6 +67,21 @@
     .ShareIcon--facebook {
         .Icon--facebook;
         .share-icon-variant(#3b5998);
+    }
+
+    .ShareIcon--youtube {
+        .Icon--youtube-logo;
+        .share-icon-variant(#bb0000);
+    }
+
+    .ShareIcon--flickr {
+        .Icon--flickr;
+        .share-icon-variant(#ff0084);
+    }
+
+    .ShareIcon--instagram {
+        .Icon--instagram;
+        .share-icon-variant(#517fa4);
     }
 
     .ShareIcon--twitter {
@@ -73,8 +99,52 @@
         .share-icon-variant(#cb2027);
     }
 
+    .ShareIcon--whatsapp {
+        .Icon--whatsapp;
+        .share-icon-variant(#4dc247);
+    }
+
+    .ShareIcon--tumblr {
+        .Icon--tumblr;
+        .share-icon-variant(#32506d);
+    }
+
+
+.ShareIcon--circle {
+    border-radius: 50%;
+    border-width: 0;
+    line-height: 36px;
+    width: 36px;
+    background: #ccc;
+    color: #fff;
+    margin-right: 6px;
+    &:before {
+        line-height: 36px;
+    }
+}
+
+.ShareIcon--dark {
+    background-color: #888;
+}
+
 .ShareIcon-text {
     font-size: 13px;
     margin-left: 8px;
     margin-right: 8px;
 }
+
+    .ShareIcon-text--hidden {
+        vertical-align: middle;
+        overflow: hidden;
+        display: inline-block;
+        font-size: 12px;
+        font-weight: bold;
+        width: 0;
+        transition: width 0.5s ease;
+        text-align: left;
+        white-space: nowrap;
+
+        .ShareIcon:focus + & {
+            width: 90px;
+        }
+    }

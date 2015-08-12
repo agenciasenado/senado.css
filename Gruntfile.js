@@ -8,12 +8,22 @@ module.exports = function(grunt) {
             main: {
                 options: {
                     sourceMap: true,
+                    sourceMapRootpath: '../',
                     sourceMapFilename: 'dist/main.css.map',
                     sourceMapURL: 'main.css.map',
-                    sourceMapRootpath: '../'
                 },
                 files: {
                     'dist/main.css': 'less/styles.less'
+                }
+            },
+            noticias: {
+                files: {
+                    'dist/noticias.css': 'less/noticias.less'
+                }
+            },
+            hp: {
+                files: {
+                    'dist/hp.css': 'less/hp.less'
                 }
             }
         },
@@ -82,7 +92,13 @@ module.exports = function(grunt) {
             },
             main: {
                 src: 'dist/main.css'
-            }
+            },
+            noticias: {
+                src: 'dist/noticias.css'
+            },
+            hp: {
+                src: 'dist/hp.css'
+            },
         },
         cssmin: {
             options : {
@@ -91,6 +107,16 @@ module.exports = function(grunt) {
             dist: {
                 files: {
                     'dist/main.css' : 'dist/main.css'
+                }
+            },
+            noticias: {
+                files: {
+                    'dist/noticias.css' : 'dist/noticias.css'
+                }
+            },
+            hp: {
+                files: {
+                    'dist/hp.css' : 'dist/hp.css'
                 }
             }
         },
@@ -172,11 +198,11 @@ module.exports = function(grunt) {
         'connect', 'concurrent:main'
     ])
     grunt.registerTask('dev', [
-        'build', 'styledown', 'server'
+        'build', 'server'
     ])
 
     grunt.registerTask('default', [
-        'build', 'styledown'
+        'build'
     ])
 
     grunt.registerTask('test', [
@@ -186,6 +212,19 @@ module.exports = function(grunt) {
         'phantomcss',
         'clean'
     ])
+
+    grunt.registerTask('noticias', [
+        'less:noticias',
+        'autoprefixer:noticias',
+        'cssmin:noticias'
+    ])
+
+    grunt.registerTask('hp', [
+        'less:hp',
+        'autoprefixer:hp',
+        'cssmin:hp'
+    ])
+
 
 
 }

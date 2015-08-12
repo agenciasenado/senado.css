@@ -1,0 +1,123 @@
+/***
+ * Box:
+ */
+
+// region exemplos
+/**
+* Box:
+* `.Box`: Elemento com padding interno e margem abaixo. Seu espaçamento pode ser configurado por meio
+* dos modificadores `--notb`, que não possui padding vertical; `--norl`, que não possui padding
+* horizontal; e `--full`, que não possui paddings.
+*
+*     @example
+*     .Box.Box--cut.Box--full
+*       | --full
+*     .Box.Box--cut.Box--horz
+*       | --horz
+*     .Box.Box--cut.Box--vert
+*       | --vert
+*/
+
+/**
+* Tamanho do espaçamento interno:
+* Os elementos `.Box` podem o tamanho do espaçamento interno alterado por meio dos modificadores `--sm`
+* ou `--lg`.
+*
+*     @example
+*     .Box.Box--cut.Box--sm
+*       | sm
+*     .Box.Box--cut
+*       | normal
+*     .Box.Box--cut.Box--lg
+*       | lg
+*/
+
+/**
+* Exemplos:
+*
+*     @example
+*     .Box.Box--links.Box--flush
+*       h4.Segment.Apex.Apex--default Expediente
+*       .Box
+*         .Flag
+*           .Flag-figure
+*             .Icon.Icon--newspaper.Icon--lg
+*           .Flag-body
+*             a Cur vita tolerare?
+*             p: small Nunquam gratia guttus
+*         .Flag
+*           .Flag-figure
+*             .Icon.Icon--newspaper.Icon--lg
+*           .Flag-body
+*             a Cur vita tolerare?
+*             p: small Nunquam gratia guttus
+*
+
+*     .Box.Box--flush.Box--links
+*       h4(class='[ Segment ][ Apex Apex--default ]') Expediente
+*         small= '<h4>'
+*       .Box
+*         .Flag
+*           .Flag-figure
+*             .Icon.Icon--newspaper.Icon--lg
+*           .Flag-body
+*             a Cur vita tolerare?
+*             p: small Nunquam gratia guttus
+*         .Flag
+*           .Flag-figure
+*             .Icon.Icon--bubble.Icon--lg
+*           .Flag-body
+*             a Nunquam contactus pulchritudine
+*             div: small Fuga de ferox buxum, manifestum advena
+*/
+
+.Box {
+    padding: @padding-base-vertical @padding-base-horizontal;
+    position: relative;
+    //&:not(:last-child) {
+    //    margin-bottom: 2 * @padding-large-vertical;
+    //}
+    //border: 1px solid red!important;
+}
+
+    .Box--xl {
+        padding: @padding-large-vertical * 2 @padding-large-horizontal * 2;
+    }
+
+    .Box--lg {
+        padding: @padding-large-vertical @padding-large-horizontal;
+    }
+
+    .Box--md {
+        padding: @padding-small-vertical @padding-small-horizontal;
+    }
+
+    .Box--vert {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .Box--horz {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .Box--flush {
+        padding: 0;
+    }
+
+    .Box--links {
+        border-bottom: 5px solid #ddd;
+    }
+
+    .Box--news {
+        border-style: solid;
+        border-color: #ccc;
+        border-width: 1px 0 5px;
+    }
+
+    .Box--destaque {
+        border-top: 1px dotted #ccc;
+        border-bottom: 5px solid #ccc;
+    }
+

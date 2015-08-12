@@ -2,12 +2,10 @@
  * Segmento:
  */
 
-// region doc
+// region segment
 /**
 * Segment:
-* `.Segment`: Estrutura que colide as margens verticais do `first-child` e `last-child` e
-* uniformiza os espaços entre os elementos de uma sequência vertical. Quando dentro de um `.Segments`, é
-* separado verticalmente do próximo elemento.
+* `.Segment`: Estrutura que colide as margens verticais do `first-child` e `last-child`.
 *
 *     @example
 *     .Segments
@@ -23,73 +21,110 @@
 *       .Segment.Painel--cut
 *         span span
 */
+// endregion
 
+// region cut-here
 /**
 * Cut here:
-* `.Segment--cutHere`: Divide cada segmento com uma borda tracejada.
-*
-*     @example
-*     .Segments.Segments.Painel.Painel--cut
-*         .Segment.Apex.Apex--cut: small ÚLTIMAS NOTÍCIAS
-*         .Segment
-*           .Segment.cutHere--lg
-*             p Apolloniates de festus gabalium, amor frondator!
-*           .Segment.cutHere--lg
-*             p Potus hic ducunt ad noster demissio.
-*           .Segment.cutHere--lg
-*             p Caculas sunt paluss de altus species.
-*         .Segment
-*           .Bed.Bed--cut: a: strong VER TODAS
-*/
-
-/**
-* Exemplos:
+* `.CutHere`: Divide cada segmento com uma borda tracejada.
 *
 *     @example
 *     .Segments.Painel.Painel--cut
-*         .Segment
-*           .Apex.Apex--cut
-*             span.h4
-*               span.u-divisorVertical Agenda
-*               span.h6: a Qua | 01/07
-*         .Segment
-*             p: a Mori diligenter ducunt ad flavum calceus
-*         .Segment
-*             p: a Sunt axonaes amor clemens, neuter triticumes
-*         .Segment
-*           .Bed.Bed--cut: a Agenda semanal
-*     .Card.Card--links
-*         .Segment.Apex.Apex--default
-*             h4 Expediente
-*               small= '<h4>'
-*         .Painel
-*           .Flag
-*             .Flag-image
-*               .Icon.Icon--newspaper.Icon--lg
-*             .Flag-body
-*               a Cur vita tolerare?
-*               p: small Nunquam gratia guttus
-*           .Flag
-*             .Flag-image
-*               .Icon.Icon--bubble.Icon--lg
-*             .Flag-body
-*               a Nunquam contactus pulchritudine
-*               div: small Fuga de ferox buxum, manifestum advena
+*
+*       div(class='Segment [ Apex Apex--cut ] small')
+*         | ÚLTIMAS NOTÍCIAS
+*       .CutHere
+*         .Segment: p Apolloniates de festus gabalium, amor frondator!
+*         .Segment: h4 Potus hic ducunt ad noster demissio.
+*         .Segment: small Caculas sunt paluss de altus species.
+*
+*       div(class='Segment [ Stand Stand--cut ] small')
+*         a: b VER TODAS
+*/
+// endregion
+
+// region exemplos
+/**
+* Uniformização dos espaçamentos verticais:
+* `.Segments`: uniformiza os espaços entre os elementos de uma sequência vertical. Quando dentro de um `.Segments`,
+* um elemento qualquer será separado verticalmente do próximo sibling.
+*
+* Pode ser utilizado na forma `ul.Segment > li` ou `Segments > *.Segment`
+*
+*     @example
+*     .row
+*       .col-xs-6
+*         .Segments.Painel.Painel--news.Painel--vert
+*           .Segment.Apex.Apex--lg.Apex--default.h4 Saiba Mais
+*           .CutHere
+*             .Segments
+*               div
+*                 i.Icon.Icon--md.Icon--display
+*                 a Video
+*               div(class='[ embed-responsive embed-responsive-16by9 ] Painel--light')
+*             div
+*               i.Icon.Icon--md.Icon--play
+*               a Audio
+*             div
+*               i.Icon.Icon--md.Icon--newspaper
+*               a Taquigrafia
+
+*         div(class='[ Segments ][ Painel Painel--vert Painel--news ]')
+*           div(class='[ Segment ][ Apex Apex--lg Apex--default ] h4')
+*             | Saiba Mais
+*           .CutHere
+*             .Segments
+*               div
+*                 i.Icon.Icon--md.Icon--display
+*                 a Vídeo
+*               div(class='[ embed-responsive embed-responsive-16by9 ] Painel--light')
+*             div
+*               i.Icon.Icon--md.Icon--play
+*               a Áudio
+*             div
+*               i.Icon.Icon--md.Icon--newspaper
+*               a Taquigrafia
+*       .col-xs-6
+*         ul(class='[ Segments ][ Painel Painel--cut Painel--lg ]')
+*           li(class='[ Apex Apex--cut ] h4')
+*             span.u-divisorVertical.pull-left Agenda
+*             i.Icon.Icon--md.Icon--calendar
+*             span.h6: a Qua | 01/07
+*           li.small: a Mori diligenter ducunt ad flavum calceus
+*           li.small: a Sunt axonaes amor clemens, neuter triticumes
+*           li.Stand.Stand--cut.small
+*             a Agenda semanal
 */
 // endregion
 
 // SPEC:
 // - não deve possuir margens lateriais
 
-.Segment {
+.Segment, ul.Segments > li {
     overflow: hidden; // garantir espaçamento ainda que não haja padding
     .collapse-margins();
+    display: block;
+    margin: 0;
 }
 
-.Segments > .Segment:not(:last-child) {
-    margin-bottom: @padding-small-horizontal;
+.Segments {
+    > :not(:last-child) {
+        margin-bottom: @padding-base-vertical!important;
+    }
+    ul& {
+        margin: 0;
+        padding: 0;
+    }
 }
 
-.Segments--lg > .Segment:not(:last-child) {
-    margin-bottom: @padding-large-horizontal;
-}
+    .Segments--lg {
+        > :not(:last-child) {
+            margin-bottom: @padding-large-vertical * 2!important;
+        }
+    }
+
+    .Segments--sm {
+        > :not(:last-child) {
+            margin-bottom: @padding-small-vertical!important;
+        }
+    }

@@ -1,0 +1,58 @@
+.Sidebar {}
+
+.Sidebar-body {
+    overflow: auto;
+    position: fixed;
+    height: 100%;
+    max-height: 100%;
+    width: 300px;
+    top: 0;
+    left: 0;
+    z-index: 1100;
+    transform: translate3d(-100%, 0, 0);
+    transition: transform .4s ease-in-out;
+}
+
+    .Sidebar-trigger {
+        position: absolute;
+        clip: rect(0, 0, 0, 0);
+        z-index: 2000;
+    }
+
+        .Sidebar-trigger:checked ~ .Sidebar-body {
+            transform: translate3d(0, 0, 0);
+            box-shadow: 2px 2px 2px rgba(0,0,0,0.3);
+        }
+
+        .Sidebar-trigger:checked ~ .Sidebar-triggerLabel {
+            transform: translate3d(300px, 0, 0);
+        }
+
+        .Sidebar-trigger:checked ~ .Sidebar-triggerLabel > :first-child {
+            transform: rotate(180deg);
+        }
+
+    .Sidebar-triggerLabel {
+        position: fixed;
+        top: 100px;
+        left: -2px;
+        z-index: 1000;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        background-size: contain;
+        transition: transform .4s ease-in-out;
+        display: table-cell;
+        text-align: center;
+        background: #dadada;
+        box-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+    }
+
+        .Sidebar-triggerLabel > :first-child {
+            vertical-align: middle;
+            transition: transform .4s ease-in-out;
+        }
+
+
+.Sidebar--controlpanel {
+}

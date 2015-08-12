@@ -1,3 +1,30 @@
+.nav.nav-tabs.nav-tabs--cut {
+    border : none;
+    font-size: 14px;
+    > li {
+        margin-left: 0;
+        &.active > a {
+            background: #f5f5f5;
+        }
+        &.active > a.tab--cut {
+            background: #D9EDF7;
+            color: @azul-padrao;
+        }
+
+        > a {
+            color: #666;
+            padding: 6px;
+            &, &:hover, &:focus {
+                border: none;
+            }
+        }
+    }
+}
+
+.tab--light {
+
+}
+
 
 .spaced-tabs {
   li a {

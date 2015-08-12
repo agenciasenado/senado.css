@@ -37,7 +37,7 @@
  *             div(style='width: 50px; height:50px; background-color:#eee')
  *           .Media-body
  *             .Etiqueta.Etiqueta--default.Etiqueta--rev.glyphicon-list Decor
- *             p: small: a(href='#') Sunt habenaes contactus rusticus, nobilis humani generises.
+ *             div: small: a(href='#') Sunt habenaes contactus rusticus, nobilis humani generises.
  */
 // endregion
 @media-spacing: 10px;
@@ -45,12 +45,22 @@
 .Media {
     overflow: hidden; // necessário para evitar problemas de clearfix
     width: 100%;
-    &:first-child {
-        margin-top: 0;
-    }
-    margin-bottom: @media-spacing;
-    margin-top: @media-spacing;
 }
+
+    .Media--row {
+        margin-right: -@grid-gutter-width/2;
+        margin-left: -@grid-gutter-width/2;
+        width: auto;
+        > .Media-figure, > .Media-body {
+            padding-left: @grid-gutter-width/2;
+            padding-right: @grid-gutter-width/2;
+            margin-right: 0;
+        }
+        > .Media-top:before {
+            content: ' ';
+            margin-left: @grid-gutter-width/2;
+        }
+    }
 
     .Media-figure {
         float: left;
@@ -94,6 +104,9 @@
         float: none; // caso não haja o Media-top, é preciso remover o float do Figure para o Body descer.
         width: 100%; // se é para empilhar, forçar que o Media-figure ocupe a largura inteira
     }
+    > .Media-figure {
+        margin-bottom: @media-spacing;
+    }
 }
 
 // region doc
@@ -121,7 +134,13 @@
 // endregion
 .Media {
     &.is-stack-xs {
-        @media (max-width: @screen-xs-max) {
+        @media (max-width: @screen-xs-min) {
+            .Media--stack;
+        }
+    }
+
+    &.is-stack-ms {
+        @media (min-width: (@screen-xs-min+1)) and (max-width: @screen-xs-max) {
             .Media--stack;
         }
     }

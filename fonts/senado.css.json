@@ -1,10 +1,394 @@
 {
 	"metadata": {
 		"name": "senado.css",
-		"lastOpened": 1435325596431,
-		"created": 1435325591968
+		"lastOpened": 1439301865321,
+		"created": 1439301863921
 	},
 	"iconSets": [
+		{
+			"selection": [
+				{
+					"order": 48,
+					"id": 7,
+					"prevSize": 50,
+					"code": 58881,
+					"name": "colegiados",
+					"tempChar": ""
+				},
+				{
+					"order": 49,
+					"id": 6,
+					"prevSize": 50,
+					"code": 58882,
+					"name": "estudosLegislativos",
+					"tempChar": ""
+				},
+				{
+					"order": 50,
+					"id": 5,
+					"prevSize": 50,
+					"code": 58883,
+					"name": "estudosOrcamentarios",
+					"tempChar": ""
+				},
+				{
+					"order": 56,
+					"id": 4,
+					"prevSize": 50,
+					"code": 58884,
+					"name": "ordemdoDiadoCongresso",
+					"tempChar": ""
+				},
+				{
+					"order": 52,
+					"id": 3,
+					"prevSize": 50,
+					"code": 58885,
+					"name": "ordemdoDiadoSenado",
+					"tempChar": ""
+				},
+				{
+					"order": 53,
+					"id": 2,
+					"prevSize": 50,
+					"code": 58886,
+					"name": "pesquisas",
+					"tempChar": ""
+				},
+				{
+					"order": 55,
+					"id": 1,
+					"prevSize": 50,
+					"code": 58887,
+					"name": "publicacoes",
+					"tempChar": ""
+				},
+				{
+					"order": 54,
+					"id": 0,
+					"prevSize": 50,
+					"code": 58888,
+					"name": "sessoesPlenarias",
+					"tempChar": ""
+				}
+			],
+			"id": 13,
+			"metadata": {
+				"name": "Untitled Set",
+				"importSize": {
+					"width": 50,
+					"height": 50
+				}
+			},
+			"height": 1024,
+			"prevSize": 50,
+			"icons": [
+				{
+					"id": 7,
+					"paths": [
+						"M389.119 276.481c0 39.588-32.092 71.68-71.68 71.68s-71.68-32.092-71.68-71.68c0-39.588 32.092-71.68 71.68-71.68s71.68 32.092 71.68 71.68z",
+						"M573.439 256c0 39.588-32.092 71.68-71.68 71.68s-71.68-32.092-71.68-71.68c0-39.588 32.092-71.68 71.68-71.68s71.68 32.092 71.68 71.68z",
+						"M757.759 276.481c0 39.588-32.092 71.68-71.68 71.68s-71.68-32.092-71.68-71.68c0-39.588 32.092-71.68 71.68-71.68s71.68 32.092 71.68 71.68z",
+						"M341.257 368.65h-96.473c0 0-19.505-0.963-19.505 16.649 0 30.083 0.205 204.787 0.205 204.787s2.413 24.329 21.707 24.329c19.292 0 26.163 0 26.163 0v225.266h115.765v-204.787c0 0-38.588-1.925-38.588-40.957 0-52.917 0-225.266 0-225.266v0 0 0c0-0.020 3.086-0.020-9.261-0.020z",
+						"M422.203 368.804c0 0-33.083-0.164-33.083 40.796s0 184.32 0 184.32c0 0 0 21.32 37.468 21.32v224.44h149.869v-225.28c0 0 37.466 0.963 37.466-21.34 0-29.020 0-183.46 0-183.46s7.025-40.96-32.784-40.96c-39.809 0-158.935 0.164-158.935 0.164z",
+						"M662.261 368.65h96.473c0 0 19.505-0.963 19.505 16.649 0 30.083-0.205 204.787-0.205 204.787s-2.413 24.329-21.707 24.329c-19.292 0-26.163 0-26.163 0v225.266h-115.765v-204.787c0 0 38.588-1.925 38.588-40.957 0-52.917 0-225.266 0-225.266v0 0 0c0-0.020-3.086-0.020 9.261-0.020z"
+					],
+					"attrs": [
+						{},
+						{},
+						{},
+						{},
+						{},
+						{}
+					],
+					"isMulticolor": false,
+					"grid": 50,
+					"tags": [
+						"colegiados"
+					]
+				},
+				{
+					"id": 6,
+					"paths": [
+						"M208.123 409.6c-24.476 0-44.283-22.916-44.283-51.168s19.823-51.15 44.283-51.15h17.157v102.299h-17.157z",
+						"M696.32 307.2h-450.56v102.318h450.56v-102.318z",
+						"M799.965 307.2h60.195v102.318h-143.36v-102.318z",
+						"M815.877 573.44c24.476 0 44.283-22.916 44.283-51.168s-19.823-51.15-44.283-51.15h-17.157v102.299h17.157z",
+						"M327.68 471.040h450.56v102.318h-450.56v-102.318z",
+						"M163.84 573.358h143.36v-102.318h-143.36z",
+						"M208.123 737.28c-24.476 0-44.283-22.916-44.283-51.168s19.823-51.15 44.283-51.15h17.157v102.299h-17.157z",
+						"M696.32 634.88h-450.56v102.318h450.56v-102.318z",
+						"M860.16 634.88v102.318h-143.36v-102.318h83.165z"
+					],
+					"attrs": [
+						{},
+						{},
+						{},
+						{},
+						{},
+						{},
+						{},
+						{},
+						{}
+					],
+					"isMulticolor": false,
+					"grid": 50,
+					"tags": [
+						"estudosLegislativos"
+					]
+				},
+				{
+					"id": 5,
+					"paths": [
+						"M815.877 409.6c24.476 0 44.283-22.916 44.283-51.168s-19.823-51.15-44.283-51.15h-17.157v102.299h17.157z",
+						"M327.68 307.2h450.56v102.318h-450.56v-102.318z",
+						"M163.84 307.2v102.318h143.36v-102.318h-83.165z",
+						"M208.123 573.44c-24.476 0-44.283-22.916-44.283-51.168s19.823-51.15 44.283-51.15h17.157v102.299h-17.157z",
+						"M696.32 471.040h-450.56v102.318h450.56v-102.318z",
+						"M779.485 573.358h-83.165v-102.318h143.36v102.318z",
+						"M815.877 737.28c24.476 0 44.283-22.916 44.283-51.168s-19.823-51.15-44.283-51.15h-17.157v102.299h17.157z",
+						"M327.68 634.88h450.56v102.318h-450.56v-102.318z",
+						"M163.84 737.198h143.36v-102.318h-143.36z"
+					],
+					"attrs": [
+						{},
+						{},
+						{},
+						{},
+						{},
+						{},
+						{},
+						{},
+						{}
+					],
+					"isMulticolor": false,
+					"grid": 50,
+					"tags": [
+						"estudosOrcamentarios"
+					]
+				},
+				{
+					"id": 4,
+					"paths": [
+						"M368.637 245.76h122.88v552.96h-122.88v-552.96z",
+						"M532.477 245.76h122.88v552.96h-122.88v-552.96z",
+						"M61.439 798.72c0 0 147.393-230.4 307.2 0h-307.2z",
+						"M962.559 696.32c0 0-147.393 230.4-307.2 0h307.2z",
+						"M491.517 471.040h40.96v40.96h-40.96v-40.96z"
+					],
+					"attrs": [
+						{},
+						{},
+						{},
+						{},
+						{}
+					],
+					"isMulticolor": false,
+					"grid": 50,
+					"tags": [
+						"ordemdoDiadoCongresso"
+					]
+				},
+				{
+					"id": 3,
+					"paths": [
+						"M593.92 245.76h163.84v552.96h-163.84v-552.96z",
+						"M184.319 798.72c0 0 196.545-276.48 409.601 0h-409.601z"
+					],
+					"attrs": [
+						{},
+						{}
+					],
+					"isMulticolor": false,
+					"grid": 50,
+					"tags": [
+						"ordemdoDiadoSenado"
+					]
+				},
+				{
+					"id": 2,
+					"paths": [
+						"M456.143 198.245c-0.006-0-0.013-0-0.020-0-144.688 0-261.98 117.293-261.98 261.98 0 0.007 0 0.014 0 0.021 0.011 144.678 117.3 261.959 261.98 261.959 0.007 0 0.014-0 0.021-0 144.671-0.011 261.947-117.288 261.959-261.959 0-0.007 0-0.014 0-0.021 0-144.681-117.281-261.969-261.959-261.98zM456.983 302.365c87.659 0 158.72 71.061 158.72 158.72s-71.061 158.72-158.72 158.72c-87.659 0-158.72-71.061-158.72-158.72s71.061-158.72 158.72-158.72z",
+						"M683.103 591.216l137.38 136.11c0 0 22.18 20.48-1.7 44.38s-59.74 51.2-59.74 51.2c0 0-5.12 13.64-39.26-18.78s-110.94-130.99-110.94-130.99c0 0 46.428-31.683 74.26-81.92z"
+					],
+					"attrs": [
+						{},
+						{}
+					],
+					"isMulticolor": false,
+					"grid": 50,
+					"tags": [
+						"pesquisas"
+					]
+				},
+				{
+					"id": 1,
+					"paths": [
+						"M225.279 204.8v614.4h552.96v-614.4h-552.96zM286.719 327.68h409.6v389.76h-409.6v-389.76z",
+						"M389.119 368.64h286.72v61.44h-286.72v-61.44z",
+						"M307.199 368.64h61.44v61.44h-61.44v-61.44z",
+						"M389.119 450.56h286.72v61.44h-286.72v-61.44z",
+						"M307.199 450.56h61.44v61.44h-61.44v-61.44z",
+						"M389.119 532.48h286.72v61.44h-286.72v-61.44z",
+						"M307.199 532.48h61.44v61.44h-61.44v-61.44z",
+						"M389.119 614.4h286.72v61.44h-286.72v-61.44z",
+						"M307.199 614.4h61.44v61.44h-61.44v-61.44z"
+					],
+					"attrs": [
+						{},
+						{},
+						{},
+						{},
+						{},
+						{},
+						{},
+						{},
+						{}
+					],
+					"isMulticolor": false,
+					"grid": 50,
+					"tags": [
+						"publicacoes"
+					]
+				},
+				{
+					"id": 0,
+					"paths": [
+						"M204.8 757.76c0 0 54.19-138.24 103.32 0h-103.32z",
+						"M326.76 757.76c0 0 54.19-138.24 103.32 0h-103.32z",
+						"M593.92 757.76c0 0 53.709-138.24 102.4 0h-102.4z",
+						"M716.8 757.76c0 0 53.709-138.24 102.4 0h-102.4z",
+						"M450.56 757.76c0 0 5.173-39.77 24.465-62.867 17.285-20.699 55.19-30.123 78.518 1.044 9.187 12.286 15.11 30.397 19.896 61.822h-122.88z",
+						"M757.76 266.24h40.96v368.64h-40.96v-368.64z",
+						"M675.84 286.72h40.96v348.16h-40.96v-348.16z",
+						"M614.4 307.2h40.96v327.68h-40.96v-327.68z",
+						"M552.96 327.68h40.96v307.2h-40.96v-307.2z",
+						"M491.52 327.68h40.96v307.2h-40.96v-307.2z",
+						"M430.080 327.68h40.96v307.2h-40.96v-307.2z",
+						"M368.64 307.2h40.96v327.68h-40.96v-327.68z",
+						"M307.2 286.72h40.96v348.16h-40.96v-348.16z",
+						"M225.28 266.24h40.96v368.64h-40.96v-368.64z"
+					],
+					"attrs": [
+						{},
+						{},
+						{},
+						{},
+						{},
+						{},
+						{},
+						{},
+						{},
+						{},
+						{},
+						{},
+						{},
+						{}
+					],
+					"isMulticolor": false,
+					"grid": 50,
+					"tags": [
+						"sessoesPlenarias"
+					]
+				}
+			],
+			"invisible": false,
+			"colorThemes": []
+		},
+		{
+			"selection": [
+				{
+					"order": 0,
+					"id": 0
+				}
+			],
+			"id": 12,
+			"metadata": {
+				"name": "IcoMoon-Free (subset)",
+				"url": "https://icomoon.io/#icons-icomoon",
+				"designer": "Keyamoon",
+				"designerURL": "http://keyamoon.com",
+				"license": "GPL or CC BY 4.0",
+				"licenseURL": "https://icomoon.io/#icons-icomoon",
+				"importSize": {
+					"width": 16,
+					"height": 16
+				}
+			},
+			"height": 1024,
+			"prevSize": 16,
+			"icons": [
+				{
+					"id": 0,
+					"paths": [
+						"M288 576h-64v448h64c17.6 0 32-14.4 32-32v-384c0-17.6-14.4-32-32-32z",
+						"M736 576c-17.602 0-32 14.4-32 32v384c0 17.6 14.398 32 32 32h64v-448h-64z",
+						"M1024 512c0-282.77-229.23-512-512-512s-512 229.23-512 512c0 61.412 10.83 120.29 30.656 174.848-19.478 33.206-30.656 71.87-30.656 113.152 0 112.846 83.448 206.188 192 221.716v-443.418c-31.914 4.566-61.664 15.842-87.754 32.378-5.392-26.718-8.246-54.364-8.246-82.676 0-229.75 186.25-416 416-416s416 186.25 416 416c0 28.314-2.83 55.968-8.22 82.696-26.1-16.546-55.854-27.848-87.78-32.418v443.44c108.548-15.532 192-108.874 192-221.714 0-41.274-11.178-79.934-30.648-113.138 19.828-54.566 30.648-113.452 30.648-174.866z"
+					],
+					"attrs": [
+						{},
+						{},
+						{}
+					],
+					"isMulticolor": false,
+					"tags": [
+						"headphones",
+						"headset",
+						"music",
+						"audio"
+					],
+					"grid": 16
+				}
+			],
+			"invisible": false,
+			"colorThemes": []
+		},
+		{
+			"selection": [
+				{
+					"order": 44,
+					"id": 0,
+					"prevSize": 16,
+					"code": 58880,
+					"name": "whatsapp",
+					"tempChar": ""
+				}
+			],
+			"id": 11,
+			"metadata": {
+				"name": "Font Awesome (subset)",
+				"url": "http://fortawesome.github.com/Font-Awesome/",
+				"designer": "Dave Gandy",
+				"designerURL": "https://github.com/davegandy",
+				"license": "Custom",
+				"licenseURL": "http://fortawesome.github.io/Font-Awesome/license/",
+				"importSize": {
+					"width": 14,
+					"height": 14
+				}
+			},
+			"height": 1024,
+			"prevSize": 16,
+			"icons": [
+				{
+					"id": 0,
+					"paths": [
+						"M642.682 558.303q8.452 0 63.39 28.607t58.19 34.459q1.3 3.25 1.3 9.751 0 21.455-11.053 49.412-10.403 25.357-46.161 42.586t-66.317 17.23q-37.058 0-123.53-40.31-63.715-29.257-110.527-76.719t-96.223-120.279q-46.812-69.567-46.161-126.13v-5.201q1.95-59.165 48.112-102.725 15.603-14.303 33.808-14.303 3.902 0 11.703 0.975t12.353 0.975q12.353 0 17.23 4.226t10.077 17.879q5.201 13.004 21.455 57.214t16.254 48.762q0 13.653-22.43 37.383t-22.43 30.231q0 4.551 3.25 9.751 22.106 47.461 66.317 89.072 36.409 34.459 98.174 65.666 7.802 4.551 14.303 4.551 9.751 0 35.108-31.533t33.808-31.533zM510.7 902.889q82.57 0 158.314-32.508t130.356-87.121 87.121-130.356 32.508-158.314-32.508-158.314-87.121-130.356-130.356-87.121-158.314-32.508-158.314 32.508-130.356 87.121-87.121 130.356-32.508 158.314q0 131.982 78.018 239.259l-51.363 151.487 157.339-50.062q102.725 67.617 224.305 67.617zM510.7 4.368q99.475 0 190.172 39.010t156.364 104.675 104.675 156.364 39.010 190.172-39.010 190.172-104.675 156.364-156.364 104.675-190.172 39.010q-126.782 0-237.308-61.115l-271.117 87.121 88.421-263.315q-70.217-115.728-70.217-252.912 0-99.475 39.010-190.172t104.675-156.364 156.364-104.675 190.172-39.010z"
+					],
+					"attrs": [
+						{}
+					],
+					"isMulticolor": false,
+					"tags": [
+						"whatsapp"
+					],
+					"grid": 16,
+					"width": 1024
+				}
+			],
+			"invisible": false,
+			"colorThemes": []
+		},
 		{
 			"selection": [
 				{
@@ -1418,7 +1802,7 @@
 				"licenseURL": "http://brankic1979.com/icons/"
 			},
 			"height": 1024,
-			"prevSize": 32,
+			"prevSize": 16,
 			"icons": [
 				{
 					"id": 0,
@@ -6238,7 +6622,7 @@
 					"grid": 32
 				}
 			],
-			"invisible": false
+			"invisible": true
 		},
 		{
 			"selection": [
@@ -10977,7 +11361,7 @@
 					"ligatures": "fullscreen_exit"
 				},
 				{
-					"order": 32,
+					"order": 0,
 					"id": 526,
 					"prevSize": 24,
 					"code": 57870,
@@ -10991,7 +11375,7 @@
 					"prevSize": 24,
 					"code": 57871,
 					"name": "more-horizontal",
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "keyboard_control"
 				},
 				{
@@ -11000,7 +11384,7 @@
 					"prevSize": 24,
 					"code": 57872,
 					"name": "more-vertical",
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "more_vert"
 				},
 				{
@@ -12111,7 +12495,7 @@
 					"ligatures": "done_all"
 				},
 				{
-					"order": 37,
+					"order": 0,
 					"id": 652,
 					"prevSize": 24,
 					"code": 57996,
@@ -25336,7 +25720,7 @@
 					"grid": 24
 				}
 			],
-			"invisible": false
+			"invisible": true
 		},
 		{
 			"selection": [
@@ -25911,7 +26295,7 @@
 				"licenseURL": "http://dribbble.com/shots/929153-Steady-set-of-icons"
 			},
 			"height": 1024,
-			"prevSize": 24,
+			"prevSize": 12,
 			"icons": [
 				{
 					"id": 0,
@@ -27879,7 +28263,7 @@
 					"grid": 24
 				}
 			],
-			"invisible": false
+			"invisible": true
 		},
 		{
 			"selection": [
@@ -29066,7 +29450,7 @@
 					"grid": 18
 				}
 			],
-			"invisible": false
+			"invisible": true
 		},
 		{
 			"selection": [
@@ -29148,7 +29532,11 @@
 				},
 				{
 					"id": 19,
-					"order": 0
+					"order": 43,
+					"prevSize": 16,
+					"code": 61544,
+					"name": "calendar",
+					"tempChar": ""
 				},
 				{
 					"id": 20,
@@ -29732,7 +30120,11 @@
 				},
 				{
 					"id": 165,
-					"order": 0
+					"order": 42,
+					"prevSize": 16,
+					"code": 61534,
+					"name": "menu",
+					"tempChar": ""
 				},
 				{
 					"id": 166,
@@ -29789,7 +30181,7 @@
 				"licenseURL": "https://github.com/github/octicons/blob/master/LICENSE.txt"
 			},
 			"height": 1024,
-			"prevSize": 32,
+			"prevSize": 16,
 			"icons": [
 				{
 					"id": 0,
@@ -32224,7 +32616,7 @@
 					"grid": 16
 				}
 			],
-			"invisible": false
+			"invisible": true
 		},
 		{
 			"selection": [
@@ -32927,7 +33319,7 @@
 				"licenseURL": "http://creativecommons.org/licenses/by-sa/3.0/us/"
 			},
 			"height": 1024,
-			"prevSize": 32,
+			"prevSize": 16,
 			"icons": [
 				{
 					"id": 0,
@@ -35268,7 +35660,7 @@
 					"grid": 16
 				}
 			],
-			"invisible": false
+			"invisible": true
 		},
 		{
 			"selection": [
@@ -35406,7 +35798,11 @@
 				},
 				{
 					"id": 33,
-					"order": 0
+					"order": 0,
+					"prevSize": 24,
+					"code": 57395,
+					"name": "stack-2",
+					"tempChar": ""
 				},
 				{
 					"id": 34,
@@ -35803,7 +36199,7 @@
 				"designer": "Cole Bemis"
 			},
 			"height": 1024,
-			"prevSize": 24,
+			"prevSize": 12,
 			"icons": [
 				{
 					"id": 0,
@@ -37739,7 +38135,7 @@
 				},
 				{
 					"id": 59,
-					"order": 36,
+					"order": 0,
 					"prevSize": 32,
 					"code": 58880,
 					"name": "dots-horizontal",
@@ -37747,7 +38143,7 @@
 				},
 				{
 					"id": 60,
-					"order": 35,
+					"order": 0,
 					"prevSize": 32,
 					"code": 58881,
 					"name": "dots-vertical",
@@ -39065,7 +39461,7 @@
 				"licenseURL": "https://creativecommons.org/licenses/by-sa/4.0/"
 			},
 			"height": 1024,
-			"prevSize": 32,
+			"prevSize": 20,
 			"icons": [
 				{
 					"id": 0,
@@ -43728,7 +44124,7 @@
 					"grid": 20
 				}
 			],
-			"invisible": false
+			"invisible": true
 		},
 		{
 			"selection": [
@@ -43935,7 +44331,7 @@
 				"designerURL": "http://shmidt.in/"
 			},
 			"height": 1024,
-			"prevSize": 32,
+			"prevSize": 16,
 			"icons": [
 				{
 					"id": 0,
@@ -44664,9 +45060,9 @@
 				{
 					"order": 9,
 					"id": 1624,
-					"prevSize": 32,
+					"prevSize": 16,
 					"code": 59652,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "newspaper, news",
 					"name": "newspaper"
 				},
@@ -44770,13 +45166,13 @@
 					"name": ""
 				},
 				{
-					"order": 0,
+					"order": 46,
 					"id": 1661,
-					"prevSize": 32,
+					"prevSize": 16,
 					"code": 59664,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "headphones, headset",
-					"name": ""
+					"name": "headphones"
 				},
 				{
 					"id": 114,
@@ -44880,9 +45276,9 @@
 				{
 					"id": 154,
 					"order": 4,
-					"prevSize": 32,
+					"prevSize": 16,
 					"code": 59676,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "podcast, broadcast",
 					"name": "podcast"
 				},
@@ -44952,9 +45348,9 @@
 				{
 					"order": 2,
 					"id": 1598,
-					"prevSize": 32,
+					"prevSize": 16,
 					"code": 59684,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "file-empty, file3",
 					"name": "page"
 				},
@@ -45375,11 +45771,11 @@
 				{
 					"id": 340,
 					"order": 0,
-					"prevSize": 32,
+					"prevSize": 16,
 					"code": 59731,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "calendar, date",
-					"name": ""
+					"name": "calendar2"
 				},
 				{
 					"id": 345,
@@ -45402,9 +45798,9 @@
 				{
 					"id": 353,
 					"order": 7,
-					"prevSize": 32,
+					"prevSize": 16,
 					"code": 59734,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "display, screen",
 					"name": "display"
 				},
@@ -45618,9 +46014,9 @@
 				{
 					"id": 425,
 					"order": 8,
-					"prevSize": 32,
+					"prevSize": 16,
 					"code": 59758,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "bubble2, comment2",
 					"name": "bubble"
 				},
@@ -46374,9 +46770,9 @@
 				{
 					"id": 788,
 					"order": 28,
-					"prevSize": 32,
+					"prevSize": 16,
 					"code": 59842,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "cloud-download, cloud2",
 					"name": "download"
 				},
@@ -46563,27 +46959,27 @@
 				{
 					"id": 863,
 					"order": 31,
-					"prevSize": 32,
+					"prevSize": 16,
 					"code": 59863,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "star-empty, rate",
 					"name": "star-empty"
 				},
 				{
 					"id": 864,
 					"order": 29,
-					"prevSize": 32,
+					"prevSize": 16,
 					"code": 59864,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "star-half, rate2",
 					"name": "star-half"
 				},
 				{
 					"id": 865,
 					"order": 30,
-					"prevSize": 32,
+					"prevSize": 16,
 					"code": 59865,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "star-full, rate3",
 					"name": "star-full"
 				},
@@ -47121,18 +47517,18 @@
 				{
 					"id": 996,
 					"order": 26,
-					"prevSize": 32,
+					"prevSize": 16,
 					"code": 59925,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "play2, player",
 					"name": "play"
 				},
 				{
 					"id": 997,
 					"order": 27,
-					"prevSize": 32,
+					"prevSize": 16,
 					"code": 59926,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "pause, player2",
 					"name": "pause"
 				},
@@ -48156,9 +48552,9 @@
 				{
 					"id": 1292,
 					"order": 24,
-					"prevSize": 32,
+					"prevSize": 16,
 					"code": 60040,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "google-plus, brand2",
 					"name": "google-plus"
 				},
@@ -48192,9 +48588,9 @@
 				{
 					"id": 1297,
 					"order": 18,
-					"prevSize": 32,
+					"prevSize": 16,
 					"code": 60044,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "facebook, brand6",
 					"name": "facebook"
 				},
@@ -48228,18 +48624,18 @@
 				{
 					"id": 1301,
 					"order": 25,
-					"prevSize": 32,
+					"prevSize": 16,
 					"code": 60048,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "instagram, brand10",
 					"name": "instagram"
 				},
 				{
 					"id": 1302,
 					"order": 19,
-					"prevSize": 32,
+					"prevSize": 16,
 					"code": 60049,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "twitter, brand11",
 					"name": "twitter"
 				},
@@ -48291,27 +48687,27 @@
 				{
 					"id": 1308,
 					"order": 21,
-					"prevSize": 32,
+					"prevSize": 16,
 					"code": 60055,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "youtube, brand14",
 					"name": "youtube-dark"
 				},
 				{
 					"id": 1309,
 					"order": 20,
-					"prevSize": 32,
+					"prevSize": 16,
 					"code": 60056,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "youtube2, brand15",
 					"name": "youtube-light"
 				},
 				{
 					"order": 22,
 					"id": 1541,
-					"prevSize": 32,
+					"prevSize": 16,
 					"code": 60057,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "youtube3, brand16",
 					"name": "youtube-logo"
 				},
@@ -48381,9 +48777,9 @@
 				{
 					"id": 1317,
 					"order": 23,
-					"prevSize": 32,
+					"prevSize": 16,
 					"code": 60065,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "flickr2, brand24",
 					"name": "flickr"
 				},
@@ -48614,12 +49010,12 @@
 				},
 				{
 					"id": 1344,
-					"order": 0,
-					"prevSize": 32,
+					"order": 47,
+					"prevSize": 16,
 					"code": 60091,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "tumblr, brand50",
-					"name": ""
+					"name": "tumblr"
 				},
 				{
 					"id": 1345,
@@ -48804,9 +49200,9 @@
 				{
 					"id": 1364,
 					"order": 38,
-					"prevSize": 32,
+					"prevSize": 16,
 					"code": 60112,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "pinterest, brand71",
 					"name": "pinterest"
 				},
@@ -49055,7 +49451,7 @@
 				"licenseURL": "https://icomoon.io/#icons-icomoon"
 			},
 			"height": 1024,
-			"prevSize": 32,
+			"prevSize": 16,
 			"icons": [
 				{
 					"id": 0,
@@ -56987,7 +57383,6 @@
 			"invisible": false
 		}
 	],
-	"uid": -1,
 	"preferences": {
 		"showGlyphs": true,
 		"showQuickUse": true,
@@ -56997,8 +57392,8 @@
 			"prefix": "Icon--",
 			"metadata": {
 				"fontFamily": "agenciaweb",
-				"majorVersion": 1,
-				"minorVersion": 2
+				"majorVersion": 2,
+				"minorVersion": 6
 			},
 			"metrics": {
 				"emSize": 1024,
@@ -57008,7 +57403,9 @@
 			"showSelector": true,
 			"showMetrics": true,
 			"showMetadata": true,
-			"showVersion": true
+			"showVersion": true,
+			"resetPoint": 58880,
+			"embed": false
 		},
 		"imagePref": {
 			"prefix": "icon-",
@@ -57019,6 +57416,9 @@
 		},
 		"historySize": 100,
 		"gridSize": 16,
-		"showGrid": true
-	}
+		"showGrid": true,
+		"showLiga": false,
+		"showCodes": false
+	},
+	"uid": -1
 }
