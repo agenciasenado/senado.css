@@ -63,21 +63,6 @@
             margin: 0 10px;
         }
 
-        &, & > a {
-            color: #666;
-        }
-
-        & > dd {
-            & > a {
-                &, &:visited, &:focus, &:hover {
-                    color: #333;
-                    text-decoration: none;
-                }
-                &:hover {
-                    text-decoration: underline;
-                }
-            }
-        }
         & > dt {
             font-size: 12px;
             font-weight: bold;
@@ -130,8 +115,13 @@
     }
 
 
-.FooterMain-list--more {
-    a {
+.FooterMain-link {
+    &, &:hover {
+        color: #333;
+    }
+}
+.FooterMain-hlink {
+    &, &:hover {
         color: #666;
     }
 }
