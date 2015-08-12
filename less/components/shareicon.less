@@ -19,8 +19,6 @@
 .ShareIcon {
     &:extend(.btn);
 
-    position: relative;
-
     border: none;
     border-radius: 0;
     border-bottom-style: solid;
@@ -115,11 +113,14 @@
 .ShareIcon--circle {
     border-radius: 50%;
     border-width: 0;
-    line-height: 35px;
-    width: 35px;
+    line-height: 36px;
+    width: 36px;
     background: #ccc;
     color: #fff;
     margin-right: 6px;
+    &:before {
+        line-height: 36px;
+    }
 }
 
 .ShareIcon--dark {
