@@ -1,22 +1,28 @@
-.row--table {
+.Band {
     display: table;
+    table-layout: fixed;
     height: 1px;
+    border-spacing: 15px 0;
 
     > div[class*="col-"] {
-        > :first-child {
-            display: table;
-            height: 100%;
-            width: 100%;
-        }
+        display: table-cell;
+        width: 1%;
+        vertical-align: top;
+        float: none;
+        // > :first-child {
+            // display: table;
+            // height: 100%;
+            // width: 100%;
+        // }
     }
 }
 
-@media (min-width: @screen-sm-min) {
-    .row--table\@sm {
-        > div[class*="col-"] {
-            float: none;
-            .u-sizeFillAlt;
-            vertical-align: middle;
-        }
-    }
-}
+// @media (min-width: @screen-sm-min) {
+//     .row--table\@sm {
+//         > div[class*="col-"] {
+//             float: none;
+//             .u-sizeFillAlt;
+//             vertical-align: middle;
+//         }
+//     }
+// }
