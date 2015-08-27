@@ -3,137 +3,144 @@
 // region doc
 /**
 * Botões de compartilhamento:
-* `.ShareIcon`: Botão de compartilhamento em redes sociais. O ícone já é embutido no componente.
+* `.Share`: Botão de compartilhamento em redes sociais. O ícone já é embutido no componente.
 *
 *     @example
-*     a.ShareIcon.ShareIcon--facebook
-*     a.ShareIcon.ShareIcon--twitter
-*     a.ShareIcon.ShareIcon--google-plus
-*     a.ShareIcon.ShareIcon--pinterest
-*     a.ShareIcon.ShareIcon--youtube
-*     a.ShareIcon.ShareIcon--flickr
-*     a.ShareIcon.ShareIcon--instagram
-*     a.ShareIcon.ShareIcon--tumblr
+*     .Box
+*       a.btn.Icon.Share.Share--facebook
+*       a.btn.Share.Share--twitter
+*         .Icon.Icon--twitter
+*       a.btn.Share.Share--google-plus
+*         .Icon.Icon--google-plus
+*       a.btn.Share.Share--pinterest
+*         .Icon.Icon--pinterest
+*       a.btn.Share.Share--youtube
+*         .Icon.Icon--youtube-logo
+*       a.btn.Share.Share--flickr
+*         .Icon.Icon--flickr
+*       a.btn.Share.Share--instagram
+*         .Icon.Icon--instagram
+*       a.btn.Share.Share--tumblr
+*         .Icon.Icon--tumblr
+*       a.btn.Share.Share--circle.Share--tumblr
+*         .Icon.Icon--tumblr
+*       a.btn.Share.Share--circle.Share--dark.Share--facebook
+*         .Icon.Icon--facebook
+*     .Box
+*       a.btn.Share.Share--mini.Share--facebook
+*         .Icon.Icon--facebook
+*       a.btn.Share.Share--mini.Share--twitter
+*         .Icon.Icon--twitter
 */
 // endregion
-.ShareIcon {
-    &:extend(.btn);
+
+.Share {
+
+    padding: 0;
 
     border: none;
     border-radius: 0;
     border-bottom-style: solid;
     border-bottom-width: 2px;
 
+    font-size: 18px;
+    @size: 1.9em;
+    line-height: @size;
+    width: @size;
+    transition: background-color 300ms linear;
+
     &, &:focus, &:active {
         color: #666;
-        outline: none;
     }
-
-    line-height: 32px;
-    font-weight: bold;
-
-    margin-right: 3px;
-    padding: 0 8px;
-
-    transition: background-color 300ms linear, border-bottom-color 300ms linear;
 
     &:hover {
         color: #fff;
-        text-decoration: none;
     }
-    &:last-child {
-        margin-right: 0;
+
+    &:not(:last-child) {
+        margin-right: 3px;
     }
-    &:before {
-        &:extend(.Icon);
-        font-size: 18px;
-    }
+
 }
 
     .share-icon-variant(@color) {
-        background-color: #eee;
+        background: #eee;
         border-bottom-color: lighten(@color, 25%);
-        &:hover, &:focus, &.ShareIcon--active {
-            color: #fff;
-            background-color: @color;
-            border-bottom-color: darken(@color, 16%);
+        &:hover, &.Share--mini {
+            background: @color;
         }
     }
 
-    .ShareIcon--default {
+    .Share--default {
         .share-icon-variant(@azul-padrao);
     }
 
-    .ShareIcon--facebook {
+    .Share--facebook {
         .Icon--facebook;
         .share-icon-variant(#3b5998);
     }
 
-    .ShareIcon--youtube {
-        .Icon--youtube-logo;
+    .Share--youtube {
         .share-icon-variant(#bb0000);
     }
 
-    .ShareIcon--flickr {
-        .Icon--flickr;
+    .Share--flickr {
         .share-icon-variant(#ff0084);
     }
 
-    .ShareIcon--instagram {
-        .Icon--instagram;
+    .Share--instagram {
         .share-icon-variant(#517fa4);
     }
 
-    .ShareIcon--twitter {
-        .Icon--twitter;
+    .Share--twitter {
         .share-icon-variant(#00aced);
     }
 
-    .ShareIcon--google-plus {
-        .Icon--google-plus;
+    .Share--google-plus {
         .share-icon-variant(#dd4b39);
     }
 
-    .ShareIcon--pinterest {
-        .Icon--pinterest;
+    .Share--pinterest {
         .share-icon-variant(#cb2027);
     }
 
-    .ShareIcon--whatsapp {
-        .Icon--whatsapp;
+    .Share--whatsapp {
         .share-icon-variant(#4dc247);
     }
 
-    .ShareIcon--tumblr {
-        .Icon--tumblr;
+    .Share--tumblr {
         .share-icon-variant(#32506d);
     }
 
+.Share--mini {
+    border: none;
+    font-size: 14px;
+    color: #fff;
+    background: none;
+}
 
-.ShareIcon--circle {
+.Share--circle {
     border-radius: 50%;
-    border-width: 0;
-    line-height: 36px;
-    width: 36px;
-    background: #ccc;
+    border: none;
     color: #fff;
     margin-right: 6px;
     &:before {
         line-height: 36px;
     }
+    background: #ccc;
 }
 
-.ShareIcon--dark {
+.Share--dark {
     background-color: #888;
 }
 
-.ShareIcon-text {
+.Share-text {
     font-size: 13px;
     margin-left: 8px;
     margin-right: 8px;
 }
 
-    .ShareIcon-text--hidden {
+    .Share-text--hidden {
         vertical-align: middle;
         overflow: hidden;
         display: inline-block;
@@ -144,7 +151,7 @@
         text-align: left;
         white-space: nowrap;
 
-        .ShareIcon:focus + & {
+        .Share:focus + & {
             width: 90px;
         }
     }
