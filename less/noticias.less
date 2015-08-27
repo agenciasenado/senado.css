@@ -13,8 +13,10 @@
 @import "utils/variables";
 @import "utils/mixins";
 @import "utils/spacer";
+@import "utils/align";
 
 @import "base/typo";
+@import "base/typography";
 
 @import "components/etiqueta";
 @import "components/media";
@@ -23,6 +25,8 @@
 @import "components/stand";
 @import "components/flag";
 @import "components/painel";
+@import "components/icons";
+@import "components/shareicon";
 @import "components/cuthere";
 @import "components/footer";
 @import "components/navegacao";
@@ -33,3 +37,19 @@
 
 @import "theme/media";
 @import "theme/bootstrap";
+
+.embed-responsive-3by2 {
+  padding-bottom: 66.667%;
+}
+
+.img-full {
+    width: 100%;
+}
+
+.SocialBar--right {
+    float: right;
+    @media (max-width: @screen-xs-max) {
+        float: none;
+        text-align: right;
+    }
+}
