@@ -1,31 +1,25 @@
-
 .Band {
-    margin-left: -@grid-gutter-width/2;
-    margin-right: -@grid-gutter-width/2;
+    margin-left: -@grid-gutter-width;
+    margin-right: -@grid-gutter-width;
+}
 
+.Band-row {
     display: table;
     table-layout: fixed;
     height: 1px;
-    border-spacing: 15px 0;
+    border-spacing: @grid-gutter-width 0;
+    width: 100%;
+
+    * {
+        border-spacing: 0 0; // border-spacing é herdável
+    }
 
     > div[class*="col-"] {
         display: table-cell;
         vertical-align: top;
         float: none;
-        // > :first-child {
-            // display: table;
-            // height: 100%;
-            // width: 100%;
-        // }
+        padding-left: 0;
+        padding-right: 0;
     }
 }
 
-// @media (min-width: @screen-sm-min) {
-//     .row--table\@sm {
-//         > div[class*="col-"] {
-//             float: none;
-//             .u-sizeFillAlt;
-//             vertical-align: middle;
-//         }
-//     }
-// }
