@@ -1,4 +1,8 @@
+
 .Band {
+    margin-left: -@grid-gutter-width/2;
+    margin-right: -@grid-gutter-width/2;
+
     display: table;
     table-layout: fixed;
     height: 1px;
@@ -6,7 +10,6 @@
 
     > div[class*="col-"] {
         display: table-cell;
-        width: 1%;
         vertical-align: top;
         float: none;
         // > :first-child {
