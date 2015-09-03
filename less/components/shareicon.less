@@ -42,10 +42,6 @@
     border-bottom-width: 2px;
 
     font-size: 18px;
-    @size: 1.9em;
-    line-height: @size;
-    width: @size;
-    transition: background-color 300ms linear;
 
     &, &:focus, &:active {
         color: #666;
@@ -53,17 +49,23 @@
 
     &:hover {
         color: #fff;
+        text-decoration: none;
     }
 
     &:before {
         &:extend(.Icon);
+        @size: 1.9em;
+        line-height: @size;
+        width: @size;
+        transition: background-color 300ms linear;
+        background: #eee;
     }
 }
 
     .share-icon-variant(@color) {
-        background: #eee;
         border-bottom-color: lighten(@color, 25%);
-        &:hover, &.Share--mini {
+        background: @color;
+        &:hover:before {
             background: @color;
         }
     }
@@ -120,8 +122,9 @@
 .Share--mini {
     border: none;
     font-size: 14px;
-    background: none;
-
+    &:before {
+        background: transparent;
+    }
     &, &:focus {
         color: #fff;
     }
@@ -130,16 +133,26 @@
 .Share--circle {
     border-radius: 50%;
     border: none;
+    &:not(:hover) {
+        background: none;
+    }
+    &:before {
+        border-radius: 50%;
+    }
 }
 
 .Share--dark {
     color: #fff;
-    background-color: #888;
+    &:before {
+        background-color: #888;
+    }
 }
 
 .Share--light {
     color: #fff;
-    background: #ccc;
+    &:before {
+        background: #ccc;
+    }
 }
 
 .Share-text {
