@@ -7,36 +7,34 @@
 *
 *     @example
 *     .Box
-*       a.btn.Icon.Share.Share--facebook
-*       a.btn.Share.Share--twitter
-*         .Icon.Icon--twitter
-*       a.btn.Share.Share--google-plus
-*         .Icon.Icon--google-plus
-*       a.btn.Share.Share--pinterest
-*         .Icon.Icon--pinterest
-*       a.btn.Share.Share--youtube
-*         .Icon.Icon--youtube-logo
-*       a.btn.Share.Share--flickr
-*         .Icon.Icon--flickr
-*       a.btn.Share.Share--instagram
-*         .Icon.Icon--instagram
-*       a.btn.Share.Share--tumblr
-*         .Icon.Icon--tumblr
-*       a.btn.Share.Share--circle.Share--tumblr
-*         .Icon.Icon--tumblr
-*       a.btn.Share.Share--circle.Share--dark.Share--facebook
-*         .Icon.Icon--facebook
+*       a.Share.Share--facebook
+*       a.Share.Share--twitter
+*       a.Share.Share--google-plus
+*       a.Share.Share--pinterest
+*       a.Share.Share--youtube
+*       a.Share.Share--flickr
+*       a.Share.Share--instagram
+*       a.Share.Share--tumblr
+*       a.Share.Share--circle.Share--light.Share--tumblr
+*       a.Share.Share--circle.Share--dark.Share--facebook
 *     .Box
-*       a.btn.Share.Share--mini.Share--facebook
-*         .Icon.Icon--facebook
-*       a.btn.Share.Share--mini.Share--twitter
-*         .Icon.Icon--twitter
+*       a.Share.Share--mini.Share--facebook
+*       a.Share.Share--mini.Share--twitter
+*     .Box
+*       button.Share.Share--whatsapp
+*       .Share-text.Share-text--hidden: strong (61) 9090-9090
+*       button.Share.Share--mini.Share--twitter
 */
 // endregion
 
 .Share {
-
     padding: 0;
+
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    touch-action: maniputation;
+    cursor: pointer;
 
     border: none;
     border-radius: 0;
@@ -57,10 +55,9 @@
         color: #fff;
     }
 
-    &:not(:last-child) {
-        margin-right: 3px;
+    &:before {
+        &:extend(.Icon);
     }
-
 }
 
     .share-icon-variant(@color) {
@@ -81,71 +78,78 @@
     }
 
     .Share--youtube {
+        .Icon--youtube-logo;
         .share-icon-variant(#bb0000);
     }
 
     .Share--flickr {
+        .Icon--flickr;
         .share-icon-variant(#ff0084);
     }
 
     .Share--instagram {
+        .Icon--instagram;
         .share-icon-variant(#517fa4);
     }
 
     .Share--twitter {
+        .Icon--twitter;
         .share-icon-variant(#00aced);
     }
 
     .Share--google-plus {
+        .Icon--google-plus;
         .share-icon-variant(#dd4b39);
     }
 
     .Share--pinterest {
+        .Icon--pinterest;
         .share-icon-variant(#cb2027);
     }
 
     .Share--whatsapp {
+        .Icon--whatsapp;
         .share-icon-variant(#4dc247);
     }
 
     .Share--tumblr {
+        .Icon--tumblr;
         .share-icon-variant(#32506d);
     }
 
 .Share--mini {
     border: none;
     font-size: 14px;
-    color: #fff;
     background: none;
+
+    &, &:focus {
+        color: #fff;
+    }
 }
 
 .Share--circle {
     border-radius: 50%;
     border: none;
-    color: #fff;
-    margin-right: 6px;
-    &:before {
-        line-height: 36px;
-    }
-    background: #ccc;
 }
 
 .Share--dark {
+    color: #fff;
     background-color: #888;
 }
 
+.Share--light {
+    color: #fff;
+    background: #ccc;
+}
+
 .Share-text {
-    font-size: 13px;
-    margin-left: 8px;
-    margin-right: 8px;
+    vertical-align: middle;
 }
 
     .Share-text--hidden {
-        vertical-align: middle;
         overflow: hidden;
         display: inline-block;
         font-size: 12px;
-        font-weight: bold;
         width: 0;
         transition: width 0.5s ease;
         text-align: left;
