@@ -31,15 +31,14 @@
 *     @example
 *     .Segments.Painel.Painel--cut
 *
-*       div(class='Segment [ Apex Apex--cut ] small')
-*         | ÚLTIMAS NOTÍCIAS
+*       div.Segment.Apex.Apex--cut
+*         .zeta ÚLTIMAS NOTÍCIAS
 *       .CutHere
 *         .Segment: p Apolloniates de festus gabalium, amor frondator!
 *         .Segment: h4 Potus hic ducunt ad noster demissio.
 *         .Segment: small Caculas sunt paluss de altus species.
-*
-*       div(class='Segment [ Stand Stand--cut ] small')
-*         a: b VER TODAS
+*       div.Segment.Stand.Stand--cut
+*         a.milli: b VER TODAS
 */
 // endregion
 
@@ -52,48 +51,19 @@
 * Pode ser utilizado na forma `ul.Segment > li` ou `Segments > *.Segment`
 *
 *     @example
-*     .row
-*       .col-xs-6
-*         .Segments.Painel.Painel--news.Painel--vert
-*           .Segment.Apex.Apex--lg.Apex--default.h4 Saiba Mais
-*           .CutHere
-*             .Segments
-*               div
-*                 i.Icon.Icon--md.Icon--display
-*                 a Video
-*               div(class='[ embed-responsive embed-responsive-16by9 ] Painel--light')
-*             div
-*               i.Icon.Icon--md.Icon--play
-*               a Audio
-*             div
-*               i.Icon.Icon--md.Icon--newspaper
-*               a Taquigrafia
-
-*         div(class='[ Segments ][ Painel Painel--vert Painel--news ]')
-*           div(class='[ Segment ][ Apex Apex--lg Apex--default ] h4')
-*             | Saiba Mais
-*           .CutHere
-*             .Segments
-*               div
-*                 i.Icon.Icon--md.Icon--display
-*                 a Vídeo
-*               div(class='[ embed-responsive embed-responsive-16by9 ] Painel--light')
-*             div
-*               i.Icon.Icon--md.Icon--play
-*               a Áudio
-*             div
-*               i.Icon.Icon--md.Icon--newspaper
-*               a Taquigrafia
-*       .col-xs-6
-*         ul(class='[ Segments ][ Painel Painel--cut Painel--lg ]')
-*           li(class='[ Apex Apex--cut ] h4')
-*             span.u-divisorVertical.pull-left Agenda
-*             i.Icon.Icon--md.Icon--calendar
-*             span.h6: a Qua | 01/07
-*           li.small: a Mori diligenter ducunt ad flavum calceus
-*           li.small: a Sunt axonaes amor clemens, neuter triticumes
-*           li.Stand.Stand--cut.small
-*             a Agenda semanal
+*     .Painel.Painel--lg.Painel--border
+*       ul(class='Segments')
+*         li.Apex.Apex--cut.h4
+*           span.u-divisorVertical.zeta Agenda
+*           i.Icon.Icon--md.Icon--calendar
+*           span.h6: a Qua | 01/07
+*         li.Painel.Painel--vert
+*           ul.list-unstyled.CutHere.CutHere--lg
+*             li Indictios prarere. Ubi est magnum gemna?
+*             li Nocere aliquando ducunt ad germanus impositio.
+*             li Eras sunt cottas de nobilis compater.
+*         li.Stand.Stand--cut.small
+*           a Agenda semanal
 */
 // endregion
 
