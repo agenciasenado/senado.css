@@ -1,7 +1,5 @@
 @bootstrap-path: "../node_modules/bootstrap/less";
 
-//@import (reference) "vendors/bootstrap";
-
 @import (reference) "@{bootstrap-path}/variables";
 @import (reference) "@{bootstrap-path}/utilities";
 @import (reference) "@{bootstrap-path}/scaffolding";
@@ -34,12 +32,11 @@
 @import "components/manchete";
 @import "components/sidebar";
 
-@import "theme/media";
+@import "ext/embed-responsive";
+
 @import "theme/bootstrap";
 
-.embed-responsive-3by2 {
-  padding-bottom: 66.667%;
-}
+
 
 .img-full {
     width: 100%;
