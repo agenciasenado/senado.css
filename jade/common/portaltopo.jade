@@ -1,15 +1,17 @@
 
 .container
+
     .PortalTopo
 
         .PortalTopo-id.PortalTopo-id--narrow
             .PortalTopo-title
-                .PortalTopo-intro.hidden-xs Notícias
-                | Senado Federal
+                | Título da página
 
         .PortalTopo-togglers.visible-xs
-            .PortalTopo-toggler--menu(data-toggle='collapse', data-target='.Nav--principal')
-            .PortalTopo-toggler--search(data-toggle='collapse', data-target='.PortalTopo-busca')
+            button.PortalTopo-toggler--search(data-toggle='collapse', data-target='.PortalTopo-busca')
+                .Icon.Icon--search.Icon--md
+            button.PortalTopo-toggler--menu(data-toggle='collapse', data-target='.Nav--principal')
+                .Icon.Icon--menu.Icon--md
 
         .PortalTopo-tools
 
@@ -21,22 +23,22 @@
                     .input-group-btn
                         button.btn.btn-default(type='submit') Buscar
 
+        .clearfix
+
     nav.Nav--principal.navbar.navbar-default.navbar-collapse.collapse(role="navigation")
+
         ul.nav.navbar-nav
             li: a(href='#') Início
-            li: a(href='#') Notícias
-            li: a(href='#') Plenário
-            li: a(href='#') Conveniadas
-            li: a(href='#') Central de Áudio
-            //- os dropdowns precisam ficar aberto no momento de gerar o uncss e
-            //- fechado na hora do build
+            li: a(href='#') Constituição Federal
+            li: a(href='#') Legislação Federal
+            li: a(href='#') Regimento Interno
             li.dropdown
                 a.dropdown-toggle(href='#', data-toggle='dropdown')
-                    = 'Serviços '
+                    = 'Consulte '
                     span.caret
                 ul.dropdown-menu
-                    li: a(href='#') Lorem Ipsum
-                    li: a(href='#') Lorem Ipsum
+                    li: a(href='#') Bases Históricas
+                    li: a(href='#') SICON
 
     nav.Nav--secundaria.hidden-xs
         ul.nav.navbar-nav.pull-right

@@ -1,0 +1,35 @@
+doctype html
+
+html(lang='pt')
+
+    head
+        meta(http-equiv='Content-Type', content='text/html; charset=UTF-8')
+        meta(charset='utf-8')
+        meta(http-equiv='X-UA-Compatible', content='IE=edge')
+        meta(name='viewport', content='width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no')
+        title Senado Federal
+        link(href='../dist/main.css', rel='stylesheet')
+
+    body#sfcss
+
+        include common/navglobal
+
+
+        .u-spacer--xl
+            include common/portaltopo
+
+        .container
+
+            div(class="row spacer--xl")
+                .col-md-6
+                    .u-posRelative
+                        .Embed.Embed--3by2
+                            img.img-responsive(src="../img/capa.jpg")
+                        .Box.Caption.Caption--film.delta
+                            | Ferox, noster compaters virtualiter prensionem de festus, azureus burgus.
+
+    include common/footer
+
+        script(src='../node_modules/jquery/dist/jquery.min.js')
+        script(src='../node_modules/bootstrap/dist/js/bootstrap.min.js')
+        script(src='//localhost:35729/livereload.js')
