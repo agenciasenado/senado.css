@@ -9,6 +9,11 @@ html(lang='pt')
         meta(name='viewport', content='width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no')
         title Senado Federal
         link(href='../dist/main.css', rel='stylesheet')
+        link(href="//fonts.googleapis.com/css?family=Open Sans&subset=latin", rel="stylesheet", type="text/css")
+        style.
+            * {
+                font-family: 'Open Sans', sans-serif;
+            }
 
     body#sfcss
 
@@ -20,13 +25,147 @@ html(lang='pt')
 
         .container
 
-            div(class="row spacer--xl")
-                .col-md-6
+            .row.spacer--xl
+                .col-md-9
                     .u-posRelative
-                        .Embed.Embed--3by2
-                            img.img-responsive(src="../img/capa.jpg")
+                        .Embed.Embed--16by9
+                            img.img-responsive(src="http://unsplash.it/800/450?image=526")
                         .Box.Caption.Caption--film.delta
-                            | Ferox, noster compaters virtualiter prensionem de festus, azureus burgus.
+                            | Nixus peregrinatione rumor, omnes silvaes transferre mirabilis, dexter classises
+                .col-md-3
+                    .label.label-danger ● Ao vivo
+                    h2
+                        | Primus, albus nuclear vexatum iaceres vix locus de peritus fortis!
+                    .CutHere.CutHere--xl
+                        .text-muted
+                            strong Quadrata
+                            |  victrix, palus, et ionicis
+                        p
+                            | Demolitione accelerare, omnes buboes resuscitabo secundus, noster bromiumes.
+                            | Cum impositio credere, omnes cannabises aperto alter, talis zetaes.
+                            | Sunt demissioes visum altus, gratis nixes.
+                        .l-fork.text-right
+                            a.ShareIcon.ShareIcon--mini.ShareIcon--whatsapp
+                            a.ShareIcon.ShareIcon--mini.ShareIcon--twitter
+                            a.ShareIcon.ShareIcon--mini.ShareIcon--facebook
+            // -
+            .row.spacer--xl
+                .col-md-3
+                    .Box.Box--flush
+                        .Embed.Embed--3by2
+                            img.img-responsive(src="http://unsplash.it/600/400?image=431")
+                        .Caption.Caption--feature
+                            button.btn.btn-square(class="+glass")
+                                .Icon.Icon--md.Icon--play-alt
+                        .Box.Caption.Caption--film
+                            | Sunt buboes prensionem neuter, primus abnobaes
+                .col-md-3
+                    .Box.Box--flush
+                        .Embed.Embed--3by2
+                            img.img-responsive(src="http://unsplash.it/600/400?image=357")
+                        .Caption.Caption--feature
+                            button.btn.btn-square(class="+glass")
+                                .Icon.Icon--md.Icon--play-alt
+                        .Box.Caption.Caption--film
+                            | Nix bulla nocere, omnes accolaes resuscitabo neuter, azureus
+                .col-md-3
+                    .Box.Box--flush
+                        .Embed.Embed--3by2
+                            img.img-responsive(src="http://unsplash.it/600/400?image=312")
+                        .Caption.Caption--feature
+                            button.btn.btn-square(class="+glass")
+                                .Icon.Icon--md.Icon--play-alt
+                        .Box.Caption.Caption--film
+                            | Lactea de camerarius domina, acquirere nutrix
+                .col-md-3
+                    .Box.Box--flush
+                        .Embed.Embed--3by2
+                            img.img-responsive(src="http://unsplash.it/600/400?image=292")
+                        .Caption.Caption--feature
+                            button.btn.btn-square(class="+glass")
+                                .Icon.Icon--md.Icon--play-alt
+                        .Box.Caption.Caption--film
+                            | Castus messor unus imitaris armarium est domina
+
+            //-
+            .Divider.Divider--lg.Divider--highlight.u-spacer--xl
+            //-
+            .row
+                .col-md-8
+                    .Apex.Apex--default.u-spacer--xl
+                        .delta Plenário e comissões
+                    .Band
+                        .Band-row
+                            .col-md-3.Box--links
+                                .Media.is-stack-md.is-stack-lg
+                                    .Media-figure.col-xs-4
+                                        .Embed.Embed--3by2
+                                            img.img-responsive(src="http://unsplash.it/600/400?image=618")
+                                    .Media-body.milli
+                                        a Rector accelerare, omnes adgiumes contactus brevis
+                                        .u-spacer--xl
+                                        div
+                                            span.text-muted 17/09/2015, 16h17 -
+                                            a  CMO
+                            .col-md-3.Box--links
+                                .Media.is-stack-md.is-stack-lg
+                                    .Media-figure.col-xs-4
+                                        .Embed.Embed--3by2
+                                            img.img-responsive(src="http://unsplash.it/600/400?image=595")
+                                    .Media-body.milli
+                                        a Parmas sunt mensas de barbatus nomen
+                                        .u-spacer--xl
+                                        div
+                                            span.text-muted 17/09/2015, 16h17 -
+                                            a  CMO
+                            .col-md-3.Box--links
+                                .Media.is-stack-md.is-stack-lg
+                                    .Media-figure.col-xs-4
+                                        .Embed.Embed--3by2
+                                            img.img-responsive(src="http://unsplash.it/600/400?image=534")
+                                    .Media-body.milli
+                                        a Experimentum virtualiter ducunt ad gratis habitio
+                                        div
+                                            span.text-muted 17/09/2015, 16h17 -
+                                            a  CMO
+                            .col-md-3.Box--links
+                                .Media.is-stack-md.is-stack-lg
+                                    .Media-figure.col-xs-4
+                                        .Embed.Embed--3by2
+                                            img.img-responsive(src="http://unsplash.it/600/400?image=530")
+                                    .Media-body.milli
+                                        a Visuss sunt lunas de brevis terror
+                                        div
+                                            span.text-muted 17/09/2015, 16h17 -
+                                            a  CMO
+
+                .col-md-4
+                    .Apex.Apex--default.delta.u-spacer--xl Assista a seu Senador
+                    p Assista a todos os discursos do seu Senador
+                    select.form-control.u-spacer
+                    label.radio-inline
+                        input(type="radio")
+                        | Ordem alfabética
+                    label.radio-inline
+                        input(type="radio")
+                        | Por estado
+                    .u-spacer--xl
+                    .Apex.Apex--default.zeta.u-spacer--xl Mais vistos
+                    ul.Segments.CutHere
+                        li
+                            div: strong Cubiculum
+                            a Idoleum peregrinationes, omnes cottaes quaestio primus, gratis dominaes
+                        li
+                            div: strong Fuga
+                            a Saga cantare, omnes bromiumes amor grandis, velox cottaes. Raptus victrixs ducunt ad lamia.
+                        li
+                            div: strong Chremisa
+                            a Festus, grandis eleatess diligenter imperium de altus, salvus lanista. Fatalis, placidus bromiums.
+                        li
+                            div: strong Peregrinatione
+                            a Fortis, castus rumors sapienter magicae de alter, neuter tabes.
+
+
 
     include common/footer
 

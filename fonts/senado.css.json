@@ -1,8 +1,8 @@
 {
 	"metadata": {
 		"name": "senado.css",
-		"lastOpened": 1443450423277,
-		"created": 1443450421537
+		"lastOpened": 1443535419656,
+		"created": 1443535416171
 	},
 	"iconSets": [
 		{
@@ -5092,7 +5092,7 @@
 					"prevSize": 24,
 					"code": 57871,
 					"name": "more-horizontal",
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "keyboard_control"
 				},
 				{
@@ -5101,7 +5101,7 @@
 					"prevSize": 24,
 					"code": 57872,
 					"name": "more-vertical",
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "more_vert"
 				},
 				{
@@ -25169,21 +25169,21 @@
 				},
 				{
 					"id": 1001,
-					"order": 0,
-					"prevSize": 32,
+					"order": 60,
+					"prevSize": 16,
 					"code": 59932,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "play3, player8",
-					"name": "play3"
+					"name": "play-alt"
 				},
 				{
 					"id": 1002,
-					"order": 0,
-					"prevSize": 32,
+					"order": 61,
+					"prevSize": 16,
 					"code": 59933,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "pause2, player9",
-					"name": "pause2"
+					"name": "pause-alt"
 				},
 				{
 					"id": 1003,
@@ -26045,7 +26045,7 @@
 					"order": 58,
 					"prevSize": 16,
 					"code": 60029,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "share, out",
 					"name": "share"
 				},
@@ -26144,7 +26144,7 @@
 					"order": 24,
 					"prevSize": 16,
 					"code": 60040,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "google-plus, brand2",
 					"name": "google-plus"
 				},
@@ -26180,7 +26180,7 @@
 					"order": 18,
 					"prevSize": 16,
 					"code": 60044,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "facebook, brand6",
 					"name": "facebook"
 				},
@@ -26216,7 +26216,7 @@
 					"order": 25,
 					"prevSize": 16,
 					"code": 60048,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "instagram, brand10",
 					"name": "instagram"
 				},
@@ -26225,7 +26225,7 @@
 					"order": 19,
 					"prevSize": 16,
 					"code": 60049,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "twitter, brand11",
 					"name": "twitter"
 				},
@@ -26279,7 +26279,7 @@
 					"order": 21,
 					"prevSize": 16,
 					"code": 60055,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "youtube, brand14",
 					"name": "youtube-dark"
 				},
@@ -26288,7 +26288,7 @@
 					"order": 20,
 					"prevSize": 16,
 					"code": 60056,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "youtube2, brand15",
 					"name": "youtube-light"
 				},
@@ -26297,7 +26297,7 @@
 					"id": 1541,
 					"prevSize": 16,
 					"code": 60057,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "youtube3, brand16",
 					"name": "youtube-logo"
 				},
@@ -26369,7 +26369,7 @@
 					"order": 23,
 					"prevSize": 16,
 					"code": 60065,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "flickr2, brand24",
 					"name": "flickr"
 				},
@@ -26603,7 +26603,7 @@
 					"order": 47,
 					"prevSize": 16,
 					"code": 60091,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "tumblr, brand50",
 					"name": "tumblr"
 				},
@@ -26792,7 +26792,7 @@
 					"order": 38,
 					"prevSize": 16,
 					"code": 60112,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "pinterest, brand71",
 					"name": "pinterest"
 				},
@@ -34983,7 +34983,7 @@
 			"metadata": {
 				"fontFamily": "agenciaweb",
 				"majorVersion": 2,
-				"minorVersion": 9
+				"minorVersion": 10
 			},
 			"metrics": {
 				"emSize": 1024,
