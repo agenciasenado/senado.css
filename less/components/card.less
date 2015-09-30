@@ -1,4 +1,40 @@
-.Card {
-    padding: 0;
+// region doc
+/**
+* Card:
+* `.Card`: Cartão
+*
+*     @example
+*     .row
+*       .col-xs-6
+*         div(class='+cut') col
+*       .col-xs-6
+*         div(class='+cut') col
+*     .Deck
+*       .Card.col-xs-12.col-sm-6
+*         .Card-body(class='+light') Title
+*           div Magnum lanista sed mire imitaris omnia est
+*           div Magnum lanista sed mire imitaris omnia est
+*         .Card-footer(class='+light') Footer
+*       .Card.col-xs-12.col-sm-6
+*         .Card-body(class='+light') Title
+*         .Card-footer(class='+light') Footer
+*/
+// endregion
+.Deck {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -@grid-gutter-width/2;
+    margin-right: -@grid-gutter-width/2;
+    > .Card {
+        padding-left: @grid-gutter-width/2;
+        padding-right: @grid-gutter-width/2;
+    }
 }
-
+.Card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+    .Card-body {
+        display: inline-block;
+    }
