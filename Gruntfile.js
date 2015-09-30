@@ -22,7 +22,7 @@ module.exports = function(grunt) {
         jade: {
             main: {
                 options: {
-                    pretty: true
+                    pretty: false
                 },
                 files: [{
                     expand: true,
