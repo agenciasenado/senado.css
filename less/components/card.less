@@ -14,7 +14,7 @@
 *         .Card-body(class='+light') Title
 *         .Card-footer(class='+light') Footer
 *     p
-*     .Deck.Deck--row.Deck--serpentine
+*     .Deck.Deck--row.Deck--strip
 *       .Card.u-size1of4
 *         .Embed.Embed--3by2(class='+cut')
 *           img.img-responsive(src='img/m1.jpg')
@@ -34,10 +34,6 @@
     flex-flow: row;
     flex-wrap: wrap;
     overflow-x: auto;
-    > .Card {
-        //flex-grow: 1;
-        //width: 1px;
-    }
 }
 
 .Deck--row {
@@ -49,17 +45,16 @@
     }
 }
 
-.Deck--serpentine {
+.Deck--strip {
+    > .Card {
+        margin-bottom:  @grid-gutter-width/2;
+    }
     @media (max-width: @screen-xs-max) {
         flex-wrap: nowrap;
         > .Card {
+            margin-bottom: 0;
             min-width: 80%;
         }
-        //&.Deck--row > .Card {
-        //    padding-right: 0;
-        //    padding-left: 0;
-        //}
-
     }
 }
 

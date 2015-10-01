@@ -1,0 +1,14 @@
+.row--strip {
+    @media (max-width: @screen-xs-max) {
+        white-space: nowrap;
+        overflow-x: auto;
+        > div[class*="col-"] {
+            display: inline-block;
+            vertical-align: top;
+
+            width: 80%;
+
+            white-space: normal;
+        }
+    }
+}
