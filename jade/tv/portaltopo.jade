@@ -1,0 +1,50 @@
+
+.container
+
+    .PortalTopo
+
+        .PortalTopo-id.PortalTopo-id--narrow
+            .PortalTopo-title
+                .PortalTopo-intro.hidden-xs Notícias
+                | TV Senado
+
+        .PortalTopo-togglers.visible-xs
+            button.PortalTopo-toggler--search(data-toggle='collapse', data-target='.PortalTopo-busca')
+                .Icon.Icon--search.Icon--md
+            button.PortalTopo-toggler--menu(data-toggle='collapse', data-target='.Nav--principal')
+                .Icon.Icon--menu.Icon--md
+
+        .PortalTopo-tools
+
+        .PortalTopo-busca.collapse
+            form(action='search', role='search')
+                p.hidden-xs: a(href='#') Busca avançada ›
+                .input-group
+                    input.form-control(type='text', name='SearchableText', autocomplete='off')
+                    .input-group-btn
+                        button.btn.btn-default(type='submit') Buscar
+
+        .clearfix
+
+    nav.Nav--principal.navbar.navbar-default.navbar-collapse.collapse(role="navigation")
+
+        ul.nav.navbar-nav
+            li: a(href='#') Início
+            li: a(href='#') Jornalismo
+            li: a(href='#') Entrevistas
+            li: a(href='#') Culturais
+            li: a(href='#') Documentários
+            li: a(href='#') Programação
+            li.dropdown
+                a.dropdown-toggle(href='#', data-toggle='dropdown')
+                    = 'Serviços '
+                    span.caret
+                ul.dropdown-menu
+                    li: a(href='#') Bases Históricas
+                    li: a(href='#') SICON
+
+    nav.Nav--secundaria.hidden-xs
+        ul.nav.navbar-nav.pull-right
+            li: a(href='http://www12.senado.leg.br/jornal') Jornal do Senado
+            li: a(href='http://www.senado.gov.br/radio') Rádio Senado
+            li: a(href='http://www12.senado.gov.br/noticias') Senado Notícias

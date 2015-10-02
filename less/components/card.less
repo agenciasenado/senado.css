@@ -33,7 +33,6 @@
     display: flex;
     flex-flow: row;
     flex-wrap: wrap;
-    overflow-x: auto;
 }
 
 .Deck--row {
@@ -46,6 +45,7 @@
 }
 
 .Deck--strip {
+    overflow-x: auto;
     > .Card {
         margin-bottom:  @grid-gutter-width/2;
     }
@@ -53,7 +53,7 @@
         flex-wrap: nowrap;
         > .Card {
             margin-bottom: 0;
-            min-width: 80%;
+            min-width: 85%;
         }
     }
 }

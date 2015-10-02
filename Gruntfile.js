@@ -131,7 +131,8 @@ module.exports = function(grunt) {
             options: {
                 logConcurrentOutput: true,
             },
-            main: ['watch:styles', 'watch:styledown', 'watch:livereload', 'watch:jade']
+            full: ['watch:styles', 'watch:styledown', 'watch:livereload', 'watch:jade'],
+            dev: ['watch:styles', 'watch:livereload', 'watch:jade']
         },
         phantomcss: {
             'desktop': {
@@ -174,11 +175,19 @@ module.exports = function(grunt) {
         'cssmin',
         'styledown'
     ])
-    grunt.registerTask('server', [
-        'connect', 'concurrent:main'
+    grunt.registerTask('server:dev', [
+        'connect', 'concurrent:dev'
     ])
+    grunt.registerTask('server:full', [
+        'connect', 'concurrent:full'
+    ])
+
     grunt.registerTask('dev', [
-        'build', 'server'
+        'build', 'server:dev'
+    ])
+
+    grunt.registerTask('full', [
+        'build', 'server:full'
     ])
 
     grunt.registerTask('default', [
