@@ -7,51 +7,35 @@
  * component is goes here. Markdown is encouraged.
  *
  *     @example
- *     .NavGlobal.navbar.navbar-static-top
+ *     .NavGlobal
  *       .container-fluid
- *          .NavGlobal-logo.pull-left
- *            a(href='http://www.senado.gov.br/')
- *              img(src='img/senado.svg', alt='Senado Federal')
- *          .NavGlobal-middle
- *            a.flat(href='#') Toolkit
+ *         .Arrange
+ *           .Arrange-sizeFit
+ *             .Flag
+ *               .Flag-figure
+ *                 img(src="assets/br.svg", height=20)
+ *               .Flag-body Fit
+ *           .Arrange-sizeFill.text-center
+ *             a.flat.hidden-xs(href='#') Toolkit
+ *           .Arrange-sizeFit
+ *             | fit
+ *
  */
 // endregion
 .NavGlobal {
     height: 47px;
     min-height: 47px; // override no nav do bootstrap
     line-height: 43px;
+
     background-color: #00305C;
     border-bottom: 4px solid #00824A;
-
     color: #fff;
-
     box-shadow: 0 4px 0 #FAE042;
     margin-bottom:4px; // compensar box-shadow
 
     font-size: 12px;
-
-    @media (max-width: @screen-xs-max) {
-        margin-bottom: 4px;
-    }
-
 }
 
-
-.NavGlobal-container {
-    .container();
-}
-
-    .NavGlobal-middle {
-        text-align: center;
-
-        @media (max-width: @screen-xs-min) {
-            display: none;
-        }
-
-        > a {
-            .flat();
-        }
-    }
 
     .NavGlobal-logo {
         font-size: 0;
@@ -80,7 +64,7 @@
         font-size: 18px;
     }
 
-    .NavGlobal-dropdownMenu.dropdown-menu {
+    .NavGlobal-dropdownMenu.dropdown-menu, .dropdown-menu.dropdown-menu--navGlobal {
         background-color: #1A456C;
         border-radius: 0;
         border-bottom: none;
