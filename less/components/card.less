@@ -4,6 +4,13 @@
 * `.Card`: Cartão
 *
 *     @example
+*     .Deck
+*       div(class='+light').u-size1of2
+*         | Magnum lanista sed mire imitaris omnia est
+*         | Magnum lanista sed mire imitaris omnia est
+*         | Magnum lanista sed mire imitaris omnia est
+*         | Magnum lanista sed mire imitaris omnia est
+*       div(class='+cut') mundo
 *     .Deck.Deck--row
 *       .Card.u-size1of2
 *         .Card-body(class='+light') Title
@@ -64,7 +71,7 @@
     display: inline-block;
     vertical-align: top;
 
-    display: flex;
+    display: inline-flex;
 
     flex-direction: column;
     justify-content: space-between;
