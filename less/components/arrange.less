@@ -11,7 +11,7 @@
 *     @example
 *     .Arrange
 *       .Arrange-sizeFit
-*         .Box(class="+cut") Fita
+*         .Box(class="+cut") Fit
 *       .Arrange-sizeFill
 *         .Box(class="+light") Fill
 *       .Arrange-sizeFit
@@ -24,7 +24,7 @@
     margin: 0;
     padding: 0;
     table-layout: auto;
-    width: 100%;
+    min-width: 100%;
 }
 
 .Arrange-sizeFill,
@@ -38,6 +38,10 @@
      width: 100%;
 }
 
+.Arrange-sizeFill img {
+  height: auto;
+  max-width: 100%;
+}
 
 .Arrange--middle {
     > .Arrange-sizeFill,
