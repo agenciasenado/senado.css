@@ -3,23 +3,19 @@
 // region doc
 /**
  * Navegação Global:
- * `.NavGlobal` - documentation on what your
- * component is goes here. Markdown is encouraged.
+ * `.NavGlobal` - Barra superior comum a todos os portais. Utiliza os utilitários `u-size` para organizar
+ * seus subelementos.
  *
  *     @example
  *     .NavGlobal
  *       .container-fluid
- *         .Arrange
- *           .Arrange-sizeFit
- *             .Flag
- *               .Flag-figure
- *                 img(src="assets/br.svg", height=20)
- *               .Flag-body Fit
- *           .Arrange-sizeFill.text-center
- *             a.flat.hidden-xs(href='#') Toolkit
- *           .Arrange-sizeFit
- *             | fit
- *
+ *         .u-sizeFitAlt
+ *           | FIT
+ *         .u-sizeFit
+ *           img(src="assets/br.svg", height=20)
+ *           span Brasil
+ *         .u-sizeFill.text-center
+ *           a.flat.hidden-xs(href='#') Toolkit
  */
 // endregion
 .NavGlobal {
