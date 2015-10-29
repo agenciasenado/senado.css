@@ -1,0 +1,43 @@
+@import (reference) "@{bootstrap-path}/grid";
+
+// region doc
+/**
+ * Navegação Global:
+ * `.NavGlobal` - documentation on what your
+ * component is goes here. Markdown is encouraged.
+ *
+ *     @example
+ *     .NavGlobal
+ *       .container-fluid
+ *         .Arrange
+ *           .Arrange-sizeFit
+ *             .Flag
+ *               .Flag-figure
+ *                 img(src="assets/br.svg", height=20)
+ *               .Flag-body Fit
+ *           .Arrange-sizeFill.text-center
+ *             a.flat.hidden-xs(href='#') Toolkit
+ *           .Arrange-sizeFit
+ *             | fit
+ *
+ */
+// endregion
+.NavGlobal {
+    height: 47px;
+    line-height: 40px;
+
+    background-color: #00305C;
+    border-bottom: 4px solid #00824A;
+    color: #fff;
+    box-shadow: 0 4px 0 #FAE042;
+    margin-bottom:4px; // compensar box-shadow
+}
+
+    .NavGlobal-toggle {
+        color: #B2C0CE;
+        cursor: pointer;
+        &:hover, &:active, &:focus {
+            color: #fff;
+            text-decoration: none;
+        }
+    }
