@@ -1,8 +1,8 @@
 {
 	"metadata": {
 		"name": "senado.css",
-		"lastOpened": 1443535419656,
-		"created": 1443535416171
+		"lastOpened": 1447558767289,
+		"created": 1447558765488
 	},
 	"iconSets": [
 		{
@@ -13,7 +13,7 @@
 					"prevSize": 50,
 					"code": 58881,
 					"name": "colegiados",
-					"tempChar": ""
+					"tempChar": ""
 				},
 				{
 					"order": 49,
@@ -21,7 +21,7 @@
 					"prevSize": 50,
 					"code": 58882,
 					"name": "estudosLegislativos",
-					"tempChar": ""
+					"tempChar": ""
 				},
 				{
 					"order": 50,
@@ -29,7 +29,7 @@
 					"prevSize": 50,
 					"code": 58883,
 					"name": "estudosOrcamentarios",
-					"tempChar": ""
+					"tempChar": ""
 				},
 				{
 					"order": 56,
@@ -37,7 +37,7 @@
 					"prevSize": 50,
 					"code": 58884,
 					"name": "ordemdoDiadoCongresso",
-					"tempChar": ""
+					"tempChar": ""
 				},
 				{
 					"order": 52,
@@ -45,7 +45,7 @@
 					"prevSize": 50,
 					"code": 58885,
 					"name": "ordemdoDiadoSenado",
-					"tempChar": ""
+					"tempChar": ""
 				},
 				{
 					"order": 53,
@@ -53,7 +53,7 @@
 					"prevSize": 50,
 					"code": 58886,
 					"name": "pesquisas",
-					"tempChar": ""
+					"tempChar": ""
 				},
 				{
 					"order": 55,
@@ -61,7 +61,7 @@
 					"prevSize": 50,
 					"code": 58887,
 					"name": "publicacoes",
-					"tempChar": ""
+					"tempChar": ""
 				},
 				{
 					"order": 54,
@@ -69,7 +69,7 @@
 					"prevSize": 50,
 					"code": 58888,
 					"name": "sessoesPlenarias",
-					"tempChar": ""
+					"tempChar": ""
 				}
 			],
 			"id": 13,
@@ -300,10 +300,10 @@
 				{
 					"order": 44,
 					"id": 0,
-					"prevSize": 16,
+					"prevSize": 32,
 					"code": 58880,
 					"name": "whatsapp",
-					"tempChar": ""
+					"tempChar": ""
 				}
 			],
 			"id": 11,
@@ -5092,7 +5092,7 @@
 					"prevSize": 24,
 					"code": 57871,
 					"name": "more-horizontal",
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "keyboard_control"
 				},
 				{
@@ -5101,7 +5101,7 @@
 					"prevSize": 24,
 					"code": 57872,
 					"name": "more-vertical",
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "more_vert"
 				},
 				{
@@ -19520,10 +19520,10 @@
 				{
 					"id": 19,
 					"order": 43,
-					"prevSize": 16,
+					"prevSize": 32,
 					"code": 61544,
 					"name": "calendar",
-					"tempChar": ""
+					"tempChar": ""
 				},
 				{
 					"id": 20,
@@ -19611,7 +19611,11 @@
 				},
 				{
 					"id": 41,
-					"order": 0
+					"order": 62,
+					"prevSize": 32,
+					"code": 61527,
+					"name": "camera",
+					"tempChar": ""
 				},
 				{
 					"id": 42,
@@ -19667,7 +19671,11 @@
 				},
 				{
 					"id": 55,
-					"order": 0
+					"order": 0,
+					"prevSize": 16,
+					"code": 61458,
+					"name": "file-media",
+					"tempChar": ""
 				},
 				{
 					"id": 56,
@@ -20052,10 +20060,10 @@
 				{
 					"id": 151,
 					"order": 59,
-					"prevSize": 16,
+					"prevSize": 32,
 					"code": 61486,
 					"name": "search",
-					"tempChar": ""
+					"tempChar": ""
 				},
 				{
 					"id": 152,
@@ -20112,10 +20120,10 @@
 				{
 					"id": 165,
 					"order": 42,
-					"prevSize": 16,
+					"prevSize": 32,
 					"code": 61534,
 					"name": "menu",
-					"tempChar": ""
+					"tempChar": ""
 				},
 				{
 					"id": 166,
@@ -20155,7 +20163,11 @@
 				},
 				{
 					"id": 175,
-					"order": 0
+					"order": 65,
+					"prevSize": 32,
+					"code": 61569,
+					"name": "close",
+					"tempChar": ""
 				},
 				{
 					"id": 176,
@@ -22650,9 +22662,9 @@
 				{
 					"order": 9,
 					"id": 1624,
-					"prevSize": 16,
+					"prevSize": 32,
 					"code": 59652,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "newspaper, news",
 					"name": "newspaper"
 				},
@@ -22758,9 +22770,9 @@
 				{
 					"order": 46,
 					"id": 1661,
-					"prevSize": 16,
+					"prevSize": 32,
 					"code": 59664,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "headphones, headset",
 					"name": "headphones"
 				},
@@ -22784,12 +22796,12 @@
 				},
 				{
 					"id": 128,
-					"order": 0,
+					"order": 66,
 					"prevSize": 32,
 					"code": 59667,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "film, video2",
-					"name": ""
+					"name": "film"
 				},
 				{
 					"id": 129,
@@ -22866,29 +22878,29 @@
 				{
 					"id": 154,
 					"order": 4,
-					"prevSize": 16,
+					"prevSize": 32,
 					"code": 59676,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "podcast, broadcast",
 					"name": "podcast"
 				},
 				{
 					"id": 160,
-					"order": 0,
+					"order": 67,
 					"prevSize": 32,
 					"code": 59677,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "feed, wave",
-					"name": ""
+					"name": "feed"
 				},
 				{
 					"id": 167,
-					"order": 0,
+					"order": 68,
 					"prevSize": 32,
 					"code": 59678,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "mic, microphone",
-					"name": ""
+					"name": "mic"
 				},
 				{
 					"order": 0,
@@ -22938,9 +22950,9 @@
 				{
 					"order": 2,
 					"id": 1598,
-					"prevSize": 16,
+					"prevSize": 32,
 					"code": 59684,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "file-empty, file3",
 					"name": "page"
 				},
@@ -23388,9 +23400,9 @@
 				{
 					"id": 353,
 					"order": 7,
-					"prevSize": 16,
+					"prevSize": 32,
 					"code": 59734,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "display, screen",
 					"name": "display"
 				},
@@ -23604,9 +23616,9 @@
 				{
 					"id": 425,
 					"order": 8,
-					"prevSize": 16,
+					"prevSize": 32,
 					"code": 59758,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "bubble2, comment2",
 					"name": "bubble"
 				},
@@ -24360,9 +24372,9 @@
 				{
 					"id": 788,
 					"order": 28,
-					"prevSize": 16,
+					"prevSize": 32,
 					"code": 59842,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "cloud-download, cloud2",
 					"name": "download"
 				},
@@ -24549,27 +24561,27 @@
 				{
 					"id": 863,
 					"order": 31,
-					"prevSize": 16,
+					"prevSize": 32,
 					"code": 59863,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "star-empty, rate",
 					"name": "star-empty"
 				},
 				{
 					"id": 864,
 					"order": 29,
-					"prevSize": 16,
+					"prevSize": 32,
 					"code": 59864,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "star-half, rate2",
 					"name": "star-half"
 				},
 				{
 					"id": 865,
 					"order": 30,
-					"prevSize": 16,
+					"prevSize": 32,
 					"code": 59865,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "star-full, rate3",
 					"name": "star-full"
 				},
@@ -24980,21 +24992,21 @@
 				},
 				{
 					"id": 949,
-					"order": 0,
+					"order": 70,
 					"prevSize": 32,
 					"code": 59911,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "warning, sign",
-					"name": ""
+					"name": "warning"
 				},
 				{
 					"id": 951,
-					"order": 0,
+					"order": 69,
 					"prevSize": 32,
 					"code": 59912,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "notification, warning2",
-					"name": ""
+					"name": "notification"
 				},
 				{
 					"id": 953,
@@ -25025,12 +25037,12 @@
 				},
 				{
 					"id": 965,
-					"order": 0,
+					"order": 71,
 					"prevSize": 32,
 					"code": 59916,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "info, information",
-					"name": ""
+					"name": "info"
 				},
 				{
 					"id": 23,
@@ -25107,18 +25119,18 @@
 				{
 					"id": 996,
 					"order": 26,
-					"prevSize": 16,
+					"prevSize": 32,
 					"code": 59925,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "play2, player",
 					"name": "play"
 				},
 				{
 					"id": 997,
 					"order": 27,
-					"prevSize": 16,
+					"prevSize": 32,
 					"code": 59926,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "pause, player2",
 					"name": "pause"
 				},
@@ -25170,18 +25182,18 @@
 				{
 					"id": 1001,
 					"order": 60,
-					"prevSize": 16,
+					"prevSize": 32,
 					"code": 59932,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "play3, player8",
 					"name": "play-alt"
 				},
 				{
 					"id": 1002,
 					"order": 61,
-					"prevSize": 16,
+					"prevSize": 32,
 					"code": 59933,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "pause2, player9",
 					"name": "pause-alt"
 				},
@@ -26043,20 +26055,20 @@
 				{
 					"id": 1267,
 					"order": 58,
-					"prevSize": 16,
+					"prevSize": 32,
 					"code": 60029,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "share, out",
 					"name": "share"
 				},
 				{
 					"id": 1269,
-					"order": 0,
+					"order": 72,
 					"prevSize": 32,
 					"code": 60030,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "new-tab, out2",
-					"name": ""
+					"name": "new-tab"
 				},
 				{
 					"id": 1271,
@@ -26142,9 +26154,9 @@
 				{
 					"id": 1292,
 					"order": 24,
-					"prevSize": 16,
+					"prevSize": 32,
 					"code": 60040,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "google-plus, brand2",
 					"name": "google-plus"
 				},
@@ -26178,9 +26190,9 @@
 				{
 					"id": 1297,
 					"order": 18,
-					"prevSize": 16,
+					"prevSize": 32,
 					"code": 60044,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "facebook, brand6",
 					"name": "facebook"
 				},
@@ -26214,18 +26226,18 @@
 				{
 					"id": 1301,
 					"order": 25,
-					"prevSize": 16,
+					"prevSize": 32,
 					"code": 60048,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "instagram, brand10",
 					"name": "instagram"
 				},
 				{
 					"id": 1302,
 					"order": 19,
-					"prevSize": 16,
+					"prevSize": 32,
 					"code": 60049,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "twitter, brand11",
 					"name": "twitter"
 				},
@@ -26277,27 +26289,27 @@
 				{
 					"id": 1308,
 					"order": 21,
-					"prevSize": 16,
+					"prevSize": 32,
 					"code": 60055,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "youtube, brand14",
 					"name": "youtube-dark"
 				},
 				{
 					"id": 1309,
 					"order": 20,
-					"prevSize": 16,
+					"prevSize": 32,
 					"code": 60056,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "youtube2, brand15",
 					"name": "youtube-light"
 				},
 				{
 					"order": 22,
 					"id": 1541,
-					"prevSize": 16,
+					"prevSize": 32,
 					"code": 60057,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "youtube3, brand16",
 					"name": "youtube-logo"
 				},
@@ -26367,9 +26379,9 @@
 				{
 					"id": 1317,
 					"order": 23,
-					"prevSize": 16,
+					"prevSize": 32,
 					"code": 60065,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "flickr2, brand24",
 					"name": "flickr"
 				},
@@ -26601,9 +26613,9 @@
 				{
 					"id": 1344,
 					"order": 47,
-					"prevSize": 16,
+					"prevSize": 32,
 					"code": 60091,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "tumblr, brand50",
 					"name": "tumblr"
 				},
@@ -26790,9 +26802,9 @@
 				{
 					"id": 1364,
 					"order": 38,
-					"prevSize": 16,
+					"prevSize": 32,
 					"code": 60112,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "pinterest, brand71",
 					"name": "pinterest"
 				},
@@ -34983,7 +34995,7 @@
 			"metadata": {
 				"fontFamily": "agenciaweb",
 				"majorVersion": 2,
-				"minorVersion": 10
+				"minorVersion": 11
 			},
 			"metrics": {
 				"emSize": 1024,
