@@ -5092,7 +5092,7 @@
 					"prevSize": 24,
 					"code": 57871,
 					"name": "more-horizontal",
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "keyboard_control"
 				},
 				{
@@ -5101,7 +5101,7 @@
 					"prevSize": 24,
 					"code": 57872,
 					"name": "more-vertical",
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "more_vert"
 				},
 				{
@@ -19611,7 +19611,7 @@
 				},
 				{
 					"id": 41,
-					"order": 62,
+					"order": 0,
 					"prevSize": 32,
 					"code": 61527,
 					"name": "camera",
@@ -20063,7 +20063,7 @@
 					"prevSize": 32,
 					"code": 61486,
 					"name": "search",
-					"tempChar": ""
+					"tempChar": ""
 				},
 				{
 					"id": 152,
@@ -20123,7 +20123,7 @@
 					"prevSize": 32,
 					"code": 61534,
 					"name": "menu",
-					"tempChar": ""
+					"tempChar": ""
 				},
 				{
 					"id": 166,
@@ -20167,7 +20167,7 @@
 					"prevSize": 32,
 					"code": 61569,
 					"name": "close",
-					"tempChar": ""
+					"tempChar": ""
 				},
 				{
 					"id": 176,
@@ -22664,7 +22664,7 @@
 					"id": 1624,
 					"prevSize": 32,
 					"code": 59652,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "newspaper, news",
 					"name": "newspaper"
 				},
@@ -22772,7 +22772,7 @@
 					"id": 1661,
 					"prevSize": 32,
 					"code": 59664,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "headphones, headset",
 					"name": "headphones"
 				},
@@ -22796,10 +22796,10 @@
 				},
 				{
 					"id": 128,
-					"order": 66,
+					"order": 0,
 					"prevSize": 32,
 					"code": 59667,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "film, video2",
 					"name": "film"
 				},
@@ -22880,16 +22880,16 @@
 					"order": 4,
 					"prevSize": 32,
 					"code": 59676,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "podcast, broadcast",
 					"name": "podcast"
 				},
 				{
 					"id": 160,
-					"order": 67,
+					"order": 0,
 					"prevSize": 32,
 					"code": 59677,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "feed, wave",
 					"name": "feed"
 				},
@@ -22898,7 +22898,7 @@
 					"order": 68,
 					"prevSize": 32,
 					"code": 59678,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "mic, microphone",
 					"name": "mic"
 				},
@@ -22952,7 +22952,7 @@
 					"id": 1598,
 					"prevSize": 32,
 					"code": 59684,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "file-empty, file3",
 					"name": "page"
 				},
@@ -23402,7 +23402,7 @@
 					"order": 7,
 					"prevSize": 32,
 					"code": 59734,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "display, screen",
 					"name": "display"
 				},
@@ -23618,7 +23618,7 @@
 					"order": 8,
 					"prevSize": 32,
 					"code": 59758,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "bubble2, comment2",
 					"name": "bubble"
 				},
@@ -24374,7 +24374,7 @@
 					"order": 28,
 					"prevSize": 32,
 					"code": 59842,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "cloud-download, cloud2",
 					"name": "download"
 				},
@@ -24563,7 +24563,7 @@
 					"order": 31,
 					"prevSize": 32,
 					"code": 59863,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "star-empty, rate",
 					"name": "star-empty"
 				},
@@ -24572,7 +24572,7 @@
 					"order": 29,
 					"prevSize": 32,
 					"code": 59864,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "star-half, rate2",
 					"name": "star-half"
 				},
@@ -24581,7 +24581,7 @@
 					"order": 30,
 					"prevSize": 32,
 					"code": 59865,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "star-full, rate3",
 					"name": "star-full"
 				},
@@ -24995,7 +24995,7 @@
 					"order": 70,
 					"prevSize": 32,
 					"code": 59911,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "warning, sign",
 					"name": "warning"
 				},
@@ -25004,7 +25004,7 @@
 					"order": 69,
 					"prevSize": 32,
 					"code": 59912,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "notification, warning2",
 					"name": "notification"
 				},
@@ -25040,7 +25040,7 @@
 					"order": 71,
 					"prevSize": 32,
 					"code": 59916,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "info, information",
 					"name": "info"
 				},
@@ -25121,7 +25121,7 @@
 					"order": 26,
 					"prevSize": 32,
 					"code": 59925,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "play2, player",
 					"name": "play"
 				},
@@ -25130,7 +25130,7 @@
 					"order": 27,
 					"prevSize": 32,
 					"code": 59926,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "pause, player2",
 					"name": "pause"
 				},
@@ -25184,7 +25184,7 @@
 					"order": 60,
 					"prevSize": 32,
 					"code": 59932,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "play3, player8",
 					"name": "play-alt"
 				},
@@ -25193,7 +25193,7 @@
 					"order": 61,
 					"prevSize": 32,
 					"code": 59933,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "pause2, player9",
 					"name": "pause-alt"
 				},
@@ -26057,7 +26057,7 @@
 					"order": 58,
 					"prevSize": 32,
 					"code": 60029,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "share, out",
 					"name": "share"
 				},
@@ -26066,7 +26066,7 @@
 					"order": 72,
 					"prevSize": 32,
 					"code": 60030,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "new-tab, out2",
 					"name": "new-tab"
 				},
@@ -26156,7 +26156,7 @@
 					"order": 24,
 					"prevSize": 32,
 					"code": 60040,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "google-plus, brand2",
 					"name": "google-plus"
 				},
@@ -26192,7 +26192,7 @@
 					"order": 18,
 					"prevSize": 32,
 					"code": 60044,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "facebook, brand6",
 					"name": "facebook"
 				},
@@ -26228,7 +26228,7 @@
 					"order": 25,
 					"prevSize": 32,
 					"code": 60048,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "instagram, brand10",
 					"name": "instagram"
 				},
@@ -26237,7 +26237,7 @@
 					"order": 19,
 					"prevSize": 32,
 					"code": 60049,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "twitter, brand11",
 					"name": "twitter"
 				},
@@ -26291,7 +26291,7 @@
 					"order": 21,
 					"prevSize": 32,
 					"code": 60055,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "youtube, brand14",
 					"name": "youtube-dark"
 				},
@@ -26300,7 +26300,7 @@
 					"order": 20,
 					"prevSize": 32,
 					"code": 60056,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "youtube2, brand15",
 					"name": "youtube-light"
 				},
@@ -26309,7 +26309,7 @@
 					"id": 1541,
 					"prevSize": 32,
 					"code": 60057,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "youtube3, brand16",
 					"name": "youtube-logo"
 				},
@@ -26381,7 +26381,7 @@
 					"order": 23,
 					"prevSize": 32,
 					"code": 60065,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "flickr2, brand24",
 					"name": "flickr"
 				},
@@ -26615,7 +26615,7 @@
 					"order": 47,
 					"prevSize": 32,
 					"code": 60091,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "tumblr, brand50",
 					"name": "tumblr"
 				},
@@ -26804,7 +26804,7 @@
 					"order": 38,
 					"prevSize": 32,
 					"code": 60112,
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": "pinterest, brand71",
 					"name": "pinterest"
 				},
@@ -34995,7 +34995,7 @@
 			"metadata": {
 				"fontFamily": "agenciaweb",
 				"majorVersion": 2,
-				"minorVersion": 11
+				"minorVersion": 12
 			},
 			"metrics": {
 				"emSize": 1024,
