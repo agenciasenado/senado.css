@@ -1,6 +1,6 @@
 {
   "name": "senado.css",
-  "version": "1.6.1",
+  "version": "2.0.0",
   "repository": "http://git.io/senado.css",
   "license": "MIT",
   "devDependencies": {

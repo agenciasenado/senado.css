@@ -89,15 +89,24 @@
 }
 
 .Manchete--manchetao, .Manchete--destaque {
+
+    > .Manchete-figure {
+        margin-bottom: 0;
+    }
+
     > .Manchete-body {
-        overflow: hidden;
-        position: absolute;
-        bottom: 10px;
-        left: 15px;
+        background: #333;
         padding: 10px 20px;
-        right: 15px;
-        background: rgba(0,0,0,0.5);
         font-size: 34px;
+
+        @media (min-width: @screen-sm-min) {
+            background: rgba(0,0,0,0.5);
+            overflow: hidden;
+            position: absolute;
+            bottom: 0px;
+            left: 15px;
+            right: 15px;
+        }
 
         > .Manchete-titulo {
             color: #fff;

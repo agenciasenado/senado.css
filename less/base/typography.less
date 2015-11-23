@@ -1,3 +1,27 @@
+ // region doc
+/**
+* Título principal:
+* `h1.titulo-principal`: Deve ser utilizado sempre como o primeiro título de um conteúdo. Apenas um subelemento é
+* permitido (`small`) e deve ser utilizado para descrição ou lead do título.
+*
+*     @example
+*     h1.titulo-principal senado.css
+*         small http://git.io/senado.css
+*/
+// endregion
+
+    h1.titulo-principal {
+        border-bottom: 1px solid #eee;
+        padding-bottom: 15px;
+    }
+        h1.titulo-principal small {
+            display: block;
+            font-size: 14px;
+            line-height: @line-height-small;
+            margin-top: 10px;
+        }
+
+
 .giga {
     font-size: @giga;
 }

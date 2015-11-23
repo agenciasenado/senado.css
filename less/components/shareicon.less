@@ -6,57 +6,72 @@
 * `.ShareIcon`: Botão de compartilhamento em redes sociais. O ícone já é embutido no componente.
 *
 *     @example
-*     a.ShareIcon.ShareIcon--facebook
-*     a.ShareIcon.ShareIcon--twitter
-*     a.ShareIcon.ShareIcon--google-plus
-*     a.ShareIcon.ShareIcon--pinterest
-*     a.ShareIcon.ShareIcon--youtube
-*     a.ShareIcon.ShareIcon--flickr
-*     a.ShareIcon.ShareIcon--instagram
-*     a.ShareIcon.ShareIcon--tumblr
+*     .Box
+*       a.ShareIcon.ShareIcon--facebook
+*       a.ShareIcon.ShareIcon--twitter
+*       a.ShareIcon.ShareIcon--google-plus
+*       a.ShareIcon.ShareIcon--pinterest
+*       a.ShareIcon.ShareIcon--youtube
+*       a.ShareIcon.ShareIcon--flickr
+*       a.ShareIcon.ShareIcon--instagram
+*       a.ShareIcon.ShareIcon--tumblr
+*       a.ShareIcon.ShareIcon--circle.ShareIcon--light.ShareIcon--tumblr
+*       a.ShareIcon.ShareIcon--circle.ShareIcon--dark.ShareIcon--facebook
+*     .Box
+*       a.ShareIcon.ShareIcon--mini.ShareIcon--facebook.is-active
+*       a.ShareIcon.ShareIcon--mini.ShareIcon--twitter.is-active
+*     .Box
+*       button.ShareIcon.ShareIcon--whatsapp
+*       .ShareIcon-text.ShareIcon-text--hidden: strong (61) 9090-9090
+*       button.ShareIcon.ShareIcon--mini.ShareIcon--twitter
+*     .Box
+*       button.ShareIcon.Icon--podcast.ShareIcon--default
+*         strong.ShareIcon-text.milli
+*           | (61) 9090-9090
 */
 // endregion
+
 .ShareIcon {
-    &:extend(.btn);
+    padding: 0;
+
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    touch-action: maniputation;
+    cursor: pointer;
 
     border: none;
     border-radius: 0;
     border-bottom-style: solid;
     border-bottom-width: 2px;
 
+    background: #eee;
+    transition: background-color 300ms linear;
+
+    font-size: 18px;
+
     &, &:focus, &:active {
         color: #666;
-        outline: none;
     }
-
-    line-height: 32px;
-    font-weight: bold;
-
-    margin-right: 3px;
-    padding: 0 8px;
-
-    transition: background-color 300ms linear, border-bottom-color 300ms linear;
 
     &:hover {
         color: #fff;
         text-decoration: none;
     }
-    &:last-child {
-        margin-right: 0;
-    }
+
+    @size: 1.9em;
+    line-height: @size;
     &:before {
         &:extend(.Icon);
-        font-size: 18px;
+        line-height: @size;
+        width: @size;
     }
 }
 
     .share-icon-variant(@color) {
-        background-color: #eee;
         border-bottom-color: lighten(@color, 25%);
-        &:hover, &:focus, &.ShareIcon--active {
-            color: #fff;
-            background-color: @color;
-            border-bottom-color: darken(@color, 16%);
+        &:hover, &.ShareIcon--mini {
+            background: @color;
         }
     }
 
@@ -109,36 +124,47 @@
         .share-icon-variant(#32506d);
     }
 
+.ShareIcon--mini {
+    border: none;
+    font-size: 14px;
+    &, &:focus {
+        color: #fff;
+    }
+}
 
 .ShareIcon--circle {
     border-radius: 50%;
-    border-width: 0;
-    line-height: 36px;
-    width: 36px;
-    background: #ccc;
-    color: #fff;
-    margin-right: 6px;
+    border: none;
     &:before {
-        line-height: 36px;
+        border-radius: 50%;
     }
 }
 
 .ShareIcon--dark {
+    &, &:focus, &:active {
+        color: #fff;
+    }
     background-color: #888;
 }
 
+.ShareIcon--light {
+    &, &:focus, &:active {
+        color: #fff;
+    }
+    background: #ccc;
+}
+
 .ShareIcon-text {
-    font-size: 13px;
-    margin-left: 8px;
-    margin-right: 8px;
+    vertical-align: middle;
+    padding-left: @padding-large-vertical;
+    padding-right: @padding-large-vertical;
 }
 
     .ShareIcon-text--hidden {
-        vertical-align: middle;
+        padding: 0;
         overflow: hidden;
         display: inline-block;
         font-size: 12px;
-        font-weight: bold;
         width: 0;
         transition: width 0.5s ease;
         text-align: left;

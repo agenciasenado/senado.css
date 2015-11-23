@@ -10,12 +10,13 @@
 * horizontal; e `--full`, que não possui paddings.
 *
 *     @example
-*     .Box.Box--cut.Box--full
-*       | --full
-*     .Box.Box--cut.Box--horz
-*       | --horz
-*     .Box.Box--cut.Box--vert
-*       | --vert
+*     .Segments
+*       .Box(class="+cut")
+*         | Box
+*       .Box.Box--x(class="+cut")
+*         | --x
+*       .Box.Box--y(class="+cut")
+*         | --y
 */
 
 /**
@@ -24,38 +25,23 @@
 * ou `--lg`.
 *
 *     @example
-*     .Box.Box--cut.Box--sm
-*       | sm
-*     .Box.Box--cut
-*       | normal
-*     .Box.Box--cut.Box--lg
-*       | lg
+*     .Segments
+*       .Box(class="+cut").Box--sm
+*         | sm
+*       .Box(class="+cut")
+*         | normal
+*       .Box(class="+cut").Box--lg
+*         | lg
+*       .Box(class="+cut").Box--xl
+*         | xl
 */
 
 /**
 * Exemplos:
 *
 *     @example
-*     .Box.Box--links.Box--flush
-*       h4.Segment.Apex.Apex--default Expediente
-*       .Box
-*         .Flag
-*           .Flag-figure
-*             .Icon.Icon--newspaper.Icon--lg
-*           .Flag-body
-*             a Cur vita tolerare?
-*             p: small Nunquam gratia guttus
-*         .Flag
-*           .Flag-figure
-*             .Icon.Icon--newspaper.Icon--lg
-*           .Flag-body
-*             a Cur vita tolerare?
-*             p: small Nunquam gratia guttus
-*
-
 *     .Box.Box--flush.Box--links
-*       h4(class='[ Segment ][ Apex Apex--default ]') Expediente
-*         small= '<h4>'
+*       .Apex.Apex--default.zeta Expediente
 *       .Box
 *         .Flag
 *           .Flag-figure
@@ -74,30 +60,26 @@
 .Box {
     padding: @padding-base-vertical @padding-base-horizontal;
     position: relative;
-    //&:not(:last-child) {
-    //    margin-bottom: 2 * @padding-large-vertical;
-    //}
-    //border: 1px solid red!important;
 }
 
     .Box--xl {
-        padding: @padding-large-vertical * 2 @padding-large-horizontal * 2;
+        padding: @padding-large-vertical * 1.3 @padding-large-horizontal * 1.3;
     }
 
     .Box--lg {
         padding: @padding-large-vertical @padding-large-horizontal;
     }
 
-    .Box--md {
+    .Box--sm {
         padding: @padding-small-vertical @padding-small-horizontal;
     }
 
-    .Box--vert {
+    .Box--y {
         padding-left: 0;
         padding-right: 0;
     }
 
-    .Box--horz {
+    .Box--x {
         padding-top: 0;
         padding-bottom: 0;
     }

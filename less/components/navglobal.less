@@ -1,0 +1,39 @@
+@import (reference) "@{bootstrap-path}/grid";
+
+// region doc
+/**
+ * Navegação Global:
+ * `.NavGlobal` - Barra superior comum a todos os portais. Utiliza os utilitários `u-size` para organizar
+ * seus subelementos.
+ *
+ *     @example
+ *     .NavGlobal
+ *       .container-fluid
+ *         .u-sizeFitAlt
+ *           | FIT
+ *         .u-sizeFit
+ *           img(src="assets/br.svg", height=20)
+ *           span Brasil
+ *         .u-sizeFill.text-center
+ *           a.flat.hidden-xs(href='#') Toolkit
+ */
+// endregion
+.NavGlobal {
+    height: 47px;
+    line-height: 40px;
+
+    background-color: #00305C;
+    border-bottom: 4px solid #00824A;
+    color: #fff;
+    box-shadow: 0 4px 0 #FAE042;
+    margin-bottom:4px; // compensar box-shadow
+}
+
+    .NavGlobal-toggle {
+        color: #B2C0CE;
+        cursor: pointer;
+        &:hover, &:active, &:focus {
+            color: #fff;
+            text-decoration: none;
+        }
+    }

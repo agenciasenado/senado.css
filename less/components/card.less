@@ -1,4 +1,68 @@
+// region doc
+/**
+* Card:
+* `.Card`: Cartão
+*
+*     @example
+*     .Deck.Deck--row
+*       .Card.u-size1of2
+*         .Card-body(class='+light') Title
+*           div Magnum lanista sed mire imitaris omnia est
+*           div Magnum lanista sed mire imitaris omnia est
+*         .Card-footer(class='+light') Footer
+*       .Card.u-size1of2
+*         .Card-body(class='+light') Title
+*         .Card-footer(class='+light') Footer
+*     p
+*     .Deck.Deck--row.Deck--strip
+*       .Card.u-size1of4
+*         .Embed.Embed--3by2(class='+cut')
+*       .Card.u-size1of4
+*         .Embed.Embed--3by2(class='+cut')
+*       .Card.u-size1of4
+*         .Embed.Embed--3by2(class='+cut')
+*       .Card.u-size1of4
+*         .Embed.Embed--3by2(class='+cut')
+*/
+// endregion
+.Deck {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+}
+
+.Deck--row {
+    margin-left: -@grid-gutter-width/2;
+    margin-right: -@grid-gutter-width/2;
+    > .Card {
+        padding-left: @grid-gutter-width/2;
+        padding-right: @grid-gutter-width/2;
+    }
+}
+
+.Deck--strip {
+    overflow-x: auto;
+    > .Card {
+        margin-bottom:  @grid-gutter-width/2;
+    }
+    @media (max-width: @screen-xs-max) {
+        flex-wrap: nowrap;
+        > .Card {
+            margin-bottom: 0;
+            min-width: 85%;
+        }
+    }
+}
+
 .Card {
-    padding: 0;
+    position: relative;
+
+    display: inline-block;
+    vertical-align: top;
+
+    display: inline-flex;
+
+    flex-direction: column;
+    justify-content: space-between;
 }
 

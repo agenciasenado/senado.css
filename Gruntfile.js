@@ -8,29 +8,21 @@ module.exports = function(grunt) {
             main: {
                 options: {
                     sourceMap: true,
-                    sourceMapRootpath: '../',
-                    sourceMapFilename: 'dist/main.css.map',
-                    sourceMapURL: 'main.css.map',
+                    sourceMapRootpath: '../'
                 },
-                files: {
-                    'dist/main.css': 'less/styles.less'
-                }
-            },
-            noticias: {
-                files: {
-                    'dist/noticias.css': 'less/noticias.less'
-                }
-            },
-            hp: {
-                files: {
-                    'dist/hp.css': 'less/hp.less'
-                }
+                files: [{
+                    cwd: 'less',
+                    expand: true,
+                    src: '*.less',
+                    dest: 'dist',
+                    ext: '.css'
+                }]
             }
         },
         jade: {
             main: {
                 options: {
-                    pretty: true
+                    pretty: false
                 },
                 files: [{
                     expand: true,
@@ -44,7 +36,7 @@ module.exports = function(grunt) {
         watch: {
             styles: {
                 files: ['**/*.less'],
-                tasks: ['less:main'],
+                tasks: ['less'],
                 options: {
                     spawn: false
                 }
@@ -91,33 +83,21 @@ module.exports = function(grunt) {
                 map: true
             },
             main: {
-                src: 'dist/main.css'
-            },
-            noticias: {
-                src: 'dist/noticias.css'
-            },
-            hp: {
-                src: 'dist/hp.css'
-            },
+                files: [{
+                    expand: true,
+                    src: 'dist/*.css'
+                }]
+            }
         },
         cssmin: {
             options : {
                 keepSpecialComments: 0
             },
             dist: {
-                files: {
-                    'dist/main.css' : 'dist/main.css'
-                }
-            },
-            noticias: {
-                files: {
-                    'dist/noticias.css' : 'dist/noticias.css'
-                }
-            },
-            hp: {
-                files: {
-                    'dist/hp.css' : 'dist/hp.css'
-                }
+                files: [{
+                    expand: true,
+                    src: 'dist/*.css'
+                }]
             }
         },
         clean: {
@@ -151,7 +131,8 @@ module.exports = function(grunt) {
             options: {
                 logConcurrentOutput: true,
             },
-            main: ['watch:styles', 'watch:styledown', 'watch:livereload', 'watch:jade']
+            full: ['watch:styles', 'watch:styledown', 'watch:livereload', 'watch:jade'],
+            dev: ['watch:styles', 'watch:livereload', 'watch:jade']
         },
         phantomcss: {
             'desktop': {
@@ -189,16 +170,24 @@ module.exports = function(grunt) {
 
     grunt.registerTask('build', [
         'jade:main',
-        'less:main',
+        'less',
         'autoprefixer',
         'cssmin',
         'styledown'
     ])
-    grunt.registerTask('server', [
-        'connect', 'concurrent:main'
+    grunt.registerTask('server:dev', [
+        'connect', 'concurrent:dev'
     ])
+    grunt.registerTask('server:full', [
+        'connect', 'concurrent:full'
+    ])
+
     grunt.registerTask('dev', [
-        'build', 'server'
+        'build', 'server:dev'
+    ])
+
+    grunt.registerTask('full', [
+        'build', 'server:full'
     ])
 
     grunt.registerTask('default', [
@@ -212,19 +201,5 @@ module.exports = function(grunt) {
         'phantomcss',
         'clean'
     ])
-
-    grunt.registerTask('noticias', [
-        'less:noticias',
-        'autoprefixer:noticias',
-        'cssmin:noticias'
-    ])
-
-    grunt.registerTask('hp', [
-        'less:hp',
-        'autoprefixer:hp',
-        'cssmin:hp'
-    ])
-
-
 
 }
