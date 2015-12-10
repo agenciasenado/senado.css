@@ -16,19 +16,28 @@
 *     p
 *     .Deck.Deck--row.Deck--strip
 *       .Card.u-size1of4
-*         .Embed.Embed--3by2(class='+cut')
+*         .Card-body
+*           .Embed.Embed--3by2(class='+cut') oi
 *       .Card.u-size1of4
-*         .Embed.Embed--3by2(class='+cut')
+*         .Card-body
+*           .Embed.Embed--3by2(class='+cut') oi
 *       .Card.u-size1of4
-*         .Embed.Embed--3by2(class='+cut')
+*         .Card-body
+*           .Embed.Embed--3by2(class='+cut') oi
 *       .Card.u-size1of4
-*         .Embed.Embed--3by2(class='+cut')
+*         .Card-body
+*           .Embed.Embed--3by2(class='+cut') oi
+*       .Deck-xspacer.u-spacer--xl
+*       .Card.u-size1of4
+*         .Card-body
+*           .Embed.Embed--3by2(class='+cut') oi
 */
 // endregion
 .Deck {
     display: flex;
     flex-flow: row;
     flex-wrap: wrap;
+    border: 1px solid red;
 }
 
 .Deck--row {
@@ -43,15 +52,18 @@
 .Deck--strip {
     overflow-x: auto;
     > .Card {
-        margin-bottom:  @grid-gutter-width/2;
     }
     @media (max-width: @screen-xs-max) {
         flex-wrap: nowrap;
         > .Card {
-            margin-bottom: 0;
             min-width: 85%;
         }
     }
+}
+
+.Deck-xspacer {
+    display: flex;
+    flex-basis: 100%;
 }
 
 .Card {
