@@ -2,6 +2,8 @@ var path = require('path')
 
 module.exports = function(grunt) {
 
+    require('load-grunt-tasks')(grunt);
+
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         less: {
@@ -154,19 +156,7 @@ module.exports = function(grunt) {
         }
     })
 
-    // region loadNpmTasks
-    grunt.loadNpmTasks('grunt-banner')
-    grunt.loadNpmTasks('grunt-styledown')
-    grunt.loadNpmTasks('grunt-concurrent')
-    grunt.loadNpmTasks('grunt-phantomcss')
-    grunt.loadNpmTasks('grunt-autoprefixer')
-    grunt.loadNpmTasks('grunt-contrib-jade')
-    grunt.loadNpmTasks('grunt-contrib-less')
-    grunt.loadNpmTasks('grunt-contrib-watch')
-    grunt.loadNpmTasks('grunt-contrib-clean')
-    grunt.loadNpmTasks('grunt-contrib-cssmin')
-    grunt.loadNpmTasks('grunt-contrib-connect')
-    // endregion
+
 
     grunt.registerTask('build', [
         'jade:main',
