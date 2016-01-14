@@ -1,3 +1,10 @@
+# 2.1.0
+
+* Componentes Glass e Knob
+* Classes de layout geo
+* Remover componente específico da aplicação noticias
+
+
 # 2.0.0
 
 * Remover arquivos .jade de outros projetos
