@@ -1,3 +1,9 @@
+# 2.1.1
+
+* Corrigir alinhamento do ícone dentro de um .Knob
+* Remover alinhamento vertical do componente .Icon
+
+
 # 2.1.0
 
 * Componentes Glass e Knob
