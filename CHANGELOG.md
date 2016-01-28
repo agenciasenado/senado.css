@@ -1,3 +1,9 @@
+# 2.1.2
+
+* Componente LogoPortal para os novos logotipos dos portais
+* Corrigir alinhamento do Icon e seu comportamento dentro de um Knob
+
+
 # 2.1.1
 
 * Corrigir alinhamento do ícone dentro de um .Knob
