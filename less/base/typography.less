@@ -21,40 +21,41 @@
             margin-top: 10px;
         }
 
+._font-scale(giga, @giga);
+._font-scale(mega, @mega);
+._font-scale(kilo, @kilo);
+._font-scale(alpha, @alpha);
+._font-scale(beta, @beta);
+._font-scale(gamma, @gamma);
+._font-scale(delta, @delta);
+._font-scale(epsilon, @epsilon);
+._font-scale(zeta, @zeta);
+._font-scale(normalis, @font-size-base);
+._font-scale(milli, @milli);
+._font-scale(micro, @micro);
 
-.giga {
-    font-size: @giga;
-}
-.mega {
-    font-size: @mega;
-}
-.kilo {
-    font-size: @kilo;
-}
-.alpha {
-    font-size: @alpha;
-}
-.beta {
-    font-size: @beta;
-}
-.gamma {
-    font-size: @gamma;
-}
-.delta {
-    font-size: @delta;
-}
-.epsilon {
-    font-size: @epsilon;
-}
-.zeta {
-    font-size: @zeta;
-}
-.normalis {
-    font-size: @font-size-base;
-}
-.milli {
-    font-size: @milli;
-}
-.micro {
-    font-size: @micro;
+._font-scale(@class, @size) {
+  .@{class} {
+    font-size: @size;
+  }
+  @media (max-width: @screen-xs-max) {
+    .@{class}\@xs {
+      font-size: @size;
+    }
+  }
+  @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+    .@{class}\@sm {
+      font-size: @size;
+    }
+  }
+  @media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+    .@{class}\@md {
+      font-size: @size;
+    }
+  }
+  @media (min-width: @screen-lg-min) {
+    .@{class}\@lg {
+      font-size: @size;
+    }
+  }
 }

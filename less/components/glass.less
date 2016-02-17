@@ -1,0 +1,24 @@
+// region doc
+/**
+* Glass:
+* `.Glass`: Camada sobreposta a um elemento.
+*
+*   @example
+*   .row
+*     .col-xs-4
+*       .Embed.Embed--3by2(style="background: #ddd")
+*         .Glass
+*           a.u-linkClean.epsilon.Knob.Knob--rounded
+*             span.Knob-icon.glyphicon.glyphicon-play.normalis
+*     .col-xs-4
+*       .Embed.Embed--3by2(style="background: #ddd")
+*         .Glass
+*           a.u-linkClean.gamma.Knob.Knob--rounded
+*             span.Knob-icon.Icon.Icon--more-horizontal
+*/
+// endregion
+
+.Glass {
+  background-image:linear-gradient(to bottom, transparent 60%, rgba(0, 0, 0, .4) 100%);
+  .fill-parent();
+}

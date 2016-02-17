@@ -1,3 +1,27 @@
+# 2.3.0
+
+* Escala de fonte responsiva
+
+
+# 2.1.2
+
+* Componente LogoPortal para os novos logotipos dos portais
+* Corrigir alinhamento do Icon e seu comportamento dentro de um Knob
+
+
+# 2.1.1
+
+* Corrigir alinhamento do ícone dentro de um .Knob
+* Remover alinhamento vertical do componente .Icon
+
+
+# 2.1.0
+
+* Componentes Glass e Knob
+* Classes de layout geo
+* Remover componente específico da aplicação noticias
+
+
 # 2.0.0
 
 * Remover arquivos .jade de outros projetos

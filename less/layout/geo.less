@@ -1,0 +1,84 @@
+// baseado em https://raw.githubusercontent.com/dropbox/scooter/master/scss/helpers/_layout.scss
+
+// Islands are the most common layout helper. They throw a padding around the
+// selected element equal to the global baseline.
+
+@baseline: @line-height-computed;
+
+._geo (@baseline) {
+  padding: @baseline;
+  &-y {
+    padding-top: @baseline;
+    padding-bottom: @baseline;
+  }   
+}
+
+.l-island {
+  ._geo(@baseline);
+}
+
+// Half an island
+.l-isle {
+  ._geo(round(@baseline / 2));
+}
+
+// Half an isle
+.l-spit {
+  ._geo(round(@baseline / 4));
+}
+
+// Twice the size of an island
+.l-country {
+  ._geo(round(@baseline * 2));
+}
+
+// Twice the size of a country
+.l-continent {
+  ._geo(round(@baseline * 4));
+}
+
+// Margin layout helpers
+// =====================
+//
+// Typically, we want most elements to have the same vertical spacing, often
+// just with a margin-bottom.
+//
+// The most basic element with this spacing is a paragraph, hence the 'l-p'
+// selector name.
+//
+// Only two modifiers here: half- and double-spacing.
+//
+// Vertical margins are strictly applied to the bottom edge only, with the
+// exception of negative margin-top values.
+//
+._margin (@direction) {
+  @micro: replace(@direction, "(.).*$", "$1");
+  .l-m@{micro} {
+    margin-@{direction}: @baseline!important;
+    &-xs {
+      margin-@{direction}: round(@baseline / 4) !important;
+    }
+    &-s {
+      margin-@{direction}: round(@baseline / 2) !important;
+    }
+    &-l {
+      margin-@{direction}: round(@baseline * 2) !important;
+    }
+    &-xl {
+      margin-@{direction}: round(@baseline * 4) !important;
+    }
+  }
+}
+
+._margin(top);
+._margin(right);
+._margin(bottom);
+._margin(left);
+
+.l-p {
+  .l-mb();
+}
+
+.l-trim {
+  margin: 0!important;
+}
