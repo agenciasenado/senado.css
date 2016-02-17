@@ -1,3 +1,8 @@
+# 2.3.0
+
+* Escala de fonte responsiva
+
+
 # 2.1.2
 
 * Componente LogoPortal para os novos logotipos dos portais
