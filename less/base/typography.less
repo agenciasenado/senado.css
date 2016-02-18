@@ -1,41 +1,45 @@
- // region doc
-/**
-* Título principal:
-* `h1.titulo-principal`: Deve ser utilizado sempre como o primeiro título de um conteúdo. Apenas um subelemento é
-* permitido (`small`) e deve ser utilizado para descrição ou lead do título.
-*
-*     @example
-*     h1.titulo-principal senado.css
-*         small http://git.io/senado.css
+/*---
+title:   Tipografia
+section: Base CSS
+---
+
+#### Título principal
+`h1.titulo-principal`: Deve ser utilizado sempre como o primeiro título de um
+conteúdo. Apenas um subelemento é permitido (`small`) e deve ser utilizado para
+descrição ou lead do título.
+```example:html
+<h1 class="titulo-principal">
+  senado.css
+  <small>http://git.io/senado.css</small>
+</h1>
+```
 */
-// endregion
 
-    h1.titulo-principal {
-        border-bottom: 1px solid #eee;
-        padding-bottom: 15px;
-    }
-        h1.titulo-principal small {
-            display: block;
-            font-size: 14px;
-            line-height: @line-height-small;
-            margin-top: 10px;
-        }
+h1.titulo-principal {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 15px;
+}
 
-/**
-* Escala de fonte:
-* Classes utilitárias de tamanho da fonte. As escalas são `.giga`, `.mega`,
-* `.kilo`, `.alpha`, `.beta`, `.gamma`, `.delta`, `.epsilon`, `.zeta`,
-* `.normalis`, `.milli`, `.micro`.
-*
-* Essas escalas também possui breakpoints responsivos, configurados em
-* mobile-first. Os sufixos são os mesmos do Bootstrap 3 (`xs`, `sm`, `md`, `lg`)
-*
-*     @example
-*     .Segments
-*       .beta .beta
-*       .gamma .gamma
-*       .delta .delta
-*       .zeta-sm.milli-xs .milli em xs; .zeta de sm em diante
+  h1.titulo-principal small {
+    display: block;
+    font-size: 14px;
+    line-height: @line-height-small;
+    margin-top: 10px;
+  }
+
+/*---
+# Escala de fonte
+
+Classes utilitárias de tamanho da fonte. As escalas são `.giga`, `.mega`,
+ `.kilo`, `.alpha`, `.beta`, `.gamma`, `.delta`, `.epsilon`, `.zeta`,
+ `.normalis`, `.milli`, `.micro`.
+
+```example:html
+<div class="beta">.beta</div>
+<div class="gamma">.gamma</div>
+<div class="delta">.delta</div>
+<div class="zeta-sm milli-xs">.milli em xs; .zeta de sm em diante</div>
+```
 */
 
 ._font-scale(giga, @giga);

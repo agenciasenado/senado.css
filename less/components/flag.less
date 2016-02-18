@@ -1,32 +1,42 @@
 // region doc
-/**
-* Flag:
-* `.Flag`: Estrutura genérica de disposição de conteúdo com uma mídia lateral e um conteúdo
-* adjacente. É centralizado verticalmente por padrão, mas pode ser alinhhado ao topo
-* ou ao rodapé por meio dos modificadores `--top` e `--bottom`.
-*
-*     @example
-*     .Flag
-*       .Flag-figure
-*         .Icon.Icon--newspaper.Icon--lg
-*       .Flag-body
-*         a Middle
-*         div: small Nunquam gratia guttus
-*         div: small Cur impositio resistere?
-*     .Flag.Flag--top
-*       .Flag-figure
-*         .Icon.Icon--bubble.Icon--lg
-*       .Flag-body
-*         a Top
-*         div: small Nunquam consumere tumultumque
-*         div: small Cur adgium persuadere
-*     .Flag.Flag--bottom
-*       .Flag-figure
-*         .Icon.Icon--twitter.Icon--lg
-*       .Flag-body
-*         a Bottom
-*         div: small Dexter verpas ducunt ad devatio.
-*         div: small A falsis, verpa peritus burgus.
+/*---
+title:   Flag
+section: Components
+---
+Flag:
+`.Flag`: Estrutura genérica de disposição de conteúdo com uma mídia lateral e um conteúdo
+adjacente. É centralizado verticalmente por padrão, mas pode ser alinhhado ao topo
+ou ao rodapé por meio dos modificadores `--top` e `--bottom`.
+
+```example:html
+<div class="Flag">
+  <div class="Flag-figure">
+    <div class="Icon Icon--newspaper Icon--lg"></div>
+  </div>
+  <div class="Flag-body"><a>Middle</a>
+    <div><small>Nunquam gratia guttus</small></div>
+    <div><small>Cur impositio resistere?</small></div>
+  </div>
+</div>
+<div class="Flag Flag--top">
+  <div class="Flag-figure">
+    <div class="Icon Icon--bubble Icon--lg"></div>
+  </div>
+  <div class="Flag-body"><a>Top</a>
+    <div><small>Nunquam consumere tumultumque</small></div>
+    <div><small>Cur adgium persuadere</small></div>
+  </div>
+</div>
+<div class="Flag Flag--bottom">
+  <div class="Flag-figure">
+    <div class="Icon Icon--twitter Icon--lg"></div>
+  </div>
+  <div class="Flag-body"><a>Bottom</a>
+    <div><small>Dexter verpas ducunt ad devatio.</small></div>
+    <div><small>A falsis, verpa peritus burgus.</small></div>
+  </div>
+</div>
+```
 */
 // endregion
 @flag-spacing: 10px;
