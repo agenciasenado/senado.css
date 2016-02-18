@@ -1,22 +1,29 @@
 @import (reference) "@{bootstrap-path}/breadcrumbs";
-// region doc
-/**
-* Breadcrumbs:
-* `.Breadcrumbs`: Caminho de navegação do portal
-* deve ser exibido em `xs`. Utilizado
-*
-*     @example
-*     ol.Breadcrumbs
-*       li: a Home
-*       li: a Senado Notícias
-*       li.active: TV Senado
-*     h1.titulo-principal
-*       | Genetrixs sunt zirbuss de bi-color silva.
-*       small
-*         | Detriuss prarere, tanquam gratis boreas. Brevis, mirabilis armariums velox convertam de superbus,
-*         | potus velox ducunt ad superbus solitudo.
+/*---
+title:   Breadcrumbs
+section: Components
+---
+
+`.Breadcrumbs`: Caminho de navegação do portal
+
+```example:html
+<ol class="Breadcrumbs">
+  <li><a>Home</a></li>
+  <li><a>Senado Notícias</a></li>
+  <li class="active">
+    <TV>Senado</TV>
+  </li>
+</ol>
+<h1 class="titulo-principal">
+  Genetrixs sunt zirbuss
+  <small>
+    Detriuss prarere, tanquam gratis boreas. Brevis, mirabilis armariums velox
+    convertam de superbus, potus velox ducunt ad superbus solitudo.
+  </small>
+</h1>
+```
 */
-// endregion
+
 .Breadcrumbs {
     &:extend(.breadcrumb all);
 }
