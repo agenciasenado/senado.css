@@ -16,7 +16,6 @@
     "grunt-contrib-watch": "^0.6.1",
     "grunt-phantomcss": "https://github.com/micahgodbolt/grunt-phantomcss.git#master",
     "grunt-postcss": "^0.7.2",
-    "grunt-styledown": "0.0.3",
     "mdcss": "^1.5.1"
   },
   "jshintConfig": {

@@ -48,9 +48,9 @@ module.exports = function(grunt) {
                     spawn: false
                 }
             },
-            styledown: {
-                files: ['**/*.less'],
-                tasks: ['styledown'],
+            styleguide: {
+                files: ['dist/main.css'],
+                tasks: ['postcss:styleguide'],
                 options: {
                     spawn: false
                 }
@@ -61,20 +61,6 @@ module.exports = function(grunt) {
                     livereload: true
                 },
                 files: ['**/*.css', '**/*.html']
-            }
-        },
-        styledown: {
-            build: {
-                files: {
-                    'index.html': ['less/**/*.less']
-                },
-                options: {
-                    css: 'dist/fat.css',
-                    config: 'styleguide/config.md',
-                    sg_css: 'styleguide/styledown.css',
-                    sg_js: 'styleguide/styledown.js',
-                    title: 'Senado.CSS'
-                }
             }
         },
         autoprefixer: {
@@ -131,7 +117,7 @@ module.exports = function(grunt) {
             options: {
                 logConcurrentOutput: true,
             },
-            full: ['watch:styles', 'watch:styledown', 'watch:livereload', 'watch:jade'],
+            full: ['watch:styles', 'watch:styleguide', 'watch:livereload', 'watch:jade'],
             dev: ['watch:styles', 'watch:livereload', 'watch:jade']
         },
         phantomcss: {
@@ -151,12 +137,28 @@ module.exports = function(grunt) {
                 },
                 src: [ 'tests/**/*desktop.js' ]
             }
+        },
+        postcss: {
+          styleguide: {
+            src: 'dist/main.css',
+            options: {
+              processors: [
+                require('mdcss')({
+                  theme: require('mdcss-theme-fabianonunes'),
+                  examples: {
+                    css: ['../dist/main.css']
+                  },
+                  destination: 'styleguide'
+                })
+              ]
+            }
+          }
         }
     })
 
     // region loadNpmTasks
     grunt.loadNpmTasks('grunt-banner')
-    grunt.loadNpmTasks('grunt-styledown')
+    grunt.loadNpmTasks('grunt-postcss')
     grunt.loadNpmTasks('grunt-concurrent')
     grunt.loadNpmTasks('grunt-phantomcss')
     grunt.loadNpmTasks('grunt-autoprefixer')
@@ -171,9 +173,9 @@ module.exports = function(grunt) {
     grunt.registerTask('build', [
         'jade:main',
         'less',
+        'postcss:styleguide',
         'autoprefixer',
-        'cssmin',
-        'styledown'
+        'cssmin'
     ])
     grunt.registerTask('server:dev', [
         'connect', 'concurrent:dev'
