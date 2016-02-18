@@ -15,7 +15,9 @@
     "grunt-contrib-less": "^1.0.1",
     "grunt-contrib-watch": "^0.6.1",
     "grunt-phantomcss": "https://github.com/micahgodbolt/grunt-phantomcss.git#master",
-    "grunt-styledown": "0.0.3"
+    "grunt-postcss": "^0.7.2",
+    "grunt-styledown": "0.0.3",
+    "mdcss": "^1.5.1"
   },
   "jshintConfig": {
     "bitwise": true,
@@ -49,6 +51,7 @@
   },
   "dependencies": {
     "bootstrap": "^3.3.4",
-    "jquery": "^2.1.4"
+    "jquery": "^2.1.4",
+    "mdcss-theme-github": "^2.2.0"
   }
 }
