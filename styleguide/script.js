@@ -2,6 +2,7 @@
 /* global examples, Prism */
 
 document.addEventListener('DOMContentLoaded', function () {
+
 	Array.prototype.forEach.call(document.querySelectorAll('pre code[class^="lang"]'), function (code) {
 		// set pre, wrap, opts, and get meta data from code
 		var pre  = code.parentNode;
@@ -36,4 +37,47 @@ document.addEventListener('DOMContentLoaded', function () {
 			if (!(conf.lang in Prism.languages)) wrap.removeChild(pre);
 		}
 	});
+
+	$('.codecollapse').on('click', function () {
+  	$(this).prev('figure').find('pre').toggle();
+  });
+
+  $('.responsive-bar').on('click', 'img', function () {
+  	var $this = $(this);
+  	$this.closest('.iframe-wrapper').width($this.data('width'));
+  });
+
+  $('.drag-handler').draggabilly({
+  	axis: 'x'
+  })
+  .on('pointerDown', function () {
+
+  	var $dragHandler = $(this);
+
+  	var $container = $dragHandler.closest('.iframe-wrapper'),
+  		$mask = $container.find('.drag-mask'),
+  		container_width = $container.width();
+
+  	$mask.show();
+  	$container.addClass('is-dragging');
+
+	  $dragHandler
+	  	.css({left: container_width - $dragHandler.outerWidth()})
+	  	.data('container', $container)
+	  	.data('mask', $mask)
+	  	.data('container-width', container_width);
+
+  })
+  .on('dragMove', function (evt, pointer, vector) {
+  	var $dragHandler = $(this);
+  	$dragHandler.data('container').width(
+  		$dragHandler.data('container-width')+vector.x
+  	);
+  })
+  .on('dragEnd', function () {
+  	var $dragHandler = $(this);
+  	$dragHandler.data('container').removeClass('is-dragging');
+  	$dragHandler.removeAttr('style').data('mask').hide();
+  })
+
 });

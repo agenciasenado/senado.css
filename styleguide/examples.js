@@ -75,7 +75,11 @@ examples.lang = {
 		// get wrap
 		var wrap = pre.parentNode.insertBefore(document.createElement('div'), pre);
 		wrap.classList.add("iframe-wrapper")
-		wrap.innerHTML = '<div class="responsive-bar"><img data-width="340" src="xs.png"><img data-width="768" src="sm.png"><img data-width="992" src="md.png"><img data-width="1100" src="lg.png"></div>'
+		wrap.innerHTML = '<div class="responsive-bar"><img data-width="340" ' +
+		'src="xs.png"><img data-width="768" src="sm.png"><img data-width="992" ' +
+		'src="md.png"><img data-width="1100" src="lg.png"></div>' +
+		'<div class="drag-handler">𝄁</div>' +
+		'<div class="drag-mask"></div>'
 
 		var iframe = wrap.appendChild(document.createElement('iframe'));
 		var style  = iframe.style;
@@ -101,7 +105,7 @@ examples.lang = {
 			return '<script src="' + js + '"></script>';
 		}).join('');
 
-		html += value;
+		html += "<div id=contentWrapper>"+value+"<div>";
 
 		html += examples.bodyjs.map(function (js) {
 			return '<script src="' + js + '"></script>';
@@ -114,6 +118,7 @@ examples.lang = {
 		// add default block styles to iframe dom
 		idoc.documentElement.setAttribute('style', examples.htmlcss);
 		idoc.body.setAttribute('style', examples.bodycss);
+		idoc.body.setAttribute('id', 'sfcss');
 
 		if (conf.width) style.width = String(conf.width);
 
@@ -122,7 +127,7 @@ examples.lang = {
 		var scrollHeight;
 
 		function resize() {
-			var currentScrollHeight = documentElement.scrollHeight;
+			var currentScrollHeight = idoc.getElementById('contentWrapper').offsetHeight;
 
 			if (scrollHeight !== currentScrollHeight) {
 				scrollHeight = currentScrollHeight;
@@ -139,9 +144,5 @@ examples.lang = {
 
 		setInterval(resize, 334);
 
-		$('.responsive-bar').on('click', 'img', function () {
-			var $this = $(this)
-			$this.closest('.iframe-wrapper').width($this.data('width'))
-		})
 	}
 };
