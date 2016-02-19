@@ -17,7 +17,7 @@
     "grunt-phantomcss": "https://github.com/micahgodbolt/grunt-phantomcss.git#master",
     "grunt-postcss": "^0.7.2",
     "mdcss": "^1.5.1",
-    "mdcss-theme-fabianonunes": "https://github.com/fabianonunes/mdcss-theme-fabianonunes.git#gh-pages"
+    "mdcss-theme-fabianonunes": "https://github.com/fabianonunes/mdcss-theme-fabianonunes.git#develop"
   },
   "jshintConfig": {
     "bitwise": true,
