@@ -1,0 +1,29 @@
+{
+  "bitwise": true,
+  "forin": true,
+  "immed": true,
+  "latedef": true,
+  "newcap": true,
+  "noarg": true,
+  "nonew": true,
+  "plusplus": true,
+  "undef": true,
+  "trailing": true,
+  "asi": true,
+  "boss": true,
+  "esnext": true,
+  "lastsemic": true,
+  "laxbreak": true,
+  "laxcomma": true,
+  "smarttabs": true,
+  "devel": true,
+  "curly": true,
+  "browser": true,
+  "node": true,
+  "maxstatements": 25,
+  "maxdepth": 2,
+  "maxcomplexity": 5,
+  "predef": [
+    "define"
+  ]
+}
