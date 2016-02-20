@@ -1,14 +1,21 @@
+
 var path = require('path')
 
 module.exports = function(grunt) {
 
+  require('load-grunt-tasks')(grunt, {scope: 'devDependencies'})
+
   grunt.initConfig({
+
     pkg: grunt.file.readJSON('package.json'),
+
     less: {
       main: {
         options: {
+          paths: ['./node_modules'],
           sourceMap: true,
-          sourceMapRootpath: '../'
+          sourceMapRootpath: '../',
+          sourceMapFileInline: true
         },
         files: [{
           cwd: 'less',
@@ -19,6 +26,7 @@ module.exports = function(grunt) {
         }]
       }
     },
+
     jade: {
       main: {
         options: {
@@ -27,12 +35,11 @@ module.exports = function(grunt) {
         files: [{
           expand: true,
           src: 'jade/*.jade',
-          rename : function (dest, src) {
-            return src.replace(/\.jade$/, '.html')
-          }
+          ext: '.html'
         }]
       }
     },
+
     watch: {
       options : {
         spawn: false,
@@ -40,29 +47,14 @@ module.exports = function(grunt) {
       },
       styles: {
         files: ['**/*.less'],
-        tasks: ['less', 'autoprefixer', 'postcss:styleguide']
+        tasks: ['less', 'postcss']
       },
       jade: {
         files: ['**/*.jade'],
         tasks: ['jade:main']
-      },
-      // styleguide: {
-        // files: ['dist/main.css'],
-        // tasks: ['postcss:styleguide']
-      // }
-    },
-    autoprefixer: {
-      options: {
-        browsers: ['> 1%', 'last 2 versions', 'ie 9'],
-        map: true
-      },
-      main: {
-        files: [{
-          expand: true,
-          src: 'dist/*.css'
-        }]
       }
     },
+
     cssmin: {
       options : {
         keepSpecialComments: 0
@@ -74,6 +66,7 @@ module.exports = function(grunt) {
         }]
       }
     },
+
     clean: {
       build: {
         src: [
@@ -85,6 +78,7 @@ module.exports = function(grunt) {
         ]
       }
     },
+
     connect: {
       options: {
         port: 8000,
@@ -93,24 +87,14 @@ module.exports = function(grunt) {
       },
       server: {
         options: {
-          middleware: function(connect, options, middlewares) {
-            middlewares.unshift(function(req, res, next) {
-              res.setHeader('Access-Control-Allow-Origin', '*')
-              res.setHeader('Access-Control-Allow-Methods', '*')
-              next()
-            })
+          middleware: function (connect, options, middlewares) {
+            middlewares.unshift(require('cors')())
             return middlewares
           }
         }
       }
     },
-    // concurrent: {
-      // options: {
-        // logConcurrentOutput: true,
-      // },
-      // full: ['watch:styles', 'watch:styleguide', 'watch:livereload', 'watch:jade'],
-      // dev: ['watch:styles', 'watch:livereload', 'watch:jade']
-    // },
+
     phantomcss: {
       'desktop': {
         options: {
@@ -129,64 +113,47 @@ module.exports = function(grunt) {
         src: [ 'tests/**/*desktop.js' ]
       }
     },
+
     postcss: {
-      styleguide: {
-      src: 'dist/main.css',
-      options: {
-        processors: [
-        require('mdcss')({
-          theme: require('mdcss-theme-fabianonunes'),
-          examples: {
-          css: ['../dist/main.css']
-          },
-          destination: 'styleguide'
-        })
-        ]
-      }
+      main: {
+        options: {
+          map: true,
+          processors: [
+            require('mdcss')({
+              theme: require('mdcss-theme-fabianonunes'),
+              examples: {
+                css: ['../dist/main.css']
+              },
+              destination: 'styleguide'
+            }),
+            require('autoprefixer')({
+              browsers: ['> 1%', 'last 2 versions', 'ie 9'],
+            })
+          ]
+        },
+        files: [{
+          expand: true,
+          src: 'dist/*.css'
+        }]
       }
     }
+
   })
 
-  // region loadNpmTasks
-  grunt.loadNpmTasks('grunt-banner')
-  grunt.loadNpmTasks('grunt-postcss')
-  grunt.loadNpmTasks('grunt-concurrent')
-  grunt.loadNpmTasks('grunt-phantomcss')
-  grunt.loadNpmTasks('grunt-autoprefixer')
-  grunt.loadNpmTasks('grunt-contrib-jade')
-  grunt.loadNpmTasks('grunt-contrib-less')
-  grunt.loadNpmTasks('grunt-contrib-watch')
-  grunt.loadNpmTasks('grunt-contrib-clean')
-  grunt.loadNpmTasks('grunt-contrib-cssmin')
-  grunt.loadNpmTasks('grunt-contrib-connect')
-  // endregion
-
   grunt.registerTask('build', [
+    'clean',
     'jade:main',
     'less',
-    'postcss:styleguide',
-    'autoprefixer',
-    'cssmin'
-  ])
-
-  grunt.registerTask('server:dev', [
-    'connect', 'watch'
-  ])
-
-  grunt.registerTask('server:full', [
-    'connect', 'concurrent:full'
+    'postcss'
   ])
 
   grunt.registerTask('dev', [
-    'build', 'server:dev'
-  ])
-
-  grunt.registerTask('full', [
-    'build', 'server:full'
+    'build', 'connect', 'watch'
   ])
 
   grunt.registerTask('default', [
-    'build'
+    'build',
+    'cssmin'
   ])
 
   grunt.registerTask('test', [
