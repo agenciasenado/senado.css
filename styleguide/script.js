@@ -78,6 +78,6 @@ document.addEventListener('DOMContentLoaded', function () {
   	var $dragHandler = $(this);
   	$dragHandler.data('container').removeClass('is-dragging');
   	$dragHandler.removeAttr('style').data('mask').hide();
-  })
+  });
 
 });

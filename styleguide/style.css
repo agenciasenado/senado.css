@@ -150,8 +150,8 @@ body {
 }
 
 nav > img {
-	height: 180px;
-	width: 180px;
+	height: 160px;
+	width: 160px;
 	margin: 0 auto 20px;
 	display: block;
 }
@@ -273,7 +273,6 @@ pre code {
 .colors {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: center;
 }
 
 .color {
@@ -562,7 +561,7 @@ nav ul {
 
 nav > ul {
 	max-height: calc(100vh - 190px - 20px - 30px);
-	overflow-y: scroll;
+	overflow-y: auto;
 	-webkit-overflow-scrolling: touch;
 	padding-bottom: 20px;
 }
