@@ -1,45 +1,47 @@
-/***
- * Media:
- */
+/*---
+title:   Media
+section: Components
+---
 
-//region doc
-/**
- * Media:
- * `.Media`: Estrutura genérica de disposição de conteúdo com uma mídia lateral. Nesse elemento, o `.Media-figure` é
- * deslocado para a esquerda (ou para a direita via `.Media-figure--right`) e um novo
- * [contexto de formatação](http://goo.gl/sIBbFp)
- * é criado.
- *
- *  Permite aninhamento de outro `.Media`.
- *
- *     @example
- *     .Media
- *       .Media-figure
- *         div(style='width:50px; height:50px; background-color:#eee; display: table-cell; vertical-align: middle')
- *       .Media-top
- *         .Etiqueta.Etiqueta--default.Etiqueta--rev.glyphicon-list Adelphiss nocere!
- *       .Media-body
- *         p: small
- *           | Azureus, superbus competitions hic promissio de fidelis, brevis lixa. Est camerarius vox, cesaris.
- *           | Domus, valebat, et homo. Salvus, grandis imbers unus dignus de albus, primus vigil.
- *           | Burgus de superbus glos, fallere nuclear vexatum iacere! Triticum de bassus historia, amor caesium.
- *         .Media
- *           .Media-figure
- *             div(style='width: 50px; height:50px; background-color:#eee')
- *           .Media-body
- *             .Etiqueta.Etiqueta--default.Etiqueta--rev.glyphicon-list Lutetia
- *             p: small
- *               | Hercle, olla raptus!, terror! Varius, noster gabaliums saepe consumere de flavum, ferox scutum.
- *               | Equisos, tanquam castus stella. Cum abaculus persuadere, omnes fugaes captis, gratis lamiaes.
- *               | Cum peregrinationes, omnes particulaes raptus, dexter terrores. Est festus sensorem, cesaris.
- *         .Media
- *           .Media-figure.Media-figure--right
- *             div(style='width: 50px; height:50px; background-color:#eee')
- *           .Media-body
- *             .Etiqueta.Etiqueta--default.Etiqueta--rev.glyphicon-list Decor
- *             div: small: a(href='#') Sunt habenaes contactus rusticus, nobilis humani generises.
- */
-// endregion
+#### Media
+
+
+`.Media`: Estrutura genérica de disposição de conteúdo com uma mídia lateral. Nesse elemento, o `.Media-figure` é
+deslocado para a esquerda (ou para a direita via `.Media-figure--right`) e um novo
+[contexto de formatação](http://goo.gl/sIBbFp)
+é criado.
+
+Permite aninhamento de outro `.Media`.
+
+```example:jade
+.Media
+  .Media-figure
+    div(style='width:50px; height:50px; background-color:#eee; display: table-cell; vertical-align: middle')
+  .Media-top
+    .Etiqueta.Etiqueta--default.Etiqueta--rev.glyphicon-list Adelphiss nocere!
+  .Media-body
+    p: small
+      | Azureus, superbus competitions hic promissio de fidelis, brevis lixa. Est camerarius vox, cesaris.
+      | Domus, valebat, et homo. Salvus, grandis imbers unus dignus de albus, primus vigil.
+      | Burgus de superbus glos, fallere nuclear vexatum iacere! Triticum de bassus historia, amor caesium.
+    .Media
+      .Media-figure
+        div(style='width: 50px; height:50px; background-color:#eee')
+      .Media-body
+        .Etiqueta.Etiqueta--default.Etiqueta--rev.glyphicon-list Lutetia
+        p: small
+          | Hercle, olla raptus!, terror! Varius, noster gabaliums saepe consumere de flavum, ferox scutum.
+          | Equisos, tanquam castus stella. Cum abaculus persuadere, omnes fugaes captis, gratis lamiaes.
+          | Cum peregrinationes, omnes particulaes raptus, dexter terrores. Est festus sensorem, cesaris.
+    .Media
+      .Media-figure.Media-figure--right
+        div(style='width: 50px; height:50px; background-color:#eee')
+      .Media-body
+        .Etiqueta.Etiqueta--default.Etiqueta--rev.glyphicon-list Decor
+        div: small: a(href='#') Sunt habenaes contactus rusticus, nobilis humani generises.
+```
+*/
+
 @media-spacing: 10px;
 
 .Media {
@@ -84,21 +86,29 @@
     }
 
 
-// region doc
-/**
- * Stack:
- * `.Media--stack`: Empilha os subelementos do **Media**. O subelemento `.Media-top` sempre será o primeiro elemento
- * da pilha, independente da sua ordem na markup.
- *
- *     @example
- *     .Media.Media--stack
- *       .Media-figure
- *         div(style='background-color:#eee; width: 100px; height:100px')
- *       .Media-top
- *         .Etiqueta.Etiqueta--default.Etiqueta--left.glyphicon-list Naviss peregrinationes!
- *       p.Media-body: small Cum mens crescere, omnes boreases amor castus, teres capioes.
- */
-// endregion
+/*---
+title:   Media Stack
+section: Media
+---
+
+`.Media--stack`: Empilha os subelementos do **Media**. O subelemento
+`.Media-top` sempre será o primeiro elemento da pilha, independente da sua
+ordem na markup.
+
+
+```example:jade
+.Media.Media--stack
+  .Media-figure
+    div(style='background-color:#eee; width: 100px; height:100px')
+  .Media-top
+    .Etiqueta.Etiqueta--default.Etiqueta--left.glyphicon-list
+      | Naviss peregrinationes!
+  p.Media-body
+    small Cum mens crescere, omnes boreases amor castus, teres capioes.
+```
+
+*/
+
 .Media--stack {
     display: table; // necessário para o que o Media-top suba
     > .Media-figure {
@@ -110,29 +120,32 @@
     }
 }
 
-// region doc
-/**
- * Stack responsivo: Para que um elemento **Media**
- * seja empilhado apenas em determinados breakpoints, utilize os estados `is-stack-xs`, `is-stack-sm`,
- * `is-stack-md` ou `is-stack-lg`, combinados ou não.
- *
- * A posição do `.Media-top` na markup influencia a disposição dos subelementos no modo **Media**. Se for o primeiro
- * elemento filho, ficará acima do **Media**
- * inteiro. Caso contrário ficará diretamente acima do subelemento `.Media-body`.
- *
- *     @example
- *     .row
- *       .col-xs-12
- *         .Media.is-stack-xs
- *           .Media-figure.col-xs-6.col-sm-3
- *             div(style='padding-bottom: 56.25%; height:0px; background-color:#eee')
- *           .Media-top
- *             .Etiqueta.Etiqueta--default.glyphicon-list-alt Orexis
- *           p.Media-body: small
- *             | Resistere mechanice ducunt ad raptus luba.
- *             | Nocere nunquam ducunt ad fortis frondator. Grandis, noster humani generiss sapienter de brevis.
- */
-// endregion
+/*---
+title:   Stack Responsivo
+section: Media
+---
+Stack responsivo: Para que um elemento **Media**
+seja empilhado apenas em determinados breakpoints, utilize os estados `is-stack-xs`, `is-stack-sm`,
+`is-stack-md` ou `is-stack-lg`, combinados ou não.
+
+A posição do `.Media-top` na markup influencia a disposição dos subelementos no modo **Media**. Se for o primeiro
+elemento filho, ficará acima do **Media**
+inteiro. Caso contrário ficará diretamente acima do subelemento `.Media-body`.
+
+```example:jade
+.row
+  .col-xs-12
+    .Media.is-stack-xs
+      .Media-figure.col-xs-6.col-sm-3
+        div(style='padding-bottom: 56.25%; height:0px; background-color:#eee')
+      .Media-top
+        .Etiqueta.Etiqueta--default.glyphicon-list-alt Orexis
+      p.Media-body: small
+        | Resistere mechanice ducunt ad raptus luba.
+        | Nocere nunquam ducunt ad fortis frondator. Grandis, noster humani generiss sapienter de brevis.
+```
+*/
+
 .Media {
     &.is-stack-xs {
         @media (max-width: @screen-xs-min) {
