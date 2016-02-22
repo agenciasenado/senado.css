@@ -9,45 +9,45 @@ no em seu `offsetParent`.
 ```example:jade
 div(style='width:200px; height:100px;position:relative; border: 1px solid #ddd')
   .Toolbar
-    .pull-right
-      a.Toolbar-tool: span.glyphicon.glyphicon-list-alt
-      a.Toolbar-tool: span.glyphicon.glyphicon-pencil
-      a.Toolbar-tool: span.glyphicon.glyphicon-list
-    span.Toolbar-title Toolbar
+  .pull-right
+    a.Toolbar-tool: span.glyphicon.glyphicon-list-alt
+    a.Toolbar-tool: span.glyphicon.glyphicon-pencil
+    a.Toolbar-tool: span.glyphicon.glyphicon-list
+  span.Toolbar-title Toolbar
 ```
 */
 
 .Toolbar {
-    position: absolute;
-    right: 0;
-    left: 0;
-    z-index: 1000;
-    font-size: 0;
-    background: fadeout(@azul-padrao, 82%);
-    padding: 2px;
+  position: absolute;
+  right: 0;
+  left: 0;
+  z-index: 1000;
+  font-size: 0;
+  background: fadeout(@azul-padrao, 82%);
+  padding: 2px;
 }
 
-    .Toolbar-title, .Toolbar-tool {
-        line-height: 20px;
-        font-size: 12px;
-        display: inline-block;
-    }
+  .Toolbar-title, .Toolbar-tool {
+    line-height: 20px;
+    font-size: 12px;
+    display: inline-block;
+  }
 
-    .Toolbar-title {
-        padding-left: 4px;
-        font-weight: bold;
-    }
+  .Toolbar-title {
+    padding-left: 4px;
+    font-weight: bold;
+  }
 
-    a.Toolbar-tool {
-        color: #fff;
-        padding: 0 4px;
+  a.Toolbar-tool {
+    color: #fff;
+    padding: 0 4px;
 
-        background: fadeout(@azul-padrao, 20%);
-        margin-left: 2px;
-        &:first-child {
-            margin-left: 0;
-        }
-        &:hover {
-            color: #fff;
-        }
+    background: fadeout(@azul-padrao, 20%);
+    margin-left: 2px;
+    &:first-child {
+      margin-left: 0;
     }
+    &:hover {
+      color: #fff;
+    }
+  }
