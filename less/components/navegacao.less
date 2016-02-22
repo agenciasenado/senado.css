@@ -1,16 +1,22 @@
 
-// region doc
-/**
-* Menus de navegação:
-* `.Nav--principal`: Menu principal do portal. É colidível no viewport `xs`.
-*
-*     @example
-*     ul.Nav--principal.navbar.navbar-collapse.navbar-default
-*       ul.nav.navbar-nav
-*         li: a Início
-*         li: a Notícias
+/*---
+section: Objetos
+title: Navegação
+---
+
+##### Navegação principal
+
+`.Nav--principal`: Menu principal do portal. É colidível no viewport `xs`.
+
+```example:jade
+ul.Nav--principal.navbar.navbar-collapse.navbar-default
+  ul.nav.navbar-nav
+    li: a Início
+    li: a Notícias
+    li: a Temas
+```
 */
-// endregion
+
 .Nav--principal {
     border-radius: 0;
     background: #fff;
@@ -39,20 +45,24 @@
 }
 
 
-// region doc
-/**
-* Menus de navegação secundário:
-* `.Nav--secundaria`: Menu secundário utilizado no topo do site. Preferencialmente, não
-* deve ser exibido em `xs`. Utilizado
-*
-*     @example
-*     div.Nav--secundaria.navbar
-*       ul.nav.navbar-nav.pull-right
-*           li: a(href='#') Jornal do Senado
-*           li: a(href='#') Senado Notícias
-*           li: a(href='#') TV Senado
+/*---
+section: Navegação
+---
+
+##### Navegação secundária
+
+`.Nav--secundaria`: Menu secundário utilizado no topo do site. Preferencialmente, não
+deve ser exibido em `xs`. Utilizado
+
+```example:jade
+div.Nav--secundaria.navbar
+  ul.nav.navbar-nav.pull-right
+      li: a(href='#') Jornal do Senado
+      li: a(href='#') Senado Notícias
+      li: a(href='#') TV Senado
+```
 */
-// endregion
+
 @secundaria-height: 30px;
 .Nav--secundaria {
     border: none;

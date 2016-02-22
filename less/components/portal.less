@@ -9,20 +9,23 @@
     }
 }
 
-// region doc
-/**
- * Barra de ações do PortalTopo:
- * `PortalTopo-togglers`: Container dos controles `PortalTop-toggler` que exibem o formulário de
- * busca e o menu principal do `PortalTopo` qdo o viewport estiver em `xs`. São alinhados à direita por padrão.
- *
- *     @example
- *     .PortalTopo-togglers
- *         .PortalTopo-toggler--menu(data-toggle='collapse', data-target='.principal')
- *           .Icon.Icon--menu.Icon--md
- *         .PortalTopo-toggler--search(data-toggle='collapse', data-target='.PortalTopo-busca')
- *           .glyphicon.glyphicon-search
- */
-// endregion doc
+/*---
+title: Topo
+section: Objetos
+
+`PortalTopo-togglers`: Container dos controles `PortalTop-toggler` que exibem o formulário de
+busca e o menu principal do `PortalTopo` qdo o viewport estiver em `xs`. São alinhados à direita por padrão.
+
+```example:jade
+.PortalTopo-togglers
+  .PortalTopo-toggler--menu(data-toggle='collapse', data-target='.principal')
+    .Icon.Icon--menu.Icon--md
+  .PortalTopo-toggler--search(data-toggle='collapse', data-target='.PortalTopo-busca')
+    .glyphicon.glyphicon-search
+.clearfix
+```
+*/
+
 .PortalTopo-togglers {
     .make-xs-column(4);
     text-align: right;

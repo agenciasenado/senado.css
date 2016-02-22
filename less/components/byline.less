@@ -1,16 +1,19 @@
 // region doc
-/**
-* Linha de autoria:
-* `.ByLine`: Linha com informações sobre autor e data de publicação. Deve ser usado preferencialmente com um
-* elemento `p` para aproveitar a margem padrão.
-*
-*     @example
-*     p.ByLine
-*         span.ByLine-autor Da Redação
-*         span.ByLine-data
-*             |  05/06/2015, 17h17 - ATUALIZADO EM 05/06/2015, 18h25
+/*---
+title: Linha de autoria
+section: Objetos
+---
+
+`.ByLine`: Linha com informações sobre autor e data de publicação. Deve ser usado preferencialmente com um
+elemento `p` para aproveitar a margem padrão.
+
+```example:jade
+p.ByLine
+  span.ByLine-autor Da Redação
+  span.ByLine-data
+    |  05/06/2015, 17h17 - ATUALIZADO EM 05/06/2015, 18h25
+```
 */
-// endregion
 
 .ByLine {
     font-size: 12px;
