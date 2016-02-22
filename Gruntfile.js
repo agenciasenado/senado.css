@@ -1,15 +1,16 @@
 
 var path = require('path')
 
-module.exports = function(grunt) {
+module.exports = function (grunt) {
 
-  require('load-grunt-tasks')(grunt, {scope: 'devDependencies'})
+  require('load-grunt-tasks')(grunt, { scope: 'devDependencies' })
 
   grunt.initConfig({
 
     pkg: grunt.file.readJSON('package.json'),
 
     less: {
+
       main: {
         options: {
           paths: ['./node_modules'],
@@ -41,7 +42,7 @@ module.exports = function(grunt) {
     },
 
     watch: {
-      options : {
+      options: {
         spawn: false,
         livereload: '<%= connect.options.livereload %>'
       },
@@ -56,7 +57,7 @@ module.exports = function(grunt) {
     },
 
     cssmin: {
-      options : {
+      options: {
         keepSpecialComments: 0
       },
       dist: {
@@ -96,21 +97,21 @@ module.exports = function(grunt) {
     },
 
     phantomcss: {
-      'desktop': {
+      desktop: {
         options: {
           screenshots: 'tests/desktop/screenshots/',
           results: 'tests/desktop/results/',
           viewportSize: [1200, 1200]
         },
-        src: [ 'tests/**/*desktop.js' ]
+        src: ['tests/**/*desktop.js']
       },
-      'mobile': {
+      mobile: {
         options: {
           screenshots: 'tests/mobile/screenshots/',
           results: 'tests/mobile/results/',
           viewportSize: [480, 480]
         },
-        src: [ 'tests/**/*desktop.js' ]
+        src: ['tests/**/*desktop.js']
       }
     },
 
