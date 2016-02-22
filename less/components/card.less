@@ -1,43 +1,46 @@
-// region doc
-/**
-* Card:
-* `.Card`: Cartão
-*
-*     @example
-*     .Deck.Deck--row
-*       .Card.u-size1of2
-*         .Card-body(class='+light') Title
-*           div Magnum lanista sed mire imitaris omnia est
-*           div Magnum lanista sed mire imitaris omnia est
-*         .Card-footer(class='+light') Footer
-*       .Card.u-size1of2
-*         .Card-body(class='+light') Title
-*         .Card-footer(class='+light') Footer
-*     p
-*     .Deck.Deck--row.Deck--strip
-*       .Card.u-size1of4
-*         .Card-body
-*           .Embed.Embed--3by2(class='+cut') oi
-*       .Card.u-size1of4
-*         .Card-body
-*           .Embed.Embed--3by2(class='+cut') oi
-*       .Card.u-size1of4
-*         .Card-body
-*           .Embed.Embed--3by2(class='+cut') oi
-*       .Card.u-size1of4
-*         .Card-body
-*           .Embed.Embed--3by2(class='+cut') oi
-*       .Deck-xspacer.u-spacer--xl
-*       .Card.u-size1of4
-*         .Card-body
-*           .Embed.Embed--3by2(class='+cut') oi
+/*---
+title: Card
+section: Components
+---
+
+Card:
+`.Card`: Cartão
+
+```example:jade
+.Deck.Deck--row
+  .Card.u-size1of2
+    .Card-body(class='+light') Title
+      div Magnum lanista sed mire imitaris omnia est
+      div Magnum lanista sed mire imitaris omnia est
+    .Card-footer(class='+light') Footer
+  .Card.u-size1of2
+    .Card-body(class='+light') Title
+    .Card-footer(class='+light') Footer
+p
+.Deck.Deck--row.Deck--strip
+  .Card.u-size1of4
+    .Card-body
+      .Embed.Embed--3by2(class='+cut') oi
+  .Card.u-size1of4
+    .Card-body
+      .Embed.Embed--3by2(class='+cut') oi
+  .Card.u-size1of4
+    .Card-body
+      .Embed.Embed--3by2(class='+cut') oi
+  .Card.u-size1of4
+    .Card-body
+      .Embed.Embed--3by2(class='+cut') oi
+  .Deck-xspacer.u-spacer--xl
+  .Card.u-size1of4
+    .Card-body
+      .Embed.Embed--3by2(class='+cut') oi
+```
 */
-// endregion
+
 .Deck {
     display: flex;
     flex-flow: row;
     flex-wrap: wrap;
-    border: 1px solid red;
 }
 
 .Deck--row {
