@@ -1,71 +1,67 @@
-/***
- * Segmento:
- */
+/*---
+title: Segment
+section: Components
+---
 
-// region segment
-/**
-* Segment:
-* `.Segment`: Estrutura que colide as margens verticais do `first-child` e `last-child`.
-*
-*     @example
-*     .Segments(class='+light')
-*       .Segment(class='+cut')
-*         div: p div > p
-*       .Segment(class='+cut')
-*         ul
-*           li ul > li
-*             ul
-*               li ul > li > ul > li
-*       .Segment(class='+cut')
-*          div: div: div: h3 div > div > div > h3
-*       .Segment(class='+cut')
-*         span span
-*/
-// endregion
+`.Segment`: Estrutura que colide as margens verticais do `first-child` e `last-child`.
 
-// region cut-here
-/**
-* Cut here:
-* `.CutHere`: Divide cada segmento com uma borda tracejada.
-*
-*     @example
-*     .Segments.Painel.Painel--cut
-*
-*       div.Segment.Apex.Apex--cut
-*         .zeta ÚLTIMAS NOTÍCIAS
-*       .CutHere
-*         .Segment: p Apolloniates de festus gabalium, amor frondator!
-*         .Segment: h4 Potus hic ducunt ad noster demissio.
-*         .Segment: small Caculas sunt paluss de altus species.
-*       div.Segment.Stand.Stand--cut
-*         a.milli: b VER TODAS
-*/
-// endregion
+```example:jade
+.Segments(class='+light')
+  .Segment(class='+cut')
+    div: p div > p
+  .Segment(class='+cut')
+    ul
+      li ul > li
+        ul
+          li ul > li > ul > li
+  .Segment(class='+cut')
+     div: div: div: h3 div > div > div > h3
+  .Segment(class='+cut')
+    span span
+```
+##### Uniformização dos espaçamentos verticais
 
-// region exemplos
-/**
-* Uniformização dos espaçamentos verticais:
-* `.Segments`: uniformiza os espaços entre os elementos de uma sequência vertical. Quando dentro de um `.Segments`,
-* um elemento qualquer será separado verticalmente do próximo sibling.
-*
-* Pode ser utilizado na forma `ul.Segment > li` ou `Segments > *.Segment`
-*
-*     @example
-*     .Painel.Painel--lg.Painel--border
-*       ul(class='Segments')
-*         li.Apex.Apex--cut.h4
-*           span.u-divisorVertical.zeta Agenda
-*           i.Icon.Icon--md.Icon--calendar
-*           span.h6: a Qua | 01/07
-*         li.Painel.Painel--vert
-*           ul.list-unstyled.CutHere.CutHere--lg
-*             li Indictios prarere. Ubi est magnum gemna?
-*             li Nocere aliquando ducunt ad germanus impositio.
-*             li Eras sunt cottas de nobilis compater.
-*         li.Stand.Stand--cut.small
-*           a Agenda semanal
+`.Segments`: uniformiza os espaços entre os elementos de uma sequência
+vertical. Quando dentro de um `.Segments`, um elemento qualquer será
+separado verticalmente do próximo sibling.
+
+Pode ser utilizado na forma `ul.Segment > li` ou `Segments > *.Segment`
+
+```example:jade
+.Painel.Painel--lg.Painel--border
+  ul(class='Segments')
+    li.Apex.Apex--cut.h4
+      span.u-divisorVertical.zeta Agenda
+      i.Icon.Icon--md.Icon--calendar
+      span.h6: a Qua | 01/07
+    li.Painel.Painel--vert
+      ul.list-unstyled.CutHere.CutHere--lg
+        li Indictios prarere. Ubi est magnum gemna?
+        li Nocere aliquando ducunt ad germanus impositio.
+        li Eras sunt cottas de nobilis compater.
+    li.Stand.Stand--cut.small
+      a Agenda semanal
+```
 */
-// endregion
+
+/*---
+title: Cut here
+section: Components
+
+`.CutHere`: Divide cada segmento com uma borda tracejada.
+
+```example:jade
+.Segments.Painel.Painel--cut
+  div.Segment.Apex.Apex--cut
+    .zeta ÚLTIMAS NOTÍCIAS
+  .CutHere
+    .Segment: p Apolloniates de festus gabalium, amor frondator!
+    .Segment: h4 Potus hic ducunt ad noster demissio.
+    .Segment: small Caculas sunt paluss de altus species.
+  div.Segment.Stand.Stand--cut
+    a.milli: b VER TODAS
+```
+*/
 
 // SPEC:
 // - não deve possuir margens lateriais

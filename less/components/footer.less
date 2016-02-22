@@ -1,42 +1,44 @@
-// region doc
-/**
-* Rodapé:
-* `.FooterMain`: Rodapé com lista de links separados em colunas. Por ser um elemento essencial, sua markup é
-* presa aos estilos e as classes de layout são embutidas nos componentes. Deve ser utilizado como um
-* componente único e indivisível.
-*
-*     @example
-*     .FooterMain.container-fluid
-*         .FooterMain-row
-*             .FooterMain-section
-*                 dl.FooterMain-list
-*                     dt Titulo
-*                     dd: a(href='#') Link
-*                     dd: a(href='#') Link
-*             .FooterMain-section
-*                 dl.FooterMain-list
-*                     dt Titulo
-*                     dd: a(href='#') Link
-*                     dd: a(href='#') Link
-*             .FooterMain-section
-*                 dl.FooterMain-list
-*                     dt Titulo
-*                     dd: a(href='#') Link
-*                     dd: a(href='#') Link
-*             .FooterMain-section
-*                 dl.FooterMain-list
-*                     dt Titulo
-*                     dd: a(href='#') Link
-*                     dd: a(href='#') Link
-*         .FooterMain-end
-*             span.FooterMain-icon--intranet
-*                 | Intranet
-*             span.FooterMain-icon--aotopo
-*                 | Topo
-*     .FooterMain-endereco
-*         | Endereço
+/*---
+title: Rodapé
+section: Objetos
+
+`.FooterMain`: Rodapé com lista de links separados em colunas. Por ser
+um elemento essencial, sua markup é presa aos estilos e as classes de
+layout são embutidas nos componentes. Deve ser utilizado como um componente
+único e indivisível.
+
+```example:jade
+.FooterMain.container-fluid
+  .FooterMain-row
+    .FooterMain-section
+      dl.FooterMain-list
+        dt Titulo
+        dd: a(href='#') Link
+        dd: a(href='#') Link
+    .FooterMain-section
+      dl.FooterMain-list
+        dt Titulo
+        dd: a(href='#') Link
+        dd: a(href='#') Link
+    .FooterMain-section
+      dl.FooterMain-list
+        dt Titulo
+        dd: a(href='#') Link
+        dd: a(href='#') Link
+    .FooterMain-section
+      dl.FooterMain-list
+        dt Titulo
+        dd: a(href='#') Link
+        dd: a(href='#') Link
+  .FooterMain-end
+    span.FooterMain-icon--intranet
+      | Intranet
+    span.FooterMain-icon--aotopo
+      | Topo
+.FooterMain-endereco
+  | Endereço
+```
 */
-// endregion
 .FooterMain {
     background-color: #eee;
     margin-top: 10px;

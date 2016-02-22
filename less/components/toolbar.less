@@ -1,19 +1,21 @@
-// region doc
-/**
-* Barra de ferramentas:
-* `.Toolbar`: Barra com botões de ações e etiquetas de informações. Por ser absolutamente posicionada, em encaixada
-* no em seu `offsetParent`.
-*
-*     @example
-*     div(style='width:200px; height:100px;position:relative; border: 1px solid #ddd')
-*       .Toolbar
-*         .pull-right
-*           a.Toolbar-tool: span.glyphicon.glyphicon-list-alt
-*           a.Toolbar-tool: span.glyphicon.glyphicon-pencil
-*           a.Toolbar-tool: span.glyphicon.glyphicon-list
-*         span.Toolbar-title Toolbar
+/*---
+title: Barra de ferramentas
+section: Components
+---
+
+`.Toolbar`: Barra com botões de ações e etiquetas de informações. Por ser absolutamente posicionada, em encaixada
+no em seu `offsetParent`.
+
+```example:jade
+div(style='width:200px; height:100px;position:relative; border: 1px solid #ddd')
+  .Toolbar
+    .pull-right
+      a.Toolbar-tool: span.glyphicon.glyphicon-list-alt
+      a.Toolbar-tool: span.glyphicon.glyphicon-pencil
+      a.Toolbar-tool: span.glyphicon.glyphicon-list
+    span.Toolbar-title Toolbar
+```
 */
-// endregion
 
 .Toolbar {
     position: absolute;
