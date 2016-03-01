@@ -13,4 +13,4 @@ tests/**/results
 *.diff.png
 *.fail.png
 
-!styleguide/*css
+styleguide

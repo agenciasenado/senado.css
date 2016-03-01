@@ -1,3 +1,10 @@
+# 2.4.0
+
+* Converter documentação em mdcss
+* Remover tasks dispensáveis e organizar o postcss
+* Helpers responsivos à escala de fontes
+
+
 # 2.3.0
 
 * Escala de fonte responsiva

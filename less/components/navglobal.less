@@ -1,23 +1,28 @@
 @import (reference) "@{bootstrap-path}/grid";
 
-// region doc
-/**
- * Navegação Global:
- * `.NavGlobal` - Barra superior comum a todos os portais. Utiliza os utilitários `u-size` para organizar
- * seus subelementos.
- *
- *     @example
- *     .NavGlobal
- *       .container-fluid
- *         .u-sizeFitAlt
- *           | FIT
- *         .u-sizeFit
- *           img(src="assets/br.svg", height=20)
- *           span Brasil
- *         .u-sizeFill.text-center
- *           a.flat.hidden-xs(href='#') Toolkit
- */
-// endregion
+/*---
+title: Global
+section: Objetos
+---
+
+##### Navegação Global
+
+`.NavGlobal` - Barra superior comum a todos os portais. Utiliza os utilitários `u-size` para organizar
+seus subelementos.
+
+```example:jade
+.NavGlobal
+  .container-fluid
+    .u-sizeFitAlt
+      | FIT
+    .u-sizeFit
+      img(src="../assets/br.svg", height=20)
+      span  Brasil
+    .u-sizeFill.text-center
+      a.flat.hidden-xs(href='#') Toolkit
+```
+*/
+
 .NavGlobal {
     min-height: 47px;
     line-height: 40px;

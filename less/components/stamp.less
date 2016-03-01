@@ -1,26 +1,30 @@
-// region doc
-/**
-* Stamps:
-* `.Stamp`: Elemento composto por um ícone `.Stamp-icon`
-* e um texto `.Stamp-caption`. O link pode ser
-* aplicado a todos os elementos, apenas ao ícone ou apenas ao texto.
-*
-* O elemento `.Stamp-icon` pode ser combinado com qualquer `.Icon`.
-*
-*     @example
-*     .Stamp.Stamp--tag
-*       .Stamp-icon.Stamp-icon--default
-*         .Icon--newspaper
-*       .Stamp-caption
-*         a.flat(href='#') Jornal
-*     .Stamp.Stamp--stack
-*       .Stamp-icon.Stamp-icon--circle
-*         .Icon--newspaper
-*       .Stamp-caption--label
-*         a(href='#') Jornal do Senado
-*
+/*---
+title: Stamps
+section: Components
+---
+
+`.Stamp`: Elemento composto por um ícone `.Stamp-icon`
+e um texto `.Stamp-caption`. O link pode ser
+aplicado a todos os elementos, apenas ao ícone ou apenas ao texto.
+
+O elemento `.Stamp-icon` pode ser combinado com qualquer `.Icon`.
+
+```example:jade
+.row
+  .col-sm-6
+    .Stamp.Stamp--tag
+      .Stamp-icon.Stamp-icon--default
+        .Icon--newspaper
+      .Stamp-caption
+        a.flat(href='#') Jornal
+  .col-sm-6
+    .Stamp.Stamp--stack
+      .Stamp-icon.Stamp-icon--circle
+        .Icon--newspaper
+      .Stamp-caption--label
+        a(href='#') Jornal do Senado
+```
 */
-// endregion
 
  // altura da tag em que o espaçamento vertical coincide com o horizontal considerando font-size: 12px
 @tag-height: 100px;

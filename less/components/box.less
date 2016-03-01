@@ -1,60 +1,41 @@
-/***
- * Box:
- */
+/*---
+title:   Box
+section: Components
+---
 
-// region exemplos
-/**
-* Box:
-* `.Box`: Elemento com padding interno e margem abaixo. Seu espaçamento pode ser configurado por meio
-* dos modificadores `--notb`, que não possui padding vertical; `--norl`, que não possui padding
-* horizontal; e `--full`, que não possui paddings.
-*
-*     @example
-*     .Segments
-*       .Box(class="+cut")
-*         | Box
-*       .Box.Box--x(class="+cut")
-*         | --x
-*       .Box.Box--y(class="+cut")
-*         | --y
-*/
+##### Básico
 
-/**
-* Tamanho do espaçamento interno:
-* Os elementos `.Box` podem o tamanho do espaçamento interno alterado por meio dos modificadores `--sm`
-* ou `--lg`.
-*
-*     @example
-*     .Segments
-*       .Box(class="+cut").Box--sm
-*         | sm
-*       .Box(class="+cut")
-*         | normal
-*       .Box(class="+cut").Box--lg
-*         | lg
-*       .Box(class="+cut").Box--xl
-*         | xl
-*/
+`.Box`: Elemento com padding interno e margem abaixo. Seu espaçamento pode ser
+configurado por meio dos modificadores `--notb`, que não possui padding
+vertical; `--norl`, que não possui padding horizontal; e `--full`, que não
+possui paddings.
 
-/**
-* Exemplos:
-*
-*     @example
-*     .Box.Box--flush.Box--links
-*       .Apex.Apex--default.zeta Expediente
-*       .Box
-*         .Flag
-*           .Flag-figure
-*             .Icon.Icon--newspaper.Icon--lg
-*           .Flag-body
-*             a Cur vita tolerare?
-*             p: small Nunquam gratia guttus
-*         .Flag
-*           .Flag-figure
-*             .Icon.Icon--bubble.Icon--lg
-*           .Flag-body
-*             a Nunquam contactus pulchritudine
-*             div: small Fuga de ferox buxum, manifestum advena
+```example:jade
+.Segments
+  .Box(class="+cut")
+    | Box
+  .Box.Box--x(class="+cut")
+    | --x
+  .Box.Box--y(class="+cut")
+    | --y
+```
+
+##### Tamanho do espaçamento interno:
+
+Os elementos `.Box` podem o tamanho do espaçamento interno alterado por
+meio dos modificadores `--sm` ou `--lg`.
+
+```example:jade
+.Segments
+  .Box(class="+cut").Box--sm
+    | sm
+  .Box(class="+cut")
+    | normal
+  .Box(class="+cut").Box--lg
+    | lg
+  .Box(class="+cut").Box--xl
+    | xl
+```
 */
 
 .Box {
@@ -102,4 +83,3 @@
         border-top: 1px dotted #ccc;
         border-bottom: 5px solid #ccc;
     }
-

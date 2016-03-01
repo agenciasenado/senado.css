@@ -1,25 +1,48 @@
- // region doc
-/**
-* Título principal:
-* `h1.titulo-principal`: Deve ser utilizado sempre como o primeiro título de um conteúdo. Apenas um subelemento é
-* permitido (`small`) e deve ser utilizado para descrição ou lead do título.
-*
-*     @example
-*     h1.titulo-principal senado.css
-*         small http://git.io/senado.css
-*/
-// endregion
+/*---
+title:   Tipografia
+section: Base
+---
 
-    h1.titulo-principal {
-        border-bottom: 1px solid #eee;
-        padding-bottom: 15px;
-    }
-        h1.titulo-principal small {
-            display: block;
-            font-size: 14px;
-            line-height: @line-height-small;
-            margin-top: 10px;
-        }
+##### Título principal
+`h1.titulo-principal`: Deve ser utilizado sempre como o primeiro título de um
+conteúdo. Apenas um subelemento é permitido (`small`) e deve ser utilizado para
+descrição ou lead do título.
+```example:html
+<h1 class="titulo-principal">
+  senado.css
+  <small>http://git.io/senado.css</small>
+</h1>
+```
+*/
+
+h1.titulo-principal {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 15px;
+}
+
+  h1.titulo-principal small {
+    display: block;
+    font-size: 14px;
+    line-height: @line-height-small;
+    margin-top: 10px;
+  }
+
+/*---
+title:   Escala de fonte
+section: Base
+---
+
+Classes utilitárias de tamanho da fonte. As escalas são `.giga`, `.mega`,
+ `.kilo`, `.alpha`, `.beta`, `.gamma`, `.delta`, `.epsilon`, `.zeta`,
+ `.normalis`, `.milli`, `.micro`.
+
+```example:jade
+.beta .beta
+.gamma .gamma
+.delta .delta
+.zeta-sm.milli-xs .milli em xs; .zeta de sm em diante
+```
+*/
 
 ._font-scale(giga, @giga);
 ._font-scale(mega, @mega);
@@ -39,22 +62,22 @@
     font-size: @size;
   }
   @media (max-width: @screen-xs-max) {
-    .@{class}\@xs {
+    .@{class}-xs {
       font-size: @size;
     }
   }
-  @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
-    .@{class}\@sm {
+  @media (min-width: @screen-sm-min) {
+    .@{class}-sm {
       font-size: @size;
     }
   }
-  @media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
-    .@{class}\@md {
+  @media (min-width: @screen-md-min) {
+    .@{class}-md {
       font-size: @size;
     }
   }
   @media (min-width: @screen-lg-min) {
-    .@{class}\@lg {
+    .@{class}-lg {
       font-size: @size;
     }
   }
