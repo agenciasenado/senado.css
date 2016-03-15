@@ -12,7 +12,7 @@
     "grunt-contrib-cssmin": "^1.0.0",
     "grunt-contrib-jade": "^1.0.0",
     "grunt-contrib-less": "^1.2.0",
-    "grunt-contrib-watch": "^0.6.1",
+    "grunt-contrib-watch": "^1.0.0",
     "grunt-phantomcss": "https://github.com/micahgodbolt/grunt-phantomcss.git#master",
     "grunt-postcss": "^0.8.0",
     "load-grunt-tasks": "^3.4.1",
