@@ -1,3 +1,9 @@
+# 2.5.0
+
+* Componente Clamp
+* Atualizar dependências
+
+
 # 2.4.0
 
 * Converter documentação em mdcss
