@@ -58,5 +58,3 @@
 * ShareIcon
 * CSS do Icon--share
 * Novo ícone de compartilhar
-5addb0db63298e63e4dade647ea7509b8d67a5df espaçar itens Card em um Deck
-87ce88cbca200f25efef4926d12934a5897232b8 Merge tag '2.5.0' into develop
