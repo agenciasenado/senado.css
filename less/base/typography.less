@@ -44,41 +44,92 @@ Classes utilitárias de tamanho da fonte. As escalas são `.giga`, `.mega`,
 ```
 */
 
-._font-scale(giga, @giga);
-._font-scale(mega, @mega);
-._font-scale(kilo, @kilo);
-._font-scale(alpha, @alpha);
-._font-scale(beta, @beta);
-._font-scale(gamma, @gamma);
-._font-scale(delta, @delta);
-._font-scale(epsilon, @epsilon);
-._font-scale(zeta, @zeta);
-._font-scale(normalis, @font-size-base);
-._font-scale(milli, @milli);
 ._font-scale(micro, @micro);
+._font-scale(milli, @milli);
+._font-scale(normalis, @font-size-base);
+._font-scale(zeta, @zeta);
+._font-scale(epsilon, @epsilon);
+._font-scale(delta, @delta);
+._font-scale(gamma, @gamma);
+._font-scale(beta, @beta);
+._font-scale(alpha, @alpha);
+._font-scale(kilo, @kilo);
+._font-scale(mega, @mega);
+._font-scale(giga, @giga);
 
 ._font-scale(@class, @size) {
   .@{class} {
     font-size: @size;
   }
-  @media (max-width: @screen-xs-max) {
-    .@{class}-xs {
-      font-size: @size;
-    }
+}
+
+._font-scale-r(@class, @size, @scale) {
+  .@{class}-@{scale} {
+    font-size: @size;
   }
-  @media (min-width: @screen-sm-min) {
-    .@{class}-sm {
-      font-size: @size;
-    }
-  }
-  @media (min-width: @screen-md-min) {
-    .@{class}-md {
-      font-size: @size;
-    }
-  }
-  @media (min-width: @screen-lg-min) {
-    .@{class}-lg {
-      font-size: @size;
-    }
-  }
+}
+
+
+@media (max-width: @screen-xs-max) {
+  @scale: xs;
+  ._font-scale-r(micro, @micro, @scale);
+  ._font-scale-r(milli, @milli, @scale);
+  ._font-scale-r(normalis, @font-size-base, @scale);
+  ._font-scale-r(zeta, @zeta, @scale);
+  ._font-scale-r(epsilon, @epsilon, @scale);
+  ._font-scale-r(delta, @delta, @scale);
+  ._font-scale-r(gamma, @gamma, @scale);
+  ._font-scale-r(beta, @beta, @scale);
+  ._font-scale-r(alpha, @alpha, @scale);
+  ._font-scale-r(kilo, @kilo, @scale);
+  ._font-scale-r(mega, @mega, @scale);
+  ._font-scale-r(giga, @giga, @scale);
+}
+
+@media (min-width: @screen-sm-min) {
+  @scale: sm;
+  ._font-scale-r(micro, @micro, @scale);
+  ._font-scale-r(milli, @milli, @scale);
+  ._font-scale-r(normalis, @font-size-base, @scale);
+  ._font-scale-r(zeta, @zeta, @scale);
+  ._font-scale-r(epsilon, @epsilon, @scale);
+  ._font-scale-r(delta, @delta, @scale);
+  ._font-scale-r(gamma, @gamma, @scale);
+  ._font-scale-r(beta, @beta, @scale);
+  ._font-scale-r(alpha, @alpha, @scale);
+  ._font-scale-r(kilo, @kilo, @scale);
+  ._font-scale-r(mega, @mega, @scale);
+  ._font-scale-r(giga, @giga, @scale);
+}
+
+@media (min-width: @screen-md-min) {
+  @scale: md;
+  ._font-scale-r(micro, @micro, @scale);
+  ._font-scale-r(milli, @milli, @scale);
+  ._font-scale-r(normalis, @font-size-base, @scale);
+  ._font-scale-r(zeta, @zeta, @scale);
+  ._font-scale-r(epsilon, @epsilon, @scale);
+  ._font-scale-r(delta, @delta, @scale);
+  ._font-scale-r(gamma, @gamma, @scale);
+  ._font-scale-r(beta, @beta, @scale);
+  ._font-scale-r(alpha, @alpha, @scale);
+  ._font-scale-r(kilo, @kilo, @scale);
+  ._font-scale-r(mega, @mega, @scale);
+  ._font-scale-r(giga, @giga, @scale);
+}
+
+@media (min-width: @screen-lg-min) {
+  @scale: lg;
+  ._font-scale-r(micro, @micro, @scale);
+  ._font-scale-r(milli, @milli, @scale);
+  ._font-scale-r(normalis, @font-size-base, @scale);
+  ._font-scale-r(zeta, @zeta, @scale);
+  ._font-scale-r(epsilon, @epsilon, @scale);
+  ._font-scale-r(delta, @delta, @scale);
+  ._font-scale-r(gamma, @gamma, @scale);
+  ._font-scale-r(beta, @beta, @scale);
+  ._font-scale-r(alpha, @alpha, @scale);
+  ._font-scale-r(kilo, @kilo, @scale);
+  ._font-scale-r(mega, @mega, @scale);
+  ._font-scale-r(giga, @giga, @scale);
 }
