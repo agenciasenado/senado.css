@@ -1,3 +1,8 @@
+# 2.5.3
+
+* Adicionar .eta à escala
+
+
 # 2.5.2
 
 * Organizar especificidade da escala de fontes responsiva
