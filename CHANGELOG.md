@@ -1,3 +1,8 @@
+# 2.5.2
+
+* Organizar especificidade da escala de fontes responsiva
+
+
 # 2.5.1
 
 * Devolver espaçamento entre .Card em um .Deck
