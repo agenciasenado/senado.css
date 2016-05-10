@@ -1,3 +1,9 @@
+# 2.5.4
+
+* Flag-figure sem padding
+* Modificadores do .BreakingNews
+
+
 # 2.5.3
 
 * Adicionar .eta à escala
