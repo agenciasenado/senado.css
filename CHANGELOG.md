@@ -1,3 +1,10 @@
+# 2.5.5
+
+* Simplificar Knob
+* Remover trecho de compatibilidade com Bootstrap 2
+* Componente Loading
+* Clamp: evitar que tamanho exato da altura seja quebrada pelo chrome
+
 # 2.5.4
 
 * Flag-figure sem padding
