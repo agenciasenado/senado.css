@@ -55,6 +55,19 @@ linha.
   }
 }
 
+  .Clamp--1 {
+    @lines: 1;
+    max-height: @lines * @line-height-base * 1em;
+    &:after {
+      top: (@lines - 1) * @line-height-base * 1em;
+    }
+    .Clamp-text {
+      &:before {
+        height: (@lines - 1) * @line-height-base * 0.99em;
+      }
+    }
+  }
+
   .Clamp--2 {
     @lines: 2;
     max-height: @lines * @line-height-base * 1em;
