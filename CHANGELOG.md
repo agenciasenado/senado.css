@@ -1,9 +1,17 @@
+# 2.6.0
+
+* Atualizar dependências
+* Clamp--1
+* Ajustes do l-fork
+
+
 # 2.5.5
 
 * Simplificar Knob
 * Remover trecho de compatibilidade com Bootstrap 2
 * Componente Loading
 * Clamp: evitar que tamanho exato da altura seja quebrada pelo chrome
+
 
 # 2.5.4
 
