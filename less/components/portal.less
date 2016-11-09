@@ -174,28 +174,29 @@ busca e o menu principal do `PortalTopo` qdo o viewport estiver em `xs`. São al
     }
 }
 
-// region doc
-/**
- * PortalTopo completo:
- * `PortalTopo`: Container de elementos que formam o topo do site. Formado pelo título (`PortalTopo-id`), formulário
- * de busca (`PortalTopo-busca`) e o toggler-collapse do viewport `xs` (`PortalTopo-togglers`). O layout é preso
- * via less (largura/offset das colunas), portanto foi projetado para ser _utilizado como está_.
- *
- *     @example
- *     .PortalTopo
- *         .PortalTopo-id
- *             .PortalTopo-title
- *                 .PortalTopo-intro.hidden-xs Notícias
- *                 | Senado
- *         .PortalTopo-togglers.visible-xs
- *             .PortalTopo-toggler--menu
- *             .PortalTopo-toggler--search
- *         .PortalTopo-busca
- *             form(action='search', role='search')
- *                 p.hidden-xs: a(href='#') Busca avançada ›
- *                 .input-group
- *                     input.form-control(type='text')
- *                     .input-group-btn
- *                         button.btn.btn-default Buscar
- */
-// endregion
+/*---
+title: PortalTopo completo
+section: Objetos
+
+`PortalTopo`: Container de elementos que formam o topo do site. Formado pelo título (`PortalTopo-id`), formulário
+de busca (`PortalTopo-busca`) e o toggler-collapse do viewport `xs` (`PortalTopo-togglers`). O layout é preso
+via less (largura/offset das colunas), portanto foi projetado para ser _utilizado como está_.
+
+```example:jade
+.PortalTopo
+    .PortalTopo-id
+        .PortalTopo-title
+            .PortalTopo-intro.hidden-xs Notícias
+            | Senado
+    .PortalTopo-togglers.visible-xs
+        .PortalTopo-toggler--menu
+        .PortalTopo-toggler--search
+    .PortalTopo-busca
+        form(action='search', role='search')
+            p.hidden-xs: a(href='#') Busca avançada ›
+            .input-group
+                input.form-control(type='text')
+                .input-group-btn
+                    button.btn.btn-default Buscar
+```
+*/
