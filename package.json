@@ -3,6 +3,9 @@
   "version": "2.6.1",
   "repository": "http://git.io/senado.css",
   "license": "MIT",
+  "scripts": {
+    "test": "stylelint 'less/**/*.less'"
+  },
   "devDependencies": {
     "autoprefixer": "^6.4.1",
     "cors": "^2.8.1",
