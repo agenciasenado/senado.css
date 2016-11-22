@@ -13,32 +13,34 @@ seus subelementos.
 ```example:jade
 .NavGlobal
   .container-fluid
-    .u-sizeFitAlt
-      | FIT
-    .u-sizeFit
-      img(src="../assets/br.svg", height=20)
-      span  Brasil
-    .u-sizeFill.text-center
-      a.flat.hidden-xs(href='#') Toolkit
+  .u-sizeFitAlt
+    | FIT
+  .u-sizeFit
+    img(src="../assets/br.svg", height=20)
+    span  Brasil
+  .u-sizeFill.text-center
+    a.flat.hidden-xs(href='#') Toolkit
 ```
 */
 
 .NavGlobal {
-    min-height: 47px;
-    line-height: 40px;
-
-    background-color: #00305C;
-    border-bottom: 4px solid #00824A;
-    color: #fff;
-    box-shadow: 0 4px 0 #FAE042;
-    margin-bottom:4px; // compensar box-shadow
+  min-height: 47px;
+  line-height: 40px;
+  background-color: #00305c;
+  border-bottom: 4px solid #00824a;
+  color: #fff;
+  box-shadow: 0 4px 0 #fae042;
+  margin-bottom: 4px; // compensar box-shadow
 }
 
-    .NavGlobal-toggle {
-        color: #B2C0CE;
-        cursor: pointer;
-        &:hover, &:active, &:focus {
-            color: #fff;
-            text-decoration: none;
-        }
-    }
+.NavGlobal-toggle {
+  color: #b2c0ce;
+  cursor: pointer;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: #fff;
+    text-decoration: none;
+  }
+}

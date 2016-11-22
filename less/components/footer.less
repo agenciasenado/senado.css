@@ -10,93 +10,97 @@ layout são embutidas nos componentes. Deve ser utilizado como um componente
 ```example:jade
 .FooterMain.container-fluid
   .FooterMain-row
-    .FooterMain-section
-      dl.FooterMain-list
-        dt Titulo
-        dd: a(href='#') Link
-        dd: a(href='#') Link
-    .FooterMain-section
-      dl.FooterMain-list
-        dt Titulo
-        dd: a(href='#') Link
-        dd: a(href='#') Link
-    .FooterMain-section
-      dl.FooterMain-list
-        dt Titulo
-        dd: a(href='#') Link
-        dd: a(href='#') Link
-    .FooterMain-section
-      dl.FooterMain-list
-        dt Titulo
-        dd: a(href='#') Link
-        dd: a(href='#') Link
+  .FooterMain-section
+    dl.FooterMain-list
+    dt Titulo
+    dd: a(href='#') Link
+    dd: a(href='#') Link
+  .FooterMain-section
+    dl.FooterMain-list
+    dt Titulo
+    dd: a(href='#') Link
+    dd: a(href='#') Link
+  .FooterMain-section
+    dl.FooterMain-list
+    dt Titulo
+    dd: a(href='#') Link
+    dd: a(href='#') Link
+  .FooterMain-section
+    dl.FooterMain-list
+    dt Titulo
+    dd: a(href='#') Link
+    dd: a(href='#') Link
   .FooterMain-end
-    span.FooterMain-icon--intranet
-      | Intranet
-    span.FooterMain-icon--aotopo
-      | Topo
+  span.FooterMain-icon--intranet
+    | Intranet
+  span.FooterMain-icon--aotopo
+    | Topo
 .FooterMain-endereco
   | Endereço
 ```
 */
 .FooterMain {
-    background-color: #eee;
-    margin-top: 10px;
-    padding-top: 10px;
-    @media (min-width: @screen-sm-min) {
-        padding-top: 20px;
-    }
+  background-color: #eee;
+  margin-top: 10px;
+  padding-top: 10px;
+
+  @media (min-width: @screen-sm-min) {
+    padding-top: 20px;
+  }
 }
 
-    .FooterMain-row {
-        .make-row();
-    }
+.FooterMain-row {
+  .make-row();
+}
 
-    .FooterMain-section {
-        .make-sm-column(3)
-    }
+.FooterMain-section {
+  .make-sm-column(3)
+}
 
-    .FooterMain-list {
-        &:extend(.list-unstyled);
-        line-height: 20px;
-        font-size: 12px;
+.FooterMain-list {
+  &:extend(.list-unstyled);
 
-        @media (max-width: @screen-xs-max) {
-            margin: 0 10px;
-        }
+  line-height: 20px;
+  font-size: 12px;
 
-        & > dt {
-            font-size: 12px;
-            font-weight: bold;
-            color: #666;
-            margin: 10px 0;
-        }
-    }
+  @media (max-width: @screen-xs-max) {
+    margin: 0 10px;
+  }
+
+  & > dt {
+    font-size: 12px;
+    font-weight: bold;
+    color: #666;
+    margin: 10px 0;
+  }
+}
 
 .FooterMain-end {
-    margin-top: 5px;
-    border-top: 1px solid #fff;
-    line-height: 40px;
+  margin-top: 5px;
+  border-top: 1px solid #fff;
+  line-height: 40px;
 }
 
 .FooterMain-endereco {
-    background-color: #002e56;
-    color: #FFF;
-    width: 100%;
-    text-align: center;
-    font-size: 11px;
-    padding: 10px;
-    line-height: 1.5;
+  background-color: #002e56;
+  color: #fff;
+  width: 100%;
+  text-align: center;
+  font-size: 11px;
+  padding: 10px;
+  line-height: 1.5;
 }
 
 .FooterMain-link {
-    &, &:hover {
-        color: #333;
-    }
+  &,
+  &:hover {
+    color: #333;
+  }
 }
 
 .FooterMain-hlink {
-    &, &:hover {
-        color: #666;
-    }
+  &,
+  &:hover {
+    color: #666;
+  }
 }

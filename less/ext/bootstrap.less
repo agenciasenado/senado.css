@@ -1,31 +1,33 @@
+
 @import (reference) "@{bootstrap-path}/grid";
 
 // fixes
 .modal-backdrop {
-    -webkit-backface-visibility: hidden; // evitar flickering no chrome
+  backface-visibility: hidden; // evitar flickering no chrome
 }
 
 .input-group-addon + .input-group-addon:not(:last-child) {
-    border-right: 0;
+  border-right: 0;
 }
 
 input + .input-group-addon:not(:last-child) {
-    border-left: 0;
+  border-left: 0;
 }
 
 // add-ons
 .scrollable-modal-body {
-    max-height: ~"calc(100vh - 210px)";
-    overflow-y: auto;
+  max-height: ~"calc(100vh - 210px)";
+  overflow-y: auto;
 }
 
 .nav.nav-tabs {
-    > li > a {
-        border-radius: 0;
-        padding: 10px 15px;
-    }
+  /* stylelint-disable-next-line selector-max-compound-selectors */
+  > li > a {
+    border-radius: 0;
+    padding: 10px 15px;
+  }
 }
 
 .embed-responsive-3by2 {
-    padding-bottom: 66.667%;
+  padding-bottom: 66.667%;
 }

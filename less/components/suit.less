@@ -41,13 +41,14 @@ br
 }
 
 .Suit--gutter {
-    > .Suit-fill,
-    > .Suit-fit {
-        &:not(:first-child) {
-            padding-left: @grid-gutter-width / 2;
-        }
-        &:not(:last-child) {
-            padding-right: @grid-gutter-width / 2;
-        }
+  > .Suit-fill,
+  > .Suit-fit {
+    &:not(:first-child) {
+      padding-left: @grid-gutter-width / 2;
     }
+
+    &:not(:last-child) {
+      padding-right: @grid-gutter-width / 2;
+    }
+  }
 }

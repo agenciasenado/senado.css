@@ -28,151 +28,162 @@ section: Components
   button.ShareIcon.ShareIcon--mini.ShareIcon--twitter
 .Box
   button.ShareIcon.Icon--podcast.ShareIcon--default
-    strong.ShareIcon-text.milli
-      | (61) 9090-9090
+  strong.ShareIcon-text.milli
+    | (61) 9090-9090
 ```
 */
 
 .ShareIcon {
-    padding: 0;
+  @size: 1.9em;
 
-    display: inline-block;
-    text-align: center;
-    vertical-align: middle;
-    touch-action: maniputation;
-    cursor: pointer;
+  padding: 0;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  touch-action: maniputation;
+  cursor: pointer;
+  border: none;
+  border-radius: 0;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  background: #eee;
+  transition: background-color 300ms linear;
+  font-size: 18px;
+  line-height: @size;
 
-    border: none;
-    border-radius: 0;
-    border-bottom-style: solid;
-    border-bottom-width: 2px;
+  &,
+  &:focus,
+  &:active {
+    color: #666;
+  }
 
-    background: #eee;
-    transition: background-color 300ms linear;
+  &:hover {
+    color: #fff;
+    text-decoration: none;
+  }
 
-    font-size: 18px;
+  &::before {
+    &:extend(.Icon);
 
-    &, &:focus, &:active {
-        color: #666;
-    }
-
-    &:hover {
-        color: #fff;
-        text-decoration: none;
-    }
-
-    @size: 1.9em;
     line-height: @size;
-    &:before {
-        &:extend(.Icon);
-        line-height: @size;
-        width: @size;
-    }
+    width: @size;
+  }
 }
 
-    .share-icon-variant(@color) {
-        border-bottom-color: lighten(@color, 25%);
-        &:hover, &.ShareIcon--mini {
-            background: @color;
-        }
-    }
+.share-icon-variant(@color) {
+  border-bottom-color: lighten(@color, 25%);
 
-    .ShareIcon--default {
-        .share-icon-variant(@azul-padrao);
-    }
+  &:hover,
+  &.ShareIcon--mini {
+    background: @color;
+  }
+}
 
-    .ShareIcon--facebook {
-        .Icon--facebook;
-        .share-icon-variant(#3b5998);
-    }
+.ShareIcon--default {
+  .share-icon-variant(@azul-padrao);
+}
 
-    .ShareIcon--youtube {
-        .Icon--youtube-logo;
-        .share-icon-variant(#bb0000);
-    }
+.ShareIcon--facebook {
+  .Icon--facebook;
+  .share-icon-variant(#3b5998);
+}
 
-    .ShareIcon--flickr {
-        .Icon--flickr;
-        .share-icon-variant(#ff0084);
-    }
+.ShareIcon--youtube {
+  .Icon--youtube-logo;
+  .share-icon-variant(#bb0000);
+}
 
-    .ShareIcon--instagram {
-        .Icon--instagram;
-        .share-icon-variant(#517fa4);
-    }
+.ShareIcon--flickr {
+  .Icon--flickr;
+  .share-icon-variant(#ff0084);
+}
 
-    .ShareIcon--twitter {
-        .Icon--twitter;
-        .share-icon-variant(#00aced);
-    }
+.ShareIcon--instagram {
+  .Icon--instagram;
+  .share-icon-variant(#517fa4);
+}
 
-    .ShareIcon--google-plus {
-        .Icon--google-plus;
-        .share-icon-variant(#dd4b39);
-    }
+.ShareIcon--twitter {
+  .Icon--twitter;
+  .share-icon-variant(#00aced);
+}
 
-    .ShareIcon--pinterest {
-        .Icon--pinterest;
-        .share-icon-variant(#cb2027);
-    }
+.ShareIcon--google-plus {
+  .Icon--google-plus;
+  .share-icon-variant(#dd4b39);
+}
 
-    .ShareIcon--whatsapp {
-        .Icon--whatsapp;
-        .share-icon-variant(#4dc247);
-    }
+.ShareIcon--pinterest {
+  .Icon--pinterest;
+  .share-icon-variant(#cb2027);
+}
 
-    .ShareIcon--tumblr {
-        .Icon--tumblr;
-        .share-icon-variant(#32506d);
-    }
+.ShareIcon--whatsapp {
+  .Icon--whatsapp;
+  .share-icon-variant(#4dc247);
+}
+
+.ShareIcon--tumblr {
+  .Icon--tumblr;
+  .share-icon-variant(#32506d);
+}
 
 .ShareIcon--mini {
-    border: none;
-    font-size: 14px;
-    &, &:focus {
-        color: #fff;
-    }
+  border: none;
+  font-size: 14px;
+
+  &,
+  &:focus {
+    color: #fff;
+  }
 }
 
 .ShareIcon--circle {
+  border-radius: 50%;
+  border: none;
+
+  &::before {
     border-radius: 50%;
-    border: none;
-    &:before {
-        border-radius: 50%;
-    }
+  }
 }
 
 .ShareIcon--dark {
-    &, &:focus, &:active {
-        color: #fff;
-    }
-    background-color: #888;
+  background-color: #888;
+
+  &,
+  &:focus,
+  &:active {
+    color: #fff;
+  }
 }
 
 .ShareIcon--light {
-    &, &:focus, &:active {
-        color: #fff;
-    }
-    background: #ccc;
+  background: #ccc;
+
+  &,
+  &:focus,
+  &:active {
+    color: #fff;
+  }
 }
 
 .ShareIcon-text {
-    vertical-align: middle;
-    padding-left: @padding-large-vertical;
-    padding-right: @padding-large-vertical;
+  vertical-align: middle;
+  padding-left: @padding-large-vertical;
+  padding-right: @padding-large-vertical;
 }
 
-    .ShareIcon-text--hidden {
-        padding: 0;
-        overflow: hidden;
-        display: inline-block;
-        font-size: 12px;
-        width: 0;
-        transition: width 0.5s ease;
-        text-align: left;
-        white-space: nowrap;
+.ShareIcon-text--hidden {
+  padding: 0;
+  overflow: hidden;
+  display: inline-block;
+  font-size: 12px;
+  width: 0;
+  transition: width 0.5s ease;
+  text-align: left;
+  white-space: nowrap;
 
-        .ShareIcon:focus + & {
-            width: 90px;
-        }
-    }
+  .ShareIcon:focus + & {
+    width: 90px;
+  }
+}

@@ -1,65 +1,78 @@
+/* stylelint-disable selector-max-specificity, selector-max-compound-selectors */
 .nav.nav-tabs.nav-tabs--cut {
-    border : none;
-    font-size: 14px;
-    > li {
-        margin-left: 0;
-        &.active > a {
-            background: #f5f5f5;
-        }
-        &.active > a.tab--cut {
-            background: #D9EDF7;
-            color: @azul-padrao;
-        }
+  border: none;
+  font-size: 14px;
 
-        > a {
-            color: #666;
-            padding: 6px;
-            &, &:hover, &:focus {
-                border: none;
-            }
-        }
+  > li {
+    margin-left: 0;
+
+    &.active > a {
+      background: #f5f5f5;
     }
+
+    &.active > a.tab--cut {
+      background: #d9edf7;
+      color: @azul-padrao;
+    }
+
+    > a {
+      color: #666;
+      padding: 6px;
+    }
+
+    > a,
+    > a:hover,
+    > a:focus {
+      border: none;
+    }
+  }
 }
 
 .spaced-tabs {
   li a {
     padding: 5px 10px;
   }
+
   > li:first-child {
     margin-left: 10px;
   }
 }
 
 .dropdown-menu {
-    border-radius: 0;
-    background-color: @smoke;
-    border: none;
-    border-bottom: 5px solid @azul-padrao;
-    border-top: 1px solid @cinza-medio;
-    min-width: 140px;
-    font-size: 13px;
-    > li.dropdown-header {
-        padding: 4px 15px;
+  border-radius: 0;
+  background-color: @smoke;
+  border: none;
+  border-bottom: 5px solid @azul-padrao;
+  border-top: 1px solid @cinza-medio;
+  min-width: 140px;
+  font-size: 13px;
+
+  > li.dropdown-header {
+    padding: 4px 15px;
+  }
+
+  > li > a {
+    padding: 4px 20px;
+
+    &:hover {
+      background: @cinza-claro;
     }
-    > li > a {
-        padding: 4px 20px;
-        &:hover {
-            background: @cinza-claro;
-        }
-        > img {
-            margin-right: 5px;
-            vertical-align: text-top;
-        }
+
+    > img {
+      margin-right: 5px;
+      vertical-align: text-top;
     }
-    .divider {
-        margin: 4px 0;
-    }
+  }
+
+  .divider {
+    margin: 4px 0;
+  }
 }
 
 .btn-square {
-    padding: 0;
-    text-align: center;
-    height: 2.2em;
-    width: 2.2em;
-    line-height: 1.2;
+  padding: 0;
+  text-align: center;
+  height: 2.2em;
+  width: 2.2em;
+  line-height: 1.2;
 }

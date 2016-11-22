@@ -5,7 +5,6 @@ section: Components
 
 #### Media
 
-
 `.Media`: Estrutura genérica de disposição de conteúdo com uma mídia lateral. Nesse elemento, o `.Media-figure` é
 deslocado para a esquerda (ou para a direita via `.Media-figure--right`) e um novo
 [contexto de formatação](http://goo.gl/sIBbFp)
@@ -16,75 +15,77 @@ Permite aninhamento de outro `.Media`.
 ```example:jade
 .Media
   .Media-figure
-    div(style='width:50px; height:50px; background-color:#eee; display: table-cell; vertical-align: middle')
+  div(style='width:50px; height:50px; background-color:#eee; display: table-cell; vertical-align: middle')
   .Media-top
-    .Etiqueta.Etiqueta--default.Etiqueta--rev.glyphicon-list Adelphiss nocere!
+  .Etiqueta.Etiqueta--default.Etiqueta--rev.glyphicon-list Adelphiss nocere!
   .Media-body
+  p: small
+    | Azureus, superbus competitions hic promissio de fidelis, brevis lixa. Est camerarius vox, cesaris.
+    | Domus, valebat, et homo. Salvus, grandis imbers unus dignus de albus, primus vigil.
+    | Burgus de superbus glos, fallere nuclear vexatum iacere! Triticum de bassus historia, amor caesium.
+  .Media
+    .Media-figure
+    div(style='width: 50px; height:50px; background-color:#eee')
+    .Media-body
+    .Etiqueta.Etiqueta--default.Etiqueta--rev.glyphicon-list Lutetia
     p: small
-      | Azureus, superbus competitions hic promissio de fidelis, brevis lixa. Est camerarius vox, cesaris.
-      | Domus, valebat, et homo. Salvus, grandis imbers unus dignus de albus, primus vigil.
-      | Burgus de superbus glos, fallere nuclear vexatum iacere! Triticum de bassus historia, amor caesium.
-    .Media
-      .Media-figure
-        div(style='width: 50px; height:50px; background-color:#eee')
-      .Media-body
-        .Etiqueta.Etiqueta--default.Etiqueta--rev.glyphicon-list Lutetia
-        p: small
-          | Hercle, olla raptus!, terror! Varius, noster gabaliums saepe consumere de flavum, ferox scutum.
-          | Equisos, tanquam castus stella. Cum abaculus persuadere, omnes fugaes captis, gratis lamiaes.
-          | Cum peregrinationes, omnes particulaes raptus, dexter terrores. Est festus sensorem, cesaris.
-    .Media
-      .Media-figure.Media-figure--right
-        div(style='width: 50px; height:50px; background-color:#eee')
-      .Media-body
-        .Etiqueta.Etiqueta--default.Etiqueta--rev.glyphicon-list Decor
-        div: small: a(href='#') Sunt habenaes contactus rusticus, nobilis humani generises.
+      | Hercle, olla raptus!, terror! Varius, noster gabaliums saepe consumere de flavum, ferox scutum.
+      | Equisos, tanquam castus stella. Cum abaculus persuadere, omnes fugaes captis, gratis lamiaes.
+      | Cum peregrinationes, omnes particulaes raptus, dexter terrores. Est festus sensorem, cesaris.
+  .Media
+    .Media-figure.Media-figure--right
+    div(style='width: 50px; height:50px; background-color:#eee')
+    .Media-body
+    .Etiqueta.Etiqueta--default.Etiqueta--rev.glyphicon-list Decor
+    div: small: a(href='#') Sunt habenaes contactus rusticus, nobilis humani generises.
 ```
 */
 
 @media-spacing: 10px;
 
 .Media {
-    position: relative;
-    overflow: hidden; // necessário para evitar problemas de clearfix
-    width: 100%;
+  position: relative;
+  overflow: hidden; // necessário para evitar problemas de clearfix
+  width: 100%;
 }
 
-    .Media--row {
-        margin-right: -@grid-gutter-width/2;
-        margin-left: -@grid-gutter-width/2;
-        width: auto;
-        > .Media-figure, > .Media-body {
-            padding-left: @grid-gutter-width/2;
-            padding-right: @grid-gutter-width/2;
-            margin-right: 0;
-        }
-        > .Media-top:before {
-            content: ' ';
-            margin-left: @grid-gutter-width/2;
-        }
-    }
+.Media--row {
+  margin-right: -@grid-gutter-width/2;
+  margin-left: -@grid-gutter-width/2;
+  width: auto;
 
-    .Media-figure {
-        float: left;
-        padding: 0; // forçar o padding==0 para permitir utilização de classes col-*-*.
-        margin-right: @media-spacing;
-    }
+  > .Media-figure,
+  > .Media-body {
+    padding-left: @grid-gutter-width/2;
+    padding-right: @grid-gutter-width/2;
+    margin-right: 0;
+  }
 
-    .Media-figure--right {
-        float: right;
-        margin-right: 0;
-        margin-left: @media-spacing;
-    }
+  > .Media-top::before {
+    content: ' ';
+    margin-left: @grid-gutter-width/2;
+  }
+}
 
-    .Media-body {
-        overflow: hidden;
-    }
+.Media-figure {
+  float: left;
+  padding: 0; // forçar o padding==0 para permitir utilização de classes col-*-*.
+  margin-right: @media-spacing;
+}
 
-    .Media-top {
-        display: table-header-group;
-    }
+.Media-figure--right {
+  float: right;
+  margin-right: 0;
+  margin-left: @media-spacing;
+}
 
+.Media-body {
+  overflow: hidden;
+}
+
+.Media-top {
+  display: table-header-group;
+}
 
 /*---
 title:   Media Stack
@@ -95,29 +96,29 @@ section: Media
 `.Media-top` sempre será o primeiro elemento da pilha, independente da sua
 ordem na markup.
 
-
 ```example:jade
 .Media.Media--stack
   .Media-figure
-    div(style='background-color:#eee; width: 100px; height:100px')
+  div(style='background-color:#eee; width: 100px; height:100px')
   .Media-top
-    .Etiqueta.Etiqueta--default.Etiqueta--left.glyphicon-list
-      | Naviss peregrinationes!
+  .Etiqueta.Etiqueta--default.Etiqueta--left.glyphicon-list
+    | Naviss peregrinationes!
   p.Media-body
-    small Cum mens crescere, omnes boreases amor castus, teres capioes.
+  small Cum mens crescere, omnes boreases amor castus, teres capioes.
 ```
-
 */
 
 .Media--stack {
-    display: table; // necessário para o que o Media-top suba
-    > .Media-figure {
-        float: none; // caso não haja o Media-top, é preciso remover o float do Figure para o Body descer.
-        width: 100%; // se é para empilhar, forçar que o Media-figure ocupe a largura inteira
-    }
-    > .Media-figure {
-        margin-bottom: @media-spacing;
-    }
+  display: table; // necessário para o que o Media-top suba
+
+  > .Media-figure {
+    float: none; // caso não haja o Media-top, é preciso remover o float do Figure para o Body descer.
+    width: 100%; // se é para empilhar, forçar que o Media-figure ocupe a largura inteira
+  }
+
+  > .Media-figure {
+    margin-bottom: @media-spacing;
+  }
 }
 
 /*---
@@ -135,45 +136,45 @@ inteiro. Caso contrário ficará diretamente acima do subelemento `.Media-body`.
 ```example:jade
 .row
   .col-xs-12
-    .Media.is-stack-xs
-      .Media-figure.col-xs-6.col-sm-3
-        div(style='padding-bottom: 56.25%; height:0px; background-color:#eee')
-      .Media-top
-        .Etiqueta.Etiqueta--default.glyphicon-list-alt Orexis
-      p.Media-body: small
-        | Resistere mechanice ducunt ad raptus luba.
-        | Nocere nunquam ducunt ad fortis frondator. Grandis, noster humani generiss sapienter de brevis.
+  .Media.is-stack-xs
+    .Media-figure.col-xs-6.col-sm-3
+    div(style='padding-bottom: 56.25%; height:0px; background-color:#eee')
+    .Media-top
+    .Etiqueta.Etiqueta--default.glyphicon-list-alt Orexis
+    p.Media-body: small
+    | Resistere mechanice ducunt ad raptus luba.
+    | Nocere nunquam ducunt ad fortis frondator. Grandis, noster humani generiss sapienter de brevis.
 ```
 */
 
 .Media {
-    &.is-stack-xs {
-        @media (max-width: @screen-xs-min) {
-            .Media--stack;
-        }
+  &.is-stack-xs {
+    @media (max-width: @screen-xs-min) {
+      .Media--stack;
     }
+  }
 
-    &.is-stack-ms {
-        @media (min-width: (@screen-xs-min+1)) and (max-width: @screen-xs-max) {
-            .Media--stack;
-        }
+  &.is-stack-ms {
+    @media (min-width: (@screen-xs-min+1)) and (max-width: @screen-xs-max) {
+      .Media--stack;
     }
+  }
 
-    &.is-stack-sm {
-        @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
-            .Media--stack;
-        }
+  &.is-stack-sm {
+    @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+      .Media--stack;
     }
+  }
 
-    &.is-stack-md {
-        @media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
-            .Media--stack;
-        }
+  &.is-stack-md {
+    @media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+      .Media--stack;
     }
+  }
 
-    &.is-stack-lg {
-        @media (min-width: @screen-lg-min) {
-            .Media--stack;
-        }
+  &.is-stack-lg {
+    @media (min-width: @screen-lg-min) {
+      .Media--stack;
     }
+  }
 }

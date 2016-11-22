@@ -13,11 +13,11 @@ possui paddings.
 ```example:jade
 .Segments
   .Box(class="+cut")
-    | Box
+  | Box
   .Box.Box--x(class="+cut")
-    | --x
+  | --x
   .Box.Box--y(class="+cut")
-    | --y
+  | --y
 ```
 
 ##### Tamanho do espaçamento interno:
@@ -28,58 +28,58 @@ meio dos modificadores `--sm` ou `--lg`.
 ```example:jade
 .Segments
   .Box(class="+cut").Box--sm
-    | sm
+  | sm
   .Box(class="+cut")
-    | normal
+  | normal
   .Box(class="+cut").Box--lg
-    | lg
+  | lg
   .Box(class="+cut").Box--xl
-    | xl
+  | xl
 ```
 */
 
 .Box {
-    padding: @padding-base-vertical @padding-base-horizontal;
-    position: relative;
+  padding: @padding-base-vertical @padding-base-horizontal;
+  position: relative;
 }
 
-    .Box--xl {
-        padding: @padding-large-vertical * 1.3 @padding-large-horizontal * 1.3;
-    }
+.Box--xl {
+  padding: @padding-large-vertical * 1.3 @padding-large-horizontal * 1.3;
+}
 
-    .Box--lg {
-        padding: @padding-large-vertical @padding-large-horizontal;
-    }
+.Box--lg {
+  padding: @padding-large-vertical @padding-large-horizontal;
+}
 
-    .Box--sm {
-        padding: @padding-small-vertical @padding-small-horizontal;
-    }
+.Box--sm {
+  padding: @padding-small-vertical @padding-small-horizontal;
+}
 
-    .Box--y {
-        padding-left: 0;
-        padding-right: 0;
-    }
+.Box--y {
+  padding-left: 0;
+  padding-right: 0;
+}
 
-    .Box--x {
-        padding-top: 0;
-        padding-bottom: 0;
-    }
+.Box--x {
+  padding-top: 0;
+  padding-bottom: 0;
+}
 
-    .Box--flush {
-        padding: 0;
-    }
+.Box--flush {
+  padding: 0;
+}
 
-    .Box--links {
-        border-bottom: 5px solid #ddd;
-    }
+.Box--links {
+  border-bottom: 5px solid #ddd;
+}
 
-    .Box--news {
-        border-style: solid;
-        border-color: #ccc;
-        border-width: 1px 0 5px;
-    }
+.Box--news {
+  border-style: solid;
+  border-color: #ccc;
+  border-width: 1px 0 5px;
+}
 
-    .Box--destaque {
-        border-top: 1px dotted #ccc;
-        border-bottom: 5px solid #ccc;
-    }
+.Box--destaque {
+  border-top: 1px dotted #ccc;
+  border-bottom: 5px solid #ccc;
+}

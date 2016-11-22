@@ -1,25 +1,28 @@
+/* stylelint-disable selector-max-specificity, selector-max-compound-selectors */
+
 .dropdown-menu.dropdown-menu--dark {
-    background-color: #1A456C;
-    padding: 5px 20px;
+  background-color: #1a456c;
+  padding: 5px 20px;
+  border-bottom: none;
+  border-top: none;
+  box-shadow: none;
+  font-size: 12px;
+  line-height: @line-height-base;
 
-    border-bottom: none;
-    border-top: none;
-    box-shadow: none;
+  > li > a {
+    padding: 6px 0;
+    color: #fff;
+    border-bottom: 1px solid #1a9fdd;
 
-    font-size: 12px;
-    line-height: @line-height-base;
-
-    > li > a {
-        padding: 6px 0;
-        color: #fff;
-        border-bottom: 1px solid #1A9FDD;
-        &:hover, &:focus {
-            background: inherit;
-            color: #fff;
-        }
+    &:hover,
+    &:focus {
+      background: inherit;
+      color: #fff;
     }
+  }
 
-    > li:last-child > a {
-        border: none;
-    }
+  > li:last-child > a {
+    border: none;
+  }
 }
+/* stylelint-enable */
