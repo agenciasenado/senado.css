@@ -8,16 +8,16 @@ section: Components
 ```example:jade
 .Segments(class='+light')
   .Segment(class='+cut')
-    div: p div > p
+  div: p div > p
   .Segment(class='+cut')
+  ul
+    li ul > li
     ul
-      li ul > li
-        ul
-          li ul > li > ul > li
+      li ul > li > ul > li
   .Segment(class='+cut')
-     div: div: div: h3 div > div > div > h3
+   div: div: div: h3 div > div > div > h3
   .Segment(class='+cut')
-    span span
+  span span
 ```
 ##### Uniformização dos espaçamentos verticais
 
@@ -30,17 +30,17 @@ Pode ser utilizado na forma `ul.Segment > li` ou `Segments > *.Segment`
 ```example:jade
 .Painel.Painel--lg.Painel--border
   ul(class='Segments')
-    li.Apex.Apex--cut.h4
-      span.u-divisorVertical.zeta Agenda
-      i.Icon.Icon--md.Icon--calendar
-      span.h6: a Qua | 01/07
-    li.Painel.Painel--vert
-      ul.list-unstyled.CutHere.CutHere--lg
-        li Indictios prarere. Ubi est magnum gemna?
-        li Nocere aliquando ducunt ad germanus impositio.
-        li Eras sunt cottas de nobilis compater.
-    li.Stand.Stand--cut.small
-      a Agenda semanal
+  li.Apex.Apex--cut.h4
+    span.u-divisorVertical.zeta Agenda
+    i.Icon.Icon--md.Icon--calendar
+    span.h6: a Qua | 01/07
+  li.Painel.Painel--vert
+    ul.list-unstyled.CutHere.CutHere--lg
+    li Indictios prarere. Ubi est magnum gemna?
+    li Nocere aliquando ducunt ad germanus impositio.
+    li Eras sunt cottas de nobilis compater.
+  li.Stand.Stand--cut.small
+    a Agenda semanal
 ```
 */
 
@@ -53,50 +53,53 @@ section: Components
 ```example:jade
 .Segments.Painel.Painel--cut
   div.Segment.Apex.Apex--cut
-    .zeta ÚLTIMAS NOTÍCIAS
+  .zeta ÚLTIMAS NOTÍCIAS
   .CutHere
-    .Segment: p Apolloniates de festus gabalium, amor frondator!
-    .Segment: h4 Potus hic ducunt ad noster demissio.
-    .Segment: small Caculas sunt paluss de altus species.
+  .Segment: p Apolloniates de festus gabalium, amor frondator!
+  .Segment: h4 Potus hic ducunt ad noster demissio.
+  .Segment: small Caculas sunt paluss de altus species.
   div.Segment.Stand.Stand--cut
-    a.milli: b VER TODAS
+  a.milli: b VER TODAS
 ```
 */
 
 // SPEC:
 // - não deve possuir margens lateriais
 
-.Segment, ul.Segments > li {
-    overflow: hidden; // garantir espaçamento ainda que não haja padding
-    .collapse-margins();
-    display: block;
-    margin: 0;
+.Segment,
+ul.Segments > li {
+  .collapse-margins();
+
+  overflow: hidden; // garantir espaçamento ainda que não haja padding
+  display: block;
+  margin: 0;
 }
 
 .Segments {
-    > :not(:last-child) {
-        margin-bottom: @padding-base-vertical!important;
-    }
-    ul& {
-        margin: 0;
-        padding: 0;
-    }
+  > :not(:last-child) {
+    margin-bottom: @padding-base-vertical !important;
+  }
+
+  ul& {
+    margin: 0;
+    padding: 0;
+  }
 }
 
-    .Segments--lg {
-        > :not(:last-child) {
-            margin-bottom: @padding-large-vertical * 2!important;
-        }
-    }
+.Segments--lg {
+  > :not(:last-child) {
+    margin-bottom: @padding-large-vertical * 2 !important;
+  }
+}
 
-    .Segments--md {
-        > :not(:last-child) {
-            margin-bottom: @padding-large-vertical!important;
-        }
-    }
+.Segments--md {
+  > :not(:last-child) {
+    margin-bottom: @padding-large-vertical !important;
+  }
+}
 
-    .Segments--sm {
-        > :not(:last-child) {
-            margin-bottom: @padding-small-vertical!important;
-        }
-    }
+.Segments--sm {
+  > :not(:last-child) {
+    margin-bottom: @padding-small-vertical !important;
+  }
+}

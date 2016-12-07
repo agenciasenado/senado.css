@@ -9,76 +9,76 @@ Card:
 ```example:jade
 .Deck.Deck--row
   .Card.u-size1of2
-    .Card-body(class='+light') Title
-      div Magnum lanista sed mire imitaris omnia est
-      div Magnum lanista sed mire imitaris omnia est
-    .Card-footer(class='+light') Footer
+  .Card-body(class='+light') Title
+    div Magnum lanista sed mire imitaris omnia est
+    div Magnum lanista sed mire imitaris omnia est
+  .Card-footer(class='+light') Footer
   .Card.u-size1of2
-    .Card-body(class='+light') Title
-    .Card-footer(class='+light') Footer
+  .Card-body(class='+light') Title
+  .Card-footer(class='+light') Footer
 p
 .Deck.Deck--row.Deck--strip
   .Card.u-size1of4
-    .Card-body
-      .Embed.Embed--3by2(class='+cut') oi
+  .Card-body
+    .Embed.Embed--3by2(class='+cut') oi
   .Card.u-size1of4
-    .Card-body
-      .Embed.Embed--3by2(class='+cut') oi
+  .Card-body
+    .Embed.Embed--3by2(class='+cut') oi
   .Card.u-size1of4
-    .Card-body
-      .Embed.Embed--3by2(class='+cut') oi
+  .Card-body
+    .Embed.Embed--3by2(class='+cut') oi
   .Card.u-size1of4
-    .Card-body
-      .Embed.Embed--3by2(class='+cut') oi
+  .Card-body
+    .Embed.Embed--3by2(class='+cut') oi
   .Deck-xspacer.u-spacer--xl
   .Card.u-size1of4
-    .Card-body
-      .Embed.Embed--3by2(class='+cut') oi
+  .Card-body
+    .Embed.Embed--3by2(class='+cut') oi
 ```
 */
 
 .Deck {
-    display: flex;
-    flex-flow: row;
-    flex-wrap: wrap;
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
 }
 
 .Deck--row {
-    margin-left: -@grid-gutter-width/2;
-    margin-right: -@grid-gutter-width/2;
-    > .Card {
-        padding-left: @grid-gutter-width/2;
-        padding-right: @grid-gutter-width/2;
-    }
+  margin-left: -@grid-gutter-width/2;
+  margin-right: -@grid-gutter-width/2;
+
+  > .Card {
+    padding-left: @grid-gutter-width/2;
+    padding-right: @grid-gutter-width/2;
+  }
 }
 
 .Deck--strip {
-    overflow-x: auto;
+  overflow-x: auto;
+
+  > .Card {
+    margin-bottom: @grid-gutter-width/2;
+  }
+
+  @media (max-width: @screen-xs-max) {
+    flex-wrap: nowrap;
+
     > .Card {
-      margin-bottom:  @grid-gutter-width/2;
+      min-width: 85%;
     }
-    @media (max-width: @screen-xs-max) {
-        flex-wrap: nowrap;
-        > .Card {
-            min-width: 85%;
-        }
-    }
+  }
 }
 
 .Deck-xspacer {
-    display: flex;
-    flex-basis: 100%;
+  display: flex;
+  flex-basis: 100%;
 }
 
 .Card {
-    position: relative;
-
-    display: inline-block;
-    vertical-align: top;
-
-    display: inline-flex;
-
-    flex-direction: column;
-    justify-content: space-between;
+  position: relative;
+  display: inline-block;
+  display: inline-flex;
+  vertical-align: top;
+  flex-direction: column;
+  justify-content: space-between;
 }
-

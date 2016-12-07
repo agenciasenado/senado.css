@@ -1,0 +1,180 @@
+/*---
+title:   Boxing
+section: Layout
+---
+
+Classes de _layout_ que configuram o padding de um elemento.
+
+O `.l-box` adiciona espaçamento em ambos os eixos, sendo o vertical um pouco menor
+para compensar a tipografia.
+
+O `.l-window` também adiciona espaçamento em ambos os eixos. Porém, diferente do `.l-box`,
+as dimensões são sempre idênticas.
+
+O `.l-pillar` adiciona apenas o espaçamento horizontal.
+
+O `.l-letter` adiciona apenas o espaçamento vertical.
+
+```example:jade
+h4 .l-box
+.Suit.Suit--gutter
+  .Suit-fill
+    .l-box-sm(class="+light")
+      div(class="+cut") .l-box-sm
+  .Suit-fill
+    .l-box(class="+light")
+      div(class="+cut") .l-box
+  .Suit-fill
+    .l-box-lg(class="+light")
+      div(class="+cut") .l-box-lg
+  .Suit-fill
+    .l-box-xl(class="+light")
+      div(class="+cut") .l-box-xl
+
+h4 .l-window
+.Suit.Suit--gutter
+  .Suit-fill
+    .l-window-sm(class="+light")
+      div(class="+cut") .l-window-sm
+  .Suit-fill
+    .l-window(class="+light")
+      div(class="+cut") .l-window
+  .Suit-fill
+    .l-window-lg(class="+light")
+      div(class="+cut") .l-window-lg
+  .Suit-fill
+    .l-window-xl(class="+light")
+      div(class="+cut") .l-window-xl
+
+h4 .l-letter
+.Suit.Suit--gutter
+  .Suit-fill
+    .l-letter-sm(class="+light")
+      div(class="+cut") .l-letter-sm
+  .Suit-fill
+    .l-letter(class="+light")
+      div(class="+cut") .l-letter
+  .Suit-fill
+    .l-letter-lg(class="+light")
+      div(class="+cut") .l-letter-lg
+  .Suit-fill
+    .l-letter-xl(class="+light")
+      div(class="+cut") .l-letter-xl
+
+h4 .l-pillar
+.Suit.Suit--gutter
+  .Suit-fill
+    .l-pillar-sm(class="+light")
+      div(class="+cut") .l-pillar-sm
+  .Suit-fill
+    .l-pillar(class="+light")
+      div(class="+cut") .l-pillar
+  .Suit-fill
+    .l-pillar-lg(class="+light")
+      div(class="+cut") .l-pillar-lg
+  .Suit-fill
+    .l-pillar-xl(class="+light")
+      div(class="+cut") .l-pillar-xl
+```
+*/
+
+@vspacing-sm: @padding-small-vertical;
+@vspacing: @padding-base-vertical;
+@vspacing-lg: @padding-large-vertical;
+@vspacing-xl: @padding-large-vertical * 1.3;
+
+@spacing-sm: @padding-small-horizontal;
+@spacing: @padding-base-horizontal;
+@spacing-lg: @padding-large-horizontal;
+@spacing-xl: @padding-large-horizontal * 1.3;
+
+.l-box {
+  padding: @vspacing @spacing;
+}
+
+.l-box-sm {
+  padding: @vspacing-sm @spacing-sm;
+}
+
+.l-box-lg {
+  padding: @vspacing-lg @spacing-lg;
+}
+
+.l-box-xl {
+  padding: @vspacing-xl @spacing-xl;
+}
+
+.l-pillar {
+  padding-left: @spacing;
+  padding-right: @spacing;
+}
+
+.l-pillar-sm {
+  padding-left: @spacing-sm;
+  padding-right: @spacing-sm;
+}
+
+.l-pillar-lg {
+  padding-left: @spacing-lg;
+  padding-right: @spacing-lg;
+}
+
+.l-pillar-xl {
+  padding-left: @spacing-xl;
+  padding-right: @spacing-xl;
+}
+
+.l-pillar-nil {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.l-letter {
+  padding-top: @spacing;
+  padding-bottom: @spacing;
+}
+
+.l-letter-sm {
+  padding-top: @spacing-sm;
+  padding-bottom: @spacing-sm;
+}
+
+.l-letter-lg {
+  padding-top: @spacing-lg;
+  padding-bottom: @spacing-lg;
+}
+
+.l-letter-xl {
+  padding-top: @spacing-xl;
+  padding-bottom: @spacing-xl;
+}
+
+.l-letter-nil {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.l-window {
+  .l-pillar;
+  .l-letter;
+}
+
+.l-window-sm {
+  .l-pillar-sm;
+  .l-letter-sm;
+}
+
+.l-window-lg {
+  .l-pillar-lg;
+  .l-letter-lg;
+}
+
+.l-window-xl {
+  .l-pillar-xl;
+  .l-letter-xl;
+}
+
+.l-window-nil {
+  .l-pillar-nil;
+  .l-letter-nil;
+}

@@ -1,40 +1,44 @@
 @import (reference) "../utils/mixins";
 
-.Spinner, [class^="Spinner--"] {
-    width: 30px;
-    height: 30px;
-    position: relative;
-    .centre-align();
+.Spinner,
+[class^="Spinner--"] {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  .centre-align();
 
-    &.is-big {
-        width: 60px;
-        height: 60px;
+  &.is-big {
+    width: 60px;
+    height: 60px;
+  }
+
+  &.is-white {
+    &::before,
+    &::after {
+      background-color: #fff;
     }
+  }
 
-    &.is-white {
-        &:before, &:after {
-            background-color: #fff;
-        }
+  &.is-blue {
+    &::before,
+    &::after {
+      background-color: @azul-padrao;
     }
-
-    &.is-blue {
-        &:before, &:after {
-            background-color: @azul-padrao;
-        }
-    }
-
+  }
 }
 
-    .Spinner--single:before,
-    .Spinner--double:before, .Spinner--double:after {
-        content: ' ';
-        .fill-parent();
-        display: block;
-        border-radius: 50%;
-        opacity: 0.4;
-        animation: bounce 2.0s infinite ease-in-out;
-    }
+.Spinner--single::before,
+.Spinner--double::before,
+.Spinner--double::after {
+  .fill-parent();
 
-    .Spinner--double:after {
-        animation-delay: -1.0s;
-    }
+  content: ' ';
+  display: block;
+  border-radius: 50%;
+  opacity: 0.4;
+  animation: bounce 2s infinite ease-in-out;
+}
+
+.Spinner--double::after {
+  animation-delay: -1s;
+}

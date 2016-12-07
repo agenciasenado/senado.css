@@ -1,15 +1,16 @@
 .breadcrumb {
-    margin: 5px 0 10px;
-    padding-left: 0;
-    background: none;
-    font-size: 12px;
+  margin: 5px 0 10px;
+  padding-left: 0;
+  background: none;
+  font-size: 12px;
 
-    > li + li:before {
-        content: '\203A\00a0';
-        color: #666;
-    }
+  /* stylelint-disable-next-line selector-max-compound-selectors */
+  > li + li::before {
+    content: '\203A\00a0';
+    color: #666;
+  }
 
-    @media (max-width: @screen-xs-max) {
-        display: none;
-    }
+  @media (max-width: @screen-xs-max) {
+    display: none;
+  }
 }

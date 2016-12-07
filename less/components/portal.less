@@ -1,12 +1,13 @@
 @portal-topo-height: 90px;
 
 .PortalTopo {
-    .make-row();
-    @media (max-width: @screen-xs-max) {
-        padding-top: 10px;
-        padding-bottom: 10px;
-        border-bottom: solid 5px #3E6892;
-    }
+  .make-row();
+
+  @media (max-width: @screen-xs-max) {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: solid 5px #3e6892;
+  }
 }
 
 /*---
@@ -19,183 +20,188 @@ busca e o menu principal do `PortalTopo` qdo o viewport estiver em `xs`. São al
 ```example:jade
 .PortalTopo-togglers
   .PortalTopo-toggler--menu(data-toggle='collapse', data-target='.principal')
-    .Icon.Icon--menu.Icon--md
+  .Icon.Icon--menu.Icon--md
   .PortalTopo-toggler--search(data-toggle='collapse', data-target='.PortalTopo-busca')
-    .glyphicon.glyphicon-search
+  .glyphicon.glyphicon-search
 .clearfix
 ```
 */
 
 .PortalTopo-togglers {
-    .make-xs-column(4);
-    text-align: right;
-    font-size: 0;
+  .make-xs-column(4);
+
+  text-align: right;
+  font-size: 0;
 }
 
-.PortalTopo-toggler, [class^="PortalTopo-toggler--"] {
-    @size: 34px;
-    @border-size: 1px;
+.PortalTopo-toggler,
+[class^="PortalTopo-toggler--"] {
+  @size: 34px;
+  @border-size: 1px;
 
-    display: inline-block;
-    font-size: 14px;
-    height: @size;
-    width: @size;
-    margin-left: 5px;
-    padding: 0;
+  display: inline-block;
+  font-size: 14px;
+  height: @size;
+  width: @size;
+  margin-left: 5px;
+  padding: 0;
+  border: @border-size solid @azul-padrao;
+  border-radius: 0;
+  vertical-align: middle;
+  text-align: center;
+  line-height: @size - 2 * @border-size;
 
-    border: @border-size solid @azul-padrao;
-    border-radius: 0;
-
-    vertical-align: middle;
-
-    text-align: center;
-    line-height: @size - 2 * @border-size;
-
-    &:first-child {
-        margin-left: 0;
-    }
-
+  &:first-child {
+    margin-left: 0;
+  }
 }
 
-    .PortalTopo-toggler--menu {
-        background: @azul-padrao;
-        border-color: @azul-padrao;
-        color: #fff;
-        font-size: 12px;
-    }
+.PortalTopo-toggler--menu {
+  background: @azul-padrao;
+  border-color: @azul-padrao;
+  color: #fff;
+  font-size: 12px;
+}
 
-    .PortalTopo-toggler--search {
-        background: #f5f5f5;
-        border-color: #ccc;
-        color: @azul-padrao;
-    }
-
+.PortalTopo-toggler--search {
+  background: #f5f5f5;
+  border-color: #ccc;
+  color: @azul-padrao;
+}
 
 .PortalTopo-id {
-    .make-xs-column(8);
-    color: #3E6892;
-    display: table;
+  .make-xs-column(8);
+
+  color: #3e6892;
+  display: table;
 }
 
-    .PortalTopo-id--narrow {
-        .make-sm-column(5);
-    }
+.PortalTopo-id--narrow {
+  .make-sm-column(5);
+}
 
 .PortalTopo-title {
-    display: table-cell;
-    vertical-align: middle;
-    line-height: 35px;
-    margin: 0;
-    font-size: 40px;
-    @media (max-width: @screen-sm-max) {
-        font-size: 34px;
-    }
-    @media (max-width: @screen-xs-max) {
-        font-size: 24px;
-    }
-    @media (max-width: @screen-xs-min) {
-        font-size: 18px;
-    }
+  display: table-cell;
+  vertical-align: middle;
+  line-height: 35px;
+  margin: 0;
+  font-size: 40px;
+
+  @media (max-width: @screen-sm-max) {
+    font-size: 34px;
+  }
+
+  @media (max-width: @screen-xs-max) {
+    font-size: 24px;
+  }
+
+  @media (max-width: @screen-xs-min) {
+    font-size: 18px;
+  }
 }
 
 .PortalTopo-intro {
-    font-size: 18px;
-    line-height: 26px;
+  font-size: 18px;
+  line-height: 26px;
 }
 
-// region doc
 /**
  * Busca principal:
  * `.PortalTopo-busca`: Formulário fixo de busca global. Faz parte do componente `PortalTopo` e, por isso,
  * tem as dimensçoes presas via CSS (xs-4, sm-4, sm-offset-4). Expande-se automaticamente no viewport `xs`
  *
- *     @example
- *     .PortalTopo-busca
- *         form(action='search', role='search')
- *             p.hidden-xs: a(href='#') Busca avançada ›
- *             .input-group
- *                 input.form-control(type='text')
- *                 .input-group-btn
- *                     button.btn.btn-default(type='submit') Buscar
+ *   @example
+ *   .PortalTopo-busca
+ *     form(action='search', role='search')
+ *       p.hidden-xs: a(href='#') Busca avançada ›
+ *       .input-group
+ *         input.form-control(type='text')
+ *         .input-group-btn
+ *           button.btn.btn-default(type='submit') Buscar
  */
-// endregion
+
 .PortalTopo-busca {
-    .make-xs-column(12);
-    .make-sm-column(4);
+  .make-xs-column(12);
+  .make-sm-column(4);
 
-    > form {
-        margin: 10px 0 0;
-        @media (min-width: @screen-sm-min) {
-            display: table-cell;
-            vertical-align: middle;
-        }
-    }
-
-    input, button {
-        border-radius: 0;
-        height: 34px;
-    }
-
-    button {
-        color: @azul-padrao;
-        background: #f5f5f5;
-    }
+  > form {
+    margin: 10px 0 0;
 
     @media (min-width: @screen-sm-min) {
-        display: table!important;
-        visibility: visible !important;
-        height: @portal-topo-height!important;
+      display: table-cell;
+      vertical-align: middle;
     }
+  }
 
+  input,
+  button {
+    border-radius: 0;
+    height: 34px;
+  }
+
+  button {
+    color: @azul-padrao;
+    background: #f5f5f5;
+  }
+
+  @media (min-width: @screen-sm-min) {
+    display: table !important;
+    visibility: visible !important;
+    height: @portal-topo-height !important;
+  }
 }
 
 .PortalTopo-tools {
-    .make-xs-column(12);
-    .make-sm-column(3);
+  .make-xs-column(12);
+  .make-sm-column(3);
 
-    overflow: hidden;
-    text-align: right;
-    @media (min-width: @screen-sm-min) {
-        display: table !important;
-        visibility: visible !important;
-    }
+  overflow: hidden;
+  text-align: right;
 
-    > div {
-        display: table-cell;
-        vertical-align: middle;
-    }
+  @media (min-width: @screen-sm-min) {
+    display: table !important;
+    visibility: visible !important;
+  }
 
+  > div {
+    display: table-cell;
+    vertical-align: middle;
+  }
 }
 
-.PortalTopo-id, .PortalTopo-busca, .PortalTopo-tools {
-    height: @portal-topo-height;
-    @media (max-width: @screen-xs-max) {
-        height: auto;
-    }
+.PortalTopo-id,
+.PortalTopo-busca,
+.PortalTopo-tools {
+  height: @portal-topo-height;
+
+  @media (max-width: @screen-xs-max) {
+    height: auto;
+  }
 }
 
-// region doc
-/**
- * PortalTopo completo:
- * `PortalTopo`: Container de elementos que formam o topo do site. Formado pelo título (`PortalTopo-id`), formulário
- * de busca (`PortalTopo-busca`) e o toggler-collapse do viewport `xs` (`PortalTopo-togglers`). O layout é preso
- * via less (largura/offset das colunas), portanto foi projetado para ser _utilizado como está_.
- *
- *     @example
- *     .PortalTopo
- *         .PortalTopo-id
- *             .PortalTopo-title
- *                 .PortalTopo-intro.hidden-xs Notícias
- *                 | Senado
- *         .PortalTopo-togglers.visible-xs
- *             .PortalTopo-toggler--menu
- *             .PortalTopo-toggler--search
- *         .PortalTopo-busca
- *             form(action='search', role='search')
- *                 p.hidden-xs: a(href='#') Busca avançada ›
- *                 .input-group
- *                     input.form-control(type='text')
- *                     .input-group-btn
- *                         button.btn.btn-default Buscar
- */
-// endregion
+/*---
+title: PortalTopo completo
+section: Objetos
+
+`PortalTopo`: Container de elementos que formam o topo do site. Formado pelo título (`PortalTopo-id`), formulário
+de busca (`PortalTopo-busca`) e o toggler-collapse do viewport `xs` (`PortalTopo-togglers`). O layout é preso
+via less (largura/offset das colunas), portanto foi projetado para ser _utilizado como está_.
+
+```example:jade
+.PortalTopo
+  .PortalTopo-id
+    .PortalTopo-title
+      .PortalTopo-intro.hidden-xs Notícias
+      | Senado
+  .PortalTopo-togglers.visible-xs
+    .PortalTopo-toggler--menu
+    .PortalTopo-toggler--search
+  .PortalTopo-busca
+    form(action='search', role='search')
+      p.hidden-xs: a(href='#') Busca avançada ›
+      .input-group
+        input.form-control(type='text')
+        .input-group-btn
+          button.btn.btn-default Buscar
+```
+*/

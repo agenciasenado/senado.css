@@ -10,30 +10,28 @@ Caption:
 .Box.Box--flush.u-size1of3
   .Embed.Embed--3by2(class='+cut')
   .Caption.Caption--film.Box
-    | Quadra de fatalis planeta, examinare demissio!
+  | Quadra de fatalis planeta, examinare demissio!
 ```
 */
-.Caption {}
 
-    .Caption--film {
-        position: absolute;
-        bottom: 0;
-        width: 100%;
+.Caption--film {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  text-shadow: 1px 1px 1px #000;
+  line-height: 1.3;
 
-        background: rgba(0,0,0,0.4);
-        color: #fff;
-        text-shadow: 1px 1px 1px #000;
-        line-height: 1.30;
+  @media (max-width: @screen-xs-max) {
+    position: static;
+    background: #333340;
+    font-size: @font-size-large;
+  }
+}
 
-        @media (max-width: @screen-xs-max) {
-            position: static;
-            background: #333340;
-            font-size: @font-size-large;
-        }
-    }
-
-    .Caption--feature {
-        position: absolute;
-        top: @padding-base-vertical;
-        left: @padding-base-vertical;
-    }
+.Caption--feature {
+  position: absolute;
+  top: @padding-base-vertical;
+  left: @padding-base-vertical;
+}

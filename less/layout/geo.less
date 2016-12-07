@@ -1,3 +1,5 @@
+/* stylelint-disable selector-max-compound-selectors */
+
 // baseado em https://raw.githubusercontent.com/dropbox/scooter/master/scss/helpers/_layout.scss
 
 // Islands are the most common layout helper. They throw a padding around the
@@ -7,10 +9,11 @@
 
 ._geo (@baseline) {
   padding: @baseline;
+
   &-y {
     padding-top: @baseline;
     padding-bottom: @baseline;
-  }   
+  }
 }
 
 .l-island {
@@ -53,17 +56,22 @@
 //
 ._margin (@direction) {
   @micro: replace(@direction, "(.).*$", "$1");
+
   .l-m@{micro} {
-    margin-@{direction}: @baseline!important;
+    margin-@{direction}: @baseline !important;
+
     &-xs {
       margin-@{direction}: round(@baseline / 4) !important;
     }
+
     &-s {
       margin-@{direction}: round(@baseline / 2) !important;
     }
+
     &-l {
       margin-@{direction}: round(@baseline * 2) !important;
     }
+
     &-xl {
       margin-@{direction}: round(@baseline * 4) !important;
     }
@@ -80,5 +88,5 @@
 }
 
 .l-trim {
-  margin: 0!important;
+  margin: 0 !important;
 }

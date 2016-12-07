@@ -1,15 +1,17 @@
 .Strip {
-    @media(max-width: @screen-xs-max) {
-        overflow-x: auto;
-        white-space: nowrap;
-        > * {
-            display: inline-block!important;
-            white-space: normal;
-            vertical-align: top;
-            width: 85%;
-        }
-        > :not(:last-child) {
-            margin-right: @padding-large-vertical;
-        }
+  @media (max-width: @screen-xs-max) {
+    overflow-x: auto;
+    white-space: nowrap;
+
+    > * {
+      display: inline-block !important;
+      white-space: normal;
+      vertical-align: top;
+      width: 85%;
     }
+
+    > :not(:last-child) {
+      margin-right: @padding-large-vertical;
+    }
+  }
 }

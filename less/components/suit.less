@@ -1,0 +1,54 @@
+/*---
+title:   Suit
+section: Layout
+---
+
+Estrutura de alinhamento horizontal em `display:flex`
+
+```example:jade
+.Suit
+  .Suit-fit
+    div(class="+cut") Fit
+  .Suit-fill
+    div(class="+light") Fill
+  .Suit-fit
+    div(class="+cut") Fit
+br
+.Suit.Suit--gutter
+  .Suit-fit.u-size1of2(class="+cut") Fit
+  .Suit-fill(class="+light") Fill
+  .Suit-fit(class="+cut") Fit
+```
+*/
+
+.Suit {
+  display: flex;
+  flex-direction: row;
+}
+
+.Suit--middle {
+  align-items: center;
+  justify-content: center;
+}
+
+.Suit-fit {
+  flex-basis: auto !important;
+}
+
+.Suit-fill {
+  flex: 1 1 0% !important;
+  flex-basis: 0% !important;
+}
+
+.Suit--gutter {
+  > .Suit-fill,
+  > .Suit-fit {
+    &:not(:first-child) {
+      padding-left: @grid-gutter-width / 2;
+    }
+
+    &:not(:last-child) {
+      padding-right: @grid-gutter-width / 2;
+    }
+  }
+}
