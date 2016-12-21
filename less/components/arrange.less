@@ -1,88 +1,54 @@
-// baseado em https://github.com/Blocss/molecules.arrange/blob/master/lib/_molecules.arrange.scss
-
 /*---
 title:   Arrange
-section: Components
+section: Layout
 ---
 
-Estrutura de alinhamento horizontal TESTE TESTE
+Estrutura de alinhamento horizontal em `display:flex`
 
 ```example:jade
 .Arrange
-  .Arrange-sizeFit
-    .Box(class="+cut") Fit 2jhbdfjhagdf
-  .Arrange-sizeFill
-    .Box(class="+light") Fill
-  .Arrange-sizeFit
-    .Box(class="+cut") Fit
+  .Arrange-fit
+    div(class="+cut") Fit
+  .Arrange-fill
+    div(class="+light") Fill
+  .Arrange-fit
+    div(class="+cut") Fit
+br
+.Arrange.Arrange--gutter
+  .Arrange-fit.u-size1of2(class="+cut") Fit
+  .Arrange-fill(class="+light") Fill
+  .Arrange-fit(class="+cut") Fit
 ```
 */
 
 .Arrange {
-  display: table;
-  margin: 0;
-  padding: 0;
-  table-layout: auto;
-  min-width: 100%;
-}
-
-.Arrange-sizeFill,
-.Arrange-sizeFit {
-  display: table-cell;
-  padding: 0;
-  vertical-align: top;
-}
-
-.Arrange-sizeFill {
-  width: 100%;
-}
-
-.Arrange-sizeFill img {
-  height: auto;
-  max-width: 100%;
+  display: flex;
+  flex-direction: row;
 }
 
 .Arrange--middle {
-  > .Arrange-sizeFill,
-  > .Arrange-sizeFit {
-    vertical-align: middle;
-  }
+  align-items: center;
+  justify-content: center;
 }
 
-.Arrange--bottom {
-  > .Arrange-sizeFill,
-  > .Arrange-sizeFit {
-    vertical-align: bottom;
-  }
+.Arrange-fit {
+  flex-basis: auto !important;
 }
 
-.Arrange--equal {
-  table-layout: fixed;
-  width: 100%;
-
-  > .Arrange-sizeFill,
-  > .Arrange-sizeFit {
-    width: 1%;
-  }
+.Arrange-fill {
+  flex: 1 1 0% !important;
+  flex-basis: 0% !important;
 }
 
 .Arrange--gutter {
-  > .Arrange-sizeFill,
-  > .Arrange-sizeFit {
+  > .Arrange-fill,
+  > .Arrange-fit {
     &:not(:first-child) {
-      padding-left: @grid-gutter-width;
+      padding-left: @grid-gutter-width / 2;
     }
-  }
-}
 
-// TODO: criar versões responsivas
-.Arrange--collapse {
-  display: block;
-
-  > .Arrange-sizeFill,
-  > .Arrange-sizeFit {
-    display: block;
-    width: 100%;
-    padding-left: 0; // zerar padding se for um --guter
+    &:not(:last-child) {
+      padding-right: @grid-gutter-width / 2;
+    }
   }
 }
