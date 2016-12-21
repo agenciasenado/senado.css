@@ -1,0 +1,35 @@
+.Flag {
+  display: flex;
+  align-items: flex-start;
+}
+
+.Flag-figure {
+  margin-right: 1em;
+}
+
+.Flag-figure--compact {
+  margin: 0 !important;
+}
+
+.Flag-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.Flag-body,
+.Flag-body :last-child {
+  margin-bottom: 0;
+}
+
+.Flag--center {
+  align-items: center;
+}
+
+.Flag--bottom {
+  align-items: flex-end;
+}
+
+.Flag--reverse > .Flag-figure {
+  order: 1;
+  margin: 0 0 0 1em;
+}
