@@ -1,24 +1,24 @@
 // baseado em https://github.com/Blocss/molecules.arrange/blob/master/lib/_molecules.arrange.scss
 
 /*---
-title:   Suit
+title:   Arrange
 section: Components
 ---
 
 Estrutura de alinhamento horizontal
 
 ```example:jade
-.Suit
-  .Suit-sizeFit
+.Arrange
+  .Arrange-sizeFit
     .Box(class="+cut") Fit
-  .Suit-sizeFill
+  .Arrange-sizeFill
     .Box(class="+light") Fill
-  .Suit-sizeFit
+  .Arrange-sizeFit
     .Box(class="+cut") Fit
 ```
 */
 
-.Suit {
+.Arrange {
   display: table;
   margin: 0;
   padding: 0;
@@ -26,49 +26,49 @@ Estrutura de alinhamento horizontal
   min-width: 100%;
 }
 
-.Suit-sizeFill,
-.Suit-sizeFit {
+.Arrange-sizeFill,
+.Arrange-sizeFit {
   display: table-cell;
   padding: 0;
   vertical-align: top;
 }
 
-.Suit-sizeFill {
+.Arrange-sizeFill {
   width: 100%;
 }
 
-.Suit-sizeFill img {
+.Arrange-sizeFill img {
   height: auto;
   max-width: 100%;
 }
 
-.Suit--middle {
-  > .Suit-sizeFill,
-  > .Suit-sizeFit {
+.Arrange--middle {
+  > .Arrange-sizeFill,
+  > .Arrange-sizeFit {
     vertical-align: middle;
   }
 }
 
-.Suit--bottom {
-  > .Suit-sizeFill,
-  > .Suit-sizeFit {
+.Arrange--bottom {
+  > .Arrange-sizeFill,
+  > .Arrange-sizeFit {
     vertical-align: bottom;
   }
 }
 
-.Suit--equal {
+.Arrange--equal {
   table-layout: fixed;
   width: 100%;
 
-  > .Suit-sizeFill,
-  > .Suit-sizeFit {
+  > .Arrange-sizeFill,
+  > .Arrange-sizeFit {
     width: 1%;
   }
 }
 
-.Suit--gutter {
-  > .Suit-sizeFill,
-  > .Suit-sizeFit {
+.Arrange--gutter {
+  > .Arrange-sizeFill,
+  > .Arrange-sizeFit {
     &:not(:first-child) {
       padding-left: @grid-gutter-width;
     }
@@ -76,11 +76,11 @@ Estrutura de alinhamento horizontal
 }
 
 // TODO: criar versões responsivas
-.Suit--collapse {
+.Arrange--collapse {
   display: block;
 
-  > .Suit-sizeFill,
-  > .Suit-sizeFit {
+  > .Arrange-sizeFill,
+  > .Arrange-sizeFit {
     display: block;
     width: 100%;
     padding-left: 0; // zerar padding se for um --guter
