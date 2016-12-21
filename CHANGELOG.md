@@ -1,3 +1,10 @@
+# 2.8.0
+
+* atualizar fonte: remover ícones específicos da HP
+* renomear Suit para Arrange e deixar a decisão para o @import
+* adicionar componente Flag em flex
+
+
 # 2.7.0
 
 * atualizar deps
