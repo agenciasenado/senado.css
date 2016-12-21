@@ -4,6 +4,8 @@
   "repository": "http://git.io/senado.css",
   "license": "MIT",
   "scripts": {
+    "dev": "grunt dev",
+    "build": "grunt build",
     "test": "stylelint 'less/**/*.less'"
   },
   "devDependencies": {
@@ -21,8 +23,10 @@
     "load-grunt-tasks": "^3.5.2",
     "mdcss": "^1.5.1",
     "mdcss-theme-fabianonunes": "https://github.com/fabianonunes/mdcss-theme-fabianonunes.git#develop",
-    "stylelint": "^7.6.0",
-    "stylelint-config-standard": "^15.0.0"
+    "mosaaaico2": "fabianonunes/mosaaaico2"
+  },
+  "stylelint": {
+    "extends": "mosaaaico2/stylelint"
   },
   "dependencies": {
     "bootstrap": "^3.3.6",
