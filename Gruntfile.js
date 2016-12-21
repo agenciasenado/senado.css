@@ -1,8 +1,4 @@
-
-var path = require('path')
-
 module.exports = function (grunt) {
-
   require('load-grunt-tasks')(grunt, { scope: 'devDependencies' })
 
   grunt.initConfig({
@@ -144,5 +140,4 @@ module.exports = function (grunt) {
     'connect',
     'clean'
   ])
-
 }
