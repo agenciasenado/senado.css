@@ -1,3 +1,30 @@
+# 2.7.0
+
+* atualizar deps
+* configurar linters
+* Arrange para flex, Suit para table
+
+
+# 2.6.3
+
+* bugfix: permitir utilizar classes Icon como mixins
+
+
+# 2.6.2
+
+* remover querystring do path das fontes, pois atrasa o webpack e não tem muita utilidade aqui
+* configurar linters
+* Suit
+* Boxing
+* remover Phantom
+* documentação
+
+
+# 2.6.1
+
+* atualizar variável com o path das fontes e mover pasta
+
+
 # 2.6.0
 
 * Atualizar dependências
