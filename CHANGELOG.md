@@ -1,3 +1,8 @@
+# 2.9.0
+
+* utilitários de texto
+
+
 # 2.8.0
 
 * atualizar fonte: remover ícones específicos da HP
