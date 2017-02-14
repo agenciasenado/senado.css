@@ -1,3 +1,9 @@
+# 2.10.0
+
+* ajustar altura da barra final do rodapé (`.FooterMain-end`)
+
+
+
 # 2.9.0
 
 * utilitários de texto
