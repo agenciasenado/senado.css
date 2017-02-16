@@ -1,7 +1,11 @@
+# 2.11.0
+
+* Componente Fence
+
+
 # 2.10.0
 
 * ajustar altura da barra final do rodapé (`.FooterMain-end`)
-
 
 
 # 2.9.0
