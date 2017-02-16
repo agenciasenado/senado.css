@@ -1,0 +1,17 @@
+.Fence {
+  &:extend(.list-inline all);
+
+  margin: 0;
+  line-height: 1;
+
+  > li:not(:last-child) {
+    border-right: 1px solid #999;
+  }
+}
+
+.Fence--lg {
+  > li {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
