@@ -22,8 +22,8 @@
     "grunt-postcss": "^0.8.0",
     "load-grunt-tasks": "^3.5.2",
     "mdcss": "^1.5.1",
-    "mdcss-theme-fabianonunes": "fabianonunes/mdcss-theme-fabianonunes#develop",
-    "mosaaaico2": "fabianonunes/mosaaaico2"
+    "mdcss-theme-fabianonunes": "fabianonunes/mdcss-theme-fabianonunes#2.2.0",
+    "mosaaaico2": "fabianonunes/mosaaaico2#1.13.3"
   },
   "stylelint": {
     "extends": "mosaaaico2/stylelint"

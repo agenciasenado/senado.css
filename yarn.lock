@@ -2769,9 +2769,9 @@ maxmin@^2.1.0:
     gzip-size "^3.0.0"
     pretty-bytes "^3.0.0"
 
-mdcss-theme-fabianonunes@fabianonunes/mdcss-theme-fabianonunes#develop:
+mdcss-theme-fabianonunes@fabianonunes/mdcss-theme-fabianonunes#2.2.0:
   version "2.2.0"
-  resolved "https://codeload.github.com/fabianonunes/mdcss-theme-fabianonunes/tar.gz/e3f82f9573f88d330cdf47ef2b5148b4be737a0c"
+  resolved "https://codeload.github.com/fabianonunes/mdcss-theme-fabianonunes/tar.gz/8e570fee8ac29dbb39d1473e695369272c5564e0"
   dependencies:
     cheerio "^0.20.0"
     jade "^1.11.0"
@@ -2910,9 +2910,9 @@ morgan@^1.8.2:
     on-finished "~2.3.0"
     on-headers "~1.0.1"
 
-mosaaaico2@fabianonunes/mosaaaico2:
-  version "1.13.2"
-  resolved "https://codeload.github.com/fabianonunes/mosaaaico2/tar.gz/ea32b10a3e60809399bfe4b8cc7c4d64584f1985"
+mosaaaico2@fabianonunes/mosaaaico2#1.13.3:
+  version "1.13.3"
+  resolved "https://codeload.github.com/fabianonunes/mosaaaico2/tar.gz/a063d365d87b540db5abd3f19ef13d915e9bfbb7"
   dependencies:
     autoprefixer "^6.5.4"
     copy-webpack-plugin "^4.0.1"
