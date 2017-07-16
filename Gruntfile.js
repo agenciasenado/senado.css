@@ -105,7 +105,7 @@ module.exports = function (grunt) {
               destination: 'styleguide'
             }),
             require('autoprefixer')({
-              browsers: ['> 1%', 'last 2 versions', 'ie 9'],
+              browsers: ['> 1%', 'last 2 versions', 'ie 9']
             })
           ]
         },
