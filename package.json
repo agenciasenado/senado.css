@@ -23,7 +23,7 @@
     "load-grunt-tasks": "^3.5.2",
     "mdcss": "^1.5.1",
     "mdcss-theme-fabianonunes": "https://github.com/fabianonunes/mdcss-theme-fabianonunes.git#develop",
-    "mosaaaico2": "fabianonunes/mosaaaico2"
+    "mosaaaico2": "fabianonunes/mosaaaico2#2.3.1"
   },
   "stylelint": {
     "extends": "mosaaaico2/stylelint"

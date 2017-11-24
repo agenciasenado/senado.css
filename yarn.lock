@@ -3391,9 +3391,9 @@ morgan@^1.6.1, morgan@^1.7.0:
     on-finished "~2.3.0"
     on-headers "~1.0.1"
 
-mosaaaico2@fabianonunes/mosaaaico2:
-  version "2.3.0"
-  resolved "https://codeload.github.com/fabianonunes/mosaaaico2/tar.gz/1ff38d8a9b93a6def92f738db4f739d1efeece4f"
+mosaaaico2@fabianonunes/mosaaaico2#2.3.1:
+  version "2.3.1"
+  resolved "https://codeload.github.com/fabianonunes/mosaaaico2/tar.gz/80a49c9c663c7fd8aa2b0aa6a4f11d54b9a9de62"
   dependencies:
     autoprefixer "^7.1.6"
     copy-webpack-plugin "^4.2.3"
