@@ -1,38 +1,38 @@
-# 2.11.0
+# Changelog
+
+## 2.12.0
+
+* Arrange--vertical
+
+## 2.11.0
 
 * Componente Fence
 
-
-# 2.10.0
+## 2.10.0
 
 * ajustar altura da barra final do rodapé (`.FooterMain-end`)
 
-
-# 2.9.0
+## 2.9.0
 
 * utilitários de texto
 
-
-# 2.8.0
+## 2.8.0
 
 * atualizar fonte: remover ícones específicos da HP
 * renomear Suit para Arrange e deixar a decisão para o @import
 * adicionar componente Flag em flex
 
-
-# 2.7.0
+## 2.7.0
 
 * atualizar deps
 * configurar linters
 * Arrange para flex, Suit para table
 
-
-# 2.6.3
+## 2.6.3
 
 * bugfix: permitir utilizar classes Icon como mixins
 
-
-# 2.6.2
+## 2.6.2
 
 * remover querystring do path das fontes, pois atrasa o webpack e não tem muita utilidade aqui
 * configurar linters
@@ -41,86 +41,72 @@
 * remover Phantom
 * documentação
 
-
-# 2.6.1
+## 2.6.1
 
 * atualizar variável com o path das fontes e mover pasta
 
-
-# 2.6.0
+## 2.6.0
 
 * Atualizar dependências
 * Clamp--1
 * Ajustes do l-fork
 
-
-# 2.5.5
+## 2.5.5
 
 * Simplificar Knob
 * Remover trecho de compatibilidade com Bootstrap 2
 * Componente Loading
 * Clamp: evitar que tamanho exato da altura seja quebrada pelo chrome
 
-
-# 2.5.4
+## 2.5.4
 
 * Flag-figure sem padding
 * Modificadores do .BreakingNews
 
-
-# 2.5.3
+## 2.5.3
 
 * Adicionar .eta à escala
 
-
-# 2.5.2
+## 2.5.2
 
 * Organizar especificidade da escala de fontes responsiva
 
-
-# 2.5.1
+## 2.5.1
 
 * Devolver espaçamento entre .Card em um .Deck
 
-
-# 2.5.0
+## 2.5.0
 
 * Componente Clamp
 * Atualizar dependências
 
-
-# 2.4.0
+## 2.4.0
 
 * Converter documentação em mdcss
 * Remover tasks dispensáveis e organizar o postcss
 * Helpers responsivos à escala de fontes
 
-
-# 2.3.0
+## 2.3.0
 
 * Escala de fonte responsiva
 
-
-# 2.1.2
+## 2.1.2
 
 * Componente LogoPortal para os novos logotipos dos portais
 * Corrigir alinhamento do Icon e seu comportamento dentro de um Knob
 
-
-# 2.1.1
+## 2.1.1
 
 * Corrigir alinhamento do ícone dentro de um .Knob
 * Remover alinhamento vertical do componente .Icon
 
-
-# 2.1.0
+## 2.1.0
 
 * Componentes Glass e Knob
 * Classes de layout geo
 * Remover componente específico da aplicação noticias
 
-
-# 2.0.0
+## 2.0.0
 
 * Remover arquivos .jade de outros projetos
 * Inclusão de 3 novos icones
