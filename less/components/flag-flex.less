@@ -1,3 +1,39 @@
+/*---
+title:   Flag
+section: Components
+---
+
+`.Flag`: Estrutura genérica de disposição de conteúdo com uma mídia lateral e um conteúdo
+adjacente. É centralizado verticalmente por padrão, mas pode ser alinhhado ao topo
+ou ao rodapé por meio dos modificadores `--top` e `--bottom`.
+
+```example:jade
+.Flag.Flag--center
+  .Flag-figure
+    .Icon.Icon--newspaper.Icon--lg
+  .Flag-body
+    a Middle
+    div: small Nunquam gratia guttus
+    div: small Cur impositio resistere?
+br
+.Flag
+  .Flag-figure
+    .Icon.Icon--bubble.Icon--lg
+  .Flag-body
+    a Top
+    div: small Nunquam consumere tumultumque
+    div: small Cur adgium persuadere
+br
+.Flag.Flag--bottom
+  .Flag-figure
+    .Icon.Icon--twitter.Icon--lg
+  .Flag-body
+    a Bottom
+    div: small Dexter verpas ducunt ad devatio.
+    div: small A falsis, verpa peritus burgus.
+```
+*/
+
 .Flag {
   display: flex;
   align-items: flex-start;
