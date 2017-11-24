@@ -4,26 +4,18 @@
   "repository": "http://git.io/senado.css",
   "license": "MIT",
   "scripts": {
-    "dev": "grunt dev",
-    "build": "grunt build",
+    "dev": "webpack-dev-server",
     "test": "stylelint 'less/**/*.less'"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.6",
     "cors": "^2.8.1",
     "fs-promise": "^2.0.3",
-    "grunt": "^1.0.1",
-    "grunt-contrib-clean": "^1.0.0",
-    "grunt-contrib-connect": "^1.0.0",
-    "grunt-contrib-cssmin": "^2.2.1",
-    "grunt-contrib-jade": "^1.0.0",
-    "grunt-contrib-less": "^1.4.0",
-    "grunt-contrib-watch": "^1.0.0",
-    "grunt-postcss": "^0.9.0",
-    "load-grunt-tasks": "^3.5.2",
     "mdcss": "^1.5.1",
     "mdcss-theme-fabianonunes": "fabianonunes/mdcss-theme-fabianonunes.git#develop",
-    "mosaaaico2": "fabianonunes/mosaaaico2#2.3.1"
+    "mosaaaico2": "fabianonunes/mosaaaico2#2.3.1",
+    "webpack": "^3.8.1",
+    "webpack-dev-server": "^2.9.4"
   },
   "stylelint": {
     "extends": "mosaaaico2/stylelint"
