@@ -877,7 +877,7 @@ cookie@0.3.1:
   version "0.3.1"
   resolved "https://registry.yarnpkg.com/cookie/-/cookie-0.3.1.tgz#e7e0a1f9ef43b4c8ba925c5c5a96e806d16873bb"
 
-copy-webpack-plugin@^4.0.1:
+copy-webpack-plugin@^4.2.3:
   version "4.2.3"
   resolved "https://registry.yarnpkg.com/copy-webpack-plugin/-/copy-webpack-plugin-4.2.3.tgz#4a3c61089f3b635777f0f0af346c338b39d63755"
   dependencies:
@@ -1668,7 +1668,7 @@ expand-range@^1.8.1:
   dependencies:
     fill-range "^2.1.0"
 
-express@^4.13.3, express@^4.15.4:
+express@^4.13.3, express@^4.16.2:
   version "4.16.2"
   resolved "https://registry.yarnpkg.com/express/-/express-4.16.2.tgz#e35c6dfe2d64b7dca0a5cd4f21781be3299e076c"
   dependencies:
@@ -1719,7 +1719,7 @@ extract-loader@^1.0.0:
   dependencies:
     loader-utils "^1.1.0"
 
-extract-text-webpack-plugin@^3.0.0:
+extract-text-webpack-plugin@^3.0.2:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/extract-text-webpack-plugin/-/extract-text-webpack-plugin-3.0.2.tgz#5f043eaa02f9750a9258b78c0a6e0dc1408fb2f7"
   dependencies:
@@ -1774,11 +1774,12 @@ file-entry-cache@^2.0.0:
     flat-cache "^1.2.1"
     object-assign "^4.0.1"
 
-file-loader@^0.11.2:
-  version "0.11.2"
-  resolved "https://registry.yarnpkg.com/file-loader/-/file-loader-0.11.2.tgz#4ff1df28af38719a6098093b88c82c71d1794a34"
+file-loader@^1.1.5:
+  version "1.1.5"
+  resolved "https://registry.yarnpkg.com/file-loader/-/file-loader-1.1.5.tgz#91c25b6b6fbe56dae99f10a425fd64933b5c9daa"
   dependencies:
     loader-utils "^1.0.2"
+    schema-utils "^0.3.0"
 
 filename-regex@^2.0.0:
   version "2.0.1"
@@ -3003,7 +3004,7 @@ less-loader@^4.0.5:
     loader-utils "^1.1.0"
     pify "^2.3.0"
 
-less@^2.7.2, less@~2.7.1:
+less@^2.7.3, less@~2.7.1:
   version "2.7.3"
   resolved "https://registry.yarnpkg.com/less/-/less-2.7.3.tgz#cc1260f51c900a9ec0d91fb6998139e02507b63b"
   optionalDependencies:
@@ -3391,38 +3392,38 @@ morgan@^1.6.1, morgan@^1.7.0:
     on-headers "~1.0.1"
 
 mosaaaico2@fabianonunes/mosaaaico2:
-  version "2.2.1"
-  resolved "https://codeload.github.com/fabianonunes/mosaaaico2/tar.gz/1b1bdf53c63b052feca663b09a3c577585febcab"
+  version "2.3.0"
+  resolved "https://codeload.github.com/fabianonunes/mosaaaico2/tar.gz/1ff38d8a9b93a6def92f738db4f739d1efeece4f"
   dependencies:
-    autoprefixer "^7.1.2"
-    copy-webpack-plugin "^4.0.1"
+    autoprefixer "^7.1.6"
+    copy-webpack-plugin "^4.2.3"
     cross-spawn "^5.1.0"
     css-loader "0.14.5"
-    express "^4.15.4"
+    express "^4.16.2"
     extract-loader "^1.0.0"
-    extract-text-webpack-plugin "^3.0.0"
-    file-loader "^0.11.2"
+    extract-text-webpack-plugin "^3.0.2"
+    file-loader "^1.1.5"
     fs-extra "^4.0.1"
     glob "^7.1.2"
     html-webpack-plugin "^2.30.1"
     json-loader "^0.5.7"
     json-update "^3.0.0"
-    less "^2.7.2"
+    less "^2.7.3"
     less-loader "^4.0.5"
     lodash "^4.17.4"
-    postcss-loader "^2.0.6"
+    postcss-loader "^2.0.9"
     pug "^2.0.0-rc.3"
     pug-loader "^2.3.0"
-    resolve-url-loader "^2.1.0"
+    resolve-url-loader "^2.2.0"
     rimraf "^2.6.1"
     sanitize-filename "^1.6.1"
     standard "^10.0.3"
-    style-loader "^0.18.2"
-    stylelint "^8.0.0"
+    style-loader "^0.19.0"
+    stylelint "^8.2.0"
     stylelint-config-standard "^17.0.0"
-    webpack "^3.5.5"
-    webpack-config "^7.2.1"
-    webpack-dev-server "^2.7.1"
+    webpack "^3.8.1"
+    webpack-config "^7.5.0"
+    webpack-dev-server "^2.9.4"
 
 ms@0.7.1:
   version "0.7.1"
@@ -3960,7 +3961,7 @@ postcss-load-plugins@^2.3.0:
     cosmiconfig "^2.1.1"
     object-assign "^4.1.0"
 
-postcss-loader@^2.0.6:
+postcss-loader@^2.0.9:
   version "2.0.9"
   resolved "https://registry.yarnpkg.com/postcss-loader/-/postcss-loader-2.0.9.tgz#001fdf7bfeeb159405ee61d1bb8e59b528dbd309"
   dependencies:
@@ -4543,7 +4544,7 @@ resolve-pkg@^0.1.0:
   dependencies:
     resolve-from "^2.0.0"
 
-resolve-url-loader@^2.1.0:
+resolve-url-loader@^2.2.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/resolve-url-loader/-/resolve-url-loader-2.2.0.tgz#9662feaa11debf7cf8e3feb91dae9544aa7dee88"
   dependencies:
@@ -5005,9 +5006,9 @@ strip-json-comments@~2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/strip-json-comments/-/strip-json-comments-2.0.1.tgz#3c531942e908c2697c0ec344858c286c7ca0a60a"
 
-style-loader@^0.18.2:
-  version "0.18.2"
-  resolved "https://registry.yarnpkg.com/style-loader/-/style-loader-0.18.2.tgz#cc31459afbcd6d80b7220ee54b291a9fd66ff5eb"
+style-loader@^0.19.0:
+  version "0.19.0"
+  resolved "https://registry.yarnpkg.com/style-loader/-/style-loader-0.19.0.tgz#7258e788f0fee6a42d710eaf7d6c2412a4c50759"
   dependencies:
     loader-utils "^1.0.2"
     schema-utils "^0.3.0"
@@ -5026,7 +5027,7 @@ stylelint-config-standard@^17.0.0:
   dependencies:
     stylelint-config-recommended "^1.0.0"
 
-stylelint@^8.0.0:
+stylelint@^8.2.0:
   version "8.2.0"
   resolved "https://registry.yarnpkg.com/stylelint/-/stylelint-8.2.0.tgz#6a15044553fb5c3143b16d62013a370314495b0d"
   dependencies:
@@ -5440,7 +5441,7 @@ webidl-conversions@^2.0.0:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/webidl-conversions/-/webidl-conversions-2.0.1.tgz#3bf8258f7d318c7443c36f2e169402a1a6703506"
 
-webpack-config@^7.2.1:
+webpack-config@^7.5.0:
   version "7.5.0"
   resolved "https://registry.yarnpkg.com/webpack-config/-/webpack-config-7.5.0.tgz#53c2c148fc7a3e377652fcea1e682015282047de"
   dependencies:
@@ -5460,7 +5461,7 @@ webpack-dev-middleware@^1.11.0:
     range-parser "^1.0.3"
     time-stamp "^2.0.0"
 
-webpack-dev-server@^2.7.1:
+webpack-dev-server@^2.9.4:
   version "2.9.4"
   resolved "https://registry.yarnpkg.com/webpack-dev-server/-/webpack-dev-server-2.9.4.tgz#7883e61759c6a4b33e9b19ec4037bd4ab61428d1"
   dependencies:
@@ -5499,7 +5500,7 @@ webpack-sources@^1.0.1:
     source-list-map "^2.0.0"
     source-map "~0.6.1"
 
-webpack@^3.5.5:
+webpack@^3.8.1:
   version "3.8.1"
   resolved "https://registry.yarnpkg.com/webpack/-/webpack-3.8.1.tgz#b16968a81100abe61608b0153c9159ef8bb2bd83"
   dependencies:
