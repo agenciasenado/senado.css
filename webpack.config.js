@@ -71,10 +71,6 @@ module.exports = (env = {}, argv) => ({
     port: process.env.PORT || 8000,
     host: '0.0.0.0',
     publicPath: '/dist/',
-    allowedHosts: [
-      'mp2823.senado.gov.br',
-      'localhost'
-    ],
     contentBase: path.resolve('./dist')
   }
 })
