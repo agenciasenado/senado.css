@@ -1,8 +1,8 @@
 const path = require('path')
-const webpack = require('webpack')
-const ExtractTextPlugin = require('extract-text-webpack-plugin')
-// const CopyWebpackPlugin = require('copy-webpack-plugin')
+const CleanWebpackPlugin = require('clean-webpack-plugin')
 
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 const autoprefixer = require('autoprefixer')
 const mdcss = require('mdcss')
 
@@ -16,7 +16,7 @@ const cssChain = [
     options: {
       sourceMap: true,
       plugins: () => [
-        autoprefixer({ browsers: 'last 2 versions' }),
+        autoprefixer(),
         mdcss({
           theme: require('mdcss-theme-fabianonunes'),
           examples: {
@@ -26,10 +26,11 @@ const cssChain = [
         })
       ]
     }
-  }
+  },
+  'less-loader?sourceMap'
 ]
 
-module.exports = {
+module.exports = (env = {}, argv) => ({
 
   entry: {
     main: ['./less/main.less']
@@ -44,11 +45,7 @@ module.exports = {
   module: {
     rules: [{
       test: /\.(less)$/,
-      loader: ExtractTextPlugin.extract({
-        use: cssChain.concat([
-          'less-loader?sourceMap'
-        ])
-      })
+      use: [argv.mode !== 'production' ? 'style-loader' : MiniCssExtractPlugin.loader].concat(cssChain)
     }, {
       test: /\.(svg|woff|ttf|eot|woff2)$/,
       loaders: ['file-loader?name=fonts/[name].[hash:base64:5].[ext]']
@@ -56,14 +53,17 @@ module.exports = {
   },
 
   plugins: [
-    new webpack.NoEmitOnErrorsPlugin(),
-    new ExtractTextPlugin('[name].css'),
-    new webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify(ENV)
-    })
+    new CleanWebpackPlugin(),
+    new MiniCssExtractPlugin({ filename: '[name].css' })
   ],
 
   stats: { colors: true },
+
+  optimization: {
+    minimizer: [
+      new OptimizeCSSAssetsPlugin()
+    ]
+  },
 
   devtool: ENV === 'production' ? '' : 'cheap-source-map',
 
@@ -77,4 +77,4 @@ module.exports = {
     ],
     contentBase: path.resolve('./dist')
   }
-}
+})
