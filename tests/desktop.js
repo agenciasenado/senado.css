@@ -1,20 +1,19 @@
-/* global casper, phantomcss, __utils__ */
+/* global casper, phantomcss, __utils__, $ */
 
-var classNames = [];
+var classNames = []
 
-casper.start('http://localhost:8000/styleguide')
-.then(function () {
-  phantomcss.pathToTest = './';
+casper.start('http://localhost:8000/styleguide').then(function () {
+  phantomcss.pathToTest = './'
   classNames = this.evaluate(function () {
     $()
-    var blocks = __utils__.findAll('figure');
+    var blocks = __utils__.findAll('figure')
     return Array.prototype.map.call(blocks, function (el) {
-      var className = el.classList[1];
-      return className;
-    });
-  });
+      var className = el.classList[1]
+      return className
+    })
+  })
 }).then(function () {
   classNames.forEach(function (className) {
-    phantomcss.screenshot('.' + className + ' .sg-canvas', className.split('sg-section-')[1]);
-  });
-});
+    phantomcss.screenshot('.' + className + ' .sg-canvas', className.split('sg-section-')[1])
+  })
+})
