@@ -1,4 +1,4 @@
-/*---
+/* ---
 title:   Arrange
 section: Layout
 ---
@@ -40,6 +40,14 @@ br
   flex-basis: 0% !important;
 }
 
+.Arrange--vertical {
+  flex-direction: column;
+
+  > .Arrange-fill {
+    min-height: 0;
+  }
+}
+
 .Arrange--gutter {
   > .Arrange-fill,
   > .Arrange-fit {
@@ -50,13 +58,5 @@ br
     &:not(:last-child) {
       padding-right: @grid-gutter-width / 2;
     }
-  }
-}
-
-.Arrange--vertical {
-  flex-direction: column;
-
-  > .Arrange-fill {
-    min-height: 0;
   }
 }

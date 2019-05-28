@@ -1,6 +1,6 @@
 @import (reference) "../utils/mixins";
 
-/*---
+/* ---
 title:   Flag
 section: Components
 ---
@@ -45,6 +45,20 @@ ou ao rodapé por meio dos modificadores `--top` e `--bottom`.
   }
 }
 
+.Flag-body {
+  max-width: 0;
+  width: 100%;
+}
+
+.Flag-figure {
+  padding-right: 10px;
+
+  > img {
+    display: block;
+    max-width: none;
+  }
+}
+
 .Flag-figure,
 .Flag-body {
   display: table-cell;
@@ -61,27 +75,13 @@ ou ao rodapé por meio dos modificadores `--top` e `--bottom`.
   .collapse-margins();
 }
 
-.Flag-figure {
-  padding-right: 10px;
-
-  > img {
-    display: block;
-    max-width: none;
-  }
-
-  .Flag--rev & {
-    padding-right: 0;
-    padding-left: 10px;
-  }
+.Flag--rev .Flag-figure {
+  padding-right: 0;
+  padding-left: 10px;
 }
 
 .Flag-figure--compact {
   padding-right: 0;
-}
-
-.Flag-body {
-  max-width: 0;
-  width: 100%;
 }
 
 .Flag--material {

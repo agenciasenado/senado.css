@@ -17,19 +17,6 @@
   z-index: 2000;
 }
 
-.Sidebar-trigger:checked ~ .Sidebar-body {
-  transform: translate3d(0, 0, 0);
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
-}
-
-.Sidebar-trigger:checked ~ .Sidebar-triggerLabel {
-  transform: translate3d(300px, 0, 0);
-}
-
-.Sidebar-trigger:checked ~ .Sidebar-triggerLabel > :first-child {
-  transform: rotate(180deg);
-}
-
 .Sidebar-triggerLabel {
   position: fixed;
   top: 100px;
@@ -49,4 +36,17 @@
 .Sidebar-triggerLabel > :first-child {
   vertical-align: middle;
   transition: transform 0.4s ease-in-out;
+}
+
+.Sidebar-trigger:checked ~ .Sidebar-body {
+  transform: translate3d(0, 0, 0);
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.Sidebar-trigger:checked ~ .Sidebar-triggerLabel {
+  transform: translate3d(300px, 0, 0);
+}
+
+.Sidebar-trigger:checked ~ .Sidebar-triggerLabel > :first-child {
+  transform: rotate(180deg);
 }
