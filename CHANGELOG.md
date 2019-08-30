@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.12.2
+
+* Reverte alteração inadvertida de cores
+
 ## 2.12.1
 
 * Atualiza dependências vulneráveis
