@@ -3,6 +3,7 @@
 > conjunto de componentes `less` e guia de estilo do portal senado.noticias
 
 ## pré-requisitos
+
 * [node](https://iojs.org)
 * grunt (`npm -g install grunt-cli`)
 
@@ -25,15 +26,16 @@ Os seguintes arquivos serão gerados:
 * **dist/*.html**: markup dos componentes essenciais.
 
 ## desenvolvimento
+
 Para compilar os arquivos .less e .jade automaticamente ao editá-los execute:
 
     grunt dev
 
-
 ## problemas comuns
+
 ### Configurações de proxy
+
 O `npm` no Windows não enxerga as configurações de proxy automaticamente. Para configurar utilize:
 
     npm config set proxy http://user:password@host:port
     npm config set https.proxy http://user:password@host:port
-    

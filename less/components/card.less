@@ -1,4 +1,4 @@
-/*---
+/* ---
 title: Card
 section: Components
 ---
@@ -43,6 +43,15 @@ p
   flex-wrap: wrap;
 }
 
+.Card {
+  position: relative;
+  display: inline-block;
+  display: inline-flex;
+  vertical-align: top;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .Deck--row {
   margin-left: -@grid-gutter-width/2;
   margin-right: -@grid-gutter-width/2;
@@ -72,13 +81,4 @@ p
 .Deck-xspacer {
   display: flex;
   flex-basis: 100%;
-}
-
-.Card {
-  position: relative;
-  display: inline-block;
-  display: inline-flex;
-  vertical-align: top;
-  flex-direction: column;
-  justify-content: space-between;
 }

@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.12.1
+
+* Atualiza dependências vulneráveis
+
 ## 2.12.0
 
 * Arrange--vertical

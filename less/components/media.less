@@ -1,4 +1,4 @@
-/*---
+/* ---
 title:   Media
 section: Components
 ---
@@ -49,6 +49,16 @@ Permite aninhamento de outro `.Media`.
   width: 100%;
 }
 
+.Media-figure {
+  float: left;
+  padding: 0; // forçar o padding==0 para permitir utilização de classes col-*-*.
+  margin-right: @media-spacing;
+}
+
+.Media-body {
+  overflow: hidden;
+}
+
 .Media--row {
   margin-right: -@grid-gutter-width/2;
   margin-left: -@grid-gutter-width/2;
@@ -67,27 +77,17 @@ Permite aninhamento de outro `.Media`.
   }
 }
 
-.Media-figure {
-  float: left;
-  padding: 0; // forçar o padding==0 para permitir utilização de classes col-*-*.
-  margin-right: @media-spacing;
-}
-
 .Media-figure--right {
   float: right;
   margin-right: 0;
   margin-left: @media-spacing;
 }
 
-.Media-body {
-  overflow: hidden;
-}
-
 .Media-top {
   display: table-header-group;
 }
 
-/*---
+/* ---
 title:   Media Stack
 section: Media
 ---
@@ -114,14 +114,11 @@ ordem na markup.
   > .Media-figure {
     float: none; // caso não haja o Media-top, é preciso remover o float do Figure para o Body descer.
     width: 100%; // se é para empilhar, forçar que o Media-figure ocupe a largura inteira
-  }
-
-  > .Media-figure {
     margin-bottom: @media-spacing;
   }
 }
 
-/*---
+/* ---
 title:   Stack Responsivo
 section: Media
 ---

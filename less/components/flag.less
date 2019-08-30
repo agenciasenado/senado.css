@@ -1,4 +1,6 @@
-/*---
+@import (reference) "../utils/mixins";
+
+/* ---
 title:   Flag
 section: Components
 ---
@@ -10,25 +12,25 @@ ou ao rodapé por meio dos modificadores `--top` e `--bottom`.
 ```example:jade
 .Flag
   .Flag-figure
-  .Icon.Icon--newspaper.Icon--lg
+    .Icon.Icon--newspaper.Icon--lg
   .Flag-body
-  a Middle
-  div: small Nunquam gratia guttus
-  div: small Cur impositio resistere?
+    a Middle
+    div: small Nunquam gratia guttus
+    div: small Cur impositio resistere?
 .Flag.Flag--top
   .Flag-figure
-  .Icon.Icon--bubble.Icon--lg
+    .Icon.Icon--bubble.Icon--lg
   .Flag-body
-  a Top
-  div: small Nunquam consumere tumultumque
-  div: small Cur adgium persuadere
+    a Top
+    div: small Nunquam consumere tumultumque
+    div: small Cur adgium persuadere
 .Flag.Flag--bottom
   .Flag-figure
-  .Icon.Icon--twitter.Icon--lg
+    .Icon.Icon--twitter.Icon--lg
   .Flag-body
-  a Bottom
-  div: small Dexter verpas ducunt ad devatio.
-  div: small A falsis, verpa peritus burgus.
+    a Bottom
+    div: small Dexter verpas ducunt ad devatio.
+    div: small A falsis, verpa peritus burgus.
 ```
 */
 
@@ -40,6 +42,20 @@ ou ao rodapé por meio dos modificadores `--top` e `--bottom`.
 
   &:not(:last-child) {
     margin-bottom: @flag-spacing;
+  }
+}
+
+.Flag-body {
+  max-width: 0;
+  width: 100%;
+}
+
+.Flag-figure {
+  padding-right: 10px;
+
+  > img {
+    display: block;
+    max-width: none;
   }
 }
 
@@ -59,27 +75,13 @@ ou ao rodapé por meio dos modificadores `--top` e `--bottom`.
   .collapse-margins();
 }
 
-.Flag-figure {
-  padding-right: 10px;
-
-  > img {
-    display: block;
-    max-width: none;
-  }
-
-  .Flag--rev & {
-    padding-right: 0;
-    padding-left: 10px;
-  }
+.Flag--rev .Flag-figure {
+  padding-right: 0;
+  padding-left: 10px;
 }
 
 .Flag-figure--compact {
   padding-right: 0;
-}
-
-.Flag-body {
-  max-width: 0;
-  width: 100%;
 }
 
 .Flag--material {
