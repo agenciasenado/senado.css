@@ -1,4 +1,4 @@
-@import (reference) "../utils/mixins";
+@import "../utils/mixins";
 
 /* ---
 title:   Flag
@@ -34,14 +34,14 @@ ou ao rodapé por meio dos modificadores `--top` e `--bottom`.
 ```
 */
 
-@flag-spacing: 10px;
+$flag-spacing: 10px;
 
 .Flag {
   display: table;
   width: 100%;
 
   &:not(:last-child) {
-    margin-bottom: @flag-spacing;
+    margin-bottom: $flag-spacing;
   }
 }
 
@@ -89,10 +89,10 @@ ou ao rodapé por meio dos modificadores `--top` e `--bottom`.
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
 
   > .Flag-figure {
-    padding-right: @padding-base-horizontal;
+    padding-right: $padding-base-horizontal;
   }
 
   > .Flag-body {
-    padding-right: @padding-base-horizontal;
+    padding-right: $padding-base-horizontal;
   }
 }

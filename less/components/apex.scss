@@ -1,10 +1,9 @@
-
 .Apex {
   padding-bottom: 5px;
 }
 
 .Apex--light {
-  color: @sf-primary;
+  color: $sf-primary;
   border-bottom: 1px solid #3e6892;
 }
 
@@ -33,11 +32,11 @@
   border: 1px solid #ccc;
   background: #f9f9f9;
   text-align: center;
-  color: @azul-padrao;
+  color: $azul-padrao;
 }
 
 .Apex--card {
-  padding: @padding-base-vertical @padding-base-horizontal;
+  padding: $padding-base-vertical $padding-base-horizontal;
   line-height: 1.5;
 }
 

@@ -3,22 +3,22 @@
     border: 1px dotted #ccc;
     border-width: 0;
     border-bottom-width: 1px;
-    padding-bottom: @padding-small-horizontal/2;
-    margin-bottom: @padding-small-horizontal/2;
+    padding-bottom: $padding-small-horizontal/2;
+    margin-bottom: $padding-small-horizontal/2;
   }
 }
 
 .CutHere--lg {
   > :not(:last-child) {
-    padding-bottom: @padding-large-horizontal/2;
-    margin-bottom: @padding-large-horizontal/2;
+    padding-bottom: $padding-large-horizontal/2;
+    margin-bottom: $padding-large-horizontal/2;
   }
 }
 
 .CutHere--xl {
   > :not(:last-child) {
-    padding-bottom: @padding-large-horizontal/1.5;
-    margin-bottom: @padding-large-horizontal/1.5;
+    padding-bottom: $padding-large-horizontal/1.5;
+    margin-bottom: $padding-large-horizontal/1.5;
   }
 }
 

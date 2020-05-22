@@ -82,7 +82,7 @@ Estrutura de alinhamento horizontal
   > .Arrange-sizeFill,
   > .Arrange-sizeFit {
     &:not(:first-child) {
-      padding-left: @grid-gutter-width;
+      padding-left: $grid-gutter-width;
     }
   }
 }

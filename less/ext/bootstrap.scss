@@ -1,5 +1,5 @@
 
-@import (reference) "@{bootstrap-path}/grid";
+@import "${bootstrap-path}/grid";
 
 // fixes
 .modal-backdrop {

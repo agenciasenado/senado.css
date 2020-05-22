@@ -1,4 +1,4 @@
-@import (reference) "../utils/mixins";
+@import "../utils/mixins";
 
 .Spinner,
 [class^="Spinner--"] {
@@ -22,7 +22,7 @@
   &.is-blue {
     &::before,
     &::after {
-      background-color: @azul-padrao;
+      background-color: $azul-padrao;
     }
   }
 }

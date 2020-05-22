@@ -15,18 +15,18 @@
 
 .l-fork--sm {
   > :not(:last-child) {
-    margin-right: @padding-small-horizontal;
+    margin-right: $padding-small-horizontal;
   }
 }
 
 .l-fork--lg {
   > :not(:last-child) {
-    margin-right: @padding-base-horizontal;
+    margin-right: $padding-base-horizontal;
   }
 }
 
 .l-fork--xl {
   > :not(:last-child) {
-    margin-right: @padding-base-horizontal * 1.5;
+    margin-right: $padding-base-horizontal * 1.5;
   }
 }

@@ -1,33 +1,4 @@
 /*---
-title:   Tipografia
-section: Base
----
-
-##### Título principal
-`h1.titulo-principal`: Deve ser utilizado sempre como o primeiro título de um
-conteúdo. Apenas um subelemento é permitido (`small`) e deve ser utilizado para
-descrição ou lead do título.
-```example:html
-<h1 class="titulo-principal">
-  senado.css
-  <small>http://git.io/senado.css</small>
-</h1>
-```
-*/
-
-h1.titulo-principal {
-  border-bottom: 1px solid #eee;
-  padding-bottom: 15px;
-}
-
-h1.titulo-principal small {
-  display: block;
-  font-size: 14px;
-  line-height: @line-height-small;
-  margin-top: 10px;
-}
-
-/*---
 title:   Escala de fonte
 section: Base
 ---
@@ -44,96 +15,97 @@ Classes utilitárias de tamanho da fonte. As escalas são `.giga`, `.mega`,
 ```
 */
 
-._font-scale(micro, @micro);
-._font-scale(milli, @milli);
-._font-scale(normalis, @font-size-base);
-._font-scale(eta, @eta);
-._font-scale(zeta, @zeta);
-._font-scale(epsilon, @epsilon);
-._font-scale(delta, @delta);
-._font-scale(gamma, @gamma);
-._font-scale(beta, @beta);
-._font-scale(alpha, @alpha);
-._font-scale(kilo, @kilo);
-._font-scale(mega, @mega);
-._font-scale(giga, @giga);
-
-._font-scale(@class, @size) {
-  .@{class} {
-    font-size: @size;
+@mixin font-scale($class, $size) {
+  .#{$class} {
+    font-size: $size;
   }
 }
 
-._font-scale-r(@class, @size, @scale) {
-  .@{class}-@{scale} {
-    font-size: @size;
+@include font-scale(micro, $micro);
+@include font-scale(milli, $milli);
+@include font-scale(normalis, $font-size-base);
+@include font-scale(eta, $eta);
+@include font-scale(zeta, $zeta);
+@include font-scale(epsilon, $epsilon);
+@include font-scale(delta, $delta);
+@include font-scale(gamma, $gamma);
+@include font-scale(beta, $beta);
+@include font-scale(alpha, $alpha);
+@include font-scale(kilo, $kilo);
+@include font-scale(mega, $mega);
+@include font-scale(giga, $giga);
+
+
+@mixin font-scale-r($class, $size, $scale) {
+  .#{$class}-#{$scale} {
+    font-size: $size;
   }
 }
 
-@media (max-width: @screen-xs-max) {
-  @scale: xs;
-  ._font-scale-r(micro, @micro, @scale);
-  ._font-scale-r(milli, @milli, @scale);
-  ._font-scale-r(normalis, @font-size-base, @scale);
-  ._font-scale-r(eta, @eta, @scale);
-  ._font-scale-r(zeta, @zeta, @scale);
-  ._font-scale-r(epsilon, @epsilon, @scale);
-  ._font-scale-r(delta, @delta, @scale);
-  ._font-scale-r(gamma, @gamma, @scale);
-  ._font-scale-r(beta, @beta, @scale);
-  ._font-scale-r(alpha, @alpha, @scale);
-  ._font-scale-r(kilo, @kilo, @scale);
-  ._font-scale-r(mega, @mega, @scale);
-  ._font-scale-r(giga, @giga, @scale);
+@media (min-width: map-get($grid-breakpoints, "sm")) {
+  $scale: sm;
+  @include font-scale-r(micro, $micro, $scale);
+  @include font-scale-r(milli, $milli, $scale);
+  @include font-scale-r(normalis, $font-size-base, $scale);
+  @include font-scale-r(eta, $eta, $scale);
+  @include font-scale-r(zeta, $zeta, $scale);
+  @include font-scale-r(epsilon, $epsilon, $scale);
+  @include font-scale-r(delta, $delta, $scale);
+  @include font-scale-r(gamma, $gamma, $scale);
+  @include font-scale-r(beta, $beta, $scale);
+  @include font-scale-r(alpha, $alpha, $scale);
+  @include font-scale-r(kilo, $kilo, $scale);
+  @include font-scale-r(mega, $mega, $scale);
+  @include font-scale-r(giga, $giga, $scale);
 }
 
-@media (min-width: @screen-sm-min) {
-  @scale: sm;
-  ._font-scale-r(micro, @micro, @scale);
-  ._font-scale-r(milli, @milli, @scale);
-  ._font-scale-r(normalis, @font-size-base, @scale);
-  ._font-scale-r(eta, @eta, @scale);
-  ._font-scale-r(zeta, @zeta, @scale);
-  ._font-scale-r(epsilon, @epsilon, @scale);
-  ._font-scale-r(delta, @delta, @scale);
-  ._font-scale-r(gamma, @gamma, @scale);
-  ._font-scale-r(beta, @beta, @scale);
-  ._font-scale-r(alpha, @alpha, @scale);
-  ._font-scale-r(kilo, @kilo, @scale);
-  ._font-scale-r(mega, @mega, @scale);
-  ._font-scale-r(giga, @giga, @scale);
+@media (min-width: map-get($grid-breakpoints, "md")) {
+  $scale: md;
+  @include font-scale-r(micro, $micro, $scale);
+  @include font-scale-r(milli, $milli, $scale);
+  @include font-scale-r(normalis, $font-size-base, $scale);
+  @include font-scale-r(eta, $eta, $scale);
+  @include font-scale-r(zeta, $zeta, $scale);
+  @include font-scale-r(epsilon, $epsilon, $scale);
+  @include font-scale-r(delta, $delta, $scale);
+  @include font-scale-r(gamma, $gamma, $scale);
+  @include font-scale-r(beta, $beta, $scale);
+  @include font-scale-r(alpha, $alpha, $scale);
+  @include font-scale-r(kilo, $kilo, $scale);
+  @include font-scale-r(mega, $mega, $scale);
+  @include font-scale-r(giga, $giga, $scale);
 }
 
-@media (min-width: @screen-md-min) {
-  @scale: md;
-  ._font-scale-r(micro, @micro, @scale);
-  ._font-scale-r(milli, @milli, @scale);
-  ._font-scale-r(normalis, @font-size-base, @scale);
-  ._font-scale-r(eta, @eta, @scale);
-  ._font-scale-r(zeta, @zeta, @scale);
-  ._font-scale-r(epsilon, @epsilon, @scale);
-  ._font-scale-r(delta, @delta, @scale);
-  ._font-scale-r(gamma, @gamma, @scale);
-  ._font-scale-r(beta, @beta, @scale);
-  ._font-scale-r(alpha, @alpha, @scale);
-  ._font-scale-r(kilo, @kilo, @scale);
-  ._font-scale-r(mega, @mega, @scale);
-  ._font-scale-r(giga, @giga, @scale);
+@media (min-width: map-get($grid-breakpoints, "lg")) {
+  $scale: lg;
+  @include font-scale-r(micro, $micro, $scale);
+  @include font-scale-r(milli, $milli, $scale);
+  @include font-scale-r(normalis, $font-size-base, $scale);
+  @include font-scale-r(eta, $eta, $scale);
+  @include font-scale-r(zeta, $zeta, $scale);
+  @include font-scale-r(epsilon, $epsilon, $scale);
+  @include font-scale-r(delta, $delta, $scale);
+  @include font-scale-r(gamma, $gamma, $scale);
+  @include font-scale-r(beta, $beta, $scale);
+  @include font-scale-r(alpha, $alpha, $scale);
+  @include font-scale-r(kilo, $kilo, $scale);
+  @include font-scale-r(mega, $mega, $scale);
+  @include font-scale-r(giga, $giga, $scale);
 }
 
-@media (min-width: @screen-lg-min) {
-  @scale: lg;
-  ._font-scale-r(micro, @micro, @scale);
-  ._font-scale-r(milli, @milli, @scale);
-  ._font-scale-r(normalis, @font-size-base, @scale);
-  ._font-scale-r(eta, @eta, @scale);
-  ._font-scale-r(zeta, @zeta, @scale);
-  ._font-scale-r(epsilon, @epsilon, @scale);
-  ._font-scale-r(delta, @delta, @scale);
-  ._font-scale-r(gamma, @gamma, @scale);
-  ._font-scale-r(beta, @beta, @scale);
-  ._font-scale-r(alpha, @alpha, @scale);
-  ._font-scale-r(kilo, @kilo, @scale);
-  ._font-scale-r(mega, @mega, @scale);
-  ._font-scale-r(giga, @giga, @scale);
+@media (min-width: map-get($grid-breakpoints, "xl")) {
+  $scale: xl;
+  @include font-scale-r(micro, $micro, $scale);
+  @include font-scale-r(milli, $milli, $scale);
+  @include font-scale-r(normalis, $font-size-base, $scale);
+  @include font-scale-r(eta, $eta, $scale);
+  @include font-scale-r(zeta, $zeta, $scale);
+  @include font-scale-r(epsilon, $epsilon, $scale);
+  @include font-scale-r(delta, $delta, $scale);
+  @include font-scale-r(gamma, $gamma, $scale);
+  @include font-scale-r(beta, $beta, $scale);
+  @include font-scale-r(alpha, $alpha, $scale);
+  @include font-scale-r(kilo, $kilo, $scale);
+  @include font-scale-r(mega, $mega, $scale);
+  @include font-scale-r(giga, $giga, $scale);
 }

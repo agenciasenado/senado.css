@@ -1,64 +1,77 @@
-@bootstrap-path: "~bootstrap/less";
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
 
-@import "vendors/bootstrap";
-
-//@font-family-base: 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Geneva, Verdana, sans-serif;
-
-// Variaveis e mixins
 @import "utils/variables";
 @import "utils/mixins";
 @import "utils/align";
-@import "utils/spacer";
-@import "utils/size";
-@import "utils/position";
 @import "utils/link";
+@import "utils/position";
+@import "utils/size";
+@import "utils/text";
+@import "utils/spacer";
 
-// Base
 @import "base/typography";
-@import "base/links";
 
-// Layout
-@import "layout/fork";
-@import "layout/tarja";
-@import "layout/boxing";
+// @import "vendors/bootstrap";
 
-// Componentes
-// @import "components/byline";
-@import "components/navegacao";
-@import "components/portal";
-@import "components/navglobal";
-@import "components/band";
-@import "components/footer";
-@import "components/icons";
-// @import "components/stamp";
-@import "components/breadcrumbs";
-@import "components/shareicon";
-@import "components/etiqueta";
-@import "components/media";
-@import "components/toolbar";
-@import "components/segment";
-@import "components/apex";
-@import "components/stand";
-@import "components/flag-flex";
-@import "components/card";
-@import "components/cuthere";
-@import "components/breakingnews";
-@import "components/formfill";
-@import "components/box";
-@import "components/divider";
-@import "components/caption";
-@import "components/arrange-flex";
-@import "components/embed";
-@import "components/row";
-@import "components/strip";
-@import "components/clamp";
-@import "components/fence";
+// //$font-family-base: 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Geneva, Verdana, sans-serif;
 
-@import "components/glass";
-@import "components/knob";
+// // Variaveis e mixins
+// @import "utils/variables";
+// @import "utils/mixins";
+// @import "utils/align";
+// @import "utils/spacer";
+// @import "utils/size";
+// @import "utils/position";
+// @import "utils/link";
 
-@import "theme/bootstrap";
-@import "theme/breadcrumbs";
+// // Base
+// @import "base/typography";
+// @import "base/links";
 
-@import "tweaks/styles";
-@import "tweaks/layout";
+// // Layout
+// @import "layout/fork";
+// @import "layout/tarja";
+// @import "layout/boxing";
+
+// // Componentes
+// // @import "components/byline";
+// @import "components/navegacao";
+// @import "components/portal";
+// @import "components/navglobal";
+// @import "components/band";
+// @import "components/footer";
+// @import "components/icons";
+// // @import "components/stamp";
+// @import "components/breadcrumbs";
+// @import "components/shareicon";
+// @import "components/etiqueta";
+// @import "components/media";
+// @import "components/toolbar";
+// @import "components/segment";
+// @import "components/apex";
+// @import "components/stand";
+// @import "components/flag-flex";
+// @import "components/card";
+// @import "components/cuthere";
+// @import "components/breakingnews";
+// @import "components/formfill";
+// @import "components/box";
+// @import "components/divider";
+// @import "components/caption";
+// @import "components/arrange-flex";
+// @import "components/embed";
+// @import "components/row";
+// @import "components/strip";
+// @import "components/clamp";
+// @import "components/fence";
+
+// @import "components/glass";
+// @import "components/knob";
+
+// @import "theme/bootstrap";
+// @import "theme/breadcrumbs";
+
+// @import "tweaks/styles";
+// @import "tweaks/layout";

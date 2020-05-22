@@ -1,4 +1,4 @@
-@import (reference) "@{bootstrap-path}/mixins.less";
+@import "${bootstrap-path}/mixins.less";
 
 /* ---
 title: Rodapé
@@ -46,7 +46,7 @@ layout são embutidas nos componentes. Deve ser utilizado como um componente
   margin-top: 10px;
   padding-top: 10px;
 
-  @media (min-width: @screen-sm-min) {
+  $media (min-width: $screen-sm-min) {
     padding-top: 20px;
   }
 }
@@ -65,7 +65,7 @@ layout são embutidas nos componentes. Deve ser utilizado como um componente
   line-height: 20px;
   font-size: 12px;
 
-  @media (max-width: @screen-xs-max) {
+  $media (max-width: $screen-xs-max) {
     margin: 0 10px;
   }
 

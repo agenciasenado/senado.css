@@ -12,7 +12,7 @@
 
     &.active > a.tab--cut {
       background: #d9edf7;
-      color: @azul-padrao;
+      color: $azul-padrao;
     }
 
     > a {
@@ -40,10 +40,10 @@
 
 .dropdown-menu {
   border-radius: 0;
-  background-color: @smoke;
+  background-color: $smoke;
   border: none;
-  border-bottom: 5px solid @azul-padrao;
-  border-top: 1px solid @cinza-medio;
+  border-bottom: 5px solid $azul-padrao;
+  border-top: 1px solid $cinza-medio;
   min-width: 140px;
   font-size: 13px;
 
@@ -55,7 +55,7 @@
     padding: 4px 20px;
 
     &:hover {
-      background: @cinza-claro;
+      background: $cinza-claro;
     }
 
     > img {

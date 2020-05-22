@@ -78,50 +78,50 @@ h4 .l-pillar
 ```
 */
 
-@vspacing-sm: @padding-small-vertical;
-@vspacing: @padding-base-vertical;
-@vspacing-lg: @padding-large-vertical;
-@vspacing-xl: @padding-large-vertical * 1.3;
+$vspacing-sm: $padding-small-vertical;
+$vspacing: $padding-base-vertical;
+$vspacing-lg: $padding-large-vertical;
+$vspacing-xl: $padding-large-vertical * 1.3;
 
-@spacing-sm: @padding-small-horizontal;
-@spacing: @padding-base-horizontal;
-@spacing-lg: @padding-large-horizontal;
-@spacing-xl: @padding-large-horizontal * 1.3;
+$spacing-sm: $padding-small-horizontal;
+$spacing: $padding-base-horizontal;
+$spacing-lg: $padding-large-horizontal;
+$spacing-xl: $padding-large-horizontal * 1.3;
 
 .l-box {
-  padding: @vspacing @spacing;
+  padding: $vspacing $spacing;
 }
 
 .l-box-sm {
-  padding: @vspacing-sm @spacing-sm;
+  padding: $vspacing-sm $spacing-sm;
 }
 
 .l-box-lg {
-  padding: @vspacing-lg @spacing-lg;
+  padding: $vspacing-lg $spacing-lg;
 }
 
 .l-box-xl {
-  padding: @vspacing-xl @spacing-xl;
+  padding: $vspacing-xl $spacing-xl;
 }
 
 .l-pillar {
-  padding-left: @spacing;
-  padding-right: @spacing;
+  padding-left: $spacing;
+  padding-right: $spacing;
 }
 
 .l-pillar-sm {
-  padding-left: @spacing-sm;
-  padding-right: @spacing-sm;
+  padding-left: $spacing-sm;
+  padding-right: $spacing-sm;
 }
 
 .l-pillar-lg {
-  padding-left: @spacing-lg;
-  padding-right: @spacing-lg;
+  padding-left: $spacing-lg;
+  padding-right: $spacing-lg;
 }
 
 .l-pillar-xl {
-  padding-left: @spacing-xl;
-  padding-right: @spacing-xl;
+  padding-left: $spacing-xl;
+  padding-right: $spacing-xl;
 }
 
 .l-pillar-nil {
@@ -130,23 +130,23 @@ h4 .l-pillar
 }
 
 .l-letter {
-  padding-top: @spacing;
-  padding-bottom: @spacing;
+  padding-top: $spacing;
+  padding-bottom: $spacing;
 }
 
 .l-letter-sm {
-  padding-top: @spacing-sm;
-  padding-bottom: @spacing-sm;
+  padding-top: $spacing-sm;
+  padding-bottom: $spacing-sm;
 }
 
 .l-letter-lg {
-  padding-top: @spacing-lg;
-  padding-bottom: @spacing-lg;
+  padding-top: $spacing-lg;
+  padding-bottom: $spacing-lg;
 }
 
 .l-letter-xl {
-  padding-top: @spacing-xl;
-  padding-bottom: @spacing-xl;
+  padding-top: $spacing-xl;
+  padding-bottom: $spacing-xl;
 }
 
 .l-letter-nil {

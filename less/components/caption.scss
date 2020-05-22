@@ -23,15 +23,15 @@ Caption:
   text-shadow: 1px 1px 1px #000;
   line-height: 1.3;
 
-  @media (max-width: @screen-xs-max) {
+  $media (max-width: $screen-xs-max) {
     position: static;
     background: #333340;
-    font-size: @font-size-large;
+    font-size: $font-size-large;
   }
 }
 
 .Caption--feature {
   position: absolute;
-  top: @padding-base-vertical;
-  left: @padding-base-vertical;
+  top: $padding-base-vertical;
+  left: $padding-base-vertical;
 }

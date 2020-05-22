@@ -1,11 +1,11 @@
-@import (reference) "@{bootstrap-path}/mixins.less";
+@import "${bootstrap-path}/mixins.less";
 
-@portal-topo-height: 90px;
+$portal-topo-height: 90px;
 
 .PortalTopo {
   .make-row();
 
-  @media (max-width: @screen-xs-max) {
+  $media (max-width: $screen-xs-max) {
     padding-top: 10px;
     padding-bottom: 10px;
     border-bottom: solid 5px #3e6892;
@@ -38,20 +38,20 @@ busca e o menu principal do `PortalTopo` qdo o viewport estiver em `xs`. São al
 
 .PortalTopo-toggler,
 [class^="PortalTopo-toggler--"] {
-  @size: 34px;
-  @border-size: 1px;
+  $size: 34px;
+  $border-size: 1px;
 
   display: inline-block;
   font-size: 14px;
-  height: @size;
-  width: @size;
+  height: $size;
+  width: $size;
   margin-left: 5px;
   padding: 0;
-  border: @border-size solid @azul-padrao;
+  border: $border-size solid $azul-padrao;
   border-radius: 0;
   vertical-align: middle;
   text-align: center;
-  line-height: @size - 2 * @border-size;
+  line-height: $size - 2 * $border-size;
 
   &:first-child {
     margin-left: 0;
@@ -59,8 +59,8 @@ busca e o menu principal do `PortalTopo` qdo o viewport estiver em `xs`. São al
 }
 
 .PortalTopo-toggler--menu {
-  background: @azul-padrao;
-  border-color: @azul-padrao;
+  background: $azul-padrao;
+  border-color: $azul-padrao;
   color: #fff;
   font-size: 12px;
 }
@@ -68,7 +68,7 @@ busca e o menu principal do `PortalTopo` qdo o viewport estiver em `xs`. São al
 .PortalTopo-toggler--search {
   background: #f5f5f5;
   border-color: #ccc;
-  color: @azul-padrao;
+  color: $azul-padrao;
 }
 
 .PortalTopo-id {
@@ -89,15 +89,15 @@ busca e o menu principal do `PortalTopo` qdo o viewport estiver em `xs`. São al
   margin: 0;
   font-size: 40px;
 
-  @media (max-width: @screen-sm-max) {
+  $media (max-width: $screen-sm-max) {
     font-size: 34px;
   }
 
-  @media (max-width: @screen-xs-max) {
+  $media (max-width: $screen-xs-max) {
     font-size: 24px;
   }
 
-  @media (max-width: @screen-xs-min) {
+  $media (max-width: $screen-xs-min) {
     font-size: 18px;
   }
 }
@@ -112,7 +112,7 @@ busca e o menu principal do `PortalTopo` qdo o viewport estiver em `xs`. São al
  * `.PortalTopo-busca`: Formulário fixo de busca global. Faz parte do componente `PortalTopo` e, por isso,
  * tem as dimensçoes presas via CSS (xs-4, sm-4, sm-offset-4). Expande-se automaticamente no viewport `xs`
  *
- *   @example
+ *   $example
  *   .PortalTopo-busca
  *     form(action='search', role='search')
  *       p.hidden-xs: a(href='#') Busca avançada ›
@@ -129,7 +129,7 @@ busca e o menu principal do `PortalTopo` qdo o viewport estiver em `xs`. São al
   > form {
     margin: 10px 0 0;
 
-    @media (min-width: @screen-sm-min) {
+    $media (min-width: $screen-sm-min) {
       display: table-cell;
       vertical-align: middle;
     }
@@ -142,14 +142,14 @@ busca e o menu principal do `PortalTopo` qdo o viewport estiver em `xs`. São al
   }
 
   button {
-    color: @azul-padrao;
+    color: $azul-padrao;
     background: #f5f5f5;
   }
 
-  @media (min-width: @screen-sm-min) {
+  $media (min-width: $screen-sm-min) {
     display: table !important;
     visibility: visible !important;
-    height: @portal-topo-height !important;
+    height: $portal-topo-height !important;
   }
 }
 
@@ -160,7 +160,7 @@ busca e o menu principal do `PortalTopo` qdo o viewport estiver em `xs`. São al
   overflow: hidden;
   text-align: right;
 
-  @media (min-width: @screen-sm-min) {
+  $media (min-width: $screen-sm-min) {
     display: table !important;
     visibility: visible !important;
   }
@@ -174,9 +174,9 @@ busca e o menu principal do `PortalTopo` qdo o viewport estiver em `xs`. São al
 .PortalTopo-id,
 .PortalTopo-busca,
 .PortalTopo-tools {
-  height: @portal-topo-height;
+  height: $portal-topo-height;
 
-  @media (max-width: @screen-xs-max) {
+  $media (max-width: $screen-xs-max) {
     height: auto;
   }
 }

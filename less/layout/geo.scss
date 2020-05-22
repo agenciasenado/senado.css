@@ -5,39 +5,39 @@
 // Islands are the most common layout helper. They throw a padding around the
 // selected element equal to the global baseline.
 
-@baseline: @line-height-computed;
+$baseline: $line-height-computed;
 
-._geo (@baseline) {
-  padding: @baseline;
+._geo ($baseline) {
+  padding: $baseline;
 
   &-y {
-    padding-top: @baseline;
-    padding-bottom: @baseline;
+    padding-top: $baseline;
+    padding-bottom: $baseline;
   }
 }
 
 .l-island {
-  ._geo(@baseline);
+  ._geo($baseline);
 }
 
 // Half an island
 .l-isle {
-  ._geo(round(@baseline / 2));
+  ._geo(round($baseline / 2));
 }
 
 // Half an isle
 .l-spit {
-  ._geo(round(@baseline / 4));
+  ._geo(round($baseline / 4));
 }
 
 // Twice the size of an island
 .l-country {
-  ._geo(round(@baseline * 2));
+  ._geo(round($baseline * 2));
 }
 
 // Twice the size of a country
 .l-continent {
-  ._geo(round(@baseline * 4));
+  ._geo(round($baseline * 4));
 }
 
 // Margin layout helpers
@@ -54,26 +54,26 @@
 // Vertical margins are strictly applied to the bottom edge only, with the
 // exception of negative margin-top values.
 //
-._margin (@direction) {
-  @micro: replace(@direction, "(.).*$", "$1");
+._margin ($direction) {
+  $micro: replace($direction, "(.).*$", "$1");
 
-  .l-m@{micro} {
-    margin-@{direction}: @baseline !important;
+  .l-m${micro} {
+    margin-${direction}: $baseline !important;
 
     &-xs {
-      margin-@{direction}: round(@baseline / 4) !important;
+      margin-${direction}: round($baseline / 4) !important;
     }
 
     &-s {
-      margin-@{direction}: round(@baseline / 2) !important;
+      margin-${direction}: round($baseline / 2) !important;
     }
 
     &-l {
-      margin-@{direction}: round(@baseline * 2) !important;
+      margin-${direction}: round($baseline * 2) !important;
     }
 
     &-xl {
-      margin-@{direction}: round(@baseline * 4) !important;
+      margin-${direction}: round($baseline * 4) !important;
     }
   }
 }

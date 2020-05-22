@@ -30,14 +30,14 @@ linha.
   overflow: hidden;
 
   .Clamp-text {
-    @_buffer: 500px;
+    $_buffer: 500px;
 
     display: block;
-    width: ~"calc(100% + @{_buffer})";
+    width: ~"calc(100% + ${_buffer})";
     position: relative;
 
     &::before {
-      width: @_buffer;
+      width: $_buffer;
       content: '';
       float: right;
     }
@@ -47,7 +47,7 @@ linha.
     content: "";
     position: absolute;
     width: 20px;
-    height: @line-height-base * 1em;
+    height: $line-height-base * 1em;
     right: 0;
     pointer-events: none;
     background:
@@ -60,65 +60,65 @@ linha.
 }
 
 .Clamp--1 {
-  @lines: 1;
+  $lines: 1;
 
-  max-height: @lines * @line-height-base * 1em;
+  max-height: $lines * $line-height-base * 1em;
 
   &::after {
-    top: (@lines - 1) * @line-height-base * 1em;
+    top: ($lines - 1) * $line-height-base * 1em;
   }
 
   .Clamp-text {
     &::before {
-      height: (@lines - 1) * @line-height-base * 0.99em;
+      height: ($lines - 1) * $line-height-base * 0.99em;
     }
   }
 }
 
 .Clamp--2 {
-  @lines: 2;
+  $lines: 2;
 
-  max-height: @lines * @line-height-base * 1em;
+  max-height: $lines * $line-height-base * 1em;
 
   &::after {
-    top: (@lines - 1) * @line-height-base * 1em;
+    top: ($lines - 1) * $line-height-base * 1em;
   }
 
   .Clamp-text {
     &::before {
-      height: (@lines - 1) * @line-height-base * 0.99em;
+      height: ($lines - 1) * $line-height-base * 0.99em;
     }
   }
 }
 
 .Clamp--3 {
-  @lines: 3;
+  $lines: 3;
 
-  max-height: @lines * @line-height-base * 1em;
+  max-height: $lines * $line-height-base * 1em;
 
   &::after {
-    top: (@lines - 1) * @line-height-base * 1em;
+    top: ($lines - 1) * $line-height-base * 1em;
   }
 
   .Clamp-text {
     &::before {
-      height: (@lines - 1) * @line-height-base * 0.99em;
+      height: ($lines - 1) * $line-height-base * 0.99em;
     }
   }
 }
 
 .Clamp--4 {
-  @lines: 4;
+  $lines: 4;
 
-  max-height: @lines * @line-height-base * 1em;
+  max-height: $lines * $line-height-base * 1em;
 
   &::after {
-    top: (@lines - 1) * @line-height-base * 1em;
+    top: ($lines - 1) * $line-height-base * 1em;
   }
 
   .Clamp-text {
     &::before {
-      height: (@lines - 1) * @line-height-base * 0.99em;
+      height: ($lines - 1) * $line-height-base * 0.99em;
     }
   }
 }

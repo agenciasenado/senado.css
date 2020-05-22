@@ -23,7 +23,7 @@ div(style='width:200px; height:100px;position:relative; border: 1px solid #ddd')
   left: 0;
   z-index: 1000;
   font-size: 0;
-  background: fadeout(@azul-padrao, 82%);
+  background: fadeout($azul-padrao, 82%);
   padding: 2px;
 }
 
@@ -42,7 +42,7 @@ div(style='width:200px; height:100px;position:relative; border: 1px solid #ddd')
 a.Toolbar-tool {
   color: #fff;
   padding: 0 4px;
-  background: fadeout(@azul-padrao, 20%);
+  background: fadeout($azul-padrao, 20%);
   margin-left: 2px;
 
   &:first-child {

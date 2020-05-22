@@ -1,5 +1,5 @@
 .row--strip {
-  @media (max-width: @screen-xs-max) {
+  $media (max-width: $screen-xs-max) {
     white-space: nowrap;
     overflow-x: auto;
 

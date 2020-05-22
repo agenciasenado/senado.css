@@ -20,18 +20,18 @@ ul.Nav--principal.navbar.navbar-collapse.navbar-default
   border-radius: 0;
   background: #fff;
   border: none;
-  border-top: dotted 1px @cinza-medio;
-  border-bottom: solid 5px @azul-padrao;
+  border-top: dotted 1px $cinza-medio;
+  border-bottom: solid 5px $azul-padrao;
   margin-bottom: 0;
   font-size: 16px;
   min-height: 0; // sendo o Nav--principal um navbar, desfazer o min-height
 
-  @media (max-width: @screen-xs-max) {
+  $media (max-width: $screen-xs-max) {
     min-height: inherit;
     border-bottom: none;
   }
 
-  @media (min-width: @screen-sm-max) {
+  $media (min-width: $screen-sm-max) {
     > ul > li > a {
       padding: 15px;
     }
@@ -60,7 +60,7 @@ div.Nav--secundaria.navbar
 ```
 */
 
-@secundaria-height: 30px;
+$secundaria-height: 30px;
 
 .Nav--secundaria {
   border: none;
@@ -71,16 +71,16 @@ div.Nav--secundaria.navbar
   margin-bottom: 0;
 
   > ul > li {
-    line-height: @secundaria-height;
+    line-height: $secundaria-height;
 
     > a {
       font-size: 13px;
       float: left;
       padding: 0 15px;
-      line-height: @secundaria-height;
+      line-height: $secundaria-height;
     }
 
-    @media (min-width: @screen-xs-max) {
+    $media (min-width: $screen-xs-max) {
       &:not(:last-child)::after {
         font-size: 14px;
         content: ' ';
@@ -89,7 +89,7 @@ div.Nav--secundaria.navbar
     }
   }
 
-  @media (max-width: @screen-xs-max) {
+  $media (max-width: $screen-xs-max) {
     > ul {
       float: left !important;
     }

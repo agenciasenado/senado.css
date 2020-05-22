@@ -18,22 +18,22 @@ small  Cum adiurator assimilant, omnes dominaes reperire neuter, peritus ratione
 */
 
 // altura da etiqueta em que o espaçamento vertical coincide com o horizontal considerando font-size: 12px
-@etiqueta-height: 21px;
-@etiqueta-padding: 5px;
+$etiqueta-height: 21px;
+$etiqueta-padding: 5px;
 
 .Etiqueta {
   display: inline-block;
-  padding: 0 @etiqueta-padding;
+  padding: 0 $etiqueta-padding;
   margin-bottom: 1px;
   font-size: 11px;
-  line-height: @etiqueta-height;
+  line-height: $etiqueta-height;
   vertical-align: middle;
 }
 
 .Etiqueta::before {
   position: relative;
-  right: @etiqueta-padding;
-  padding: 0 @etiqueta-padding;
+  right: $etiqueta-padding;
+  padding: 0 $etiqueta-padding;
   display: inline-block;
   vertical-align: top;
   font-family: 'Glyphicons Halflings', sans-serif;
@@ -50,7 +50,7 @@ small  Cum adiurator assimilant, omnes dominaes reperire neuter, peritus ratione
   &::before {
     float: right;
     right: auto;
-    left: @etiqueta-padding;
+    left: $etiqueta-padding;
     border-width: 0 0 0 1px;
   }
 }
@@ -60,6 +60,6 @@ small  Cum adiurator assimilant, omnes dominaes reperire neuter, peritus ratione
   background: #999;
 
   &::before {
-    background: @azul-padrao;
+    background: $azul-padrao;
   }
 }

@@ -1,4 +1,4 @@
-@import (reference) "icons";
+@import "icons";
 
 /* ---
 title: Share Icons
@@ -34,7 +34,7 @@ section: Components
 */
 
 .ShareIcon {
-  @size: 1.9em;
+  $size: 1.9em;
 
   padding: 0;
   display: inline-block;
@@ -49,7 +49,7 @@ section: Components
   background: #eee;
   transition: background-color 300ms linear;
   font-size: 18px;
-  line-height: @size;
+  line-height: $size;
 
   &,
   &:focus,
@@ -65,22 +65,22 @@ section: Components
   &::before {
     &:extend(.Icon);
 
-    line-height: @size;
-    width: @size;
+    line-height: $size;
+    width: $size;
   }
 }
 
-.share-icon-variant(@color) {
-  border-bottom-color: lighten(@color, 25%);
+.share-icon-variant($color) {
+  border-bottom-color: lighten($color, 25%);
 
   &:hover,
   &.ShareIcon--mini {
-    background: @color;
+    background: $color;
   }
 }
 
 .ShareIcon--default {
-  .share-icon-variant(@azul-padrao);
+  .share-icon-variant($azul-padrao);
 }
 
 .ShareIcon--facebook {
@@ -169,8 +169,8 @@ section: Components
 
 .ShareIcon-text {
   vertical-align: middle;
-  padding-left: @padding-large-vertical;
-  padding-right: @padding-large-vertical;
+  padding-left: $padding-large-vertical;
+  padding-right: $padding-large-vertical;
 }
 
 .ShareIcon-text--hidden {
