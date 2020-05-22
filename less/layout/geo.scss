@@ -5,9 +5,9 @@
 // Islands are the most common layout helper. They throw a padding around the
 // selected element equal to the global baseline.
 
-$baseline: $line-height-computed;
+$baseline: $line-height-base * $spacer;
 
-._geo ($baseline) {
+@mixin _geo ($baseline) {
   padding: $baseline;
 
   &-y {
@@ -17,27 +17,27 @@ $baseline: $line-height-computed;
 }
 
 .l-island {
-  ._geo($baseline);
+  @include _geo($baseline);
 }
 
 // Half an island
 .l-isle {
-  ._geo(round($baseline / 2));
+  @include _geo(round($baseline / 2));
 }
 
 // Half an isle
 .l-spit {
-  ._geo(round($baseline / 4));
+  @include _geo(round($baseline / 4));
 }
 
 // Twice the size of an island
 .l-country {
-  ._geo(round($baseline * 2));
+  @include _geo(round($baseline * 2));
 }
 
 // Twice the size of a country
 .l-continent {
-  ._geo(round($baseline * 4));
+  @include _geo(round($baseline * 4));
 }
 
 // Margin layout helpers
@@ -54,37 +54,35 @@ $baseline: $line-height-computed;
 // Vertical margins are strictly applied to the bottom edge only, with the
 // exception of negative margin-top values.
 //
-._margin ($direction) {
-  $micro: replace($direction, "(.).*$", "$1");
-
-  .l-m${micro} {
-    margin-${direction}: $baseline !important;
+@mixin _margin ($attr, $direction) {
+  .l-m#{$attr} {
+    margin-#{$direction}: $baseline !important;
 
     &-xs {
-      margin-${direction}: round($baseline / 4) !important;
+      margin-#{$direction}: round($baseline / 4) !important;
     }
 
     &-s {
-      margin-${direction}: round($baseline / 2) !important;
+      margin-#{$direction}: round($baseline / 2) !important;
     }
 
     &-l {
-      margin-${direction}: round($baseline * 2) !important;
+      margin-#{$direction}: round($baseline * 2) !important;
     }
 
     &-xl {
-      margin-${direction}: round($baseline * 4) !important;
+      margin-#{$direction}: round($baseline * 4) !important;
     }
   }
 }
 
-._margin(top);
-._margin(right);
-._margin(bottom);
-._margin(left);
+@include _margin(t, top);
+@include _margin(r, right);
+@include _margin(b, bottom);
+@include _margin(l, left);
 
 .l-p {
-  .l-mb();
+  @extend .l-mb;
 }
 
 .l-trim {
