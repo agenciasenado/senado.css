@@ -1,5 +1,5 @@
 .Strip {
-  $media (max-width: $screen-xs-max) {
+  @media (max-width: map-get($grid-breakpoints, "sm")) {
     overflow-x: auto;
     white-space: nowrap;
 
