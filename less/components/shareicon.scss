@@ -1,5 +1,3 @@
-@import "icons";
-
 /* ---
 title: Share Icons
 section: Components
@@ -63,14 +61,14 @@ section: Components
   }
 
   &::before {
-    &:extend(.Icon);
+    @extend .Icon;
 
     line-height: $size;
     width: $size;
   }
 }
 
-.share-icon-variant($color) {
+@mixin share-icon-variant($color) {
   border-bottom-color: lighten($color, 25%);
 
   &:hover,
@@ -80,52 +78,52 @@ section: Components
 }
 
 .ShareIcon--default {
-  .share-icon-variant($azul-padrao);
+  @include share-icon-variant($azul-padrao);
 }
 
 .ShareIcon--facebook {
-  .Icon--facebook;
-  .share-icon-variant(#3b5998);
+  @extend .Icon--facebook;
+  @include share-icon-variant(#3b5998);
 }
 
 .ShareIcon--youtube {
-  .Icon--youtube-logo;
-  .share-icon-variant(#bb0000);
+  @extend .Icon--youtube-logo;
+  @include share-icon-variant(#bb0000);
 }
 
 .ShareIcon--flickr {
-  .Icon--flickr;
-  .share-icon-variant(#ff0084);
+  @extend .Icon--flickr;
+  @include share-icon-variant(#ff0084);
 }
 
 .ShareIcon--instagram {
-  .Icon--instagram;
-  .share-icon-variant(#517fa4);
+  @extend .Icon--instagram;
+  @include share-icon-variant(#517fa4);
 }
 
 .ShareIcon--twitter {
-  .Icon--twitter;
-  .share-icon-variant(#00aced);
+  @extend .Icon--twitter;
+  @include share-icon-variant(#00aced);
 }
 
 .ShareIcon--google-plus {
-  .Icon--google-plus;
-  .share-icon-variant(#dd4b39);
+  @extend .Icon--google-plus;
+  @include share-icon-variant(#dd4b39);
 }
 
 .ShareIcon--pinterest {
-  .Icon--pinterest;
-  .share-icon-variant(#cb2027);
+  @extend .Icon--pinterest;
+  @include share-icon-variant(#cb2027);
 }
 
 .ShareIcon--whatsapp {
-  .Icon--whatsapp;
-  .share-icon-variant(#4dc247);
+  @extend .Icon--whatsapp;
+  @include share-icon-variant(#4dc247);
 }
 
 .ShareIcon--tumblr {
-  .Icon--tumblr;
-  .share-icon-variant(#32506d);
+  @extend .Icon--tumblr;
+  @include share-icon-variant(#32506d);
 }
 
 .ShareIcon--mini {
