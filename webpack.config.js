@@ -1,10 +1,9 @@
 const path = require('path')
-const CleanWebpackPlugin = require('clean-webpack-plugin')
 
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 const autoprefixer = require('autoprefixer')
-const mdcss = require('mdcss')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
 const ENV = process.env.NODE_ENV || 'development'
 const PUBLIC_PATH = '/dist/'
@@ -17,23 +16,17 @@ const cssChain = [
       sourceMap: true,
       plugins: () => [
         autoprefixer(),
-        mdcss({
-          theme: require('mdcss-theme-fabianonunes'),
-          examples: {
-            css: ['/dist/main.css']
-          },
-          destination: '/dist/styleguide'
-        })
       ]
     }
   },
-  'less-loader?sourceMap'
+  'resolve-url-loader',
+  'sass-loader?sourceMap'
 ]
 
 module.exports = (env = {}, argv) => ({
 
   entry: {
-    main: ['./less/main.less']
+    main: ['./less/main.scss']
   },
 
   output: {
@@ -44,7 +37,7 @@ module.exports = (env = {}, argv) => ({
 
   module: {
     rules: [{
-      test: /\.(less)$/,
+      test: /\.(scss)$/,
       use: [argv.mode !== 'production' ? 'style-loader' : MiniCssExtractPlugin.loader].concat(cssChain)
     }, {
       test: /\.(svg|woff|ttf|eot|woff2)$/,
