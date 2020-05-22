@@ -1,11 +1,10 @@
-
-.vertical-align() {
+@mixin vertical-align {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
 }
 
-.centre-align() {
+@mixin centre-align {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -13,7 +12,7 @@
   transform: translate(-50%, -50%);
 }
 
-.fill-parent() {
+@mixin fill-parent {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -21,14 +20,14 @@
   right: 0;
 }
 
-.rect(@top, @left, @bottom, @right) {
-  top: @top;
-  left: @left;
-  right: @right;
-  bottom: @bottom;
+@mixin rect($top, $left, $bottom, $right) {
+  top: $top;
+  left: $left;
+  right: $right;
+  bottom: $bottom;
 }
 
-.collapse-margins() {
+@mixin collapse-margins {
   &::after,
   &::before {
     content: '';
@@ -38,7 +37,7 @@
   }
 }
 
-.collapse-margins-after() {
+@mixin collapse-margins-after {
   &::after {
     content: '';
     height: 0;
@@ -47,6 +46,6 @@
   }
 }
 
-.debug() {
+@mixin debug {
   border: 1px dotted #f06;
 }
