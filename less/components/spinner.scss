@@ -1,11 +1,9 @@
-@import "../utils/mixins";
-
 .Spinner,
 [class^="Spinner--"] {
   width: 30px;
   height: 30px;
   position: relative;
-  .centre-align();
+  @include centre-align;
 
   &.is-big {
     width: 60px;
@@ -30,7 +28,7 @@
 .Spinner--single::before,
 .Spinner--double::before,
 .Spinner--double::after {
-  .fill-parent();
+  @include fill-parent;
 
   content: ' ';
   display: block;
