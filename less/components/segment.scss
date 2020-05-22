@@ -1,5 +1,3 @@
-@import "../utils/mixins";
-
 /* ---
 title: Segment
 section: Components
@@ -70,7 +68,7 @@ section: Components
 
 .Segment,
 ul.Segments > li {
-  .collapse-margins();
+  @include collapse-margins;
 
   overflow: hidden; // garantir espaçamento ainda que não haja padding
   display: block;
@@ -82,7 +80,7 @@ ul.Segments > li {
     margin-bottom: $padding-base-vertical !important;
   }
 
-  ul& {
+  ul & {
     margin: 0;
     padding: 0;
   }
