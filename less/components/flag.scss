@@ -1,5 +1,3 @@
-@import "../utils/mixins";
-
 /* ---
 title:   Flag
 section: Components
@@ -10,20 +8,22 @@ adjacente. É centralizado verticalmente por padrão, mas pode ser alinhhado ao 
 ou ao rodapé por meio dos modificadores `--top` e `--bottom`.
 
 ```example:jade
-.Flag
+.Flag.Flag--center
   .Flag-figure
     .Icon.Icon--newspaper.Icon--lg
   .Flag-body
     a Middle
     div: small Nunquam gratia guttus
     div: small Cur impositio resistere?
-.Flag.Flag--top
+br
+.Flag
   .Flag-figure
     .Icon.Icon--bubble.Icon--lg
   .Flag-body
     a Top
     div: small Nunquam consumere tumultumque
     div: small Cur adgium persuadere
+br
 .Flag.Flag--bottom
   .Flag-figure
     .Icon.Icon--twitter.Icon--lg
@@ -34,65 +34,38 @@ ou ao rodapé por meio dos modificadores `--top` e `--bottom`.
 ```
 */
 
-$flag-spacing: 10px;
-
 .Flag {
-  display: table;
-  width: 100%;
-
-  &:not(:last-child) {
-    margin-bottom: $flag-spacing;
-  }
-}
-
-.Flag-body {
-  max-width: 0;
-  width: 100%;
+  display: flex;
+  align-items: flex-start;
 }
 
 .Flag-figure {
-  padding-right: 10px;
-
-  > img {
-    display: block;
-    max-width: none;
-  }
-}
-
-.Flag-figure,
-.Flag-body {
-  display: table-cell;
-  vertical-align: middle;
-
-  .Flag--top & {
-    vertical-align: top;
-  }
-
-  .Flag--bottom & {
-    vertical-align: bottom;
-  }
-
-  .collapse-margins();
-}
-
-.Flag--rev .Flag-figure {
-  padding-right: 0;
-  padding-left: 10px;
+  margin-right: 1em;
 }
 
 .Flag-figure--compact {
-  padding-right: 0;
+  margin: 0 !important;
 }
 
-.Flag--material {
-  background: #fff;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+.Flag-body {
+  flex: 1;
+  min-width: 0;
+}
 
-  > .Flag-figure {
-    padding-right: $padding-base-horizontal;
-  }
+.Flag-body,
+.Flag-body :last-child {
+  margin-bottom: 0;
+}
 
-  > .Flag-body {
-    padding-right: $padding-base-horizontal;
-  }
+.Flag--center {
+  align-items: center;
+}
+
+.Flag--bottom {
+  align-items: flex-end;
+}
+
+.Flag--reverse > .Flag-figure {
+  order: 1;
+  margin: 0 0 0 1em;
 }
