@@ -33,7 +33,7 @@ linha.
     $_buffer: 500px;
 
     display: block;
-    width: ~"calc(100% + ${_buffer})";
+    width: calc(100% + #{$_buffer});
     position: relative;
 
     &::before {
