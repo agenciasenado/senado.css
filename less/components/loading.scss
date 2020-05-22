@@ -1,4 +1,3 @@
-
 $loading-size: 38px;
 
 .Loading {
@@ -39,7 +38,7 @@ $loading-size: 38px;
   animation: loading-spinner 500ms linear infinite;
 }
 
-$keyframes loading-spinner {
+@keyframes loading-spinner {
   0% {
     transform: rotate(0deg) scale(0.8);
   }
