@@ -1,6 +1,3 @@
-
-@import "${bootstrap-path}/grid";
-
 // fixes
 .modal-backdrop {
   backface-visibility: hidden; // evitar flickering no chrome
@@ -16,7 +13,7 @@ input + .input-group-addon:not(:last-child) {
 
 // add-ons
 .scrollable-modal-body {
-  max-height: ~"calc(100vh - 210px)";
+  max-height: calc(100vh - 210px);
   overflow-y: auto;
 }
 
