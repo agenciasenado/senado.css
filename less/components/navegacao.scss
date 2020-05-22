@@ -26,12 +26,12 @@ ul.Nav--principal.navbar.navbar-collapse.navbar-default
   font-size: 16px;
   min-height: 0; // sendo o Nav--principal um navbar, desfazer o min-height
 
-  $media (max-width: $screen-xs-max) {
+  @media (max-width: map-get($grid-breakpoints, "sm")) {
     min-height: inherit;
     border-bottom: none;
   }
 
-  $media (min-width: $screen-sm-max) {
+  @media (min-width: map-get($grid-breakpoints, "sm")) {
     > ul > li > a {
       padding: 15px;
     }
@@ -80,7 +80,7 @@ $secundaria-height: 30px;
       line-height: $secundaria-height;
     }
 
-    $media (min-width: $screen-xs-max) {
+    @media (min-width: map-get($grid-breakpoints, "sm")) {
       &:not(:last-child)::after {
         font-size: 14px;
         content: ' ';
@@ -89,7 +89,7 @@ $secundaria-height: 30px;
     }
   }
 
-  $media (max-width: $screen-xs-max) {
+  @media (max-width: map-get($grid-breakpoints, "sm")) {
     > ul {
       float: left !important;
     }
