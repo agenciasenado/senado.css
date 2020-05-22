@@ -69,7 +69,7 @@ p
     margin-bottom: $grid-gutter-width/2;
   }
 
-  $media (max-width: $screen-xs-max) {
+  @media (max-width: map-get($grid-breakpoints, "sm")) {
     flex-wrap: nowrap;
 
     > .Card {
