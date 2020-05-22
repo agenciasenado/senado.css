@@ -1,71 +1,20 @@
-@import "${bootstrap-path}/mixins.less";
-
-/* ---
-title: Rodapé
-section: Objetos
-
-`.FooterMain`: Rodapé com lista de links separados em colunas. Por ser
-um elemento essencial, sua markup é presa aos estilos e as classes de
-layout são embutidas nos componentes. Deve ser utilizado como um componente
-único e indivisível.
-
-```example:jade
-.FooterMain.container-fluid
-  .FooterMain-row
-  .FooterMain-section
-    dl.FooterMain-list
-    dt Titulo
-    dd: a(href='#') Link
-    dd: a(href='#') Link
-  .FooterMain-section
-    dl.FooterMain-list
-    dt Titulo
-    dd: a(href='#') Link
-    dd: a(href='#') Link
-  .FooterMain-section
-    dl.FooterMain-list
-    dt Titulo
-    dd: a(href='#') Link
-    dd: a(href='#') Link
-  .FooterMain-section
-    dl.FooterMain-list
-    dt Titulo
-    dd: a(href='#') Link
-    dd: a(href='#') Link
-  .FooterMain-end
-  span.FooterMain-icon--intranet
-    | Intranet
-  span.FooterMain-icon--aotopo
-    | Topo
-.FooterMain-endereco
-  | Endereço
-```
-*/
 .FooterMain {
   background-color: #eee;
   margin-top: 10px;
   padding-top: 10px;
 
-  $media (min-width: $screen-sm-min) {
+  @media (min-width: map-get($grid-breakpoints, "sm")) {
     padding-top: 20px;
   }
 }
 
-.FooterMain-row {
-  .make-row();
-}
-
-.FooterMain-section {
-  .make-sm-column(3);
-}
-
 .FooterMain-list {
-  &:extend(.list-unstyled);
+  // &:extend(.list-unstyled);
 
   line-height: 20px;
   font-size: 12px;
 
-  $media (max-width: $screen-xs-max) {
+  @media (max-width: map-get($grid-breakpoints, "sm")) {
     margin: 0 10px;
   }
 
