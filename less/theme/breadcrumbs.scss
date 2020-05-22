@@ -10,7 +10,7 @@
     color: #666;
   }
 
-  $media (max-width: $screen-xs-max) {
+@media (max-width: map-get($grid-breakpoints, "sm")) {
     display: none;
   }
 }
