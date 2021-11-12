@@ -1,5 +1,6 @@
 {
   "extends": "stylelint-config-standard",
+  "customSyntax": "postcss-less",
   "rules": {
     "max-nesting-depth": 2,
     "at-rule-no-vendor-prefix": true,
@@ -8,12 +9,15 @@
     "selector-no-vendor-prefix": true,
     "value-no-vendor-prefix": true,
     "selector-max-compound-selectors": 2,
-    "selector-max-specificity": "0,2,2",
-    "at-rule-empty-line-before": ["always", {
-      "except": [
-        "first-nested"
-      ],
-      "ignore": ["after-comment", "blockless-after-blockless"]
-    }]
+    "selector-max-specificity": "0,3,2",
+    "selector-class-pattern": ".*",
+    "value-keyword-case": ["lower", { "ignoreFunctions": ["extend"] }],
+    "at-rule-empty-line-before": [
+      "always",
+      {
+        "except": ["first-nested"],
+        "ignore": ["after-comment", "blockless-after-blockless"]
+      }
+    ]
   }
 }
