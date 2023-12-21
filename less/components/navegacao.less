@@ -1,3 +1,5 @@
+/* stylelint-disable selector-max-specificity, selector-max-compound-selectors, max-nesting-depth */
+
 /* ---
 section: Objetos
 title: Navegação
@@ -83,7 +85,7 @@ div.Nav--secundaria.navbar
     @media (min-width: @screen-xs-max) {
       &:not(:last-child)::after {
         font-size: 14px;
-        content: ' ';
+        content: " ";
         border-left: 1px solid #ccc;
       }
     }
@@ -95,3 +97,4 @@ div.Nav--secundaria.navbar
     }
   }
 }
+/* stylelint-enable */

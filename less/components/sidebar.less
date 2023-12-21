@@ -30,7 +30,7 @@
   display: table-cell;
   text-align: center;
   background-color: #dadada;
-  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  box-shadow: 1px 1px 1px rgb(0 0 0 / 50%);
 }
 
 .Sidebar-triggerLabel > :first-child {
@@ -40,13 +40,14 @@
 
 .Sidebar-trigger:checked ~ .Sidebar-body {
   transform: translate3d(0, 0, 0);
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 2px 2px 2px rgb(0 0 0 / 30%);
 }
 
 .Sidebar-trigger:checked ~ .Sidebar-triggerLabel {
   transform: translate3d(300px, 0, 0);
 }
 
+/* stylelint-disable-next-line selector-max-compound-selectors, selector-max-specificity */
 .Sidebar-trigger:checked ~ .Sidebar-triggerLabel > :first-child {
   transform: rotate(180deg);
 }
